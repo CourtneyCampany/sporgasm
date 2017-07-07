@@ -1,7 +1,7 @@
 
 ### gametophyte dry downs
 
-#1st trial with hemisphytic fern (lomariopsis)
+#trials with ferns from different niches
 
 drydown <- read.csv("raw_data/gam_drydown_trial.csv")
 
@@ -43,6 +43,7 @@ plot(gam_mass ~ datetime, col = cols[1],subset(camp_agg, salt== "c"),lwd=2,
   lines(gam_mass ~ datetime, col = cols[2],subset(camp_agg, salt== "kno3"),lwd=2, type='b')
   lines(gam_mass ~ datetime, col = cols[3],subset(camp_agg, salt== "mgso4"),lwd=2, type='b')
   lines(gam_mass ~ datetime, col = cols[4],subset(camp_agg, salt== "nacl"),lwd=2, type='b')
+  legend("topleft",chems, lty=1, col=cols, bty='n',inset=.01, lwd=2)
 #lomves
 windows()
 plot(gam_mass ~ datetime, col = cols[1],subset(lomves_agg, salt== "c"),lwd=2,
@@ -50,3 +51,4 @@ plot(gam_mass ~ datetime, col = cols[1],subset(lomves_agg, salt== "c"),lwd=2,
 lines(gam_mass ~ datetime, col = cols[2],subset(lomves_agg, salt== "kno3"),lwd=2, type='b')
 lines(gam_mass ~ datetime, col = cols[3],subset(lomves_agg, salt== "mgso4"),lwd=2, type='b')
 lines(gam_mass ~ datetime, col = cols[4],subset(lomves_agg, salt== "nacl"),lwd=2, type='b')
+legend("topleft",chems, lty=1, col=cols, bty='n',inset=.01, lwd=2)
