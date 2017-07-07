@@ -5,40 +5,48 @@
 
 drydown <- read.csv("raw_data/gam_drydown_trial.csv")
 
-
 # data formatting ---------------------------------------------------------
-drydown$date_t0 <- as.Date(drydown$date_t0, format = "%m/%d/%Y",tz='UTC')
-drydown$date_t1 <- as.Date(drydown$date_t1, format = "%m/%d/%Y",tz='UTC')
-drydown$date_t2 <- as.Date(drydown$date_t2, format = "%m/%d/%Y",tz='UTC')
-drydown$date_t2 <- as.Date(drydown$date_t3, format = "%m/%d/%Y",tz='UTC')
-drydown$id <- as.factor(drydown$id)
+  drydown$date <- as.Date(drydown$date, format = "%m/%d/%Y",tz='UTC')
+  drydown$id <- as.factor(drydown$id)
 
-#calculate gametophyte mass
-gam_mass_init <- with(drydown, total_mass_t0-filter_mass)
-gam_mass_t1 <- with(drydown, total_mass_t1-filter_mass)
-gam_mass_t2 <- with(drydown, total_mass_t2-filter_mass)
-gam_mass_t3 <- with(drydown, total_mass_t3-filter_mass)
+  #calculate gametophyte mass
+  drydown$gam_mass <- with(drydown, total_mass-filter_mass)
 
-#merge date and time into datetime object
-drydown$datetime <- with(drydown, paste(date_t0, time0, sep = " "))
-drydown$datetime2 <- as.POSIXct(drydown$datetime,tz='UTC', format="%Y-%m-%d %H:%M")
-
+  #merge date and time into datetime object
+  drydown$datetime <- with(drydown, paste(date, time, sep = " "))
+  drydown$datetime <- as.POSIXct(drydown$datetime,tz='UTC', format="%Y-%m-%d %H:%M")
+  
+  #species subsets
+  lomves <- drydown[drydown$species=="lomves",]
+  camp <- drydown[drydown$species=="camp",]
+  
+  #means
+  library(doBy)
+  camp_agg <- summaryBy(gam_mass ~ salt + drydown_no+datetime, data=camp, 
+                        FUN=mean, keep.names = TRUE)
+  lomves_agg <- summaryBy(gam_mass ~ salt+datetime, data=lomves, 
+                          FUN=mean, keep.names = TRUE)
+  
 # plot objects ------------------------------------------------------------
 chems <- c("Control", "KNo3", "MgSo4", "NaCl")
-cols <- c("forestgreen", "cornflowerblue", "gold", "firebrick4")
+
+library(RColorBrewer)
+gradient <- colorRampPalette(c("darkgreen", "red3"))
+cols <- c(gradient(8)[1],gradient(8)[3],gradient(8)[5],gradient(8)[8])
 
 
 # plotting ----------------------------------------------------------------
-
-lomves <- drydown[drydown$species=="lomves",]
-camp <- drydown[drydown$species=="camp",]
-
-plot()
-
-###percent mass loss
+#camp
 windows()
-boxplot((gam_mass_init-gam_mass_t1/gam_mass_init)*100 ~ salt, data = drydown, 
-        col=cols, ylab="Mass Loss (%)", outline=F,names=chems)
-
-
-mean(drydown$fvfm)
+plot(gam_mass ~ datetime, col = cols[1],subset(camp_agg, salt== "c"),lwd=2,
+     type='b', ylab="Gametophyte mass (g)",xlab="",ylim=c(0, 0.015))
+  lines(gam_mass ~ datetime, col = cols[2],subset(camp_agg, salt== "kno3"),lwd=2, type='b')
+  lines(gam_mass ~ datetime, col = cols[3],subset(camp_agg, salt== "mgso4"),lwd=2, type='b')
+  lines(gam_mass ~ datetime, col = cols[4],subset(camp_agg, salt== "nacl"),lwd=2, type='b')
+#lomves
+windows()
+plot(gam_mass ~ datetime, col = cols[1],subset(lomves_agg, salt== "c"),lwd=2,
+       type='b', ylab="Gametophyte mass (g)",xlab="",ylim=c(0, 0.04))
+lines(gam_mass ~ datetime, col = cols[2],subset(lomves_agg, salt== "kno3"),lwd=2, type='b')
+lines(gam_mass ~ datetime, col = cols[3],subset(lomves_agg, salt== "mgso4"),lwd=2, type='b')
+lines(gam_mass ~ datetime, col = cols[4],subset(lomves_agg, salt== "nacl"),lwd=2, type='b')
