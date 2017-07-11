@@ -1,0 +1,109 @@
+species,niche,plant_no,disk,region,sto1,sto2,sto3
+phlebodium_aurem,epiphyte,1,,,,,
+phlebodium_aurem,epiphyte,2,,,,,
+phlebodium_aurem,epiphyte,3,,,,,
+phlebodium_aurem,epiphyte,4,,,,,
+phlebodium_aurem,epiphyte,5,,,,,
+phlebodium_aurem,epiphyte,6,,,,,
+phlebodium_aurem,epiphyte,7,,,,,
+phlebodium_aurem,epiphyte,8,,,,,
+thelypteris_curtii,terrestrial,1,,,,,
+thelypteris_curtii,terrestrial,2,,,,,
+thelypteris_curtii,terrestrial,3,,,,,
+thelypteris_curtii,terrestrial,4,,,,,
+thelypteris_curtii,terrestrial,5,,,,,
+thelypteris_curtii,terrestrial,6,,,,,
+polybotrya_osmundacea,climber,1,,,,,
+polybotrya_osmundacea,climber,2,,,,,
+polybotrya_osmundacea,climber,3,,,,,
+polybotrya_osmundacea,climber,4,,,,,
+polybotrya_osmundacea,climber,5,,,,,
+polybotrya_osmundacea,climber,6,,,,,
+serpocaulon_loriciforme,epiphyte,10,,,,,
+serpocaulon_loriciforme,epiphyte,9,,,,,
+serpocaulon_loriciforme,epiphyte,3,,,,,
+serpocaulon_loriciforme,epiphyte,4,,,,,
+serpocaulon_loriciforme,epiphyte,12,,,,,
+serpocaulon_loriciforme,epiphyte,6,,,,,
+asplenium_auritum,epiphyte,1,,,,,
+asplenium_auritum,epiphyte,2,,,,,
+asplenium_auritum,epiphyte,3,,,,,
+asplenium_auritum,epiphyte,4,,,,,
+asplenium_auritum,epiphyte,5,,,,,
+asplenium_auritum,epiphyte,6,,,,,
+blechnum_occidentale ,terrestrial,1,1,1,3,5,7
+blechnum_occidentale ,terrestrial,1,1,2,6,3,5
+blechnum_occidentale ,terrestrial,1,1,3,5,8,5
+blechnum_occidentale ,terrestrial,1,2,1,4,5,5
+blechnum_occidentale ,terrestrial,1,2,2,7,5,5
+blechnum_occidentale ,terrestrial,1,2,3,7,6,6
+blechnum_occidentale ,terrestrial,1,3,1,5,4,2
+blechnum_occidentale ,terrestrial,1,3,2,4,1,3
+blechnum_occidentale ,terrestrial,1,3,3,6,0,6
+blechnum_occidentale ,terrestrial,2,1,1,7,7,3
+blechnum_occidentale ,terrestrial,2,1,2,6,6,0
+blechnum_occidentale ,terrestrial,2,1,3,2,6,2
+blechnum_occidentale ,terrestrial,2,2,1,5,7,2
+blechnum_occidentale ,terrestrial,2,2,2,2,4,6
+blechnum_occidentale ,terrestrial,2,2,3,5,4,4
+blechnum_occidentale ,terrestrial,2,3,1,7,5,9
+blechnum_occidentale ,terrestrial,2,3,2,6,4,8
+blechnum_occidentale ,terrestrial,2,3,3,6,7,5
+blechnum_occidentale ,terrestrial,3,1,1,7,4,8
+blechnum_occidentale ,terrestrial,3,1,2,4,11,8
+blechnum_occidentale ,terrestrial,3,1,3,9,5,10
+blechnum_occidentale ,terrestrial,3,2,1,9,7,7
+blechnum_occidentale ,terrestrial,3,2,2,9,9,6
+blechnum_occidentale ,terrestrial,3,2,3,6,7,7
+blechnum_occidentale ,terrestrial,3,3,1,8,8,7
+blechnum_occidentale ,terrestrial,3,3,2,6,5,8
+blechnum_occidentale ,terrestrial,3,3,3,6,9,7
+blechnum_occidentale ,terrestrial,4,1,1,6,6,6
+blechnum_occidentale ,terrestrial,4,1,2,5,6,6
+blechnum_occidentale ,terrestrial,4,1,3,4,8,7
+blechnum_occidentale ,terrestrial,4,2,1,3,1,6
+blechnum_occidentale ,terrestrial,4,2,2,5,6,4
+blechnum_occidentale ,terrestrial,4,2,3,5,4,3
+blechnum_occidentale ,terrestrial,4,3,1,6,5,0
+blechnum_occidentale ,terrestrial,4,2,2,8,1,5
+blechnum_occidentale ,terrestrial,4,2,3,7,4,1
+blechnum_occidentale ,terrestrial,5,1,1,5,5,6
+blechnum_occidentale ,terrestrial,5,1,2,8,8,6
+blechnum_occidentale ,terrestrial,5,1,3,7,8,5
+blechnum_occidentale ,terrestrial,5,2,1,8,3,8
+blechnum_occidentale ,terrestrial,5,2,2,9,7,7
+blechnum_occidentale ,terrestrial,5,2,3,6,9,9
+blechnum_occidentale ,terrestrial,5,3,1,4,6,7
+blechnum_occidentale ,terrestrial,5,2,2,5,10,7
+blechnum_occidentale ,terrestrial,5,2,3,9,8,8
+blechnum_occidentale ,terrestrial,6,1,1,14,11,11
+blechnum_occidentale ,terrestrial,6,1,2,8,7,11
+blechnum_occidentale ,terrestrial,6,1,3,10,9,7
+blechnum_occidentale ,terrestrial,6,2,1,11,9,6
+blechnum_occidentale ,terrestrial,6,2,2,8,11,8
+blechnum_occidentale ,terrestrial,6,2,3,7,6,9
+blechnum_occidentale ,terrestrial,6,3,1,9,9,4
+blechnum_occidentale ,terrestrial,6,2,2,12,12,7
+blechnum_occidentale ,terrestrial,6,2,3,6,7,11
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+lomariopsis_japurensis,hemi-epiphyte ,1,,,,,
+lomariopsis_japurensis,hemi-epiphyte ,2,,,,,
+lomariopsis_japurensis,hemi-epiphyte ,3,,,,,
+lomariopsis_japurensis,hemi-epiphyte ,4,,,,,
+lomariopsis_japurensis,hemi-epiphyte ,5,,,,,
+lomariopsis_japurensis,hemi-epiphyte ,6,,,,,
+thelypteris_dentata,terrestrial,1,,,,,
+thelypteris_dentata,terrestrial,2,,,,,
+thelypteris_dentata,terrestrial,3,,,,,
+thelypteris_dentata,terrestrial,4,,,,,
+thelypteris_dentata,terrestrial,6,,,,,
+diplazium_straitastrum,terrestrial,1,,,,,
+diplazium_straitastrum,terrestrial,2,,,,,
+diplazium_straitastrum,terrestrial,3,,,,,
+diplazium_straitastrum,terrestrial,4,,,,,
+diplazium_straitastrum,terrestrial,5,,,,,
+diplazium_straitastrum,terrestrial,6,,,,,
