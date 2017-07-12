@@ -1,349 +1,481 @@
-species,niche,plant_no,disk,region,sto1,sto2,sto3
-blechnum_occidentale ,terrestrial,1,1,1,3,5,7
-blechnum_occidentale ,terrestrial,1,1,2,6,3,5
-blechnum_occidentale ,terrestrial,1,1,3,5,8,5
-blechnum_occidentale ,terrestrial,1,2,1,4,5,5
-blechnum_occidentale ,terrestrial,1,2,2,7,5,5
-blechnum_occidentale ,terrestrial,1,2,3,7,6,6
-blechnum_occidentale ,terrestrial,1,3,1,5,4,2
-blechnum_occidentale ,terrestrial,1,3,2,4,1,3
-blechnum_occidentale ,terrestrial,1,3,3,6,0,6
-blechnum_occidentale ,terrestrial,2,1,1,7,7,3
-blechnum_occidentale ,terrestrial,2,1,2,6,6,0
-blechnum_occidentale ,terrestrial,2,1,3,2,6,2
-blechnum_occidentale ,terrestrial,2,2,1,5,7,2
-blechnum_occidentale ,terrestrial,2,2,2,2,4,6
-blechnum_occidentale ,terrestrial,2,2,3,5,4,4
-blechnum_occidentale ,terrestrial,2,3,1,7,5,9
-blechnum_occidentale ,terrestrial,2,3,2,6,4,8
-blechnum_occidentale ,terrestrial,2,3,3,6,7,5
-blechnum_occidentale ,terrestrial,3,1,1,7,4,8
-blechnum_occidentale ,terrestrial,3,1,2,4,11,8
-blechnum_occidentale ,terrestrial,3,1,3,9,5,10
-blechnum_occidentale ,terrestrial,3,2,1,9,7,7
-blechnum_occidentale ,terrestrial,3,2,2,9,9,6
-blechnum_occidentale ,terrestrial,3,2,3,6,7,7
-blechnum_occidentale ,terrestrial,3,3,1,8,8,7
-blechnum_occidentale ,terrestrial,3,3,2,6,5,8
-blechnum_occidentale ,terrestrial,3,3,3,6,9,7
-blechnum_occidentale ,terrestrial,4,1,1,6,6,6
-blechnum_occidentale ,terrestrial,4,1,2,5,6,6
-blechnum_occidentale ,terrestrial,4,1,3,4,8,7
-blechnum_occidentale ,terrestrial,4,2,1,3,1,6
-blechnum_occidentale ,terrestrial,4,2,2,5,6,4
-blechnum_occidentale ,terrestrial,4,2,3,5,4,3
-blechnum_occidentale ,terrestrial,4,3,1,6,5,0
-blechnum_occidentale ,terrestrial,4,2,2,8,1,5
-blechnum_occidentale ,terrestrial,4,2,3,7,4,1
-blechnum_occidentale ,terrestrial,5,1,1,5,5,6
-blechnum_occidentale ,terrestrial,5,1,2,8,8,6
-blechnum_occidentale ,terrestrial,5,1,3,7,8,5
-blechnum_occidentale ,terrestrial,5,2,1,8,3,8
-blechnum_occidentale ,terrestrial,5,2,2,9,7,7
-blechnum_occidentale ,terrestrial,5,2,3,6,9,9
-blechnum_occidentale ,terrestrial,5,3,1,4,6,7
-blechnum_occidentale ,terrestrial,5,2,2,5,10,7
-blechnum_occidentale ,terrestrial,5,2,3,9,8,8
-blechnum_occidentale ,terrestrial,6,1,1,14,11,11
-blechnum_occidentale ,terrestrial,6,1,2,8,7,11
-blechnum_occidentale ,terrestrial,6,1,3,10,9,7
-blechnum_occidentale ,terrestrial,6,2,1,11,9,6
-blechnum_occidentale ,terrestrial,6,2,2,8,11,8
-blechnum_occidentale ,terrestrial,6,2,3,7,6,9
-blechnum_occidentale ,terrestrial,6,3,1,9,9,4
-blechnum_occidentale ,terrestrial,6,2,2,12,12,7
-blechnum_occidentale ,terrestrial,6,2,3,6,7,11
-salpichlaena_volubilis,terrestrial,1,1,1,3,4,5
-salpichlaena_volubilis,terrestrial,1,1,2,3,4,2
-salpichlaena_volubilis,terrestrial,1,1,3,3,3,4
-salpichlaena_volubilis,terrestrial,1,2,1,4,3,2
-salpichlaena_volubilis,terrestrial,1,2,2,2,0,4
-salpichlaena_volubilis,terrestrial,1,2,3,1,2,2
-salpichlaena_volubilis,terrestrial,1,3,1,5,0,4
-salpichlaena_volubilis,terrestrial,1,3,2,4,5,3
-salpichlaena_volubilis,terrestrial,1,3,3,2,2,6
-salpichlaena_volubilis,terrestrial,2,1,1,7,4,5
-salpichlaena_volubilis,terrestrial,2,1,2,3,4,4
-salpichlaena_volubilis,terrestrial,2,1,3,2,3,3
-salpichlaena_volubilis,terrestrial,2,2,1,3,2,3
-salpichlaena_volubilis,terrestrial,2,2,2,3,5,1
-salpichlaena_volubilis,terrestrial,2,2,3,1,3,3
-salpichlaena_volubilis,terrestrial,2,3,1,3,3,2
-salpichlaena_volubilis,terrestrial,2,3,2,5,4,2
-salpichlaena_volubilis,terrestrial,2,3,3,4,2,4
-salpichlaena_volubilis,terrestrial,3,1,1,3,4,5
-salpichlaena_volubilis,terrestrial,3,1,2,5,2,4
-salpichlaena_volubilis,terrestrial,3,1,3,2,3,3
-salpichlaena_volubilis,terrestrial,3,2,1,5,3,1
-salpichlaena_volubilis,terrestrial,3,2,2,5,8,5
-salpichlaena_volubilis,terrestrial,3,2,3,5,2,5
-salpichlaena_volubilis,terrestrial,3,3,1,3,2,3
-salpichlaena_volubilis,terrestrial,3,3,2,4,3,5
-salpichlaena_volubilis,terrestrial,3,3,3,4,6,4
-salpichlaena_volubilis,terrestrial,4,1,1,2,3,4
-salpichlaena_volubilis,terrestrial,4,1,2,3,4,5
-salpichlaena_volubilis,terrestrial,4,1,3,3,5,4
-salpichlaena_volubilis,terrestrial,4,2,1,3,4,6
-salpichlaena_volubilis,terrestrial,4,2,2,2,3,3
-salpichlaena_volubilis,terrestrial,4,2,3,6,5,4
-salpichlaena_volubilis,terrestrial,4,3,1,5,5,4
-salpichlaena_volubilis,terrestrial,4,2,2,4,4,6
-salpichlaena_volubilis,terrestrial,4,2,3,3,4,7
-diplazium_straitastrum,terrestrial,1,1,1,19,18,20
-diplazium_straitastrum,terrestrial,1,1,2,16,17,20
-diplazium_straitastrum,terrestrial,1,1,3,18,17,17
-diplazium_straitastrum,terrestrial,1,2,1,12,15,17
-diplazium_straitastrum,terrestrial,1,2,2,16,18,14
-diplazium_straitastrum,terrestrial,1,2,3,18,16,17
-diplazium_straitastrum,terrestrial,1,3,1,22,22,20
-diplazium_straitastrum,terrestrial,1,3,2,20,20,19
-diplazium_straitastrum,terrestrial,1,3,3,18,19,18
-diplazium_straitastrum,terrestrial,2,1,1,16,20,16
-diplazium_straitastrum,terrestrial,2,1,2,13,16,17
-diplazium_straitastrum,terrestrial,2,1,3,13,14,16
-diplazium_straitastrum,terrestrial,2,2,1,16,20,18
-diplazium_straitastrum,terrestrial,2,2,2,12,15,16
-diplazium_straitastrum,terrestrial,2,2,3,19,19,16
-diplazium_straitastrum,terrestrial,2,3,1,16,19,18
-diplazium_straitastrum,terrestrial,2,3,2,18,18,18
-diplazium_straitastrum,terrestrial,2,3,3,20,22,21
-diplazium_straitastrum,terrestrial,3,1,1,18,16,17
-diplazium_straitastrum,terrestrial,3,1,2,14,17,16
-diplazium_straitastrum,terrestrial,3,1,3,16,17,16
-diplazium_straitastrum,terrestrial,3,2,1,17,14,18
-diplazium_straitastrum,terrestrial,3,2,2,18,19,17
-diplazium_straitastrum,terrestrial,3,2,3,19,19,18
-diplazium_straitastrum,terrestrial,3,3,1,18,15,17
-diplazium_straitastrum,terrestrial,3,3,2,19,20,16
-diplazium_straitastrum,terrestrial,3,3,3,18,18,17
-diplazium_straitastrum,terrestrial,4,1,1,20,20,20
-diplazium_straitastrum,terrestrial,4,1,2,18,17,19
-diplazium_straitastrum,terrestrial,4,1,3,18,16,19
-diplazium_straitastrum,terrestrial,4,2,1,12,19,20
-diplazium_straitastrum,terrestrial,4,2,2,18,19,16
-diplazium_straitastrum,terrestrial,4,2,3,18,18,17
-diplazium_straitastrum,terrestrial,4,3,1,20,16,20
-diplazium_straitastrum,terrestrial,4,2,2,19,19,20
-diplazium_straitastrum,terrestrial,4,2,3,18,18,19
-diplazium_straitastrum,terrestrial,5,1,1,12,15,19
-diplazium_straitastrum,terrestrial,5,1,2,19,14,19
-diplazium_straitastrum,terrestrial,5,1,3,18,17,18
-diplazium_straitastrum,terrestrial,5,2,1,16,16,15
-diplazium_straitastrum,terrestrial,5,2,2,15,18,16
-diplazium_straitastrum,terrestrial,5,2,3,16,18,17
-diplazium_straitastrum,terrestrial,5,3,1,18,16,15
-diplazium_straitastrum,terrestrial,5,2,2,15,12,18
-diplazium_straitastrum,terrestrial,5,2,3,18,19,16
-diplazium_straitastrum,terrestrial,6,1,1,19,14,18
-diplazium_straitastrum,terrestrial,6,1,2,17,17,14
-diplazium_straitastrum,terrestrial,6,1,3,16,19,18
-diplazium_straitastrum,terrestrial,6,2,1,20,22,19
-diplazium_straitastrum,terrestrial,6,2,2,20,21,18
-diplazium_straitastrum,terrestrial,6,2,3,17,22,18
-diplazium_straitastrum,terrestrial,6,3,1,14,12,16
-diplazium_straitastrum,terrestrial,6,2,2,16,18,12
-diplazium_straitastrum,terrestrial,6,2,3,14,20,21
-campylonerum_brevifolia,epiphyte,1,1,1,7,6,8
-campylonerum_brevifolia,epiphyte,1,1,2,6,7,10
-campylonerum_brevifolia,epiphyte,1,1,3,9,7,7
-campylonerum_brevifolia,epiphyte,1,2,1,7,6,8
-campylonerum_brevifolia,epiphyte,1,2,2,5,8,8
-campylonerum_brevifolia,epiphyte,1,2,3,6,7,6
-campylonerum_brevifolia,epiphyte,1,3,1,9,8,7
-campylonerum_brevifolia,epiphyte,1,3,2,8,4,7
-campylonerum_brevifolia,epiphyte,1,3,3,6,5,9
-campylonerum_brevifolia,epiphyte,2,1,1,5,6,5
-campylonerum_brevifolia,epiphyte,2,1,2,6,6,5
-campylonerum_brevifolia,epiphyte,2,1,3,4,6,5
-campylonerum_brevifolia,epiphyte,2,2,1,6,6,5
-campylonerum_brevifolia,epiphyte,2,2,2,8,6,5
-campylonerum_brevifolia,epiphyte,2,2,3,6,8,5
-campylonerum_brevifolia,epiphyte,2,3,1,10,5,4
-campylonerum_brevifolia,epiphyte,2,3,2,6,8,7
-campylonerum_brevifolia,epiphyte,2,3,3,9,5,6
-campylonerum_brevifolia,epiphyte,3,1,1,9,8,9
-campylonerum_brevifolia,epiphyte,3,1,2,7,7,7
-campylonerum_brevifolia,epiphyte,3,1,3,7,6,12
-campylonerum_brevifolia,epiphyte,3,2,1,11,7,10
-campylonerum_brevifolia,epiphyte,3,2,2,9,9,9
-campylonerum_brevifolia,epiphyte,3,2,3,8,9,7
-campylonerum_brevifolia,epiphyte,3,3,1,8,9,5
-campylonerum_brevifolia,epiphyte,3,3,2,8,10,8
-campylonerum_brevifolia,epiphyte,3,3,3,9,7,8
-campylonerum_brevifolia,epiphyte,4,1,1,7,8,9
-campylonerum_brevifolia,epiphyte,4,1,2,7,8,10
-campylonerum_brevifolia,epiphyte,4,1,3,9,11,8
-campylonerum_brevifolia,epiphyte,4,2,1,5,9,8
-campylonerum_brevifolia,epiphyte,4,2,2,12,6,11
-campylonerum_brevifolia,epiphyte,4,2,3,11,9,7
-campylonerum_brevifolia,epiphyte,4,3,1,8,9,11
-campylonerum_brevifolia,epiphyte,4,2,2,9,9,6
-campylonerum_brevifolia,epiphyte,4,2,3,7,6,8
-campylonerum_brevifolia,epiphyte,5,1,1,9,8,7
-campylonerum_brevifolia,epiphyte,5,1,2,7,8,6
-campylonerum_brevifolia,epiphyte,5,1,3,9,6,7
-campylonerum_brevifolia,epiphyte,5,2,1,8,7,6
-campylonerum_brevifolia,epiphyte,5,2,2,6,7,8
-campylonerum_brevifolia,epiphyte,5,2,3,7,6,9
-campylonerum_brevifolia,epiphyte,5,3,1,9,10,11
-campylonerum_brevifolia,epiphyte,5,2,2,14,8,8
-campylonerum_brevifolia,epiphyte,5,2,3,10,10,9
-campylonerum_brevifolia,epiphyte,6,1,1,10,6,8
-campylonerum_brevifolia,epiphyte,6,1,2,6,7,6
-campylonerum_brevifolia,epiphyte,6,1,3,7,7,6
-campylonerum_brevifolia,epiphyte,6,2,1,9,6,5
-campylonerum_brevifolia,epiphyte,6,2,2,8,4,9
-campylonerum_brevifolia,epiphyte,6,2,3,9,6,8
-campylonerum_brevifolia,epiphyte,6,3,1,7,6,7
-campylonerum_brevifolia,epiphyte,6,2,2,7,6,8
-campylonerum_brevifolia,epiphyte,6,2,3,9,4,9
-asplenium_auritum,epiphyte,1,1,1,4,3,4
-asplenium_auritum,epiphyte,1,1,2,4,2,4
-asplenium_auritum,epiphyte,1,1,3,8,4,4
-asplenium_auritum,epiphyte,1,2,1,5,9,4
-asplenium_auritum,epiphyte,1,2,2,5,5,7
-asplenium_auritum,epiphyte,1,2,3,7,5,6
-asplenium_auritum,epiphyte,1,3,1,3,6,4
-asplenium_auritum,epiphyte,1,3,2,4,4,5
-asplenium_auritum,epiphyte,1,3,3,5,5,1
-asplenium_auritum,epiphyte,2,1,1,6,5,2
-asplenium_auritum,epiphyte,2,1,2,3,1,4
-asplenium_auritum,epiphyte,2,1,3,7,3,5
-asplenium_auritum,epiphyte,2,2,1,4,2,4
-asplenium_auritum,epiphyte,2,2,2,4,4,5
-asplenium_auritum,epiphyte,2,2,3,8,9,4
-asplenium_auritum,epiphyte,2,3,1,8,7,7
-asplenium_auritum,epiphyte,2,3,2,6,7,6
-asplenium_auritum,epiphyte,2,3,3,6,5,4
-asplenium_auritum,epiphyte,3,1,1,3,3,5
-asplenium_auritum,epiphyte,3,1,2,2,3,3
-asplenium_auritum,epiphyte,3,1,3,2,3,4
-asplenium_auritum,epiphyte,3,2,1,2,2,4
-asplenium_auritum,epiphyte,3,2,2,2,3,3
-asplenium_auritum,epiphyte,3,2,3,3,2,3
-asplenium_auritum,epiphyte,3,3,1,3,4,3
-asplenium_auritum,epiphyte,3,3,2,2,2,3
-asplenium_auritum,epiphyte,3,3,3,4,3,2
-asplenium_auritum,epiphyte,4,1,1,7,9,8
-asplenium_auritum,epiphyte,4,1,2,8,9,10
-asplenium_auritum,epiphyte,4,1,3,8,6,14
-asplenium_auritum,epiphyte,4,2,1,9,8,9
-asplenium_auritum,epiphyte,4,2,2,11,8,7
-asplenium_auritum,epiphyte,4,2,3,7,9,11
-asplenium_auritum,epiphyte,4,3,1,9,9,10
-asplenium_auritum,epiphyte,4,2,2,9,11,9
-asplenium_auritum,epiphyte,4,2,3,8,8,10
-asplenium_auritum,epiphyte,5,1,1,5,5,4
-asplenium_auritum,epiphyte,5,1,2,4,4,6
-asplenium_auritum,epiphyte,5,1,3,4,8,4
-asplenium_auritum,epiphyte,5,2,1,5,5,7
-asplenium_auritum,epiphyte,5,2,2,5,4,3
-asplenium_auritum,epiphyte,5,2,3,2,5,4
-asplenium_auritum,epiphyte,5,3,1,4,4,6
-asplenium_auritum,epiphyte,5,2,2,7,8,6
-asplenium_auritum,epiphyte,5,2,3,4,6,4
-asplenium_auritum,epiphyte,6,1,1,6,5,4
-asplenium_auritum,epiphyte,6,1,2,3,7,5
-asplenium_auritum,epiphyte,6,1,3,6,4,4
-asplenium_auritum,epiphyte,6,2,1,4,6,6
-asplenium_auritum,epiphyte,6,2,2,4,6,4
-asplenium_auritum,epiphyte,6,2,3,3,5,6
-asplenium_auritum,epiphyte,6,3,1,6,4,3
-asplenium_auritum,epiphyte,6,2,2,6,5,4
-asplenium_auritum,epiphyte,6,2,3,6,5,4
-lomariopsis_japurensis,hemi-epiphyte,1,1,1,6,4,4
-lomariopsis_japurensis,hemi-epiphyte,1,1,2,5,5,5
-lomariopsis_japurensis,hemi-epiphyte,1,1,3,3,5,5
-lomariopsis_japurensis,hemi-epiphyte,1,2,1,6,6,6
-lomariopsis_japurensis,hemi-epiphyte,1,2,2,5,6,5
-lomariopsis_japurensis,hemi-epiphyte,1,2,3,5,5,4
-lomariopsis_japurensis,hemi-epiphyte,1,3,1,3,5,5
-lomariopsis_japurensis,hemi-epiphyte,1,3,2,6,3,6
-lomariopsis_japurensis,hemi-epiphyte,1,3,3,4,4,2
-lomariopsis_japurensis,hemi-epiphyte,2,1,1,6,6,4
-lomariopsis_japurensis,hemi-epiphyte,2,1,2,5,7,4
-lomariopsis_japurensis,hemi-epiphyte,2,1,3,5,6,5
-lomariopsis_japurensis,hemi-epiphyte,2,2,1,7,7,7
-lomariopsis_japurensis,hemi-epiphyte,2,2,2,7,6,8
-lomariopsis_japurensis,hemi-epiphyte,2,2,3,5,6,5
-lomariopsis_japurensis,hemi-epiphyte,2,3,1,6,5,3
-lomariopsis_japurensis,hemi-epiphyte,2,3,2,6,7,8
-lomariopsis_japurensis,hemi-epiphyte,2,3,3,6,3,7
-lomariopsis_japurensis,hemi-epiphyte,3,1,1,8,8,7
-lomariopsis_japurensis,hemi-epiphyte,3,1,2,6,8,7
-lomariopsis_japurensis,hemi-epiphyte,3,1,3,6,8,6
-lomariopsis_japurensis,hemi-epiphyte,3,2,1,4,5,4
-lomariopsis_japurensis,hemi-epiphyte,3,2,2,4,8,4
-lomariopsis_japurensis,hemi-epiphyte,3,2,3,6,8,6
-lomariopsis_japurensis,hemi-epiphyte,3,3,1,4,6,5
-lomariopsis_japurensis,hemi-epiphyte,3,3,2,5,6,4
-lomariopsis_japurensis,hemi-epiphyte,3,3,3,6,7,4
-lomariopsis_japurensis,hemi-epiphyte,4,1,1,6,5,4
-lomariopsis_japurensis,hemi-epiphyte,4,1,2,5,5,6
-lomariopsis_japurensis,hemi-epiphyte,4,1,3,4,7,6
-lomariopsis_japurensis,hemi-epiphyte,4,2,1,8,6,8
-lomariopsis_japurensis,hemi-epiphyte,4,2,2,5,6,6
-lomariopsis_japurensis,hemi-epiphyte,4,2,3,5,7,6
-lomariopsis_japurensis,hemi-epiphyte,4,3,1,5,7,7
-lomariopsis_japurensis,hemi-epiphyte,4,2,2,5,6,6
-lomariopsis_japurensis,hemi-epiphyte,4,2,3,9,5,8
-lomariopsis_japurensis,hemi-epiphyte,5,1,1,6,6,4
-lomariopsis_japurensis,hemi-epiphyte,5,1,2,5,4,4
-lomariopsis_japurensis,hemi-epiphyte,5,1,3,4,4,4
-lomariopsis_japurensis,hemi-epiphyte,5,2,1,7,6,5
-lomariopsis_japurensis,hemi-epiphyte,5,2,2,6,4,5
-lomariopsis_japurensis,hemi-epiphyte,5,2,3,5,5,6
-lomariopsis_japurensis,hemi-epiphyte,5,3,1,2,3,7
-lomariopsis_japurensis,hemi-epiphyte,5,2,2,3,7,4
-lomariopsis_japurensis,hemi-epiphyte,5,2,3,5,7,6
-lomariopsis_japurensis,hemi-epiphyte,6,1,1,5,7,5
-lomariopsis_japurensis,hemi-epiphyte,6,1,2,5,5,6
-lomariopsis_japurensis,hemi-epiphyte,6,1,3,5,5,6
-lomariopsis_japurensis,hemi-epiphyte,6,2,1,4,4,5
-lomariopsis_japurensis,hemi-epiphyte,6,2,2,6,4,6
-lomariopsis_japurensis,hemi-epiphyte,6,2,3,7,6,4
-lomariopsis_japurensis,hemi-epiphyte,6,3,1,10,7,7
-lomariopsis_japurensis,hemi-epiphyte,6,2,2,7,6,5
-lomariopsis_japurensis,hemi-epiphyte,6,2,3,7,6,8
-thelypteris_dentata,terrestrial,1,1,1,17,20,19
-thelypteris_dentata,terrestrial,1,1,2,15,15,16
-thelypteris_dentata,terrestrial,1,1,3,18,14,12
-thelypteris_dentata,terrestrial,1,2,1,17,21,22
-thelypteris_dentata,terrestrial,1,2,2,18,22,21
-thelypteris_dentata,terrestrial,1,2,3,20,26,19
-thelypteris_dentata,terrestrial,1,3,1,19,19,22
-thelypteris_dentata,terrestrial,1,3,2,17,16,15
-thelypteris_dentata,terrestrial,1,3,3,12,16,18
-thelypteris_dentata,terrestrial,2,1,1,14,17,13
-thelypteris_dentata,terrestrial,2,1,2,11,10,16
-thelypteris_dentata,terrestrial,2,1,3,12,14,15
-thelypteris_dentata,terrestrial,2,2,1,18,12,14
-thelypteris_dentata,terrestrial,2,2,2,19,16,15
-thelypteris_dentata,terrestrial,2,2,3,19,19,22
-thelypteris_dentata,terrestrial,3,1,1,15,17,15
-thelypteris_dentata,terrestrial,3,1,2,16,17,13
-thelypteris_dentata,terrestrial,3,1,3,14,17,15
-thelypteris_dentata,terrestrial,3,2,1,16,19,16
-thelypteris_dentata,terrestrial,3,2,2,14,20,16
-thelypteris_dentata,terrestrial,3,2,3,16,18,20
-thelypteris_dentata,terrestrial,3,3,1,15,18,17
-thelypteris_dentata,terrestrial,3,3,2,14,18,17
-thelypteris_dentata,terrestrial,3,3,3,15,15,16
-thelypteris_dentata,terrestrial,4,1,1,19,20,18
-thelypteris_dentata,terrestrial,4,1,2,20,19,20
-thelypteris_dentata,terrestrial,4,1,3,21,20,19
-thelypteris_dentata,terrestrial,4,2,1,21,21,19
-thelypteris_dentata,terrestrial,4,2,2,18,19,19
-thelypteris_dentata,terrestrial,4,2,3,20,20,17
-thelypteris_dentata,terrestrial,4,3,1,18,17,19
-thelypteris_dentata,terrestrial,4,2,2,17,19,19
-thelypteris_dentata,terrestrial,4,2,3,17,18,17
-thelypteris_dentata,terrestrial,6,1,1,17,16,18
-thelypteris_dentata,terrestrial,6,1,2,15,16,18
-thelypteris_dentata,terrestrial,6,1,3,18,16,17
-thelypteris_dentata,terrestrial,6,2,1,17,18,20
-thelypteris_dentata,terrestrial,6,2,2,18,19,19
-thelypteris_dentata,terrestrial,6,2,3,18,17,19
-thelypteris_dentata,terrestrial,6,3,1,16,15,18
-thelypteris_dentata,terrestrial,6,2,2,17,18,20
-thelypteris_dentata,terrestrial,6,2,3,19,20,16
+species,niche,plant_no,disk,region,sto1,sto2,sto3,fov_mm2
+blechnum_occidentale ,terrestrial,1,1,1,3,5,7,0.16
+blechnum_occidentale ,terrestrial,1,1,2,6,3,5,0.16
+blechnum_occidentale ,terrestrial,1,1,3,5,8,5,0.16
+blechnum_occidentale ,terrestrial,1,2,1,4,5,5,0.16
+blechnum_occidentale ,terrestrial,1,2,2,7,5,5,0.16
+blechnum_occidentale ,terrestrial,1,2,3,7,6,6,0.16
+blechnum_occidentale ,terrestrial,1,3,1,5,4,2,0.16
+blechnum_occidentale ,terrestrial,1,3,2,4,1,3,0.16
+blechnum_occidentale ,terrestrial,1,3,3,6,0,6,0.16
+blechnum_occidentale ,terrestrial,2,1,1,7,7,3,0.16
+blechnum_occidentale ,terrestrial,2,1,2,6,6,0,0.16
+blechnum_occidentale ,terrestrial,2,1,3,2,6,2,0.16
+blechnum_occidentale ,terrestrial,2,2,1,5,7,2,0.16
+blechnum_occidentale ,terrestrial,2,2,2,2,4,6,0.16
+blechnum_occidentale ,terrestrial,2,2,3,5,4,4,0.16
+blechnum_occidentale ,terrestrial,2,3,1,7,5,9,0.16
+blechnum_occidentale ,terrestrial,2,3,2,6,4,8,0.16
+blechnum_occidentale ,terrestrial,2,3,3,6,7,5,0.16
+blechnum_occidentale ,terrestrial,3,1,1,7,4,8,0.16
+blechnum_occidentale ,terrestrial,3,1,2,4,11,8,0.16
+blechnum_occidentale ,terrestrial,3,1,3,9,5,10,0.16
+blechnum_occidentale ,terrestrial,3,2,1,9,7,7,0.16
+blechnum_occidentale ,terrestrial,3,2,2,9,9,6,0.16
+blechnum_occidentale ,terrestrial,3,2,3,6,7,7,0.16
+blechnum_occidentale ,terrestrial,3,3,1,8,8,7,0.16
+blechnum_occidentale ,terrestrial,3,3,2,6,5,8,0.16
+blechnum_occidentale ,terrestrial,3,3,3,6,9,7,0.16
+blechnum_occidentale ,terrestrial,4,1,1,6,6,6,0.16
+blechnum_occidentale ,terrestrial,4,1,2,5,6,6,0.16
+blechnum_occidentale ,terrestrial,4,1,3,4,8,7,0.16
+blechnum_occidentale ,terrestrial,4,2,1,3,1,6,0.16
+blechnum_occidentale ,terrestrial,4,2,2,5,6,4,0.16
+blechnum_occidentale ,terrestrial,4,2,3,5,4,3,0.16
+blechnum_occidentale ,terrestrial,4,3,1,6,5,0,0.16
+blechnum_occidentale ,terrestrial,4,2,2,8,1,5,0.16
+blechnum_occidentale ,terrestrial,4,2,3,7,4,1,0.16
+blechnum_occidentale ,terrestrial,5,1,1,5,5,6,0.16
+blechnum_occidentale ,terrestrial,5,1,2,8,8,6,0.16
+blechnum_occidentale ,terrestrial,5,1,3,7,8,5,0.16
+blechnum_occidentale ,terrestrial,5,2,1,8,3,8,0.16
+blechnum_occidentale ,terrestrial,5,2,2,9,7,7,0.16
+blechnum_occidentale ,terrestrial,5,2,3,6,9,9,0.16
+blechnum_occidentale ,terrestrial,5,3,1,4,6,7,0.16
+blechnum_occidentale ,terrestrial,5,2,2,5,10,7,0.16
+blechnum_occidentale ,terrestrial,5,2,3,9,8,8,0.16
+blechnum_occidentale ,terrestrial,6,1,1,14,11,11,0.16
+blechnum_occidentale ,terrestrial,6,1,2,8,7,11,0.16
+blechnum_occidentale ,terrestrial,6,1,3,10,9,7,0.16
+blechnum_occidentale ,terrestrial,6,2,1,11,9,6,0.16
+blechnum_occidentale ,terrestrial,6,2,2,8,11,8,0.16
+blechnum_occidentale ,terrestrial,6,2,3,7,6,9,0.16
+blechnum_occidentale ,terrestrial,6,3,1,9,9,4,0.16
+blechnum_occidentale ,terrestrial,6,2,2,12,12,7,0.16
+blechnum_occidentale ,terrestrial,6,2,3,6,7,11,0.16
+salpichlaena_volubilis,terrestrial,1,1,1,3,4,5,0.16
+salpichlaena_volubilis,terrestrial,1,1,2,3,4,2,0.16
+salpichlaena_volubilis,terrestrial,1,1,3,3,3,4,0.16
+salpichlaena_volubilis,terrestrial,1,2,1,4,3,2,0.16
+salpichlaena_volubilis,terrestrial,1,2,2,2,0,4,0.16
+salpichlaena_volubilis,terrestrial,1,2,3,1,2,2,0.16
+salpichlaena_volubilis,terrestrial,1,3,1,5,0,4,0.16
+salpichlaena_volubilis,terrestrial,1,3,2,4,5,3,0.16
+salpichlaena_volubilis,terrestrial,1,3,3,2,2,6,0.16
+salpichlaena_volubilis,terrestrial,2,1,1,7,4,5,0.16
+salpichlaena_volubilis,terrestrial,2,1,2,3,4,4,0.16
+salpichlaena_volubilis,terrestrial,2,1,3,2,3,3,0.16
+salpichlaena_volubilis,terrestrial,2,2,1,3,2,3,0.16
+salpichlaena_volubilis,terrestrial,2,2,2,3,5,1,0.16
+salpichlaena_volubilis,terrestrial,2,2,3,1,3,3,0.16
+salpichlaena_volubilis,terrestrial,2,3,1,3,3,2,0.16
+salpichlaena_volubilis,terrestrial,2,3,2,5,4,2,0.16
+salpichlaena_volubilis,terrestrial,2,3,3,4,2,4,0.16
+salpichlaena_volubilis,terrestrial,3,1,1,3,4,5,0.16
+salpichlaena_volubilis,terrestrial,3,1,2,5,2,4,0.16
+salpichlaena_volubilis,terrestrial,3,1,3,2,3,3,0.16
+salpichlaena_volubilis,terrestrial,3,2,1,5,3,1,0.16
+salpichlaena_volubilis,terrestrial,3,2,2,5,8,5,0.16
+salpichlaena_volubilis,terrestrial,3,2,3,5,2,5,0.16
+salpichlaena_volubilis,terrestrial,3,3,1,3,2,3,0.16
+salpichlaena_volubilis,terrestrial,3,3,2,4,3,5,0.16
+salpichlaena_volubilis,terrestrial,3,3,3,4,6,4,0.16
+salpichlaena_volubilis,terrestrial,4,1,1,2,3,4,0.16
+salpichlaena_volubilis,terrestrial,4,1,2,3,4,5,0.16
+salpichlaena_volubilis,terrestrial,4,1,3,3,5,4,0.16
+salpichlaena_volubilis,terrestrial,4,2,1,3,4,6,0.16
+salpichlaena_volubilis,terrestrial,4,2,2,2,3,3,0.16
+salpichlaena_volubilis,terrestrial,4,2,3,6,5,4,0.16
+salpichlaena_volubilis,terrestrial,4,3,1,5,5,4,0.16
+salpichlaena_volubilis,terrestrial,4,2,2,4,4,6,0.16
+salpichlaena_volubilis,terrestrial,4,2,3,3,4,7,0.16
+diplazium_straitastrum,terrestrial,1,1,1,19,18,20,0.16
+diplazium_straitastrum,terrestrial,1,1,2,16,17,20,0.16
+diplazium_straitastrum,terrestrial,1,1,3,18,17,17,0.16
+diplazium_straitastrum,terrestrial,1,2,1,12,15,17,0.16
+diplazium_straitastrum,terrestrial,1,2,2,16,18,14,0.16
+diplazium_straitastrum,terrestrial,1,2,3,18,16,17,0.16
+diplazium_straitastrum,terrestrial,1,3,1,22,22,20,0.16
+diplazium_straitastrum,terrestrial,1,3,2,20,20,19,0.16
+diplazium_straitastrum,terrestrial,1,3,3,18,19,18,0.16
+diplazium_straitastrum,terrestrial,2,1,1,16,20,16,0.16
+diplazium_straitastrum,terrestrial,2,1,2,13,16,17,0.16
+diplazium_straitastrum,terrestrial,2,1,3,13,14,16,0.16
+diplazium_straitastrum,terrestrial,2,2,1,16,20,18,0.16
+diplazium_straitastrum,terrestrial,2,2,2,12,15,16,0.16
+diplazium_straitastrum,terrestrial,2,2,3,19,19,16,0.16
+diplazium_straitastrum,terrestrial,2,3,1,16,19,18,0.16
+diplazium_straitastrum,terrestrial,2,3,2,18,18,18,0.16
+diplazium_straitastrum,terrestrial,2,3,3,20,22,21,0.16
+diplazium_straitastrum,terrestrial,3,1,1,18,16,17,0.16
+diplazium_straitastrum,terrestrial,3,1,2,14,17,16,0.16
+diplazium_straitastrum,terrestrial,3,1,3,16,17,16,0.16
+diplazium_straitastrum,terrestrial,3,2,1,17,14,18,0.16
+diplazium_straitastrum,terrestrial,3,2,2,18,19,17,0.16
+diplazium_straitastrum,terrestrial,3,2,3,19,19,18,0.16
+diplazium_straitastrum,terrestrial,3,3,1,18,15,17,0.16
+diplazium_straitastrum,terrestrial,3,3,2,19,20,16,0.16
+diplazium_straitastrum,terrestrial,3,3,3,18,18,17,0.16
+diplazium_straitastrum,terrestrial,4,1,1,20,20,20,0.16
+diplazium_straitastrum,terrestrial,4,1,2,18,17,19,0.16
+diplazium_straitastrum,terrestrial,4,1,3,18,16,19,0.16
+diplazium_straitastrum,terrestrial,4,2,1,12,19,20,0.16
+diplazium_straitastrum,terrestrial,4,2,2,18,19,16,0.16
+diplazium_straitastrum,terrestrial,4,2,3,18,18,17,0.16
+diplazium_straitastrum,terrestrial,4,3,1,20,16,20,0.16
+diplazium_straitastrum,terrestrial,4,2,2,19,19,20,0.16
+diplazium_straitastrum,terrestrial,4,2,3,18,18,19,0.16
+diplazium_straitastrum,terrestrial,5,1,1,12,15,19,0.16
+diplazium_straitastrum,terrestrial,5,1,2,19,14,19,0.16
+diplazium_straitastrum,terrestrial,5,1,3,18,17,18,0.16
+diplazium_straitastrum,terrestrial,5,2,1,16,16,15,0.16
+diplazium_straitastrum,terrestrial,5,2,2,15,18,16,0.16
+diplazium_straitastrum,terrestrial,5,2,3,16,18,17,0.16
+diplazium_straitastrum,terrestrial,5,3,1,18,16,15,0.16
+diplazium_straitastrum,terrestrial,5,2,2,15,12,18,0.16
+diplazium_straitastrum,terrestrial,5,2,3,18,19,16,0.16
+diplazium_straitastrum,terrestrial,6,1,1,19,14,18,0.16
+diplazium_straitastrum,terrestrial,6,1,2,17,17,14,0.16
+diplazium_straitastrum,terrestrial,6,1,3,16,19,18,0.16
+diplazium_straitastrum,terrestrial,6,2,1,20,22,19,0.16
+diplazium_straitastrum,terrestrial,6,2,2,20,21,18,0.16
+diplazium_straitastrum,terrestrial,6,2,3,17,22,18,0.16
+diplazium_straitastrum,terrestrial,6,3,1,14,12,16,0.16
+diplazium_straitastrum,terrestrial,6,2,2,16,18,12,0.16
+diplazium_straitastrum,terrestrial,6,2,3,14,20,21,0.16
+campylonerum_brevifolia,epiphyte,1,1,1,7,6,8,0.16
+campylonerum_brevifolia,epiphyte,1,1,2,6,7,10,0.16
+campylonerum_brevifolia,epiphyte,1,1,3,9,7,7,0.16
+campylonerum_brevifolia,epiphyte,1,2,1,7,6,8,0.16
+campylonerum_brevifolia,epiphyte,1,2,2,5,8,8,0.16
+campylonerum_brevifolia,epiphyte,1,2,3,6,7,6,0.16
+campylonerum_brevifolia,epiphyte,1,3,1,9,8,7,0.16
+campylonerum_brevifolia,epiphyte,1,3,2,8,4,7,0.16
+campylonerum_brevifolia,epiphyte,1,3,3,6,5,9,0.16
+campylonerum_brevifolia,epiphyte,2,1,1,5,6,5,0.16
+campylonerum_brevifolia,epiphyte,2,1,2,6,6,5,0.16
+campylonerum_brevifolia,epiphyte,2,1,3,4,6,5,0.16
+campylonerum_brevifolia,epiphyte,2,2,1,6,6,5,0.16
+campylonerum_brevifolia,epiphyte,2,2,2,8,6,5,0.16
+campylonerum_brevifolia,epiphyte,2,2,3,6,8,5,0.16
+campylonerum_brevifolia,epiphyte,2,3,1,10,5,4,0.16
+campylonerum_brevifolia,epiphyte,2,3,2,6,8,7,0.16
+campylonerum_brevifolia,epiphyte,2,3,3,9,5,6,0.16
+campylonerum_brevifolia,epiphyte,3,1,1,9,8,9,0.16
+campylonerum_brevifolia,epiphyte,3,1,2,7,7,7,0.16
+campylonerum_brevifolia,epiphyte,3,1,3,7,6,12,0.16
+campylonerum_brevifolia,epiphyte,3,2,1,11,7,10,0.16
+campylonerum_brevifolia,epiphyte,3,2,2,9,9,9,0.16
+campylonerum_brevifolia,epiphyte,3,2,3,8,9,7,0.16
+campylonerum_brevifolia,epiphyte,3,3,1,8,9,5,0.16
+campylonerum_brevifolia,epiphyte,3,3,2,8,10,8,0.16
+campylonerum_brevifolia,epiphyte,3,3,3,9,7,8,0.16
+campylonerum_brevifolia,epiphyte,4,1,1,7,8,9,0.16
+campylonerum_brevifolia,epiphyte,4,1,2,7,8,10,0.16
+campylonerum_brevifolia,epiphyte,4,1,3,9,11,8,0.16
+campylonerum_brevifolia,epiphyte,4,2,1,5,9,8,0.16
+campylonerum_brevifolia,epiphyte,4,2,2,12,6,11,0.16
+campylonerum_brevifolia,epiphyte,4,2,3,11,9,7,0.16
+campylonerum_brevifolia,epiphyte,4,3,1,8,9,11,0.16
+campylonerum_brevifolia,epiphyte,4,2,2,9,9,6,0.16
+campylonerum_brevifolia,epiphyte,4,2,3,7,6,8,0.16
+campylonerum_brevifolia,epiphyte,5,1,1,9,8,7,0.16
+campylonerum_brevifolia,epiphyte,5,1,2,7,8,6,0.16
+campylonerum_brevifolia,epiphyte,5,1,3,9,6,7,0.16
+campylonerum_brevifolia,epiphyte,5,2,1,8,7,6,0.16
+campylonerum_brevifolia,epiphyte,5,2,2,6,7,8,0.16
+campylonerum_brevifolia,epiphyte,5,2,3,7,6,9,0.16
+campylonerum_brevifolia,epiphyte,5,3,1,9,10,11,0.16
+campylonerum_brevifolia,epiphyte,5,2,2,14,8,8,0.16
+campylonerum_brevifolia,epiphyte,5,2,3,10,10,9,0.16
+campylonerum_brevifolia,epiphyte,6,1,1,10,6,8,0.16
+campylonerum_brevifolia,epiphyte,6,1,2,6,7,6,0.16
+campylonerum_brevifolia,epiphyte,6,1,3,7,7,6,0.16
+campylonerum_brevifolia,epiphyte,6,2,1,9,6,5,0.16
+campylonerum_brevifolia,epiphyte,6,2,2,8,4,9,0.16
+campylonerum_brevifolia,epiphyte,6,2,3,9,6,8,0.16
+campylonerum_brevifolia,epiphyte,6,3,1,7,6,7,0.16
+campylonerum_brevifolia,epiphyte,6,2,2,7,6,8,0.16
+campylonerum_brevifolia,epiphyte,6,2,3,9,4,9,0.16
+asplenium_auritum,epiphyte,1,1,1,4,3,4,0.16
+asplenium_auritum,epiphyte,1,1,2,4,2,4,0.16
+asplenium_auritum,epiphyte,1,1,3,8,4,4,0.16
+asplenium_auritum,epiphyte,1,2,1,5,9,4,0.16
+asplenium_auritum,epiphyte,1,2,2,5,5,7,0.16
+asplenium_auritum,epiphyte,1,2,3,7,5,6,0.16
+asplenium_auritum,epiphyte,1,3,1,3,6,4,0.16
+asplenium_auritum,epiphyte,1,3,2,4,4,5,0.16
+asplenium_auritum,epiphyte,1,3,3,5,5,1,0.16
+asplenium_auritum,epiphyte,2,1,1,6,5,2,0.16
+asplenium_auritum,epiphyte,2,1,2,3,1,4,0.16
+asplenium_auritum,epiphyte,2,1,3,7,3,5,0.16
+asplenium_auritum,epiphyte,2,2,1,4,2,4,0.16
+asplenium_auritum,epiphyte,2,2,2,4,4,5,0.16
+asplenium_auritum,epiphyte,2,2,3,8,9,4,0.16
+asplenium_auritum,epiphyte,2,3,1,8,7,7,0.16
+asplenium_auritum,epiphyte,2,3,2,6,7,6,0.16
+asplenium_auritum,epiphyte,2,3,3,6,5,4,0.16
+asplenium_auritum,epiphyte,3,1,1,3,3,5,0.16
+asplenium_auritum,epiphyte,3,1,2,2,3,3,0.16
+asplenium_auritum,epiphyte,3,1,3,2,3,4,0.16
+asplenium_auritum,epiphyte,3,2,1,2,2,4,0.16
+asplenium_auritum,epiphyte,3,2,2,2,3,3,0.16
+asplenium_auritum,epiphyte,3,2,3,3,2,3,0.16
+asplenium_auritum,epiphyte,3,3,1,3,4,3,0.16
+asplenium_auritum,epiphyte,3,3,2,2,2,3,0.16
+asplenium_auritum,epiphyte,3,3,3,4,3,2,0.16
+asplenium_auritum,epiphyte,4,1,1,7,9,8,0.16
+asplenium_auritum,epiphyte,4,1,2,8,9,10,0.16
+asplenium_auritum,epiphyte,4,1,3,8,6,14,0.16
+asplenium_auritum,epiphyte,4,2,1,9,8,9,0.16
+asplenium_auritum,epiphyte,4,2,2,11,8,7,0.16
+asplenium_auritum,epiphyte,4,2,3,7,9,11,0.16
+asplenium_auritum,epiphyte,4,3,1,9,9,10,0.16
+asplenium_auritum,epiphyte,4,2,2,9,11,9,0.16
+asplenium_auritum,epiphyte,4,2,3,8,8,10,0.16
+asplenium_auritum,epiphyte,5,1,1,5,5,4,0.16
+asplenium_auritum,epiphyte,5,1,2,4,4,6,0.16
+asplenium_auritum,epiphyte,5,1,3,4,8,4,0.16
+asplenium_auritum,epiphyte,5,2,1,5,5,7,0.16
+asplenium_auritum,epiphyte,5,2,2,5,4,3,0.16
+asplenium_auritum,epiphyte,5,2,3,2,5,4,0.16
+asplenium_auritum,epiphyte,5,3,1,4,4,6,0.16
+asplenium_auritum,epiphyte,5,2,2,7,8,6,0.16
+asplenium_auritum,epiphyte,5,2,3,4,6,4,0.16
+asplenium_auritum,epiphyte,6,1,1,6,5,4,0.16
+asplenium_auritum,epiphyte,6,1,2,3,7,5,0.16
+asplenium_auritum,epiphyte,6,1,3,6,4,4,0.16
+asplenium_auritum,epiphyte,6,2,1,4,6,6,0.16
+asplenium_auritum,epiphyte,6,2,2,4,6,4,0.16
+asplenium_auritum,epiphyte,6,2,3,3,5,6,0.16
+asplenium_auritum,epiphyte,6,3,1,6,4,3,0.16
+asplenium_auritum,epiphyte,6,2,2,6,5,4,0.16
+asplenium_auritum,epiphyte,6,2,3,6,5,4,0.16
+lomariopsis_japurensis,hemi-epiphyte,1,1,1,6,4,4,0.16
+lomariopsis_japurensis,hemi-epiphyte,1,1,2,5,5,5,0.16
+lomariopsis_japurensis,hemi-epiphyte,1,1,3,3,5,5,0.16
+lomariopsis_japurensis,hemi-epiphyte,1,2,1,6,6,6,0.16
+lomariopsis_japurensis,hemi-epiphyte,1,2,2,5,6,5,0.16
+lomariopsis_japurensis,hemi-epiphyte,1,2,3,5,5,4,0.16
+lomariopsis_japurensis,hemi-epiphyte,1,3,1,3,5,5,0.16
+lomariopsis_japurensis,hemi-epiphyte,1,3,2,6,3,6,0.16
+lomariopsis_japurensis,hemi-epiphyte,1,3,3,4,4,2,0.16
+lomariopsis_japurensis,hemi-epiphyte,2,1,1,6,6,4,0.16
+lomariopsis_japurensis,hemi-epiphyte,2,1,2,5,7,4,0.16
+lomariopsis_japurensis,hemi-epiphyte,2,1,3,5,6,5,0.16
+lomariopsis_japurensis,hemi-epiphyte,2,2,1,7,7,7,0.16
+lomariopsis_japurensis,hemi-epiphyte,2,2,2,7,6,8,0.16
+lomariopsis_japurensis,hemi-epiphyte,2,2,3,5,6,5,0.16
+lomariopsis_japurensis,hemi-epiphyte,2,3,1,6,5,3,0.16
+lomariopsis_japurensis,hemi-epiphyte,2,3,2,6,7,8,0.16
+lomariopsis_japurensis,hemi-epiphyte,2,3,3,6,3,7,0.16
+lomariopsis_japurensis,hemi-epiphyte,3,1,1,8,8,7,0.16
+lomariopsis_japurensis,hemi-epiphyte,3,1,2,6,8,7,0.16
+lomariopsis_japurensis,hemi-epiphyte,3,1,3,6,8,6,0.16
+lomariopsis_japurensis,hemi-epiphyte,3,2,1,4,5,4,0.16
+lomariopsis_japurensis,hemi-epiphyte,3,2,2,4,8,4,0.16
+lomariopsis_japurensis,hemi-epiphyte,3,2,3,6,8,6,0.16
+lomariopsis_japurensis,hemi-epiphyte,3,3,1,4,6,5,0.16
+lomariopsis_japurensis,hemi-epiphyte,3,3,2,5,6,4,0.16
+lomariopsis_japurensis,hemi-epiphyte,3,3,3,6,7,4,0.16
+lomariopsis_japurensis,hemi-epiphyte,4,1,1,6,5,4,0.16
+lomariopsis_japurensis,hemi-epiphyte,4,1,2,5,5,6,0.16
+lomariopsis_japurensis,hemi-epiphyte,4,1,3,4,7,6,0.16
+lomariopsis_japurensis,hemi-epiphyte,4,2,1,8,6,8,0.16
+lomariopsis_japurensis,hemi-epiphyte,4,2,2,5,6,6,0.16
+lomariopsis_japurensis,hemi-epiphyte,4,2,3,5,7,6,0.16
+lomariopsis_japurensis,hemi-epiphyte,4,3,1,5,7,7,0.16
+lomariopsis_japurensis,hemi-epiphyte,4,2,2,5,6,6,0.16
+lomariopsis_japurensis,hemi-epiphyte,4,2,3,9,5,8,0.16
+lomariopsis_japurensis,hemi-epiphyte,5,1,1,6,6,4,0.16
+lomariopsis_japurensis,hemi-epiphyte,5,1,2,5,4,4,0.16
+lomariopsis_japurensis,hemi-epiphyte,5,1,3,4,4,4,0.16
+lomariopsis_japurensis,hemi-epiphyte,5,2,1,7,6,5,0.16
+lomariopsis_japurensis,hemi-epiphyte,5,2,2,6,4,5,0.16
+lomariopsis_japurensis,hemi-epiphyte,5,2,3,5,5,6,0.16
+lomariopsis_japurensis,hemi-epiphyte,5,3,1,2,3,7,0.16
+lomariopsis_japurensis,hemi-epiphyte,5,2,2,3,7,4,0.16
+lomariopsis_japurensis,hemi-epiphyte,5,2,3,5,7,6,0.16
+lomariopsis_japurensis,hemi-epiphyte,6,1,1,5,7,5,0.16
+lomariopsis_japurensis,hemi-epiphyte,6,1,2,5,5,6,0.16
+lomariopsis_japurensis,hemi-epiphyte,6,1,3,5,5,6,0.16
+lomariopsis_japurensis,hemi-epiphyte,6,2,1,4,4,5,0.16
+lomariopsis_japurensis,hemi-epiphyte,6,2,2,6,4,6,0.16
+lomariopsis_japurensis,hemi-epiphyte,6,2,3,7,6,4,0.16
+lomariopsis_japurensis,hemi-epiphyte,6,3,1,10,7,7,0.16
+lomariopsis_japurensis,hemi-epiphyte,6,2,2,7,6,5,0.16
+lomariopsis_japurensis,hemi-epiphyte,6,2,3,7,6,8,0.16
+thelypteris_dentata,terrestrial,1,1,1,17,20,19,0.16
+thelypteris_dentata,terrestrial,1,1,2,15,15,16,0.16
+thelypteris_dentata,terrestrial,1,1,3,18,14,12,0.16
+thelypteris_dentata,terrestrial,1,2,1,17,21,22,0.16
+thelypteris_dentata,terrestrial,1,2,2,18,22,21,0.16
+thelypteris_dentata,terrestrial,1,2,3,20,26,19,0.16
+thelypteris_dentata,terrestrial,1,3,1,19,19,22,0.16
+thelypteris_dentata,terrestrial,1,3,2,17,16,15,0.16
+thelypteris_dentata,terrestrial,1,3,3,12,16,18,0.16
+thelypteris_dentata,terrestrial,2,1,1,14,17,13,0.16
+thelypteris_dentata,terrestrial,2,1,2,11,10,16,0.16
+thelypteris_dentata,terrestrial,2,1,3,12,14,15,0.16
+thelypteris_dentata,terrestrial,2,2,1,18,12,14,0.16
+thelypteris_dentata,terrestrial,2,2,2,19,16,15,0.16
+thelypteris_dentata,terrestrial,2,2,3,19,19,22,0.16
+thelypteris_dentata,terrestrial,3,1,1,15,17,15,0.16
+thelypteris_dentata,terrestrial,3,1,2,16,17,13,0.16
+thelypteris_dentata,terrestrial,3,1,3,14,17,15,0.16
+thelypteris_dentata,terrestrial,3,2,1,16,19,16,0.16
+thelypteris_dentata,terrestrial,3,2,2,14,20,16,0.16
+thelypteris_dentata,terrestrial,3,2,3,16,18,20,0.16
+thelypteris_dentata,terrestrial,3,3,1,15,18,17,0.16
+thelypteris_dentata,terrestrial,3,3,2,14,18,17,0.16
+thelypteris_dentata,terrestrial,3,3,3,15,15,16,0.16
+thelypteris_dentata,terrestrial,4,1,1,19,20,18,0.16
+thelypteris_dentata,terrestrial,4,1,2,20,19,20,0.16
+thelypteris_dentata,terrestrial,4,1,3,21,20,19,0.16
+thelypteris_dentata,terrestrial,4,2,1,21,21,19,0.16
+thelypteris_dentata,terrestrial,4,2,2,18,19,19,0.16
+thelypteris_dentata,terrestrial,4,2,3,20,20,17,0.16
+thelypteris_dentata,terrestrial,4,3,1,18,17,19,0.16
+thelypteris_dentata,terrestrial,4,2,2,17,19,19,0.16
+thelypteris_dentata,terrestrial,4,2,3,17,18,17,0.16
+thelypteris_dentata,terrestrial,6,1,1,17,16,18,0.16
+thelypteris_dentata,terrestrial,6,1,2,15,16,18,0.16
+thelypteris_dentata,terrestrial,6,1,3,18,16,17,0.16
+thelypteris_dentata,terrestrial,6,2,1,17,18,20,0.16
+thelypteris_dentata,terrestrial,6,2,2,18,19,19,0.16
+thelypteris_dentata,terrestrial,6,2,3,18,17,19,0.16
+thelypteris_dentata,terrestrial,6,3,1,16,15,18,0.16
+thelypteris_dentata,terrestrial,6,2,2,17,18,20,0.16
+thelypteris_dentata,terrestrial,6,2,3,19,20,16,0.16
+polybotrya_osmundacea,climber,1,1,1,112,106,92,2.57
+polybotrya_osmundacea,climber,1,2,1,120,141,111,2.57
+polybotrya_osmundacea,climber,1,3,1,119,142,92,2.57
+polybotrya_osmundacea,climber,2,1,1,103,109,129,2.57
+polybotrya_osmundacea,climber,2,2,1,91,98,119,2.57
+polybotrya_osmundacea,climber,2,3,1,91,96,106,2.57
+polybotrya_osmundacea,climber,3,1,1,100,90,106,2.57
+polybotrya_osmundacea,climber,3,2,1,87,119,111,2.57
+polybotrya_osmundacea,climber,3,3,1,99,84,96,2.57
+polybotrya_osmundacea,climber,4,1,1,120,132,119,2.57
+polybotrya_osmundacea,climber,4,2,1,120,133,122,2.57
+polybotrya_osmundacea,climber,4,3,1,117,136,136,2.57
+polybotrya_osmundacea,climber,5,1,1,136,116,113,2.57
+polybotrya_osmundacea,climber,5,2,1,93,125,133,2.57
+polybotrya_osmundacea,climber,5,3,1,1219,126,127,2.57
+polybotrya_osmundacea,climber,6,1,1,97,95,110,2.57
+polybotrya_osmundacea,climber,6,2,1,94,105,92,2.57
+polybotrya_osmundacea,climber,6,3,1,102,94,122,2.57
+serpocaulon_loriciforme,epiphyte,6,1,1,7,4,4,0.16
+serpocaulon_loriciforme,epiphyte,6,1,2,5,4,7,0.16
+serpocaulon_loriciforme,epiphyte,6,1,3,9,3,6,0.16
+serpocaulon_loriciforme,epiphyte,6,2,1,7,4,6,0.16
+serpocaulon_loriciforme,epiphyte,6,2,2,5,5,7,0.16
+serpocaulon_loriciforme,epiphyte,6,2,3,5,5,9,0.16
+serpocaulon_loriciforme,epiphyte,6,3,1,8,8,8,0.16
+serpocaulon_loriciforme,epiphyte,6,3,2,7,7,6,0.16
+serpocaulon_loriciforme,epiphyte,6,3,3,7,8,8,0.16
+serpocaulon_loriciforme,epiphyte,9,1,1,7,7,6,0.16
+serpocaulon_loriciforme,epiphyte,9,1,2,6,5,8,0.16
+serpocaulon_loriciforme,epiphyte,9,1,3,7,6,7,0.16
+serpocaulon_loriciforme,epiphyte,9,2,1,8,5,7,0.16
+serpocaulon_loriciforme,epiphyte,9,2,2,7,7,6,0.16
+serpocaulon_loriciforme,epiphyte,9,2,3,6,6,7,0.16
+serpocaulon_loriciforme,epiphyte,9,3,1,8,11,8,0.16
+serpocaulon_loriciforme,epiphyte,9,3,2,8,8,9,0.16
+serpocaulon_loriciforme,epiphyte,9,3,3,10,6,6,0.16
+serpocaulon_loriciforme,epiphyte,10,1,1,5,4,6,0.16
+serpocaulon_loriciforme,epiphyte,10,1,2,5,6,4,0.16
+serpocaulon_loriciforme,epiphyte,10,1,3,6,6,8,0.16
+serpocaulon_loriciforme,epiphyte,10,2,1,8,7,7,0.16
+serpocaulon_loriciforme,epiphyte,10,2,2,6,7,5,0.16
+serpocaulon_loriciforme,epiphyte,10,2,3,9,7,6,0.16
+serpocaulon_loriciforme,epiphyte,10,3,1,7,6,6,0.16
+serpocaulon_loriciforme,epiphyte,10,3,2,7,5,5,0.16
+serpocaulon_loriciforme,epiphyte,10,3,3,5,6,4,0.16
+serpocaulon_loriciforme,epiphyte,12,1,1,8,8,6,0.16
+serpocaulon_loriciforme,epiphyte,12,1,2,6,8,6,0.16
+serpocaulon_loriciforme,epiphyte,12,1,3,7,6,7,0.16
+serpocaulon_loriciforme,epiphyte,12,2,1,7,8,8,0.16
+serpocaulon_loriciforme,epiphyte,12,2,2,7,7,9,0.16
+serpocaulon_loriciforme,epiphyte,12,2,3,6,8,6,0.16
+serpocaulon_loriciforme,epiphyte,12,3,1,7,9,10,0.16
+serpocaulon_loriciforme,epiphyte,12,2,2,10,10,9,0.16
+serpocaulon_loriciforme,epiphyte,12,2,3,6,8,9,0.16
+serpocaulon_loriciforme,epiphyte,5,1,1,10,11,12,0.16
+serpocaulon_loriciforme,epiphyte,5,1,2,6,9,6,0.16
+serpocaulon_loriciforme,epiphyte,5,1,3,8,7,8,0.16
+serpocaulon_loriciforme,epiphyte,5,2,1,9,7,11,0.16
+serpocaulon_loriciforme,epiphyte,5,2,2,8,9,5,0.16
+serpocaulon_loriciforme,epiphyte,5,2,3,10,8,6,0.16
+serpocaulon_loriciforme,epiphyte,5,3,1,8,6,8,0.16
+serpocaulon_loriciforme,epiphyte,5,2,2,6,7,7,0.16
+serpocaulon_loriciforme,epiphyte,5,2,3,8,8,6,0.16
+serpocaulon_loriciforme,epiphyte,4,1,1,7,8,9,0.16
+serpocaulon_loriciforme,epiphyte,4,1,2,10,7,6,0.16
+serpocaulon_loriciforme,epiphyte,4,1,3,6,10,5,0.16
+serpocaulon_loriciforme,epiphyte,4,2,1,8,10,12,0.16
+serpocaulon_loriciforme,epiphyte,4,2,2,9,11,12,0.16
+serpocaulon_loriciforme,epiphyte,4,2,3,9,10,8,0.16
+serpocaulon_loriciforme,epiphyte,4,3,1,9,10,10,0.16
+serpocaulon_loriciforme,epiphyte,4,2,2,8,9,10,0.16
+serpocaulon_loriciforme,epiphyte,4,2,3,9,9,11,0.16
+phlebodium_aurem,epiphyte,1,1,1,92,85,95,2.57
+phlebodium_aurem,epiphyte,1,2,1,95,93,108,2.57
+phlebodium_aurem,epiphyte,1,3,1,108,98,124,2.57
+phlebodium_aurem,epiphyte,2,1,1,96,131,92,2.57
+phlebodium_aurem,epiphyte,2,2,1,105,94,92,2.57
+phlebodium_aurem,epiphyte,2,3,1,100,92,101,2.57
+phlebodium_aurem,epiphyte,3,1,1,127,135,130,2.57
+phlebodium_aurem,epiphyte,3,2,1,133,142,134,2.57
+phlebodium_aurem,epiphyte,3,3,1,136,133,156,2.57
+phlebodium_aurem,epiphyte,4,1,1,134,124,110,2.57
+phlebodium_aurem,epiphyte,4,2,1,99,112,116,2.57
+phlebodium_aurem,epiphyte,4,3,1,113,97,94,2.57
+phlebodium_aurem,epiphyte,5,1,1,117,99,105,2.57
+phlebodium_aurem,epiphyte,5,2,1,137,117,128,2.57
+phlebodium_aurem,epiphyte,5,3,1,103,86,75,2.57
+phlebodium_aurem,epiphyte,6,1,1,120,110,102,2.57
+phlebodium_aurem,epiphyte,6,2,1,111,116,115,2.57
+phlebodium_aurem,epiphyte,6,3,1,120,119,104,2.57
+phlebodium_aurem,epiphyte,7,1,1,123,121,119,2.57
+phlebodium_aurem,epiphyte,7,2,1,110,106,110,2.57
+phlebodium_aurem,epiphyte,7,3,1,107,99,99,2.57
+phlebodium_aurem,epiphyte,8,1,1,80,76,76,2.57
+phlebodium_aurem,epiphyte,8,2,1,73,64,64,2.57
+phlebodium_aurem,epiphyte,8,3,1,83,66,85,2.57
+thelypteris_curtii,terrestrial,1,1,1,18,16,16,0.16
+thelypteris_curtii,terrestrial,1,2,1,19,21,18,0.16
+thelypteris_curtii,terrestrial,1,3,1,26,26,20,0.16
+thelypteris_curtii,terrestrial,2,1,1,16,21,19,0.16
+thelypteris_curtii,terrestrial,2,2,1,15,16,21,0.16
+thelypteris_curtii,terrestrial,2,3,1,22,19,17,0.16
+thelypteris_curtii,terrestrial,3,1,1,21,23,26,0.16
+thelypteris_curtii,terrestrial,3,2,1,23,25,24,0.16
+thelypteris_curtii,terrestrial,3,3,1,17,20,21,0.16
+thelypteris_curtii,terrestrial,4,1,1,18,16,12,0.16
+thelypteris_curtii,terrestrial,4,2,1,21,19,17,0.16
+thelypteris_curtii,terrestrial,4,3,1,16,14,18,0.16
+thelypteris_curtii,terrestrial,5,1,1,16,17,16,0.16
+thelypteris_curtii,terrestrial,5,2,1,18,17,15,0.16
+thelypteris_curtii,terrestrial,5,3,1,17,18,19,0.16
+thelypteris_curtii,terrestrial,6,1,1,20,25,22,0.16
+thelypteris_curtii,terrestrial,6,2,1,21,24,21,0.16
+thelypteris_curtii,terrestrial,6,3,1,22,27,19,0.16
+polybotrya_osmundacea,climber,1,1,1,112,106,92,2.57
+polybotrya_osmundacea,climber,1,2,1,120,141,111,2.57
+polybotrya_osmundacea,climber,1,3,1,119,142,92,2.57
+polybotrya_osmundacea,climber,2,1,1,103,109,129,2.57
+polybotrya_osmundacea,climber,2,2,1,91,98,119,2.57
+polybotrya_osmundacea,climber,2,3,1,91,96,106,2.57
+polybotrya_osmundacea,climber,3,1,1,100,90,106,2.57
+polybotrya_osmundacea,climber,3,2,1,87,119,111,2.57
+polybotrya_osmundacea,climber,3,3,1,99,84,96,2.57
+polybotrya_osmundacea,climber,4,1,1,120,132,119,2.57
+polybotrya_osmundacea,climber,4,2,1,120,133,122,2.57
+polybotrya_osmundacea,climber,4,3,1,117,136,136,2.57
+polybotrya_osmundacea,climber,5,1,1,136,116,115,2.57
+polybotrya_osmundacea,climber,5,2,1,93,125,133,2.57
+polybotrya_osmundacea,climber,5,3,1,129,126,127,2.57
+polybotrya_osmundacea,climber,6,1,1,97,95,110,2.57
+polybotrya_osmundacea,climber,6,2,1,94,105,92,2.57
+polybotrya_osmundacea,climber,6,3,1,102,94,122,2.57
