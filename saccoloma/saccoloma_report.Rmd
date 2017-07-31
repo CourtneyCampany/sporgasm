@@ -1,0 +1,75 @@
+---
+title: "Saccoloma Leaf Age @ La Selva 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r format sacc, echo=FALSE}
+chlro <- read.csv("sacc_chl.csv")
+photo <- read.csv("sacc_photo.csv")
+
+addleafage_func <- function(x){
+  x$leafage <- ifelse(x$Color == "w", 1, 99)
+  x$leafage <- ifelse(x$Color == "o", 2, x$leafage)
+  x$leafage <- ifelse(x$Color == "y", 3, x$leafage)
+  x$leafage <- ifelse(x$Color == "p", 4, x$leafage)
+return(x)
+  }
+
+chlro <- addleafage_func(chlro)
+photo <- addleafage_func(photo)
+
+library(doBy)
+photo_agg <- summaryBy(Photo + Cond + Ci + Trmmol ~ Indiv + leafage, data=photo,
+                       FUN=mean, keep.names = TRUE)
+
+  photo_agg$iwue <- with(photo_agg, Photo/Trmmol)
+
+photo_agg2 <- photo_agg[!photo_agg$Indiv == 26, ]    
+  
+cols <- c("white", "darkorange3", "yellow", "purple4")
+years <- c("Year 1", "Year 2", "Year 3", "Year 4")
+
+```
+
+## Summary
+
+Here we measured gas exchange and chlorophyll content on different age classes of Saccoloma at La Selva. Each individual (n=25) had fronds with ages classes of 1 to 4 years. Below are the boxplots (excluding outliers) of photosynthesis (A~n~), stomatal conductance (g~s~), instantaneous water use efficiency (ITE), transpiration (E~l~) and chlorophyll content. Gas exchange was performed on a subset of individuals (n=10). For clarity I have colored the age classes in the manner they are marked in the field.
+
+There is an issue with Year 2 & 3 gas exchange data from #26 . Something went wrong on the water side of gas exchange, although A~n~ looks alright.  I have deleted it for the moment. I have pasted the raw data that was deleted at the bottom so you can have a look.
+
+```{r gas exchange, echo=FALSE, fig.align='center',fig.width = 5, fig.height = 7}
+boxplot(Photo ~ leafage, data=photo_agg2, outline=FALSE, col=cols,xaxt='n',
+        ylab=expression(italic(A)[net]~~(mu*mol~m^-2~s^-1)))
+axis(1, at=1:3, years[1:3])
+
+boxplot(Cond ~ leafage, data=photo_agg2, outline=FALSE, col=cols,xaxt='n',
+        ylab=expression(g[s]~~(mu*mol~m^-2~s^-1)))
+axis(1, at=1:3, years[1:3])
+```
+A~n~ seems to be higher in year 2 but there is  a lot of variation within other years. Stomatal conductance may be higher in year 3, despite a ton of variation in year 2. Ill run some stats sonon.
+
+
+```{r iwue, echo=FALSE, fig.align='center',fig.width = 5, fig.height = 7}
+boxplot(iwue ~ leafage, data=photo_agg2, outline=FALSE, col=cols,xaxt='n',
+        ylab=expression(ITE~~(mmol~CO[2]~mol~H[2]*O^-1)))
+axis(1, at=1:3, years[1:3])
+boxplot(Trmmol ~ leafage, data=photo_agg2, outline=FALSE, col=cols,xaxt='n',
+        ylab=expression(italic(E)[L]~~(mmol~m^-2~s^-1)))
+axis(1, at=1:3, years[1:3])
+```
+Instantaneous water use efficiency looks like it declines in year 3. Looks to be mostly driven by water loss instead of A~n~
+
+```{r chl, echo=FALSE, fig.align='center',fig.width = 5, fig.height = 5}
+boxplot(chl ~ leafage, data=chlro, outline=FALSE, col=cols, xaxt='n',
+         ylab="cholorphyll content  (units)")
+axis(1, at=1:4, years)
+```
+No obvious changes in chlorophyll content. It will be interesting to see what happens with leaf nitrogen.
+
+### Transpiration data is bad for certain ages for #26
+```{r baddat,}
+photo[photo$Indiv == 26, c("Indiv", "leafage", "Photo", "Cond", "Trmmol", "Ci")] 
