@@ -1,3 +1,5 @@
+# standard error function
+se <- function(x) sd(x)/sqrt(length(x))
 
 # functions for sporgasm project ------------------------------------------
 
