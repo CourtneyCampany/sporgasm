@@ -14,7 +14,7 @@ sla_mass$sla <- with(sla_mass, totalarea_cm2/sla_dry)
 boxplot(sla ~ niche, data=sla_mass, ylab="SLA (g/cm2)", outline=FALSE)
 
 ##There are some really weird numbers when only one disk is used...so go back 
-## and chekc data but for now lets drop them
+## and check data but for now lets drop them
 
 sla_mass_clean <- sla_mass[sla_mass$sla_no_disks > 1,]
 

@@ -28,8 +28,6 @@ sqrt(225)
 # Exponents
 15^2
 
-
-
 # Projects ----------------------------------------------------------------
 
 ##skipping a lot of intro steps to learn the ease of Rprojects (just like a pc desktop)
@@ -76,10 +74,10 @@ nums1 <- c(1,4,2,8,11,100,8)
 sum(nums1)
 
 # Get mean, standard deviation, number of observations (length):
-mean(nums1)
+mean_nums1 <- mean(nums1)
 sd(nums1)
 length(nums1)
-cumsum(nums1) # cumulative sum
+cs_nums1 <- cumsum(nums1) # cumulative sum
 
 #how would you reuse or save the output of one of these operations??????
 
@@ -112,19 +110,19 @@ sd()
 ##you can use multiple functions in one line of code: 
 
 # Mean of the vector, *then* square it:
-mean(vec1)^2
+mean(nums1)^2
 
 # Mean of the log of vec2:
-mean(log(vec2))
+mean(log(nums1))
 
 # The sum of squared deviations from the sample mean:
-sum((vec1 - mean(vec1))^2)
+sum((nums1 - mean(nums1))^2)
 ## [1] 10
 # The sample variance:
-sum((vec1 - mean(vec1))^2) / (length(vec1) - 1)
+sum((nums1 - mean(nums1))^2) / (length(nums1) - 1)
 
 ###How would you calculate the SE of vec1????
-
+sd(nums1)/sqrt(length(nums1))
 
 ##remember vectors can be characters too...useful for plotting labels and colors
 mycols <- c("red","forestgreen","cornflowerblue","gold","pink")
@@ -144,8 +142,7 @@ nums3 <- c(nums1, nums2)
   1:10 # Numbers 1 through 10
 
 # Examples using seq()
-seq(from=10,to=100,by=10)
-## [1] 10 20 30 40 50 60 70 80 90 100
+seq(from=1,to=67,by=8)
 
 # Replicate 
 rep(2, times = 10)
@@ -156,7 +153,7 @@ rep(c(4,5), each=3)
 
 runif(10)
 # Five random numbers between 100 and 1000
-runif(5, 100, 1000)
+a <- runif(425, 100, 1000)
 
 ##workspace quickies
 ls()
@@ -187,7 +184,7 @@ mydat <- data.frame(var1=nums1, var2=nums2)
 # column names
 names(traits)
 
-names(traits) <- #c("S","D","SP","N","Pno"......etc)
+names(traits) <- #c("S","D","SP","N","Pno", "g", "h' ")
 # rename first vairable
 names(traits)[1] <- "Location"
 # rename 1st and 2nd:
@@ -214,7 +211,7 @@ nums1[nums1 == 8]
 nums2[nums2 > 5 & nums2 < 10] #two arguments together
 nums2[nums2 < 1 | nums2 > 20] #either 
 
-nums1[nums1 != 100] #does not equalo
+nums1[nums1 != 100] #does not equal
 nums1[nums1 %in% c(1,4,11)] #includes
 
 nums2[nums2 > 10 & !nums2 == 80]
@@ -226,13 +223,13 @@ nums2[nums2 > 10 & !nums2 == 80]
 traits[4,4]
 traits[,3]
 traits[1:5, "stipe_length_cm"]
-newdat <- traits[1:10, c("site", "niche", "plant_no","chl_mg_m2" )]
+newdat <- traits[, c("site", "niche", "plant_no","chl_mg_m2" )]
 
 traits[which.max(traits$laminalength_cm), "chl_mg_m2"]
 
 #something useful
 levels(traits$niche)
-chl_epi <- traits[traits$niche=="epiphyte", c("plant_no", "chl_mg_m2")]
+chl_epi <- traits[traits$niche=="epiphyte", c("plant_no", "chl_mg_m2", "niche")]
 
 str(traits)
 traits_nochl <- traits[,-11 ]
@@ -243,7 +240,7 @@ traits_nochl <- traits[,-11 ]
 
 #now that we made new dataframes (datasets)...we can save them for later use
 
-write.csv(chl_epi, "pathtofile", row.names = FALSE)
+write.csv(chl_epi, "calculated_data/chl_data.csv", row.names = FALSE)
 
 
 #classes
@@ -273,7 +270,8 @@ traits$id2 <- with(traits, paste("site", "niche", sep="."))
 
 #another useful function is gsub() for formatting (find and replace)
 traits$species2 <- gsub("_", " ", traits$species)
-traits$genus <- gsub("_.*","", traits$species) #uses regular expression
+
+traits$genus <- as.factor(gsub("_.*","", traits$species)) #uses regular expression
 
 #calculations to make new variables
 traits$laminalength_m <- 
@@ -299,9 +297,7 @@ traits$date <- as.Date(traits$date, format= "%d/%m/%Y", tz="UTC")
 max(traits$date)
 str(traits$date)
 
-max(traits$date) - min(traits$date) ##hmmm
-
-
+max(traits$date) - min(traits$date) 
 
 # missing values ----------------------------------------------------------
 
@@ -331,31 +327,34 @@ traits_nona <- traits[complete.cases(traits),]
 # Option 1: plot of X and Y
   with(dfr, plot(X,Y))
 # Option 2: formula interface (Y 'as a function of' X)   
-  plot(Y ~X, data=dfr) #i use this one
+  plot(Y ~ X, data=dfr) #i use this one
   
-plot(frond_length_cm ~ lamina_area_cm2, data=traits) #why did something go wrong
-
-traits$frond_length_cm <- as.numeric(traits$frond_length_cm)
+plot(frond_length_cm ~ lamina_area_cm2, data=traits)
 
 ###time time make it look pretty
 ###?par is your BFF
-plot(frond_length_cm ~ lamina_area_cm2, data=traits,ylim=c(0, 180), xlim=c(0, 1800))
+plot(frond_length_cm ~ lamina_area_cm2, data=traits,
+     ylim=c(0, 180), xlim=c(0, 1800))
 #you can easily add treatment colors as long as they are factors
-plot(frond_length_cm ~ lamina_area_cm2, data=traits,ylim=c(0, 180), xlim=c(0, 1800),
-     col=as.factor(niche), pch=16)
+plot(frond_length_cm ~ lamina_area_cm2, data=traits,
+     ylim=c(0, 180), xlim=c(0, 1800),
+     bg=niche, pch=25)
 #that pretty cool but the colors are soo ugly
 levels(traits$niche)
 length(mycols)
 
-plot(frond_length_cm ~ lamina_area_cm2, data=traits,ylim=c(0, 180), xlim=c(0, 1800),
-     col=mycols[niche], pch=16)
+plot(frond_length_cm ~ lamina_area_cm2, data=traits,
+     ylim=c(0, 180), xlim=c(0, 1800),
+     bg=mycols[niche], pch=21)
 #so often you have points that overlap, so we can add transparency and change point type
 
 ##This is our first look at packages (they are made to enhance base R)
 library(scales) #you have to install them first, then load intro environment
-mycols2 <- alpha(mycols[1:5], .75)
+mycols2 <- alpha(mycols, .75)
 
-plot(frond_length_cm ~ lamina_area_cm2, data=traits,ylim=c(0, 180), xlim=c(0, 1800),
+windows()
+plot(frond_length_cm ~ lamina_area_cm2, data=traits,ylim=c(0, 180), 
+     xlim=c(0, 1800), cex=1.5,
      bg=mycols2[niche], pch=21)
 
 ##we need to make some better axis titles (use ylab, xlab)
@@ -374,8 +373,6 @@ plot(frond_length_cm ~ lamina_area_cm2, data=traits,ylim=c(0, 180), xlim=c(0, 18
 #almost there but are outside margins are funky.... ?par
 #we can setup some global plotting parameters which will work for all subsequent plots
 
-par(cex.axis=.96, cex.lab=1.2,mfrow=c(1,2),  oma=c(0.1,0.1,0.1,0.1), las=1)
-
 windows()
 par(mar=c(4,4,1,1), cex.axis=.8, cex.lab=1.1, mgp=c(2.5, 1, 0))
 
@@ -384,11 +381,12 @@ plot(frond_length_cm ~ lamina_area_cm2, data=traits,ylim=c(0, 180), xlim=c(0, 18
          xlab=LAlabel)  
     
 #almost done...but we need a legend 
-?legend
-legend("bottomright", levels(traits$niche), pch=21,inset=0.01, pt.bg=mycols2, bty='n') 
+
+legend("bottomright", levels(traits$niche), pch=21,inset=0.01, 
+       pt.bg=mycols2, bty='n') 
 
 dev.copy2pdf(file="output/lengthbyarea.pdf")
-
+dev.off()
 ###BASIC STATS
     
 mean(traits$lamina_area_cm2)
@@ -419,10 +417,10 @@ qqnorm(traits$lamina_area_cm2)
 
 plot(frond_length_cm ~ lamina_area_cm2, data=traits)
 
-model <- lm(frond_length_cm ~ lamina_area_cm2, data=traits)
+model <- lm(log10(frond_length_cm) ~ log10(lamina_area_cm2), data=traits)
 summary(model)
 
-plot(frond_length_cm ~ lamina_area_cm2, data=traits)
+plot(log10(frond_length_cm) ~ log10(lamina_area_cm2), data=traits,log='xy')
 abline(model)
 
 ##we can plot the model object to get some diagnostics of the fit
