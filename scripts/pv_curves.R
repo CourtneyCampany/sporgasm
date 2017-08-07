@@ -35,32 +35,57 @@ pv_calc <- merge(curves, rwc_final)
 
   pv_calc$RWC <- with(pv_calc, (wet_weight_g - pv_dry)/leafwater_t0)
   
-  
-test_curve <- pv_calc[pv_calc$species=="nephrolepis_rivularis" & pv_calc$plant_no =="4",]
 
   
 # plotting ----------------------------------------------------------------
 #1/psi vs rwc (is the goal)
+test_curve <- pv_calc[pv_calc$species=="nephrolepis_rivularis" & pv_calc$plant_no =="4",]
+  test_curve$wp_recip <- with(test_curve, 1/psi_bars)
 
-plot(1/psi_bars ~ RWC, data=test_curve, xlim=c(1, .9))
+  plot(wp_recip ~ RWC, data=test_curve, xlim=c(1, .9))
+  plot(log(wp_recip) ~ log(RWC), data=test_curve, xlim=c(0, -.09))
+  fit <- lm(log(wp_recip) ~ log(RWC), data=test_curve)
+  #use log linear model to extract a starting value for nls
+  fit$coefficients #can plot the fit but it wont be great
 
-#fit nls 
+# Fit using nls
+fit_nls = nls(wp_recip ~ (RWC ^ b), start = c(b = 33), trace = T, data=test_curve)
+  # The coefficient is much closer to the known
+  coef(fit_nls) #b=49
+  summary(fit_nls)
+  pred <- predict(fit_nls)
+# Plot of data and two estimates
+  windows()
+plot(wp_recip ~ RWC, data=test_curve)#, xlim=c(1,.85), ylim=c(0, .99))
+lines(test_curve$RWC, test_curve$RWC^coef(fit_nls), col = "red") #, xlim=c(1,.85))
+abline(fit_top, col="blue")
+axis(4, tick=c(.1,.2,.3,.4))
 
-library(nlme)
-nlsfits <- nlsList(gs ~  1.6*(1+g1/sqrt(D))*(A/Ca) | volume,
-                   start=list(g1=8),data=cond_agg2)
+rwc_decrease <- sort(top_line$RWC, decreasing = TRUE)
+###guess the inflection = .96
+top_line <- test_curve[test_curve$RWC < .955,]
+fit_top <- lm(wp_recip~rwc_decrease, data=top_line)
+abline(fit_top, col="blue")
+coef(fit_top)
+x_int <- coef(fit_top)[1] / coef(fit_top)[2]
 
-#model
-nls_lob <- nls(height~ chapm(age, Asym, b, c), 
-               data=Loblolly,
-               start=list(Asym=100, b=.1, c=2.5))
 
-library(nlstools)
-overview(nls_lob)
+library(inflection)
+knee <-edeci(x=test_curve$RWC, y=pred,0)
+uik=knee[1]
+uik
 
-#find a curve that is close (exponetial decay curve???, and insert parameters into nls)
-chapm <- function(x, Asym, b,c) Asym*(1-exp(-b*x))^c
+ede(x=test_curve$RWC, y=pred, index=0)
+edeci(x=test_curve$RWC, y=test_curve$wp_recip, index=1, k = 5)
+findiplist(x=test_curve$RWC, y=pred, index=0)
+# #use this when automating with nlsfits
+# form <- wp_recip ~ R(a,b,RWC)
+# fit <- nls(form, data=test_curve, start=list(a=1,b=0.01))
 
-curve(chapm(x, Asym=100, b=.15, c=3), from =0, to=50)
-curve(chapm(x, Asym=100, b=.05, c=3), add=TRUE)
+
+
+
+
+
+
 
