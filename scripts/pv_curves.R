@@ -55,19 +55,38 @@ fit_nls = nls(wp_recip ~ (RWC ^ b), start = c(b = 33), trace = T, data=test_curv
   summary(fit_nls)
   pred <- predict(fit_nls)
 # Plot of data and two estimates
-  windows()
-plot(wp_recip ~ RWC, data=test_curve)#, xlim=c(1,.85), ylim=c(0, .99))
-lines(test_curve$RWC, test_curve$RWC^coef(fit_nls), col = "red") #, xlim=c(1,.85))
+  test_curve$minus <-  test_curve$RWC -1
+  
+windows()
+plot(wp_recip ~ RWC, data=test_curve,xlim=c(1,.85), ylim=c(-.4, .99))
+lines(test_curve$RWC, test_curve$RWC^coef(fit_nls), col = "red", xlim=c(1,.85))
 abline(fit_top, col="blue")
-axis(4, tick=c(.1,.2,.3,.4))
+abline(h=0)
+abline(v=.86)
 
-rwc_decrease <- sort(top_line$RWC, decreasing = TRUE)
 ###guess the inflection = .96
-top_line <- test_curve[test_curve$RWC < .955,]
-fit_top <- lm(wp_recip~rwc_decrease, data=top_line)
-abline(fit_top, col="blue")
+top_line <- test_curve[test_curve$RWC < .95,]
+fit_top <- lm(wp_recip~RWC, data=top_line)
 coef(fit_top)
-x_int <- coef(fit_top)[1] / coef(fit_top)[2]
+#normalize to zero
+
+fit_top_trans <- lm(wp_recip~minus, data=top_line)
+
+windows()
+plot(wp_recip ~ minus, data=test_curve, xlim=c(-.1, 0), ylim=c(-.1, .5))
+abline(fit_top_trans, col="blue")
+
+coef(fit_top_trans)
+#x and y intercepts of untransformed data
+y_int <- coef(fit_top_trans)[1] 
+
+x_int <- (coef(fit_top_trans)[2]-y_int)/coef(fit_top_trans)[2]
+
+#x_int is based on y=mx+b from normailized lm, so x_trans = x_org-1
+# y= m(x_trans) + B, 
+#m and B are from transfromed model
+
+###should get the same answer for yaxis if x=100 (RW)
 
 
 library(inflection)
