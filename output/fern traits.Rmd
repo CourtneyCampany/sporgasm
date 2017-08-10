@@ -1,0 +1,81 @@
+---
+title: "fern traits"
+output: html_document
+---
+
+```{r, results="asis", echo=FALSE, warning=FALSE}
+library(knitr)
+opts_knit$set(root.dir = '../')
+```
+
+```{r data, echo=FALSE}
+pinnae <- read.csv("raw_data/fern_traits.csv")
+source("master_scripts/plot_objects.R")
+
+area <- pinnae[, c(1:5, 9)]
+length <- pinnae[complete.cases(pinnae), 1:8]
+
+niche_lab <- c("Climber", "Epiphyte", "Hemi-epiphyte", "Terresetrial")
+
+n_terr <- length(unique(pinnae[pinnae$niche =="terrestrial", "species"]))
+n_climb <- length(unique(pinnae[pinnae$niche =="climber", "species"]))
+n_epi <- length(unique(pinnae[pinnae$niche =="epiphyte", "species"]))
+n_hemi <- length(unique(pinnae[pinnae$niche =="hemi-epiphyte", "species"]))
+
+niche_count <- c(n_climb, n_epi, n_hemi, n_terr)
+niche_lab2 <- paste("n=", niche_count, sep = "")
+
+drymass <- read.csv("raw_data/fern_dryweights2.csv")
+#there are gonna be some redos with pv curves and sla so index drymass 
+#where sladrymass !is.na
+sla_mass <- drymass[!(is.na(drymass$sla_dry)),]
+  sla_mass$totalarea_cm2 <- with(sla_mass, (sla_no_disks * size_mm2)/100)
+  sla_mass$sla <- with(sla_mass, totalarea_cm2/sla_dry)
+  
+stodens <- read.csv("raw_data/stomata_density.csv")
+  ##calculate a leaf disk mean, need to average multiple region counts first
+  stodens$sto_no <- with(stodens, (sto1 + sto2 + sto3)/3)
+  stodens$sto_mm2 <- with(stodens, (sto_no/fov_mm2 ))
+```
+
+
+## Summary
+
+This document contains summary statistics for the 2017 La Selva field work. Below are visualizations for many of the fern functional traits we measured including SLA, stomatal density, cholorophyll content, lamina length and lamina area.
+
+
+```{r area, echo=FALSE, fig.align='center',fig.width = 7, fig.height = 7}
+par(mgp=c(2.5,1,0), mar=c(4,4,1,1), cex.lab=1.1)
+boxplot(lamina_area_cm2 ~ niche, data=area, ylim=c(0, 1750),xaxt='n',
+        ylab=expression(Lamina~area~~(cm^2)), outline=FALSE)
+axis(1, niche_lab, at=1:4, cex=1.1)
+text(x=c(1,2,3,4),y=1700, labels=niche_lab2)
+```
+
+```{r length, echo=FALSE, fig.align='center',fig.width = 7, fig.height = 7}
+par(mgp=c(2.5,1,0), mar=c(4,4,1,1), cex.lab=1.1)
+boxplot(frond_length_cm ~ niche, data=length, ylim=c(0, 177),xaxt='n',
+        ylab = "Frond length  (cm)",outline=FALSE)
+axis(1, niche_lab, at=1:4, cex=1.1)
+text(x=c(1,2,3,4),y=170, labels=niche_lab2)
+```
+
+```{r stomata, echo=FALSE, fig.align='center',fig.width = 7, fig.height = 7}
+par(mgp=c(2.5,1,0), mar=c(4,4,1,1), cex.lab=1.1)
+boxplot(sto_mm2 ~ niche, data=stodens, xaxt='n',ylim=c(0, 210),
+        ylab=expression(Stomatal~densit~~(cm^2)), outline=FALSE)
+axis(1, niche_lab, at=1:4, cex=1.1)
+text(x=c(1,2,3,4),y=200, labels=niche_lab2)
+```
+
+```{r sla,  echo=FALSE, fig.align='center',fig.width = 7, fig.height = 7}
+sla_mass_clean <- sla_mass[sla_mass$sla_no_disks > 1,]
+
+par(mgp=c(2.5,1,0), mar=c(4,4,1,1), cex.lab=1.1)
+boxplot(sla ~ niche, data=sla_mass_clean, outline=FALSE,xaxt='n',ylim=c(0,210),
+        ylab=expression(Specific~leaf~area~~(g/cm^2)),outline=FALSE)
+axis(1, niche_lab, at=1:4, cex=1.1)
+text(x=c(1,2,3,4),y=200, labels=niche_lab2)
+
+```
+

@@ -102,9 +102,37 @@ findiplist(x=test_curve$RWC, y=pred, index=0)
 # fit <- nls(form, data=test_curve, start=list(a=1,b=0.01))
 
 
+#function that includes an asymptotic slope, 
+#with a curvy part for the first line
+pv_func <- function(t, slope, k, e0)1 - slope*t + e0*exp(-k*t)
 
+fit_nls = nls(wp_recip ~ (RWC ^ b), start = c(b = 33), trace = T, data=test_curve)
 
+curve(pv_func(x, slope=0.02, k=2, e0=1.4), from=0, to=10)
 
+curve(pv_func(x, slope=0.02, k=2, e0=1.4), from=max(test_curve$RWC), to=min(test_curve$RWC))
 
+#then fit segmented regression
+library(segmented)
+
+# have to provide estimates for breakpoints.
+# after looking a the data, 
+my.seg <- segmented(my.lm, 
+                    seg.Z = ~ DistanceMeters, 
+                    psi = list(DistanceMeters = c(4, 15)))
+
+# When not providing estimates for the breakpoints "psi = NA" can be used.
+# The number of breakpoints that will show up is not defined
+#my.seg <- segmented(my.lm, 
+#                    seg.Z = ~ DistanceMeters, 
+#                    psi = NA)
+
+# display the summary
+summary(my.seg)
+# get the breakpoints
+my.seg$psi
+
+# get the slopes
+slope(my.seg)
 
 

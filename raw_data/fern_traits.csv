@@ -1,4 +1,10 @@
 site,date,species,niche,plant_no,frond_length_cm,stipe_length_cm,laminalength_cm,lamina_area_cm2,cfr,chl_mg_m2
+laselva,8/7/2017,polybotrya_osmundacea,climber,1,99,19.2,79.8,1519.7,1.46,534
+laselva,8/7/2017,polybotrya_osmundacea,climber,2,110,31.4,78.6,1314.8,1.59,617
+laselva,8/7/2017,polybotrya_osmundacea,climber,3,95.1,24.4,70.7,1075.7,1.57,604
+laselva,8/7/2017,polybotrya_osmundacea,climber,4,92.7,27.5,65.2,1292.2,1.57,541
+laselva,8/7/2017,polybotrya_osmundacea,climber,5,97.4,37.7,59.7,1002.6,1.47,572
+laselva,8/7/2017,polybotrya_osmundacea,climber,6,89.7,20.6,69.1,1073.3,1.49,553
 laselva,8/7/2017,asplenium_auritum,epiphyte,1,34.8,10.4,24.4,61.5,1.19,363
 laselva,8/7/2017,asplenium_auritum,epiphyte,2,42.7,16.1,26.6,58.5,0.97,224
 laselva,8/7/2017,asplenium_auritum,epiphyte,3,31.8,12.2,19.6,25,1.09,300
@@ -16,38 +22,12 @@ laselva,14/7/2017,asplenium_serratum,epiphyte,3,67,0,67,403,1.54,585
 laselva,14/7/2017,asplenium_serratum,epiphyte,4,68,0,68,272,1.58,611
 laselva,14/7/2017,asplenium_serratum,epiphyte,5,75,0,75,358,1.52,578
 laselva,14/7/2017,asplenium_serratum,epiphyte,6,72,0,72,596,1.39,490
-laselva,8/7/2017,blechnum_occidentale ,terrestrial,1,64.8,29.2,35.6,189.4,1.29,427
-laselva,8/7/2017,blechnum_occidentale ,terrestrial,2,88.8,27,61.8,170.6,1.55,592
-laselva,8/7/2017,blechnum_occidentale ,terrestrial,3,100.7,28.4,72.3,259.9,1.35,465
-laselva,8/7/2017,blechnum_occidentale ,terrestrial,4,67.8,31.6,36.2,191.4,1.15,338
-laselva,8/7/2017,blechnum_occidentale ,terrestrial,5,66.1,15.8,50.3,185.8,1.43,515
-laselva,8/7/2017,blechnum_occidentale ,terrestrial,6,52.4,18.1,34.3,190.7,1.42,509
 laselva,10/7/2017,campylonerum_brevifolia,epiphyte,1,100,15,85,599,1.5,560
 laselva,10/7/2017,campylonerum_brevifolia,epiphyte,2,80,15,65,350,1.48,547
 laselva,10/7/2017,campylonerum_brevifolia,epiphyte,3,115.5,15,100.5,809,1.52,572
 laselva,10/7/2017,campylonerum_brevifolia,epiphyte,4,115,12,103,827,1.3,433
 laselva,10/7/2017,campylonerum_brevifolia,epiphyte,5,60,9,51,329,1.6,471
 laselva,10/7/2017,campylonerum_brevifolia,epiphyte,6,88,9,79,504,1.37,477
-laselva,10/8/2017,cyclopeltis_semicordata,terrestrial,1,124.9,20,104.9,746,1.59,617
-laselva,10/8/2017,cyclopeltis_semicordata,terrestrial,2,117.6,19.1,98.5,866,1.29,427
-laselva,10/8/2017,cyclopeltis_semicordata,terrestrial,3,113.2,14.5,98.7,828,1.24,395
-laselva,10/8/2017,cyclopeltis_semicordata,terrestrial,4,110.8,24.9,85.9,824,1.29,427
-laselva,10/8/2017,cyclopeltis_semicordata,terrestrial,5,118.1,19.5,98.6,857,1.18,357
-laselva,10/8/2017,cyclopeltis_semicordata,terrestrial,6,98.5,18.9,79.6,685,1.31,395
-laselva,10/8/2017,cyclopeltis_semicordata,terrestrial,7,73.6,10.1,63.5,524,1.19,439
-laselva,10/8/2017,cyclopeltis_semicordata,terrestrial,8,107.7,9.6,98.1,882,1.19,363
-laselva,10/7/2017,diplazium_straitastrum,terrestrial,1,114.4,23.4,91,80,1.33,452
-laselva,10/7/2017,diplazium_straitastrum,terrestrial,2,101.5,17.5,84,48,1.39,490
-laselva,10/7/2017,diplazium_straitastrum,terrestrial,3,100.5,23.5,77,93,1.35,465
-laselva,10/7/2017,diplazium_straitastrum,terrestrial,4,100,21,79,60,1.34,458
-laselva,10/7/2017,diplazium_straitastrum,terrestrial,5,94,20,74,60,1.4,496
-laselva,10/7/2017,diplazium_straitastrum,terrestrial,6,94,21,73,85,1.47,451
-laselva,20/7/2017,elaphoglossum_amygdalifolium,hemi-epiphyte,1,19.9,4,15.9,28.6,1.48,547
-laselva,20/7/2017,elaphoglossum_amygdalifolium,hemi-epiphyte,2,22.3,1.8,20.5,36.2,1.03,262
-laselva,20/7/2017,elaphoglossum_amygdalifolium,hemi-epiphyte,3,17.7,2.9,14.8,25.1,1.47,541
-laselva,20/7/2017,elaphoglossum_amygdalifolium,hemi-epiphyte,4,19.6,4.8,14.8,23.9,1.41,503
-laselva,20/7/2017,elaphoglossum_amygdalifolium,hemi-epiphyte,5,14,1,13,23.5,1.48,547
-laselva,20/7/2017,elaphoglossum_amygdalifolium,hemi-epiphyte,6,16.8,1.3,15.5,22.5,1.53,579
 laselva,19/7/2017,elaphoglossum_herminieri,epiphyte,1,48.7,0,48.7,88.6,2.12,953
 laselva,19/7/2017,elaphoglossum_herminieri,epiphyte,2,35.5,0,35.5,54.6,1.47,541
 laselva,19/7/2017,elaphoglossum_herminieri,epiphyte,3,29,0,29,48.3,2,877
@@ -60,24 +40,6 @@ laselva,18/7/2017,elaphoglossum_latifolia,epiphyte,3,24.2,5.7,18.5,54.2,1.66,661
 laselva,18/7/2017,elaphoglossum_latifolia,epiphyte,4,26.4,5.3,21.1,52.5,1.49,553
 laselva,18/7/2017,elaphoglossum_latifolia,epiphyte,5,24.9,8.5,16.4,92.1,1.34,458
 laselva,18/7/2017,elaphoglossum_latifolia,epiphyte,6,36.8,10,26.8,63.8,1.21,376
-laselva,10/7/2017,lomariopsis_japurensis,hemi-epiphyte ,1,68,5.5,62.5,673.7,1.29,427
-laselva,10/7/2017,lomariopsis_japurensis,hemi-epiphyte ,2,100,6.5,93.5,1102.8,1.63,642
-laselva,10/7/2017,lomariopsis_japurensis,hemi-epiphyte ,3,98.9,3.5,95.4,1261,1.33,452
-laselva,10/7/2017,lomariopsis_japurensis,hemi-epiphyte ,4,111.7,8.5,103.2,1186.8,1.23,389
-laselva,10/7/2017,lomariopsis_japurensis,hemi-epiphyte ,5,82.9,19.5,63.4,692.5,1.65,655
-laselva,10/7/2017,lomariopsis_japurensis,hemi-epiphyte ,6,83.6,6.5,77.1,981.9,1.31,439
-laselva,10/7/2017,mickelia_nicotianifolia,terrestrial,1,55.4,16.7,38.7,347,1.64,649
-laselva,10/7/2017,mickelia_nicotianifolia,terrestrial,2,64.1,19.1,45,510.3,1.47,541
-laselva,10/7/2017,mickelia_nicotianifolia,terrestrial,3,54.3,22.4,31.9,220.6,1.46,534
-laselva,10/7/2017,mickelia_nicotianifolia,terrestrial,4,62.8,17.5,45.3,433.7,1.03,262
-laselva,10/7/2017,mickelia_nicotianifolia,terrestrial,5,52.2,13.4,38.8,342.5,1.52,572
-laselva,10/7/2017,mickelia_nicotianifolia,terrestrial,6,56.1,13.8,42.3,382.7,1,243
-laselva,20/7/2017,nephrolepis biserrata,terrestrial,1,149.1,21.1,128,1091.4,1.32,446
-laselva,20/7/2017,nephrolepis biserrata,terrestrial,2,134,28.5,105.5,908.8,1.25,401
-laselva,20/7/2017,nephrolepis biserrata,terrestrial,3,93.2,13.6,79.6,603.9,1.2,370
-laselva,20/7/2017,nephrolepis biserrata,terrestrial,6,86,11,75,517.3,1.1,344
-laselva,20/7/2017,nephrolepis biserrata,terrestrial,8,90.5,17.1,73.4,712.6,1.16,376
-laselva,20/7/2017,nephrolepis biserrata,terrestrial,9,67.7,11.7,56,435.4,1.2,433
 laselva,20/7/2017,nephrolepis_rivularis,epiphyte,1,40,4.5,35.5,643.5,1.29,427
 laselva,20/7/2017,nephrolepis_rivularis,epiphyte,2,44.2,6.3,37.9,104.6,1.37,477
 laselva,20/7/2017,nephrolepis_rivularis,epiphyte,3,46,4,42,110.9,1.29,427
@@ -111,24 +73,62 @@ laselva,20/7/2017,pleopeltis_bradeorum,epiphyte,3,39.4,12.5,26.9,109,1.54,585
 laselva,20/7/2017,pleopeltis_bradeorum,epiphyte,4,46,14.8,31.2,141,1.67,668
 laselva,20/7/2017,pleopeltis_bradeorum,epiphyte,5,31.1,10.6,20.5,137,1.63,642
 laselva,20/7/2017,pleopeltis_bradeorum,epiphyte,6,24.4,6,18.4,61,1.14,332
-laselva,8/7/2017,polybotrya_osmundacea,climber,1,99,19.2,79.8,1519.7,1.46,534
-laselva,8/7/2017,polybotrya_osmundacea,climber,2,110,31.4,78.6,1314.8,1.59,617
-laselva,8/7/2017,polybotrya_osmundacea,climber,3,95.1,24.4,70.7,1075.7,1.57,604
-laselva,8/7/2017,polybotrya_osmundacea,climber,4,92.7,27.5,65.2,1292.2,1.57,541
-laselva,8/7/2017,polybotrya_osmundacea,climber,5,97.4,37.7,59.7,1002.6,1.47,572
-laselva,8/7/2017,polybotrya_osmundacea,climber,6,89.7,20.6,69.1,1073.3,1.49,553
-laselva,11/7/2017,salpichlaena_volubilis,terrestrial,1,81,45,36,468,1.37,477
-laselva,11/7/2017,salpichlaena_volubilis,terrestrial,2,63,24,39,576,1.53,579
-laselva,11/7/2017,salpichlaena_volubilis,terrestrial,3,60,30,30,370,1.64,649
-laselva,11/7/2017,salpichlaena_volubilis,terrestrial,4,58,23,35,460,1.4,496
-laselva,11/7/2017,salpichlaena_volubilis,terrestrial,5,,,,429,1.45,528
-laselva,11/7/2017,salpichlaena_volubilis,terrestrial,6,,,,408,1.35,465
 laselva,8/7/2017,serpocaulon_loriciforme,epiphyte,10,63,9.2,53.8,192.8,1.06,281
 laselva,8/7/2017,serpocaulon_loriciforme,epiphyte,9,53.5,7.3,46.2,225.8,0.97,224
 laselva,8/7/2017,serpocaulon_loriciforme,epiphyte,3,45.5,4.7,40.8,172.7,1,243
 laselva,8/7/2017,serpocaulon_loriciforme,epiphyte,4,63.6,8.6,55,154.5,1.08,294
 laselva,8/7/2017,serpocaulon_loriciforme,epiphyte,12,55.5,6.4,49.1,190.7,1.11,313
 laselva,8/7/2017,serpocaulon_loriciforme,epiphyte,6,56.6,9.9,46.7,274.6,1.15,338
+laselva,20/7/2017,elaphoglossum_amygdalifolium,hemi-epiphyte,1,19.9,4,15.9,28.6,1.48,547
+laselva,20/7/2017,elaphoglossum_amygdalifolium,hemi-epiphyte,2,22.3,1.8,20.5,36.2,1.03,262
+laselva,20/7/2017,elaphoglossum_amygdalifolium,hemi-epiphyte,3,17.7,2.9,14.8,25.1,1.47,541
+laselva,20/7/2017,elaphoglossum_amygdalifolium,hemi-epiphyte,4,19.6,4.8,14.8,23.9,1.41,503
+laselva,20/7/2017,elaphoglossum_amygdalifolium,hemi-epiphyte,5,14,1,13,23.5,1.48,547
+laselva,20/7/2017,elaphoglossum_amygdalifolium,hemi-epiphyte,6,16.8,1.3,15.5,22.5,1.53,579
+laselva,10/7/2017,lomariopsis_japurensis,hemi-epiphyte,1,68,5.5,62.5,673.7,1.29,427
+laselva,10/7/2017,lomariopsis_japurensis,hemi-epiphyte,2,100,6.5,93.5,1102.8,1.63,642
+laselva,10/7/2017,lomariopsis_japurensis,hemi-epiphyte,3,98.9,3.5,95.4,1261,1.33,452
+laselva,10/7/2017,lomariopsis_japurensis,hemi-epiphyte,4,111.7,8.5,103.2,1186.8,1.23,389
+laselva,10/7/2017,lomariopsis_japurensis,hemi-epiphyte,5,82.9,19.5,63.4,692.5,1.65,655
+laselva,10/7/2017,lomariopsis_japurensis,hemi-epiphyte,6,83.6,6.5,77.1,981.9,1.31,439
+laselva,8/7/2017,blechnum_occidentale ,terrestrial,1,64.8,29.2,35.6,189.4,1.29,427
+laselva,8/7/2017,blechnum_occidentale ,terrestrial,2,88.8,27,61.8,170.6,1.55,592
+laselva,8/7/2017,blechnum_occidentale ,terrestrial,3,100.7,28.4,72.3,259.9,1.35,465
+laselva,8/7/2017,blechnum_occidentale ,terrestrial,4,67.8,31.6,36.2,191.4,1.15,338
+laselva,8/7/2017,blechnum_occidentale ,terrestrial,5,66.1,15.8,50.3,185.8,1.43,515
+laselva,8/7/2017,blechnum_occidentale ,terrestrial,6,52.4,18.1,34.3,190.7,1.42,509
+laselva,10/8/2017,cyclopeltis_semicordata,terrestrial,1,124.9,20,104.9,746,1.59,617
+laselva,10/8/2017,cyclopeltis_semicordata,terrestrial,2,117.6,19.1,98.5,866,1.29,427
+laselva,10/8/2017,cyclopeltis_semicordata,terrestrial,3,113.2,14.5,98.7,828,1.24,395
+laselva,10/8/2017,cyclopeltis_semicordata,terrestrial,4,110.8,24.9,85.9,824,1.29,427
+laselva,10/8/2017,cyclopeltis_semicordata,terrestrial,5,118.1,19.5,98.6,857,1.18,357
+laselva,10/8/2017,cyclopeltis_semicordata,terrestrial,6,98.5,18.9,79.6,685,1.31,395
+laselva,10/8/2017,cyclopeltis_semicordata,terrestrial,7,73.6,10.1,63.5,524,1.19,439
+laselva,10/8/2017,cyclopeltis_semicordata,terrestrial,8,107.7,9.6,98.1,882,1.19,363
+laselva,10/7/2017,diplazium_straitastrum,terrestrial,1,114.4,23.4,91,80,1.33,452
+laselva,10/7/2017,diplazium_straitastrum,terrestrial,2,101.5,17.5,84,48,1.39,490
+laselva,10/7/2017,diplazium_straitastrum,terrestrial,3,100.5,23.5,77,93,1.35,465
+laselva,10/7/2017,diplazium_straitastrum,terrestrial,4,100,21,79,60,1.34,458
+laselva,10/7/2017,diplazium_straitastrum,terrestrial,5,94,20,74,60,1.4,496
+laselva,10/7/2017,diplazium_straitastrum,terrestrial,6,94,21,73,85,1.47,451
+laselva,10/7/2017,mickelia_nicotianifolia,terrestrial,1,55.4,16.7,38.7,347,1.64,649
+laselva,10/7/2017,mickelia_nicotianifolia,terrestrial,2,64.1,19.1,45,510.3,1.47,541
+laselva,10/7/2017,mickelia_nicotianifolia,terrestrial,3,54.3,22.4,31.9,220.6,1.46,534
+laselva,10/7/2017,mickelia_nicotianifolia,terrestrial,4,62.8,17.5,45.3,433.7,1.03,262
+laselva,10/7/2017,mickelia_nicotianifolia,terrestrial,5,52.2,13.4,38.8,342.5,1.52,572
+laselva,10/7/2017,mickelia_nicotianifolia,terrestrial,6,56.1,13.8,42.3,382.7,1,243
+laselva,20/7/2017,nephrolepis biserrata,terrestrial,1,149.1,21.1,128,1091.4,1.32,446
+laselva,20/7/2017,nephrolepis biserrata,terrestrial,2,134,28.5,105.5,908.8,1.25,401
+laselva,20/7/2017,nephrolepis biserrata,terrestrial,3,93.2,13.6,79.6,603.9,1.2,370
+laselva,20/7/2017,nephrolepis biserrata,terrestrial,6,86,11,75,517.3,1.1,344
+laselva,20/7/2017,nephrolepis biserrata,terrestrial,8,90.5,17.1,73.4,712.6,1.16,376
+laselva,20/7/2017,nephrolepis biserrata,terrestrial,9,67.7,11.7,56,435.4,1.2,433
+laselva,11/7/2017,salpichlaena_volubilis,terrestrial,1,81,45,36,468,1.37,477
+laselva,11/7/2017,salpichlaena_volubilis,terrestrial,2,63,24,39,576,1.53,579
+laselva,11/7/2017,salpichlaena_volubilis,terrestrial,3,60,30,30,370,1.64,649
+laselva,11/7/2017,salpichlaena_volubilis,terrestrial,4,58,23,35,460,1.4,496
+laselva,11/7/2017,salpichlaena_volubilis,terrestrial,5,,,,429,1.45,528
+laselva,11/7/2017,salpichlaena_volubilis,terrestrial,6,,,,408,1.35,465
 laselva,13/8/2017,tectaria_incisa,terrestrial,1,69,32,37,571.2,1,243
 laselva,13/8/2017,tectaria_incisa,terrestrial,2,107,43,64,763.4,0.98,230
 laselva,13/8/2017,tectaria_incisa,terrestrial,3,91,37,54,876.2,0.96,217
