@@ -34,13 +34,12 @@ curves <- pv_clean[!pv_clean$psi_bars == "init",]
 pv_calc <- merge(curves, rwc_final)
 
   pv_calc$RWC <- with(pv_calc, (wet_weight_g - pv_dry)/leafwater_t0)
-  
+  pv_calc$wp_recip <- with(pv_calc, 1/psi_bars)
 
   
 # plotting ----------------------------------------------------------------
 #1/psi vs rwc (is the goal)
 test_curve <- pv_calc[pv_calc$species=="nephrolepis_rivularis" & pv_calc$plant_no =="4",]
-  test_curve$wp_recip <- with(test_curve, 1/psi_bars)
 
   plot(wp_recip ~ RWC, data=test_curve, xlim=c(1, .9))
   plot(log(wp_recip) ~ log(RWC), data=test_curve, xlim=c(0, -.09))
@@ -54,33 +53,34 @@ fit_nls = nls(wp_recip ~ (RWC ^ b), start = c(b = 33), trace = T, data=test_curv
   coef(fit_nls) #b=49
   summary(fit_nls)
   pred <- predict(fit_nls)
+  
 # Plot of data and two estimates
   test_curve$minus <-  test_curve$RWC -1
   
+  ###guess the inflection = .96
+  flat_line <- test_curve[test_curve$RWC < .95,]
+  fit_flat <- lm(wp_recip~RWC, data=flat_line)
+  coef(fit_flat)
+  #normalize to zero
+  
 windows()
-plot(wp_recip ~ RWC, data=test_curve,xlim=c(1,.85), ylim=c(-.4, .99))
+plot(wp_recip ~ RWC, data=test_curve,xlim=c(1,.85), ylim=c(0, .99))
 lines(test_curve$RWC, test_curve$RWC^coef(fit_nls), col = "red", xlim=c(1,.85))
 abline(fit_top, col="blue")
 abline(h=0)
 abline(v=.86)
 
-###guess the inflection = .96
-top_line <- test_curve[test_curve$RWC < .95,]
-fit_top <- lm(wp_recip~RWC, data=top_line)
-coef(fit_top)
-#normalize to zero
-
-fit_top_trans <- lm(wp_recip~minus, data=top_line)
-
+#fit the transformed data (1-rwc, to plot on negative axis to get y intercept)
+fit_flat_trans <- lm(wp_recip~minus, data=flat_line)
 windows()
-plot(wp_recip ~ minus, data=test_curve, xlim=c(-.1, 0), ylim=c(-.1, .5))
+par(mar=c(4,4,1,1))
+plot(wp_recip ~ minus, data=test_curve, xlim=c(-.1, 0), ylim=c(-.1, .5), xlab="1-RWC")
 abline(fit_top_trans, col="blue")
 
 coef(fit_top_trans)
-#x and y intercepts of untransformed data
-y_int <- coef(fit_top_trans)[1] 
-
-x_int <- (coef(fit_top_trans)[2]-y_int)/coef(fit_top_trans)[2]
+#x and y intercepts of untransformed RWC flat line
+y_int <- coef(fit_flat_trans)[1] 
+x_int <- (coef(fit_flat_trans)[2]-y_int)/coef(fit_flat_trans)[2]
 
 #x_int is based on y=mx+b from normailized lm, so x_trans = x_org-1
 # y= m(x_trans) + B, 
@@ -89,30 +89,28 @@ x_int <- (coef(fit_top_trans)[2]-y_int)/coef(fit_top_trans)[2]
 ###should get the same answer for yaxis if x=100 (RW)
 
 
-library(inflection)
-knee <-edeci(x=test_curve$RWC, y=pred,0)
-uik=knee[1]
-uik
 
-ede(x=test_curve$RWC, y=pred, index=0)
-edeci(x=test_curve$RWC, y=test_curve$wp_recip, index=1, k = 5)
-findiplist(x=test_curve$RWC, y=pred, index=0)
-# #use this when automating with nlsfits
-# form <- wp_recip ~ R(a,b,RWC)
-# fit <- nls(form, data=test_curve, start=list(a=1,b=0.01))
+#function that includes an asymptotic slope--------------------------- 
 
-
-#function that includes an asymptotic slope, 
 #with a curvy part for the first line
+test_nls = nls(wp_recip ~ (RWC ^ b), start = c(b = 33), trace = T, data=test_curve)
+# The coefficient is much closer to the known
+coef(test_nls) #b=49
+summary(test_nls)
+pred <- predict(test_nls)
+
+
 pv_func <- function(t, slope, k, e0)1 - slope*t + e0*exp(-k*t)
+curve(pv_func(x, slope=0.02, k=2, e0=1.4), from=0, to=10, ylim=c(0,5), xlim=c(0,20))
 
-fit_nls = nls(wp_recip ~ (RWC ^ b), start = c(b = 33), trace = T, data=test_curve)
+#my data range is x=.85,1, and y=0,1
+curve(pv_func(x, slope=0.02, k=2, e0=1.4), from=.9, to=1,ylim=c(1,1.5), xlim=c(.85,1.1))
+#so parameters of function need to change
 
-curve(pv_func(x, slope=0.02, k=2, e0=1.4), from=0, to=10)
+pv_func2 <- function(t, slope, k, e0)1 - slope*t + e0*exp(-k*t)
+curve(pv_func(x, slope=.02, k=2, e0=4.4), from=max(test_curve$RWC), to=min(test_curve$RWC))
 
-curve(pv_func(x, slope=0.02, k=2, e0=1.4), from=max(test_curve$RWC), to=min(test_curve$RWC))
-
-#then fit segmented regression
+#could fit segmented regression----------------------------------------
 library(segmented)
 
 # have to provide estimates for breakpoints.
