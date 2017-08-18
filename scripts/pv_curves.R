@@ -40,8 +40,10 @@ pv_calc <- merge(curves, rwc_final)
 # plotting ----------------------------------------------------------------
 #1/psi vs rwc (is the goal)
 test_curve <- pv_calc[pv_calc$species=="nephrolepis_rivularis" & pv_calc$plant_no =="4",]
-
+# write.csv(test_curve, "calculated_data/test_curve.csv", row.names = FALSE)
+  
   plot(wp_recip ~ RWC, data=test_curve, xlim=c(1, .9))
+  #get start value for nls as the slope of the logarimitic curve
   plot(log(wp_recip) ~ log(RWC), data=test_curve, xlim=c(0, -.09))
   fit <- lm(log(wp_recip) ~ log(RWC), data=test_curve)
   #use log linear model to extract a starting value for nls
@@ -91,15 +93,9 @@ x_int <- (coef(fit_flat_trans)[2]-y_int)/coef(fit_flat_trans)[2]
 
 
 #function that includes an asymptotic slope--------------------------- 
-
 #with a curvy part for the first line
-test_nls = nls(wp_recip ~ (RWC ^ b), start = c(b = 33), trace = T, data=test_curve)
-# The coefficient is much closer to the known
-coef(test_nls) #b=49
-summary(test_nls)
-pred <- predict(test_nls)
 
-
+#ex from Remko
 pv_func <- function(t, slope, k, e0)1 - slope*t + e0*exp(-k*t)
 curve(pv_func(x, slope=0.02, k=2, e0=1.4), from=0, to=10, ylim=c(0,5), xlim=c(0,20))
 
@@ -107,8 +103,26 @@ curve(pv_func(x, slope=0.02, k=2, e0=1.4), from=0, to=10, ylim=c(0,5), xlim=c(0,
 curve(pv_func(x, slope=0.02, k=2, e0=1.4), from=.9, to=1,ylim=c(1,1.5), xlim=c(.85,1.1))
 #so parameters of function need to change
 
-pv_func2 <- function(t, slope, k, e0)1 - slope*t + e0*exp(-k*t)
-curve(pv_func(x, slope=.02, k=2, e0=4.4), from=max(test_curve$RWC), to=min(test_curve$RWC))
+pv_func2 <- function(t, slope, k, e0) 1-slope*t + e0*exp(-k*t)
+curve(pv_func2(x, slope=1, k=-50.6, e0=.0000000000000000000001), 
+      from=.9, to=1,xlim=c(.8,1.05))
+points(wp_recip ~ RWC, data=test_curve)
+
+#fit bew nls for the new equation
+test_nls = nls(wp_recip ~ 1-slope*RWC + e0*exp(-k*RWC), 
+               start = c(slope=1,e0=.0000000000000000000001,k=-50.6), 
+               trace = T, 
+               data=test_curve)
+# The coefficient is much closer to the known
+coef(test_nls)
+summary(test_nls)
+pred <- predict(test_nls)
+
+plot(wp_recip ~ RWC, data=test_curve, xlim=c(.9,1), ylim=c(0,1))
+lines(test_curve$RWC, test_curve$RWC^coef(test_nls), col = "red")
+
+#inflection
+derv <- D(D(1-.02*t + 1.4*exp(-2*t), 't'))
 
 #could fit segmented regression----------------------------------------
 library(segmented)
