@@ -4,6 +4,7 @@ makelabels <- read.csv("raw_data/fern_traits.csv")
 
 
 niche_lab <- c("Climber", "Epiphyte", "Hemi-epiphyte", "Terresetrial")
+niche_lab_noclimb <- c("Epiphyte", "Hemi-epiphyte", "Terresetrial")
 
 n_terr <- length(unique(makelabels[makelabels$niche =="terrestrial", "species"]))
 n_climb <- length(unique(makelabels[makelabels$niche =="climber", "species"]))
