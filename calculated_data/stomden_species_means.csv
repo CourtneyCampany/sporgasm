@@ -1,26 +1,26 @@
-"species","niche","sto_mm2.m2"
-"asplenium_auritum","epiphyte",32.6388888888889
-"asplenium_juglandifolia","epiphyte",22.5447243519533
-"asplenium_serratum","terrestrial",13.1265803956567
-"blechnum_occidentale ","terrestrial",39.1975308641975
-"campylonerum_brevifolia","epiphyte",46.875
-"cyclopeltis_semicordata","terrestrial",50.3867321136397
-"diplazium_straitastrum","terrestrial",108.757716049383
-"elaphoglossum_amygdalifolium","hemi-epiphyte",8.73515024458421
-"elaphoglossum_herminieri","epiphyte",26.9042627533194
-"elaphoglossum_latifolia","terrestrial",30.6700830809845
-"lomariopsis_japurensis","hemi-epiphyte",34.7222222222222
-"mickelia_nicotianifolia","terrestrial",21.0471515692399
-"nephrolepis biserrata","terrestrial",51.501127328824
-"nephrolepis_rivularis","epiphyte",31.5630095504309
-"oleandra_articulata","epiphyte",114.056224899598
-"pecluma_pectinata","epiphyte",33.9312058389627
-"phlebodium_aurem","epiphyte",41.4559014267185
-"pleopeltis_bradeorum","epiphyte",13.1265803956567
-"polybotrya_osmundacea","climber",43.3059518662632
-"salpichlaena_volubilis","terrestrial",22.2800925925926
-"serpocaulon_loriciforme","epiphyte",45.7561728395062
-"tectaria_incisa","terrestrial",93.4787367499347
-"thelypteris_curtii","terrestrial",121.643518518519
-"thelypteris_dentata","terrestrial",108.482142857143
-"thelypteris_nicaraguensis","terrestrial",111.817640934107
+"species","niche","sto_mm2.m2","sto_mm2.se"
+"asplenium_auritum","epiphyte",32.6388888888889,1.72581678933219
+"asplenium_juglandifolia","epiphyte",22.5447243519533,1.09413987605703
+"asplenium_serratum","terrestrial",13.1265803956567,0.461887236606217
+"blechnum_occidentale ","terrestrial",39.1975308641975,1.62728826192281
+"campylonerum_brevifolia","epiphyte",46.875,1.00912962611268
+"cyclopeltis_semicordata","terrestrial",50.3867321136397,0.791388650717243
+"diplazium_straitastrum","terrestrial",108.757716049383,1.40342198732579
+"elaphoglossum_amygdalifolium","hemi-epiphyte",8.73515024458421,0.479145487694801
+"elaphoglossum_herminieri","epiphyte",26.9042627533194,0.711335553262611
+"elaphoglossum_latifolia","terrestrial",30.6700830809845,1.06644015222783
+"lomariopsis_japurensis","hemi-epiphyte",34.7222222222222,0.860268179212832
+"mickelia_nicotianifolia","terrestrial",21.0471515692399,0.777871865178351
+"nephrolepis biserrata","terrestrial",51.501127328824,1.18666192001899
+"nephrolepis_rivularis","epiphyte",31.5630095504309,0.987362587943316
+"oleandra_articulata","epiphyte",114.056224899598,2.50331743420727
+"pecluma_pectinata","epiphyte",33.9312058389627,0.87813793530585
+"phlebodium_aurem","epiphyte",41.4559014267185,1.46927114019677
+"pleopeltis_bradeorum","epiphyte",13.1265803956567,0.58802536695007
+"polybotrya_osmundacea","climber",43.3059518662632,0.766712423059465
+"salpichlaena_volubilis","terrestrial",22.2800925925926,1.00229648552959
+"serpocaulon_loriciforme","epiphyte",45.7561728395062,1.22648874916005
+"tectaria_incisa","terrestrial",93.4787367499347,3.91271791320341
+"thelypteris_curtii","terrestrial",121.643518518519,4.27467210472581
+"thelypteris_dentata","terrestrial",108.482142857143,1.99734575074638
+"thelypteris_nicaraguensis","terrestrial",111.817640934107,3.05342796514478

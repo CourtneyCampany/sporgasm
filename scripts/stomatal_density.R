@@ -13,9 +13,10 @@ stodens <- read.csv("raw_data/stomata_density.csv")
 
 #lets get the mean by dish
 library(doBy)
+  se <- function(x) sqrt(var(x,na.rm=TRUE)/length(na.omit(x)))
 
 sto_agg <- summaryBy(sto_mm2 ~ niche, data=stodens, FUN=mean)
-sto_agg2 <- summaryBy(sto_mm2 ~ species + niche, data=stodens, FUN=m2)
+sto_agg2 <- summaryBy(sto_mm2 ~ species + niche, data=stodens, FUN=c(m2,se))
 
 write.csv(sto_agg, "calculated_data/stomden_means.csv", row.names = FALSE)
 write.csv(sto_agg2, "calculated_data/stomden_species_means.csv", row.names = FALSE)
