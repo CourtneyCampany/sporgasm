@@ -1,4 +1,7 @@
 source("master_scripts/plot_objects.R")
+library(visreg)
+library(multcomp)
+library(car)
 ##stomatal density across tropical fern species
 m2 <- function(x) mean(x, na.rm=TRUE)
 
@@ -27,3 +30,22 @@ boxplot(sto_mm2 ~ niche, data=stodens, xaxt='n',ylim=c(0, 210),
         ylab=expression(Stomatal~densit~~(cm^2)), outline=FALSE)
 axis(1, niche_lab, at=1:4, cex=1.1)
 text(x=c(1,2,3,4),y=200, labels=niche_lab2)
+
+
+
+library(visreg)
+library(multcomp)
+library(car)
+sto_agg3 <- summaryBy(sto_mm2 ~ species + plant_no + niche, data=stodens, FUN=m2, keep.names = TRUE)
+sd_mod <- lm(sto_mm2 ~ niche, data=sto_agg3)
+
+visreg(sd_mod)
+residualPlot(sd_mod)
+qqPlot(sd_mod)
+
+summary(sd_mod)
+anova(sd_mod)
+
+tukey_sd <- glht(sd_mod, linfct = mcp(niche = "Tukey"))
+sd_siglets <-cld(tukey_sd)
+sd_siglets2 <- sd_siglets$mcletters$Letters
