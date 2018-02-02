@@ -1,154 +1,154 @@
-site,date,species,niche,plant_no,pv_dry,sla_dry,sla_no_disks,size_mm2
-laselva,4/7/2017,phlebodium_aurem,epiphyte,1,,0.0041,10,10
-laselva,4/7/2017,phlebodium_aurem,epiphyte,2,,0.0042,10,10
-laselva,4/7/2017,phlebodium_aurem,epiphyte,3,,0.0063,10,10
-laselva,4/7/2017,phlebodium_aurem,epiphyte,4,,0.0057,10,10
-laselva,4/7/2017,phlebodium_aurem,epiphyte,5,,0.0058,10,10
-laselva,4/7/2017,phlebodium_aurem,epiphyte,6,,0.0072,10,10
-laselva,4/7/2017,phlebodium_aurem,epiphyte,7,,0.0047,10,10
-laselva,4/7/2017,phlebodium_aurem,epiphyte,8,,0.0045,10,10
-laselva,6/7/2017,thelypteris_curtii,terrestrial,1,,0.0014,5,10
-laselva,6/7/2017,thelypteris_curtii,terrestrial,2,,0.0008,5,10
-laselva,6/7/2017,thelypteris_curtii,terrestrial,3,,0.0012,5,10
-laselva,6/7/2017,thelypteris_curtii,terrestrial,4,,0.0006,5,7
-laselva,6/7/2017,thelypteris_curtii,terrestrial,5,,0.0016,5,9
-laselva,6/7/2017,thelypteris_curtii,terrestrial,6,,0.0011,5,10
-laselva,8/7/2017,polybotrya_osmundacea,climber,1,,0.0055,5,10
-laselva,8/7/2017,polybotrya_osmundacea,climber,2,,0.0065,5,10
-laselva,8/7/2017,polybotrya_osmundacea,climber,3,,0.008,5,10
-laselva,8/7/2017,polybotrya_osmundacea,climber,4,,0.0053,5,10
-laselva,8/7/2017,polybotrya_osmundacea,climber,5,,0.006,5,10
-laselva,8/7/2017,polybotrya_osmundacea,climber,6,,0.0053,5,10
-laselva,8/7/2017,serpocaulon_loriciforme,epiphyte,10,,0.0044,2,10
-laselva,8/7/2017,serpocaulon_loriciforme,epiphyte,9,,0.0043,2,10
-laselva,8/7/2017,serpocaulon_loriciforme,epiphyte,3,,0.0032,2,10
-laselva,8/7/2017,serpocaulon_loriciforme,epiphyte,4,,0.0053,2,10
-laselva,8/7/2017,serpocaulon_loriciforme,epiphyte,12,,0.0036,2,10
-laselva,8/7/2017,serpocaulon_loriciforme,epiphyte,6,,0.0044,2,10
-laselva,8/7/2017,asplenium_auritum,epiphyte,1,,0.0085,2,10
-laselva,8/7/2017,asplenium_auritum,epiphyte,2,,0.005,2,10
-laselva,8/7/2017,asplenium_auritum,epiphyte,3,,0.0061,2,10
-laselva,8/7/2017,asplenium_auritum,epiphyte,4,,0.0107,2,10
-laselva,8/7/2017,asplenium_auritum,epiphyte,5,,0.0073,2,10
-laselva,8/7/2017,asplenium_auritum,epiphyte,6,,0.0082,2,10
-laselva,8/7/2017,blechnum_occidentale ,terrestrial,1,,0.0067,5,10
-laselva,8/7/2017,blechnum_occidentale ,terrestrial,2,,0.0071,5,10
-laselva,8/7/2017,blechnum_occidentale ,terrestrial,3,,0.0081,5,10
-laselva,8/7/2017,blechnum_occidentale ,terrestrial,4,,0.0076,5,10
-laselva,8/7/2017,blechnum_occidentale ,terrestrial,5,,0.0081,5,10
-laselva,8/7/2017,blechnum_occidentale ,terrestrial,6,,0.0096,5,10
-laselva,10/7/2017,lomariopsis_japurensis,hemi-epiphyte ,1,,,,
-laselva,10/7/2017,lomariopsis_japurensis,hemi-epiphyte ,2,,,,
-laselva,10/7/2017,lomariopsis_japurensis,hemi-epiphyte ,3,,,,
-laselva,10/7/2017,lomariopsis_japurensis,hemi-epiphyte ,4,,,,
-laselva,10/7/2017,lomariopsis_japurensis,hemi-epiphyte ,5,,,,
-laselva,10/7/2017,lomariopsis_japurensis,hemi-epiphyte ,6,,,,
-laselva,10/7/2017,thelypteris_dentata,terrestrial,1,,,,
-laselva,10/7/2017,thelypteris_dentata,terrestrial,2,,,,
-laselva,10/7/2017,thelypteris_dentata,terrestrial,3,,,,
-laselva,10/7/2017,thelypteris_dentata,terrestrial,4,,,,
-laselva,10/7/2017,thelypteris_dentata,terrestrial,6,,,,
-laselva,10/7/2017,diplazium_straitastrum,terrestrial,1,,,,
-laselva,10/7/2017,diplazium_straitastrum,terrestrial,2,,,,
-laselva,10/7/2017,diplazium_straitastrum,terrestrial,3,,,,
-laselva,10/7/2017,diplazium_straitastrum,terrestrial,4,,,,
-laselva,10/7/2017,diplazium_straitastrum,terrestrial,5,,,,
-laselva,10/7/2017,diplazium_straitastrum,terrestrial,6,,,,
-laselva,10/7/2017,campylonerum_brevifolia,epiphyte,1,,,,
-laselva,10/7/2017,campylonerum_brevifolia,epiphyte,2,,,,
-laselva,10/7/2017,campylonerum_brevifolia,epiphyte,3,,,,
-laselva,10/7/2017,campylonerum_brevifolia,epiphyte,4,,,,
-laselva,10/7/2017,campylonerum_brevifolia,epiphyte,5,,,,
-laselva,10/7/2017,campylonerum_brevifolia,epiphyte,6,,,,
-laselva,10/7/2017,campylonerum_brevifolia,epiphyte,1,,,,
-laselva,10/7/2017,campylonerum_brevifolia,epiphyte,2,,,,
-laselva,10/7/2017,campylonerum_brevifolia,epiphyte,3,,,,
-laselva,10/7/2017,campylonerum_brevifolia,epiphyte,4,,,,
-laselva,10/7/2017,campylonerum_brevifolia,epiphyte,5,,,,
-laselva,10/7/2017,campylonerum_brevifolia,epiphyte,6,,,,
-laselva,10/8/2017,cyclopeltis_semicordata,terrestrial,1,,,,
-laselva,10/8/2017,cyclopeltis_semicordata,terrestrial,2,,,,
-laselva,10/8/2017,cyclopeltis_semicordata,terrestrial,3,,,,
-laselva,10/8/2017,cyclopeltis_semicordata,terrestrial,4,,,,
-laselva,10/8/2017,cyclopeltis_semicordata,terrestrial,5,,,,
-laselva,10/8/2017,cyclopeltis_semicordata,terrestrial,6,,,,
-laselva,10/8/2017,cyclopeltis_semicordata,terrestrial,7,,,,
-laselva,10/8/2017,cyclopeltis_semicordata,terrestrial,8,,,,
-laselva,10/7/2017,mickelia_nicotianifolia,terrestrial,1,,,,
-laselva,10/7/2017,mickelia_nicotianifolia,terrestrial,2,,,,
-laselva,10/7/2017,mickelia_nicotianifolia,terrestrial,3,,,,
-laselva,10/7/2017,mickelia_nicotianifolia,terrestrial,4,,,,
-laselva,10/7/2017,mickelia_nicotianifolia,terrestrial,5,,,,
-laselva,10/7/2017,mickelia_nicotianifolia,terrestrial,6,,,,
-laselva,13/8/2017,tectaria_incisa,terrestrial,1,,,,
-laselva,13/8/2018,tectaria_incisa,terrestrial,2,,,,
-laselva,13/8/2019,tectaria_incisa,terrestrial,3,,,,
-laselva,13/8/2020,tectaria_incisa,terrestrial,4,,,,
-laselva,13/8/2021,tectaria_incisa,terrestrial,5,,,,
-laselva,13/8/2022,tectaria_incisa,terrestrial,6,,,,
-laselva,14/7/2017,asplenium_serratum,epiphyte,1,,,,
-laselva,14/7/2017,asplenium_serratum,epiphyte,2,,,,
-laselva,14/7/2017,asplenium_serratum,epiphyte,3,,,,
-laselva,14/7/2017,asplenium_serratum,epiphyte,4,,,,
-laselva,14/7/2017,asplenium_serratum,epiphyte,5,,,,
-laselva,14/7/2017,asplenium_serratum,epiphyte,6,,,,
-laselva,14/7/2017,thelypteris_nicaraguensis,terrestrial,1,,,,
-laselva,14/7/2017,thelypteris_nicaraguensis,terrestrial,2,,,,
-laselva,14/7/2017,thelypteris_nicaraguensis,terrestrial,3,,,,
-laselva,14/7/2017,thelypteris_nicaraguensis,terrestrial,4,,,,
-laselva,14/7/2017,thelypteris_nicaraguensis,terrestrial,5,,,,
-laselva,14/7/2017,thelypteris_nicaraguensis,terrestrial,6,,,,
-laselva,18/7/2017,elaphoglossum_latifolia,epiphyte,1,,,,
-laselva,18/7/2017,elaphoglossum_latifolia,epiphyte,2,,,,
-laselva,18/7/2017,elaphoglossum_latifolia,epiphyte,3,,,,
-laselva,18/7/2017,elaphoglossum_latifolia,epiphyte,4,,,,
-laselva,18/7/2017,elaphoglossum_latifolia,epiphyte,5,,,,
-laselva,18/7/2017,elaphoglossum_latifolia,epiphyte,6,,,,
-laselva,18/7/2017,pecluma_pectinata,epiphyte,1,,,,
-laselva,18/7/2017,pecluma_pectinata,epiphyte,2,,,,
-laselva,18/7/2017,pecluma_pectinata,epiphyte,3,,,,
-laselva,18/7/2017,pecluma_pectinata,epiphyte,4,,,,
-laselva,18/7/2017,pecluma_pectinata,epiphyte,5,,,,
-laselva,18/7/2017,pecluma_pectinata,epiphyte,6,,,,
-laselva,18/7/2017,pecluma_pectinata,epiphyte,10,,,,
-laselva,19/7/2017,elaphoglossum_herminieri,epiphyte,1,,,,
-laselva,19/7/2017,elaphoglossum_herminieri,epiphyte,2,,,,
-laselva,19/7/2017,elaphoglossum_herminieri,epiphyte,3,,,,
-laselva,19/7/2017,elaphoglossum_herminieri,epiphyte,4,,,,
-laselva,19/7/2017,elaphoglossum_herminieri,epiphyte,5,,,,
-laselva,19/7/2017,elaphoglossum_herminieri,epiphyte,6,,,,
-laselva,19/7/2017,asplenium_juglandifolia,epiphyte,1,,,,
-laselva,19/7/2017,asplenium_juglandifolia,epiphyte,2,,,,
-laselva,19/7/2017,asplenium_juglandifolia,epiphyte,3,,,,
-laselva,19/7/2017,asplenium_juglandifolia,epiphyte,4,,,,
-laselva,19/7/2017,asplenium_juglandifolia,epiphyte,5,,,,
-laselva,19/7/2017,oleandra_articulata,epiphyte,1,,,,
-laselva,19/7/2017,oleandra_articulata,epiphyte,3,,,,
-laselva,19/7/2017,oleandra_articulata,epiphyte,5,,,,
-laselva,19/7/2017,oleandra_articulata,epiphyte,6,,,,
-laselva,19/7/2017,oleandra_articulata,epiphyte,7,,,,
-laselva,19/7/2017,oleandra_articulata,epiphyte,8,,,,
-laselva,20/7/2017,pleopeltis_bradeorum,epiphyte,1,,,,
-laselva,20/7/2017,pleopeltis_bradeorum,epiphyte,2,,,,
-laselva,20/7/2017,pleopeltis_bradeorum,epiphyte,3,,,,
-laselva,20/7/2017,pleopeltis_bradeorum,epiphyte,4,,,,
-laselva,20/7/2017,pleopeltis_bradeorum,epiphyte,5,,,,
-laselva,20/7/2017,pleopeltis_bradeorum,epiphyte,6,,,,
-laselva,20/7/2017,nephrolepis_rivularis,epiphyte,1,,,,
-laselva,20/7/2017,nephrolepis_rivularis,epiphyte,2,,,,
-laselva,20/7/2017,nephrolepis_rivularis,epiphyte,3,,,,
-laselva,20/7/2017,nephrolepis_rivularis,epiphyte,4,,,,
-laselva,20/7/2017,nephrolepis_rivularis,epiphyte,5,,,,
-laselva,20/7/2017,nephrolepis_rivularis,epiphyte,6,,,,
-laselva,20/7/2017,elaphoglossum_amygdalifolium,hemi_epiphyte,1,,,,
-laselva,20/7/2017,elaphoglossum_amygdalifolium,hemi_epiphyte,2,,,,
-laselva,20/7/2017,elaphoglossum_amygdalifolium,hemi_epiphyte,3,,,,
-laselva,20/7/2017,elaphoglossum_amygdalifolium,hemi_epiphyte,4,,,,
-laselva,20/7/2017,elaphoglossum_amygdalifolium,hemi_epiphyte,5,,,,
-laselva,20/7/2017,elaphoglossum_amygdalifolium,hemi_epiphyte,6,,,,
-laselva,20/7/2017,nephrolepis biserrata,terrestrial,1,,,,
-laselva,20/7/2017,nephrolepis biserrata,terrestrial,2,,,,
-laselva,20/7/2017,nephrolepis biserrata,terrestrial,3,,,,
-laselva,20/7/2017,nephrolepis biserrata,terrestrial,6,,,,
-laselva,20/7/2017,nephrolepis biserrata,terrestrial,8,,,,
-laselva,20/7/2017,nephrolepis biserrata,terrestrial,9,,,,
+site,date,species,plant_no,pv_dry,sla_dry,sla_no_disks,size_mm2
+laselva,4/7/2017,phlebodium_aurem,1,,0.0041,10,10
+laselva,4/7/2017,phlebodium_aurem,2,,0.0042,10,10
+laselva,4/7/2017,phlebodium_aurem,3,,0.0063,10,10
+laselva,4/7/2017,phlebodium_aurem,4,,0.0057,10,10
+laselva,4/7/2017,phlebodium_aurem,5,,0.0058,10,10
+laselva,4/7/2017,phlebodium_aurem,6,,0.0072,10,10
+laselva,4/7/2017,phlebodium_aurem,7,,0.0047,10,10
+laselva,4/7/2017,phlebodium_aurem,8,,0.0045,10,10
+laselva,6/7/2017,thelypteris_curtii,1,,0.0014,5,10
+laselva,6/7/2017,thelypteris_curtii,2,,0.0008,5,10
+laselva,6/7/2017,thelypteris_curtii,3,,0.0012,5,10
+laselva,6/7/2017,thelypteris_curtii,4,,0.0006,5,7
+laselva,6/7/2017,thelypteris_curtii,5,,0.0016,5,9
+laselva,6/7/2017,thelypteris_curtii,6,,0.0011,5,10
+laselva,8/7/2017,polybotrya_osmundacea,1,,0.0055,5,10
+laselva,8/7/2017,polybotrya_osmundacea,2,,0.0065,5,10
+laselva,8/7/2017,polybotrya_osmundacea,3,,0.008,5,10
+laselva,8/7/2017,polybotrya_osmundacea,4,,0.0053,5,10
+laselva,8/7/2017,polybotrya_osmundacea,5,,0.006,5,10
+laselva,8/7/2017,polybotrya_osmundacea,6,,0.0053,5,10
+laselva,8/7/2017,serpocaulon_loriciforme,10,,0.0044,2,10
+laselva,8/7/2017,serpocaulon_loriciforme,9,,0.0043,2,10
+laselva,8/7/2017,serpocaulon_loriciforme,3,,0.0032,2,10
+laselva,8/7/2017,serpocaulon_loriciforme,4,,0.0053,2,10
+laselva,8/7/2017,serpocaulon_loriciforme,12,,0.0036,2,10
+laselva,8/7/2017,serpocaulon_loriciforme,6,,0.0044,2,10
+laselva,8/7/2017,asplenium_auritum,1,,0.0085,2,10
+laselva,8/7/2017,asplenium_auritum,2,,0.005,2,10
+laselva,8/7/2017,asplenium_auritum,3,,0.0061,2,10
+laselva,8/7/2017,asplenium_auritum,4,,0.0107,2,10
+laselva,8/7/2017,asplenium_auritum,5,,0.0073,2,10
+laselva,8/7/2017,asplenium_auritum,6,,0.0082,2,10
+laselva,8/7/2017,blechnum_occidentale ,1,,0.0067,5,10
+laselva,8/7/2017,blechnum_occidentale ,2,,0.0071,5,10
+laselva,8/7/2017,blechnum_occidentale ,3,,0.0081,5,10
+laselva,8/7/2017,blechnum_occidentale ,4,,0.0076,5,10
+laselva,8/7/2017,blechnum_occidentale ,5,,0.0081,5,10
+laselva,8/7/2017,blechnum_occidentale ,6,,0.0096,5,10
+laselva,10/7/2017,lomariopsis_japurensis,1,,,,
+laselva,10/7/2017,lomariopsis_japurensis,2,,,,
+laselva,10/7/2017,lomariopsis_japurensis,3,,,,
+laselva,10/7/2017,lomariopsis_japurensis,4,,,,
+laselva,10/7/2017,lomariopsis_japurensis,5,,,,
+laselva,10/7/2017,lomariopsis_japurensis,6,,,,
+laselva,10/7/2017,thelypteris_dentata,1,,,,
+laselva,10/7/2017,thelypteris_dentata,2,,,,
+laselva,10/7/2017,thelypteris_dentata,3,,,,
+laselva,10/7/2017,thelypteris_dentata,4,,,,
+laselva,10/7/2017,thelypteris_dentata,6,,,,
+laselva,10/7/2017,diplazium_straitastrum,1,,,,
+laselva,10/7/2017,diplazium_straitastrum,2,,,,
+laselva,10/7/2017,diplazium_straitastrum,3,,,,
+laselva,10/7/2017,diplazium_straitastrum,4,,,,
+laselva,10/7/2017,diplazium_straitastrum,5,,,,
+laselva,10/7/2017,diplazium_straitastrum,6,,,,
+laselva,10/7/2017,campylonerum_brevifolia,1,,,,
+laselva,10/7/2017,campylonerum_brevifolia,2,,,,
+laselva,10/7/2017,campylonerum_brevifolia,3,,,,
+laselva,10/7/2017,campylonerum_brevifolia,4,,,,
+laselva,10/7/2017,campylonerum_brevifolia,5,,,,
+laselva,10/7/2017,campylonerum_brevifolia,6,,,,
+laselva,10/7/2017,campylonerum_brevifolia,1,,,,
+laselva,10/7/2017,campylonerum_brevifolia,2,,,,
+laselva,10/7/2017,campylonerum_brevifolia,3,,,,
+laselva,10/7/2017,campylonerum_brevifolia,4,,,,
+laselva,10/7/2017,campylonerum_brevifolia,5,,,,
+laselva,10/7/2017,campylonerum_brevifolia,6,,,,
+laselva,10/8/2017,cyclopeltis_semicordata,1,,,,
+laselva,10/8/2017,cyclopeltis_semicordata,2,,,,
+laselva,10/8/2017,cyclopeltis_semicordata,3,,,,
+laselva,10/8/2017,cyclopeltis_semicordata,4,,,,
+laselva,10/8/2017,cyclopeltis_semicordata,5,,,,
+laselva,10/8/2017,cyclopeltis_semicordata,6,,,,
+laselva,10/8/2017,cyclopeltis_semicordata,7,,,,
+laselva,10/8/2017,cyclopeltis_semicordata,8,,,,
+laselva,10/7/2017,mickelia_nicotianifolia,1,,,,
+laselva,10/7/2017,mickelia_nicotianifolia,2,,,,
+laselva,10/7/2017,mickelia_nicotianifolia,3,,,,
+laselva,10/7/2017,mickelia_nicotianifolia,4,,,,
+laselva,10/7/2017,mickelia_nicotianifolia,5,,,,
+laselva,10/7/2017,mickelia_nicotianifolia,6,,,,
+laselva,13/8/2017,tectaria_incisa,1,,,,
+laselva,13/8/2018,tectaria_incisa,2,,,,
+laselva,13/8/2019,tectaria_incisa,3,,,,
+laselva,13/8/2020,tectaria_incisa,4,,,,
+laselva,13/8/2021,tectaria_incisa,5,,,,
+laselva,13/8/2022,tectaria_incisa,6,,,,
+laselva,14/7/2017,asplenium_serratum,1,,,,
+laselva,14/7/2017,asplenium_serratum,2,,,,
+laselva,14/7/2017,asplenium_serratum,3,,,,
+laselva,14/7/2017,asplenium_serratum,4,,,,
+laselva,14/7/2017,asplenium_serratum,5,,,,
+laselva,14/7/2017,asplenium_serratum,6,,,,
+laselva,14/7/2017,thelypteris_nicaraguensis,1,,,,
+laselva,14/7/2017,thelypteris_nicaraguensis,2,,,,
+laselva,14/7/2017,thelypteris_nicaraguensis,3,,,,
+laselva,14/7/2017,thelypteris_nicaraguensis,4,,,,
+laselva,14/7/2017,thelypteris_nicaraguensis,5,,,,
+laselva,14/7/2017,thelypteris_nicaraguensis,6,,,,
+laselva,18/7/2017,elaphoglossum_latifolia,1,,,,
+laselva,18/7/2017,elaphoglossum_latifolia,2,,,,
+laselva,18/7/2017,elaphoglossum_latifolia,3,,,,
+laselva,18/7/2017,elaphoglossum_latifolia,4,,,,
+laselva,18/7/2017,elaphoglossum_latifolia,5,,,,
+laselva,18/7/2017,elaphoglossum_latifolia,6,,,,
+laselva,18/7/2017,pecluma_pectinata,1,,,,
+laselva,18/7/2017,pecluma_pectinata,2,,,,
+laselva,18/7/2017,pecluma_pectinata,3,,,,
+laselva,18/7/2017,pecluma_pectinata,4,,,,
+laselva,18/7/2017,pecluma_pectinata,5,,,,
+laselva,18/7/2017,pecluma_pectinata,6,,,,
+laselva,18/7/2017,pecluma_pectinata,10,,,,
+laselva,19/7/2017,elaphoglossum_herminieri,1,,,,
+laselva,19/7/2017,elaphoglossum_herminieri,2,,,,
+laselva,19/7/2017,elaphoglossum_herminieri,3,,,,
+laselva,19/7/2017,elaphoglossum_herminieri,4,,,,
+laselva,19/7/2017,elaphoglossum_herminieri,5,,,,
+laselva,19/7/2017,elaphoglossum_herminieri,6,,,,
+laselva,19/7/2017,asplenium_juglandifolia,1,,,,
+laselva,19/7/2017,asplenium_juglandifolia,2,,,,
+laselva,19/7/2017,asplenium_juglandifolia,3,,,,
+laselva,19/7/2017,asplenium_juglandifolia,4,,,,
+laselva,19/7/2017,asplenium_juglandifolia,5,,,,
+laselva,19/7/2017,oleandra_articulata,1,,,,
+laselva,19/7/2017,oleandra_articulata,3,,,,
+laselva,19/7/2017,oleandra_articulata,5,,,,
+laselva,19/7/2017,oleandra_articulata,6,,,,
+laselva,19/7/2017,oleandra_articulata,7,,,,
+laselva,19/7/2017,oleandra_articulata,8,,,,
+laselva,20/7/2017,pleopeltis_bradeorum,1,,,,
+laselva,20/7/2017,pleopeltis_bradeorum,2,,,,
+laselva,20/7/2017,pleopeltis_bradeorum,3,,,,
+laselva,20/7/2017,pleopeltis_bradeorum,4,,,,
+laselva,20/7/2017,pleopeltis_bradeorum,5,,,,
+laselva,20/7/2017,pleopeltis_bradeorum,6,,,,
+laselva,20/7/2017,nephrolepis_rivularis,1,,,,
+laselva,20/7/2017,nephrolepis_rivularis,2,,,,
+laselva,20/7/2017,nephrolepis_rivularis,3,,,,
+laselva,20/7/2017,nephrolepis_rivularis,4,,,,
+laselva,20/7/2017,nephrolepis_rivularis,5,,,,
+laselva,20/7/2017,nephrolepis_rivularis,6,,,,
+laselva,20/7/2017,elaphoglossum_amygdalifolium,1,,,,
+laselva,20/7/2017,elaphoglossum_amygdalifolium,2,,,,
+laselva,20/7/2017,elaphoglossum_amygdalifolium,3,,,,
+laselva,20/7/2017,elaphoglossum_amygdalifolium,4,,,,
+laselva,20/7/2017,elaphoglossum_amygdalifolium,5,,,,
+laselva,20/7/2017,elaphoglossum_amygdalifolium,6,,,,
+laselva,20/7/2017,nephrolepis biserrata,1,,,,
+laselva,20/7/2017,nephrolepis biserrata,2,,,,
+laselva,20/7/2017,nephrolepis biserrata,3,,,,
+laselva,20/7/2017,nephrolepis biserrata,6,,,,
+laselva,20/7/2017,nephrolepis biserrata,8,,,,
+laselva,20/7/2017,nephrolepis biserrata,9,,,,

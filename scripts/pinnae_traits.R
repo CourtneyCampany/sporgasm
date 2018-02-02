@@ -2,6 +2,8 @@
 source("master_scripts/plot_objects.R")
 pinnae <- read.csv("raw_data/fern_traits.csv")
 
+
+
   # table(pinnae$lamina_area_cm2)
   # which(is.na(pinnae$lamina_area_cm2))
   # which(is.na(pinnae$frond_length_cm))
