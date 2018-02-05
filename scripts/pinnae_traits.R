@@ -1,15 +1,16 @@
 ##analyze and plot lamina area and lamina length
 source("master_scripts/plot_objects.R")
 pinnae <- read.csv("raw_data/fern_traits.csv")
+niche <- read.csv("raw_data/species_niches.csv")
 
-
+pinnae <- merge(pinnae, niche)
 
   # table(pinnae$lamina_area_cm2)
   # which(is.na(pinnae$lamina_area_cm2))
   # which(is.na(pinnae$frond_length_cm))
 
-area <- pinnae[, c(1:5, 9)]
-length <- pinnae[complete.cases(pinnae), 1:8]
+area <- pinnae[, c(1:4, 8, 11)]
+length <- pinnae[complete.cases(pinnae), c(1:7, 11)]
 
 # plotting ----------------------------------------------------------------
 

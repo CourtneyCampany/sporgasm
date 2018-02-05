@@ -1,7 +1,9 @@
 #LMA for different tropical fern niche habitats
 source("master_scripts/plot_objects.R")
+niche <- read.csv("raw_data/species_niches.csv")
 
 drymass <- read.csv("raw_data/fern_dryweights2.csv")
+drymass <- merge(drymass, niche, by="species")
 
 #there are gonna be some redos with pv curves and sla so index drymass 
 #where sladrymass !is.na
