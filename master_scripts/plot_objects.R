@@ -14,3 +14,6 @@ n_hemi <- length(unique(makelabels[makelabels$niche =="hemi-epiphyte", "species"
 niche_count <- c(n_climb, n_epi, n_hemi, n_terr)
 niche_lab2 <- paste("n=", niche_count, sep = "")
 
+gradient <- colorRampPalette(c("darkgreen", "orange"))
+palette(gradient(4))
+nichcols <- palette(gradient(4))

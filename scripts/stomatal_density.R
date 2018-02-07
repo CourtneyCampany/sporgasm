@@ -6,9 +6,9 @@ library(car)
 m2 <- function(x) mean(x, na.rm=TRUE)
 
 stodens <- read.csv("raw_data/stomata_density.csv")
-
-##calculate a leaf disk mean, need to average multiple region counts first
-
+niche <- read.csv("raw_data/species_niches.csv")
+stodens <- merge(stodens, niche)
+  ##calculate a leaf disk mean, need to average multiple region counts first
   stodens$sto_no <- with(stodens, (sto1 + sto2 + sto3)/3)
   #scale sto_no to cm2 from FOV and mm2
   stodens$sto_cm2 <- with(stodens, (sto_no/fov_mm2 )* .01)
