@@ -52,7 +52,6 @@ hydro_agg <- summaryBy(. ~ species+  niche, data=hydraulics_noclimb,
 
 This document contains summary statistics for the 2017 La Selva field work. Below are visualizations for many of the leaf functional traits we measured including SLA, stomatal density, cholorophyll content, lamina length and lamina area.
 
-
 ```{r area, echo=FALSE, fig.align='center',fig.width = 7, fig.height = 7}
 par(mgp=c(2.5,1,0), mar=c(4,4,1,1), cex.lab=1.1)
 boxplot(lamina_area_cm2 ~ niche, data=area, ylim=c(0, 1750),xaxt='n',
