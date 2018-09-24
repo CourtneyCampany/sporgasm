@@ -9,7 +9,7 @@ opts_knit$set(root.dir = '../')
 ```
 
 ```{r data, echo=FALSE, warning=FALSE}
-pinnae <- read.csv("raw_data/fern_traits.csv")
+pinnae <- read.csv("raw_data/fern_traits_laselva.csv")
 source("master_scripts/plot_objects.R")
 niche <- read.csv("raw_data/species_niches.csv")
 
