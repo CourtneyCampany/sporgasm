@@ -17,3 +17,9 @@ niche_lab2 <- paste("n=", niche_count, sep = "")
 gradient <- colorRampPalette(c("darkgreen", "orange"))
 palette(gradient(4))
 nichcols <- palette(gradient(4))
+
+
+##plot axis labels
+lamina_lab <- expression(Lamina~area~~(cm^2))
+frond_lab <- "Frond length  (cm)"
+stipe_lab <- "Stipe length  (cm)"
