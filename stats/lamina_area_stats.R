@@ -78,3 +78,27 @@ emmip(lamina_mod3, niche2 ~ site) ##visualize interaction
 emm_lamina <- emmeans(lamina_mod3, pairwise ~ niche2 | site)
 emm_lamina
 ##sconfirms results of TUkeys
+
+
+##full mixed model:
+lamina_mod5 <- lmer(lamina_area_cm2^(1/3) ~ niche2 * site + (1|species), 
+                   data=lamina[-c(226,228),])
+
+plot(lamina_mod5)
+qqnorm(resid(lamina_mod5))
+qqline(resid(lamina_mod5))
+
+Anova(lamina_mod5) # niche only p = 0.0157
+summary(lamina_mod5)
+
+visreg(lamina_mod5, "niche2") 
+
+r.squaredGLMM(lamina_mod5)                   
+#R2m       R2c
+# 0.2119827 0.8481775      
+
+tukey_lamina5 <- summary(glht(lamina_mod5, linfct=mcp(niche2="Tukey")))  
+lamina5_siglets <-cld(tukey_lamina5)
+lamina5_siglets2 <- lamina5_siglets$mcletters$Letters
+
+#terrestrial greater than epe, hemi is intermediate

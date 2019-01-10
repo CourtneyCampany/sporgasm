@@ -88,3 +88,35 @@ stipeNS_siglets2 <- stipeNS_siglets$mcletters$Letters
 ##terrestrial > at las cruces
 
 visreg(stipe_mod4, "niche2", by="site", overlay=TRUE) 
+
+
+##full mixed model:
+stipe_mod7 <- lmer(sqrt(stipe_length_cm) ~ niche2 * site + (1|species)
+                   , data=stipe2)
+
+plot(stipe_mod7)
+qqnorm(resid(stipe_mod7))
+qqline(resid(stipe_mod7))
+
+Anova(stipe_mod7) # P < 0.001
+summary(stipe_mod7)
+
+r.squaredGLMM(stipe_mod7)
+#      R2m       R2c
+#  0.3887817 0.8841734
+
+visreg(stipe_mod7, "niche2", by="site", overlay=TRUE) 
+##there is a minor interaction with site
+
+visreg(stipe_mod7, "niche2") 
+
+tukey_stipe_7 <- summary(glht(stipe_mod7, linfct=mcp(niche2="Tukey")))  
+stipe7_siglets <-cld(tukey_stipe_7)
+stipeN7_siglets2 <- stipe7_siglets$mcletters$Letters
+
+#if no interaction, then terrestrial greater
+
+
+emmip(stipe_mod7, niche2 ~ site) ##visualize interaction
+emm_lamina7 <- emmeans(stipe_mod7, pairwise ~ niche2 | site)
+emm_lamina7

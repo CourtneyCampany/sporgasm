@@ -47,27 +47,27 @@ frond_mod3 <- lm(frond_length_cm ~ niche2 + site,
 summary(frond_mod3)
 anova(frond_mod3) ##no effect of site
 
-##linear mixed model with site as random (account for site variation)
+##linear mixed model with species as random (account for species variation)
 library(lme4)
 library(MuMIn)
 library(arm)
 
-frond_mod4 <- lmer(frond_length_cm ~ niche2 + (1|site), 
+frond_mod4 <- lmer(frond_length_cm ~ niche2 * site + (1|species), 
                    data=traits[-c(205, 206,226,228,203),])
   
   plot(frond_mod4)
   qqnorm(resid(frond_mod4))
   qqline(resid(frond_mod4))
 
-  Anova(frond_mod4)
+  Anova(frond_mod4) 
   summary(frond_mod4)
 
   r.squaredGLMM(frond_mod4)
 # R2m       R2c 
-# 0.2441609 0.2488163 
+# 0.256307 0.7870744
 #P<o.ooo1
   
-# very little effect of site on the total model variance
+# niche effect still present depsite large amount of species variation
   
 tukey_frond_mm <- glht(frond_mod4, linfct = mcp(niche2 = "Tukey"))
   frond_siglets_mm <-cld(tukey_frond_mm)

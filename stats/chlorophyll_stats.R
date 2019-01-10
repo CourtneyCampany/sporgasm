@@ -50,17 +50,18 @@ library(lme4)
 library(MuMIn)
 library(arm)
 
-chl_mod3 <- lmer(chl_mg_m2 ~ niche2 + (1|site), data=chloro)
-#singular fit, so appears no vairation assocaited with site
+chl_mod3 <- lmer(chl_mg_m2 ~ niche2 + site + (1|species), data=chloro)
+#site as vactor variable, species as random
 plot(chl_mod3)
-qqplot(chl_mod3)
+qqnorm(resid(chl_mod3))
+qqline(resid(chl_mod3))
 
-Anova(chl_mod3)
+Anova(chl_mod3) #no diff
 summary(chl_mod3)
 
-r.squaredGLMM(chl_mod3) #confirms singlur fit
+r.squaredGLMM(chl_mod3) #nearly all of variation in model from species diffs
 
-#or 
+ 
 tukey_chl <- summary(glht(chl_mod3, linfct=mcp(niche2="Tukey")))  
 chl_siglets <-cld(tukey_chl)
 chl_siglets2 <- chl_siglets$mcletters$Letters
