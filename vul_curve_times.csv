@@ -1,0 +1,8 @@
+species,individual,water_potential,stipe_length_mm,pressure_head_height_cm,reservoir_height_cm,pressure_head_cm,air_temp_C,back_first_initial,back_first_final,flow_initial,flow_final,back_second_initial,back_second_final
+cyc_sem,1,0,120,108.1,6.3,101.8,24.4,250,310,375,435,460,520
+cyc_sem,1,0.5,118,105.7,5.3,100.4,24.3,895,955,1005,1065,1120,1180
+cyc_sem,1,1,117,102,5.5,96.5,23.9,275,335,380,440,470,530
+cyc_sem,1,1.5,116,101.6,5.6,96,24.4,300,360,405,465,495,555
+cyc_sem,1,2,115,100.9,6.1,94.8,24.2,350,410,450,510,535,595
+cyc_sem,1,2.5,114,98.6,6.3,92.3,24.5,400,460,515,575,605,665
+cyc_sem,1,3,113,117.5,6.1,111.4,24.4,350,410,455,515,550,610
