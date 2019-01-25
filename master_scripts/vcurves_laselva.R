@@ -46,24 +46,20 @@ vcurve_function <- function(dfr, timesdfr,
                             massflow_constant1 = -0.2323,
                             massflow_constant2 = 1002.9,
                             acceleratebygrav = 0.09806) {
-  
-      x <- data.frame(dfr[[1]])
-    # x <- dfr
-    # x <- data.frame(dfr[1])
-    
-    y_alltimes <- timesdfr
+
+    x <- data.frame(dfr)
 
     #subset times dataframe to match sample id of an individual curve
-    y <- y_alltimes[y_alltimes$SampleID == unique(x$SampleID),]
+    y <- timesdfr[timesdfr$SampleID == unique(x$SampleID),]
     
-    #density of H20 calculation 
+    #density of H20 calculation
     y$h20_dens <- (massflow_constant1 * y$air_temp_C )+ massflow_constant2
 
     #isolate backgrounds (x2) and flow from timesdfr to trim flow data sets
     #ackward variable names are raw names from flow meter
-    background1 <- x[x$Relative.Time.s. > (y$back_first_initial-1)
-                       & x$Relative.Time.s. < y$back_first_final ,]
-    
+    background1 <- dfr[dfr$Relative.Time.s. > (y$back_first_initial-1)
+                       & dfr$Relative.Time.s. < y$back_first_final ,]
+
     background2 <- x[x$Relative.Time.s. > (y$back_second_initial-1)
                        & x$Relative.Time.s. < y$back_second_final ,]
 
@@ -102,18 +98,16 @@ vcurve_function <- function(dfr, timesdfr,
 }
 
 #test function with simple data frames
-testdata <- vcurve_files[[1]]
-
-test1 <- vcurve_function(dfr = testdata, timesdfr = laselva_times)
-test2 <- vcurve_function(dfr = vcurve_files, timesdfr = laselva_times)
+# testdata <- vcurve_files[[2]]
+# test1 <- vcurve_function(dfr = testdata, timesdfr = laselva_times)
 
 #test function with larger list
 test3 <- lapply(vcurve_files, function(x) 
-          vcurve_function(x, laselva_times))
+          vcurve_function(x,  timesdfr=laselva_times))
 
-test4 <- llply(vcurve_files, function(x)  
-                vcurve_function(x, laselva_times))
-
-test5 <- lapply(vcurve_files, vcurve_function, laselva_times)
-
+# 
+# for(i in 1:length(vcurve_files)){
+#   x <- data.frame(vcurve_files[[i]])
+#   vcurve_function(dfr=x,  timesdfr=laselva_times)
+# }
 
