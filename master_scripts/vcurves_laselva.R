@@ -5,43 +5,37 @@ library(plyr)
 
 laselva_times <- read.csv("raw_data/vcurve_raw_data/laselva/vcurve_times_laselva.csv")
   laselva_times$water_potential <- round(laselva_times$water_potential,1)
-  laselva_times$SampleID <- with(laselva_times,
+  laselva_times$sample_id <- with(laselva_times,
                             paste(species, individual, 
                             format(water_potential,digits=1), sep="_"))
-  # timesnames <- laselva_times$SampleID
-  
-#turn times into a list, double check that each list element aligns with data
-  # times_list <- split(laselva_times, seq(nrow(laselva_times)))
-  # times_list2 <- setNames(times_list, timesnames)
 
-##Read in flow meter data files
+
+##Read in flow meter data files into a list and create unique ID to match times dfr
 
 #create a list of clean file names that we will use latter
 vcurves <- list.files(path="raw_data/vcurve_raw_data/laselva/",
-                      pattern="cycsem_1",full.names=TRUE)
+                      pattern="lomjap",full.names=TRUE)
 
   #extract the genusspecies and treatment info
   vcurves_names <- gsub("raw_data/vcurve_raw_data/laselva/", "", vcurves)
   vcurves_names <- gsub("_mpa.csv", "", vcurves_names)
 
-
 ##read in all data files from laselva
-
 #skip first 14 rows from sensirion flow meter csv files
 vcurve_files <- llply(list.files(path="raw_data/vcurve_raw_data/laselva/",
-                                 pattern="cycsem_1",full.names=TRUE),function(filename){
+                                 pattern="lomjap",full.names=TRUE),function(filename){
                                  dat=read.csv(filename, header=TRUE,skip=14)
                                  })
 
-# vcurve_files2 <- setNames(vcurve_files, vcurves_names) 
-#set dataframe names to genusspecies & MPa
+vcurve_files <- setNames(vcurve_files, vcurves_names) 
+#set dataframe names to unique ID
 
 #add new variable with unique ID
 for(i in seq_along(vcurve_files)){
-  vcurve_files[[i]]$SampleID <- vcurves_names[i]
+  vcurve_files[[i]]$sample_id <- vcurves_names[i]
 }
 
-## function to calculate conductivity from stem flow rates
+## function to calculate conductivity from stipe flow rates--------
 vcurve_function <- function(dfr, timesdfr,
                             massflow_constant1 = -0.2323,
                             massflow_constant2 = 1002.9,
@@ -50,7 +44,7 @@ vcurve_function <- function(dfr, timesdfr,
     x <- data.frame(dfr)
 
     #subset times dataframe to match sample id of an individual curve
-    y <- timesdfr[timesdfr$SampleID == unique(x$SampleID),]
+    y <- timesdfr[timesdfr$sample_id == unique(x$sample_id),]
     
     #density of H20 calculation
     y$h20_dens <- (massflow_constant1 * y$air_temp_C )+ massflow_constant2
@@ -93,8 +87,11 @@ vcurve_function <- function(dfr, timesdfr,
 
     conductivity <- corr_flow_rate/(pressurehead/y$stipe_length_mm) #stipe must be mm
     #mg mm KPa-1s-1
-
-    return(conductivity)
+    
+    id_cond <- data.frame(sample_id = unique(x$sample_id), 
+                          genusspecies = y$species, individual = y$individual,
+                          K = conductivity, MPa = y$water_potential)
+    return(id_cond)
 }
 
 #test function with simple data frames
@@ -102,12 +99,25 @@ vcurve_function <- function(dfr, timesdfr,
 # test1 <- vcurve_function(dfr = testdata, timesdfr = laselva_times)
 
 #test function with larger list
-test3 <- lapply(vcurve_files, function(x) 
+laselva_cond <- lapply(vcurve_files, function(x) 
           vcurve_function(x,  timesdfr=laselva_times))
 
-# 
-# for(i in 1:length(vcurve_files)){
-#   x <- data.frame(vcurve_files[[i]])
-#   vcurve_function(dfr=x,  timesdfr=laselva_times)
-# }
+laselva_cond_genspe <- rbind.fill(laselva_cond)
+
+
+##calculate PLC
+
+library(fitplc)
+
+#test
+test <- laselva_cond_genspe[1:9,]
+plc_test <- fitcond(test, varnames=c(K="K",
+                      WP="MPa"),  WP_Kmax = 0.0)
+##why the missing values error?
+
+laselva_fits <- fitconds(laselva_cond_genspe, varnames=c(K="conductivity",
+                         WP="MPa"), group="sample_id", WP_Kmax = 0.0)
+
+plot(laselva_fits, onepanel=TRUE, plotci=FALSE, px_ci="none", pxlinecol="dimgrey")
+
 
