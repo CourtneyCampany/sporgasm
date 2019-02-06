@@ -18,6 +18,10 @@ variable ~ niche + site + (1|species)
 #(most variation associated with species effects)
 
 ##TODO:
+
+change vcruve function to make unique id from species_id (need to change laselva name)
+
+
 sla
 sd
 ss
