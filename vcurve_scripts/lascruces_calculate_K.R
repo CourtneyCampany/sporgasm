@@ -1,6 +1,4 @@
-###wont work because of rounding issue with .25 & .75 for one species
-
-
+# load packages
 library(dplyr)
 library(stringr)
 
@@ -8,7 +6,7 @@ library(stringr)
 
 lascruces_times <- 
   read.csv("raw_data/vcurve_raw_data/lascruces/vcurve_times_lascruces.csv") %>% 
-  mutate(water_potential = round(water_potential,1),
+         mutate(water_potential = format(water_potential, nsmall=2),
          sample_id = paste(species_id, individual, 
          format(water_potential,digits=1), sep="_"))
 
@@ -27,9 +25,7 @@ vcurves_names <- str_replace(vcurves, "raw_data/vcurve_raw_data/lascruces/", "")
 vcurve_data_list <- lapply(vcurves, read.csv, header=TRUE, skip=14)
 
 
-#add new variable with unique ID (maybe go back to loop)
-# vcurve_data_list <- Map(cbind, vcurve_data_list, 
-#                         sample_id = as.character(vcurves_names))
+#add new variable to each list object with matching unique ID 
 for(i in seq_along(vcurve_data_list)){
   vcurve_data_list[[i]]$sample_id <- vcurves_names[i]
 }
@@ -94,17 +90,19 @@ vcurve_function <- function(dfr, timesdfr,
   return(id_cond)
 }
 
-#test function with simple data frames
-testdata <- vcurve_data_list[[200]]
-test1 <- vcurve_function(dfr = testdata, timesdfr = lascruces_times)
 
-#test function with larger list
-laselva_cond <- lapply(vcurve_data_list, 
+#test function with simple data frames----------
+# testdata <- vcurve_data_list[[290]]
+# test1 <- vcurve_function(dfr = testdata, timesdfr = lascruces_times)
+
+#run function with all data ----------
+lascruces_cond <- lapply(vcurve_data_list, 
                        vcurve_function,
                        timesdfr=lascruces_times) %>%
                        dplyr::bind_rows(.)
 
-write.csv(laselva_cond, "calculated_data/laselva_vcurves.csv", row.names = FALSE)
+write.csv(lascruces_cond, "calculated_data/lascruces_vcurves.csv", 
+          row.names = FALSE)
 
 
 # write.csv(test, "t.csv", row.names = FALSE)

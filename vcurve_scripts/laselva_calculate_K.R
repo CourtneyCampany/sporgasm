@@ -3,11 +3,9 @@
 # r <- require(pacman)
 # if(!r)install.packages("pacman")
 # #pacman:::p_set_cranrepo()
-# pacman::p_load(tibble,broom,reporttools,lubridate, doBy, plyr,plotrix, wesanderson, plantecophys, 
-#                lme4,scales,reshape, pixiedust)
+# pacman::p_load(dplyr, stringr)
 
-
-## laselva vulnerability curve format
+#load packages
 library(dplyr)
 library(stringr)
 
@@ -15,9 +13,11 @@ library(stringr)
 
 ## read in datasheet with flow parameters
 
-laselva_times <- read.csv("raw_data/vcurve_raw_data/laselva/vcurve_times_laselva.csv") %>%  mutate(water_potential = round(water_potential,1),
-                 sample_id = paste(species, individual, 
-                 format(water_potential,digits=1), sep="_"))
+laselva_times <- 
+  read.csv("raw_data/vcurve_raw_data/laselva/vcurve_times_laselva.csv") %>%  
+  mutate(water_potential = format(water_potential, nsmall=2),
+  sample_id = paste(species, individual, 
+  format(water_potential,digits=2), sep="_"))
 
 
 ##Read in flow meter data files into a list and create unique ID to match times dfr
@@ -39,7 +39,7 @@ vcurves_names <- str_replace(vcurves, "raw_data/vcurve_raw_data/laselva/", "") %
 vcurve_data_list <- lapply(vcurves, read.csv, header=TRUE, skip=14)
 
 
-#add new variable with unique ID (maybe go back to loop)
+#add new variable to each list object with matching unique ID 
 # vcurve_data_list <- Map(cbind, vcurve_data_list, 
 #                         sample_id = as.character(vcurves_names))
 for(i in seq_along(vcurve_data_list)){

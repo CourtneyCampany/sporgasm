@@ -1,57 +1,56 @@
-#vcurve data setup file
-laselva_times <- read.csv("raw_data/vcurve_raw_data/laselva/vcurve_times_laselva.csv")
-  laselva_times$water_potential <- round(laselva_times$water_potential,1)
-  laselva_times$SampleID <- with(laselva_times,
-                                  paste(species, individual, 
-                                  format(water_potential,digits=1), sep="_"))
+#vcurve individual tests for bad data
+
+# laselva_times <- 
+#   read.csv("raw_data/vcurve_raw_data/laselva/vcurve_times_laselva.csv") %>%  
+#   mutate(water_potential = format(water_potential, nsmall=2),
+#          sample_id = paste(species, individual, 
+#          format(water_potential,digits=2), sep="_"))
+
+lascruces_times <- 
+  read.csv("raw_data/vcurve_raw_data/lascruces/vcurve_times_lascruces.csv") %>% 
+  mutate(water_potential = format(water_potential, nsmall=2),
+  sample_id = paste(species_id, individual, 
+  format(water_potential,digits=1), sep="_"))
 
 
 ##Read in flow meter data files
 
 #create a list of clean file names that we will use latter
-vcurves <- list.files(path="raw_data/vcurve_raw_data/laselva/",
-                      pattern="cycsem_1_0.0",full.names=TRUE)
+vcurves <- list.files(path="raw_data/vcurve_raw_data/lascruces/",
+                      pattern="parexc_10_1.5",full.names=TRUE)
 
 #extract the genusspecies and treatment info
-vcurves_names <- gsub("raw_data/vcurve_raw_data/laselva/", "", vcurves)
-vcurves_names <- gsub("_mpa.csv", "", vcurves_names)
+vcurves_names <- str_replace(vcurves, "raw_data/vcurve_raw_data/lascruces/", "") %>%
+  str_replace("_mpa.csv", "")
 
-
-##read in all data files from laselva
-
+#read in all data files from laselva using file path from vcurves object (above)
 #skip first 14 rows from sensirion flow meter csv files
-vcurve_files <- llply(list.files(path="raw_data/vcurve_raw_data/laselva/",
-                                 pattern="cycsem_1_0.0",full.names=TRUE),function(filename){
-                                   dat=read.csv(filename, header=TRUE,skip=14)
-                                 })
+vcurve_data_list <- lapply(vcurves, read.csv, header=TRUE, skip=14)
 
-# vcurve_files2 <- setNames(vcurve_files, vcurves_names) 
-#set dataframe names to genusspecies & MPa
 
-#add new variable with unique ID
-for(i in seq_along(vcurve_files)){
-  vcurve_files[[i]]$SampleID <- vcurves_names[i]
+#add new variable to each list object with matching unique ID 
+for(i in seq_along(vcurve_data_list)){
+  vcurve_data_list[[i]]$sample_id <- vcurves_names[i]
 }
 
 ## calculate conductivity
+times <- lascruces_times
 
 massflow_constant1 = -0.2323
 massflow_constant2 = 1002.9
 acceleratebygrav = 0.09806
   
 
-x <- vcurve_files[[1]]
-y_alltimes <- laselva_times
+x <- data.frame(vcurve_data_list[[1]])
 
-  
+
 #subset times dataframe to match sample id of an individual curve
-y <- y_alltimes[y_alltimes$SampleID == unique(x$SampleID),]
-  
-#density of H20 calculation 
+y <- times[times$sample_id == unique(x$sample_id),]
+
+#density of H20 calculation
 y$h20_dens <- (massflow_constant1 * y$air_temp_C )+ massflow_constant2
   
 #isolate backgrounds (x2) and flow from timesdfr to trim flow data sets
-#ackward variable names are raw names from flow meter
 background1 <- x[x$Relative.Time.s. > (y$back_first_initial-1)
                    & x$Relative.Time.s. < (y$back_first_final) ,]
   
