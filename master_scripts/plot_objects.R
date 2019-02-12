@@ -23,3 +23,5 @@ nichcols <- palette(gradient(4))
 lamina_lab <- expression(Lamina~area~~(cm^2))
 frond_lab <- "Frond length  (cm)"
 stipe_lab <- "Stipe length  (cm)"
+
+k_lab <- expression(Conductivity~~(mg~mm~KPa^-1~s^-1))

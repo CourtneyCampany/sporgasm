@@ -1,26 +1,26 @@
 #vcurve individual tests for bad data
 
-# laselva_times <- 
-#   read.csv("raw_data/vcurve_raw_data/laselva/vcurve_times_laselva.csv") %>%  
-#   mutate(water_potential = format(water_potential, nsmall=2),
-#          sample_id = paste(species, individual, 
-#          format(water_potential,digits=2), sep="_"))
-
-lascruces_times <- 
-  read.csv("raw_data/vcurve_raw_data/lascruces/vcurve_times_lascruces.csv") %>% 
+laselva_times <-
+  read.csv("raw_data/vcurve_raw_data/laselva/vcurve_times_laselva.csv") %>%
   mutate(water_potential = format(water_potential, nsmall=2),
-  sample_id = paste(species_id, individual, 
-  format(water_potential,digits=1), sep="_"))
+         sample_id = paste(species, individual,
+         format(water_potential,digits=2), sep="_"))
+
+# lascruces_times <- 
+#   read.csv("raw_data/vcurve_raw_data/lascruces/vcurve_times_lascruces.csv") %>% 
+#   mutate(water_potential = format(water_potential, nsmall=2),
+#   sample_id = paste(species_id, individual, 
+#   format(water_potential,digits=1), sep="_"))
 
 
 ##Read in flow meter data files
 
 #create a list of clean file names that we will use latter
-vcurves <- list.files(path="raw_data/vcurve_raw_data/lascruces/",
-                      pattern="parexc_10_1.5",full.names=TRUE)
+vcurves <- list.files(path="raw_data/vcurve_raw_data/laselva/",
+                      pattern="tecinc_4_2.0",full.names=TRUE)
 
 #extract the genusspecies and treatment info
-vcurves_names <- str_replace(vcurves, "raw_data/vcurve_raw_data/lascruces/", "") %>%
+vcurves_names <- str_replace(vcurves, "raw_data/vcurve_raw_data/laselva/", "") %>%
   str_replace("_mpa.csv", "")
 
 #read in all data files from laselva using file path from vcurves object (above)
@@ -34,7 +34,7 @@ for(i in seq_along(vcurve_data_list)){
 }
 
 ## calculate conductivity
-times <- lascruces_times
+times <- laselva
 
 massflow_constant1 = -0.2323
 massflow_constant2 = 1002.9
