@@ -85,8 +85,12 @@ vcurve_function <- function(dfr, timesdfr,
   #mg mm KPa-1s-1
   
   id_cond <- data.frame(sample_id = unique(x$sample_id), 
-                        genusspecies = y$species_id, individual = y$individual,
-                        K = conductivity, MPa = y$water_potential)
+                        genusspecies = y$species_id, 
+                        individual = y$individual,
+                        K = conductivity, 
+                        MPa = as.numeric(format(y$water_potential, nsmall=2)),
+                        curve_id = paste(y$species_id, y$individual, 
+                                                   sep = "-"))
   return(id_cond)
 }
 
@@ -101,8 +105,29 @@ lascruces_cond <- lapply(vcurve_data_list,
                        timesdfr=lascruces_times) %>%
                        dplyr::bind_rows(.)
 
-write.csv(lascruces_cond, "calculated_data/lascruces_vcurves.csv", 
+
+
+#calculate %loss conductivity, split each curve into a list
+lascruces_list <-  split(lascruces_cond, as.factor(lascruces_cond$curve_id))
+
+#quick function to calculate percent loss K
+percloss_func <- function(x){
+  Kdata <- data.frame(x)
+  kmax <- Kdata[Kdata$MPa == 0.00, "K"] #isolate kmax for each curve
+  Kdata$perc_loss_k <- Kdata$K/kmax #percent loss K at each MPa
+  Kdata$PLC <-  Kdata$perc_loss_k * 100
+  return(Kdata)
+}
+
+
+lascruces_cond_loss<- lapply(lascruces_list, 
+                             percloss_func) %>%
+                             dplyr::bind_rows(.)
+
+write.csv(lascruces_cond_loss, "calculated_data/lascruces_vcurves.csv", 
           row.names = FALSE)
 
-
-# write.csv(test, "t.csv", row.names = FALSE)
+#lets save a dataset that is only Kmax
+lascruces_kmax <- lascruces_cond[lascruces_cond$MPa == 0.00,]
+write.csv(lascruces_kmax, "calculated_data/lascruces_kmax.csv", 
+          row.names = FALSE)

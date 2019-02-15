@@ -102,7 +102,9 @@ vcurve_function <- function(dfr, timesdfr,
   
   id_cond <- data.frame(sample_id = unique(x$sample_id), 
                         genusspecies = y$species, individual = y$individual,
-                        K = conductivity, MPa = y$water_potential)
+                        K = conductivity, 
+                        MPa = as.numeric(format(y$water_potential, nsmall=2)),
+                        curve_id = paste(y$species, y$individual,sep = "-"))
   return(id_cond)
 }
 
@@ -116,4 +118,29 @@ laselva_cond <- lapply(vcurve_data_list,
                        timesdfr=laselva_times) %>%
                        dplyr::bind_rows(.)
 
-write.csv(laselva_cond, "calculated_data/laselva_vcurves.csv", row.names = FALSE)
+#calculate %loss conductivity, split each curve into a list
+laselva_list <-  split(laselva_cond, as.factor(laselva_cond$curve_id))
+
+#quick function to calculate percent loss K
+percloss_func <- function(x){
+  Kdata <- data.frame(x)
+  kmax <- Kdata[Kdata$MPa == 0.00, "K"] #isolate kmax for each curve
+  Kdata$perc_loss_k <- Kdata$K/kmax #percent loss K at each MPa
+  Kdata$PLC <-  Kdata$perc_loss_k * 100
+  return(Kdata)
+}
+
+
+laselva_cond_loss<- lapply(laselva_list, 
+                           percloss_func) %>%
+                           dplyr::bind_rows(.)
+
+write.csv(laselva_cond_loss, "calculated_data/laselva_vcurves.csv", 
+          row.names = FALSE)
+
+#lets save a dataset that is only Kmax
+laselva_kmax <- laselva_cond[laselva_cond$MPa == 0.00,]
+
+write.csv(laselva_kmax, "calculated_data/laselva_kmax.csv", 
+          row.names = FALSE)
+

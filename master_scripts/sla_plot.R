@@ -11,7 +11,7 @@ boxlabs <- c("Epiphyte", "Hemi-epiphyte", "Terrestrial")
 sla_lab <- expression(SLA~~(g~m^-2))
 
 #reorder from ground to canopy 
-traits$niche2<-factor(traits$niche2, 
+sla$niche2<-factor(sla$niche2, 
                       levels=c("terrestrial", "hemi-epiphyte", "epiphyte"))
 
 boxlabs <- c("Terrestrial", "Hemi-epiphyte", "Epiphyte")
