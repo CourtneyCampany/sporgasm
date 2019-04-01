@@ -23,5 +23,9 @@ nichcols <- palette(gradient(4))
 lamina_lab <- expression(Lamina~area~~(cm^2))
 frond_lab <- "Frond length  (cm)"
 stipe_lab <- "Stipe length  (cm)"
-
+c13lab <-expression(paste(delta^{13}, "C (\u2030)"))
 k_lab <- expression(Conductivity~~(mg~mm~KPa^-1~s^-1))
+slalab<- expression(SLA[TNC~free]~~(m^2~g^-1))
+lmalab <- expression(LMA[TNC~free]~~(g~cm^-2))
+nitrolab <- expression(Leaf~Nitrogen~~(g~g^-1))
+n15lab <-expression(paste(delta^{15}, "N (\u2030)"))

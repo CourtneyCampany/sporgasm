@@ -45,7 +45,7 @@ niche_count2 <- c(no_terr, no_hemi, no_epi)
   gradient <- colorRampPalette(c("forestgreen","orange"))
   palette(gradient(3))
   trtcols <- palette(gradient(3))
-  boxlabs <- c("Epiphyte", "Hemi-epiphyte", "Terrestrial")
+
   
 #reorder from ground to canopy 
   traits$niche2<-factor(traits$niche2, 
