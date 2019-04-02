@@ -7,7 +7,6 @@ sla <- read.csv("calculated_data/fern_sla.csv")
 gradient <- colorRampPalette(c("forestgreen","orange"))
 palette(gradient(3))
 trtcols <- palette(gradient(3))
-boxlabs <- c("Epiphyte", "Hemi-epiphyte", "Terrestrial")
 sla_lab <- expression(SLA~~(g~m^-2))
 
 #reorder from ground to canopy 
