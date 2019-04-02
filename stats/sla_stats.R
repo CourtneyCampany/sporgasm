@@ -44,3 +44,48 @@ anova(sla_mod2) #broad differences in niche
 
 Ltest_frond <- leveneTest(1/sla_cm2g ~ niche2 , data = sla)
 Ltest_frond ##variances not equal!!
+
+
+
+##full mixed model---------------------
+boxplot(sla_cm2g ~ niche2, data=sla2) #lots of outliers
+
+sla_mod2 <- lmer(sla_cm2g ~ niche2 * site + (1|species), data=sla2)
+sla_mod2 <- lmer(sla_cm2g ~ niche2 + site + (1|species), data=sla2)
+
+
+hist(sd_new$sd_mm2)
+plot(sd_mod2)
+qqPlot(residuals(sd_mod2))
+
+#model summary
+Anova(sd_mod2, type="3") #niche but no interaction
+anova(sd_mod2, sd_mod3) #not different
+AIC(sd_mod2, sd_mod3) #model 2 is slighly better
+
+#use model without interaction
+summary(sd_mod3)
+Anova(sd_mod3, type="3")
+r.squaredGLMM(sd_mod3)
+#R2m       R2c
+#0.3069365 0.9220326
+
+#niche2       14.3531  2  0.0007643 ***
+# site          2.7325  1  0.0983235 .  
+
+visreg(sd_mod3)
+##slightly higher SD at las cruces
+
+tukey_sd3 <- glht(sd_mod3, linfct = mcp(niche2 = "Tukey"))
+sd3_siglets <-cld(tukey_sd3)
+
+#terrestrial hemi-epiphyte      epiphyte 
+# "b"           "a"           "a"
+
+terr_sd <- mean(sd_new[sd_new$niche2 == "terrestrial", "sd_mm2"]) #68.2
+notterr_sd <- mean(sd_new[!sd_new$niche2 == "terrestrial", "sd_mm2"]) #37.1
+
+
+
+
+

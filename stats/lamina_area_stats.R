@@ -17,88 +17,41 @@ library(car)
 library(lattice)
 library(outliers)
 
-chisq.out.test(lamina$lamina_area_cm2) #2448 is an outier
-  
-lamina_mod <- lm(lamina_area_cm2 ~ niche2, data=lamina[-203,])
-#model diagnostics
-qqPlot(lamina_mod)
-plot(lamina_mod) ##negative skewed so we need a transformation
-skewness(lamina_mod$residuals) 
-
-
-lamina_mod2 <- lm(lamina_area_cm2^(1/3) ~ niche2, data=lamina[-203,])
-  plot(lamina_mod2)
-  qqPlot(lamina_mod2) #cube transformation works best
-
-  Ltest_lamina <- leveneTest(lamina_area_cm2^(1/3) ~ niche2 , data = lamina[-203,])
-  summary(Ltest_lamina) # not signficant so variance are equal
-
-summary(lamina_mod2)
-anova(lamina_mod2)
-## significant effect of niche (p <0.001), r2 = .15
-
-tukey_lamina <- glht(lamina_mod2, linfct = mcp(niche2 = "Tukey"))
-lamina_siglets <-cld(tukey_lamina)
-lamina_siglets2 <- lamina_siglets$mcletters$Letters
-#terrestrial longer lmaina area than  epi, hemi same as epi
-
-#check for effect of site
-lamina_mod3 <- lm(lamina_area_cm2^(1/3) ~ niche2 * site,
-                 data=lamina[-c(226,228),])
-# plot(lamina_mod3)
-# qqPlot(lamina_mod3)
-
-summary(lamina_mod3)
-anova(lamina_mod3) ##niche * site interaction on leaf area
-
-bwplot(lamina_area_cm2 ~ niche2 | site , data = lamina[-c(226,228),]) 
-visreg(lamina_mod3, "niche2", by="site", overlay=TRUE)  
-
-lamina_siglets_mm<- glht(lamina_mod3, linfct = mcp(niche2 = "Tukey"))
-  lamina_siglets_mm <-cld(lamina_siglets_mm)
-  lamina_siglets2_mm <- lamina_siglets_mm$mcletters$Letters
-  lamina_siglets2_mm ##same as before
-
-##rerun model with interacationcalculated so post hoc works
-lamina$nichesite <- interaction(lamina$niche2, lamina$site)  
-lamina_mod4 <- lm(lamina_area_cm2^(1/3) ~ -1 + nichesite,data=lamina[-c(226,228),])
-##if use -1 + or not results are same
-tukey_lamina_NS <- summary(glht(lamina_mod4, linfct=mcp(nichesite="Tukey")))  
-laminaNS_siglets <-cld(tukey_lamina_NS)
-laminaNS_siglets2 <- laminaNS_siglets$mcletters$Letters
-
-#terrestrial broadly have highest lamina area, regardless of site
-#epiphites at las cruces have higher area than la selva, 
-#otherwise epi/hemi are similar
-
-#confirm with pairwise contrasts (use model#3)
-library(emmeans)
-
-emmip(lamina_mod3, niche2 ~ site) ##visualize interaction
-emm_lamina <- emmeans(lamina_mod3, pairwise ~ niche2 | site)
-emm_lamina
-##sconfirms results of TUkeys
-
-
 ##full mixed model:
-lamina_mod5 <- lmer(lamina_area_cm2^(1/3) ~ niche2 * site + (1|species), 
-                   data=lamina[-c(226,228),])
+boxplot(lamina_area_cm2 ~ niche2, data=lamina) #outliers, but they were big
 
-plot(lamina_mod5)
-qqnorm(resid(lamina_mod5))
-qqline(resid(lamina_mod5))
+#variables are several orders of magnitude so log transformation
+lamina_mod <- lmer(log10(lamina_area_cm2) ~ niche2 * site + (1|species), 
+                   data=lamina)
+lamina_mod2 <- lmer(log10(lamina_area_cm2) ~ niche2 + site + (1|species), 
+                    data=lamina)
 
-Anova(lamina_mod5) # niche only p = 0.0157
-summary(lamina_mod5)
+#model diagnostics
+qqPlot(residuals(lamina_mod2)) #pretty good
+plot(lamina_mod62) ##negative skewed so we need a transformation
 
-visreg(lamina_mod5, "niche2") 
+#model summary
+Anova(lamina_mod, type="3") #no interactions
+anova(lamina_mod, lamina_mod2) #not different
+AIC(lamina_mod, lamina_mod2) 
 
-r.squaredGLMM(lamina_mod5)                   
+
+#use model withinteraction
+summary(lamina_mod2)
+Anova(lamina_mod2, type="3")
+r.squaredGLMM(lamina_mod)
 #R2m       R2c
-# 0.2119827 0.8481775      
+#0.1689838 0.8865733
 
-tukey_lamina5 <- summary(glht(lamina_mod5, linfct=mcp(niche2="Tukey")))  
-lamina5_siglets <-cld(tukey_lamina5)
-lamina5_siglets2 <- lamina5_siglets$mcletters$Letters
+# no diff, related to species
 
-#terrestrial greater than epe, hemi is intermediate
+visreg(lamina_mod2, trans=log)
+##slightly higher SD at las cruces
+
+tukey_la <- glht(lamina_mod2, linfct = mcp(niche2 = "Tukey"))
+la_siglets <-cld(tukey_la)
+
+#terrestrial hemi-epiphyte      epiphyte 
+# "a"           "a"           "a"
+
+###depends heavily on the model, but simples model says no!

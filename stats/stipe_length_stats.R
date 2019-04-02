@@ -11,6 +11,9 @@ traits$niche2 <- traits$niche
 stipe <- traits[complete.cases(traits$stipe_length_cm),]
 #stipe length has zeros, may be difficult to normalize
 
+boxplot(stipe_length_cm ~ niche2, data=traits)
+#quite a few, lets see if the matter
+
 ## stats on basic stipe morphology-------
 library(visreg)
 library(multcomp)
@@ -61,62 +64,38 @@ stipe_mod2 <- lm(stipe_length_cm ~ niche2, data=stipe2)
 ##go ahead and run through normally, then use kruskal wallace
   
     
-stipe_mod4 <- lm(sqrt(stipe_length_cm) ~ niche2 * site, data=stipe2)
-  summary(stipe_mod4)
-  anova(stipe_mod4) ## no interaction, so rerunwith main effects
-
-stipe_mod5 <- lm(sqrt(stipe_length_cm) ~ niche2 + site, data=stipe2)
-  summary(stipe_mod5)
-  anova(stipe_mod5)
-
-library(emmeans)
-  
-  emmip(stipe_mod4, niche2 ~ site) ##visualize interaction
-  emm_lamina <- emmeans(stipe_mod4, pairwise ~ niche2 | site)
-  emm_lamina
-  
-#tukey with interaction
-stipe2$nichesite <- interaction(stipe2$niche2, stipe2$site)  
-stipe_mod6 <- lm(sqrt(stipe_length_cm) ~ -1 + nichesite,data=stipe2)
-  
-##if use -1 + or not results are same
-tukey_stipe_NS <- summary(glht(stipe_mod6, linfct=mcp(nichesite="Tukey")))  
-stipeNS_siglets <-cld(tukey_stipe_NS)
-stipeNS_siglets2 <- stipeNS_siglets$mcletters$Letters
-
-##terrestrial > others
-##terrestrial > at las cruces
 
 visreg(stipe_mod4, "niche2", by="site", overlay=TRUE) 
 
 
 ##full mixed model:
-stipe_mod7 <- lmer(sqrt(stipe_length_cm) ~ niche2 * site + (1|species)
-                   , data=stipe2)
+stipe_mod7 <- lmer(sqrt(stipe_length_cm) ~ niche2 * site 
+                   + (1|species), data=traits)
 
+stipe_mod8 <- lmer(sqrt(stipe_length_cm) ~ niche2 + site 
+                   + (1|species), data=traits)
+
+boxplot(stipe_length_cm ~ niche2, data=traits) #outliers present
+hist(traits$stipe_length_cm)
 plot(stipe_mod7)
-qqnorm(resid(stipe_mod7))
-qqline(resid(stipe_mod7))
+qqPlot(residuals(stipe_mod7))
 
-Anova(stipe_mod7) # P < 0.001
-summary(stipe_mod7)
+#model summary
+Anova(stipe_mod7, type="3") #niche but no interaction
+anova(stipe_mod7, stipe_mod8) #not different
+AIC(stipe_mod7, stipe_mod8) #aic close, use no interaction
 
-r.squaredGLMM(stipe_mod7)
-#      R2m       R2c
-#  0.3887817 0.8841734
+#use model without interaction
+summary(stipe_mod8)
+Anova(stipe_mod8, type="3")
+r.squaredGLMM(stipe_mod8)
 
-visreg(stipe_mod7, "niche2", by="site", overlay=TRUE) 
-##there is a minor interaction with site
+#           R2m       R2c
+# [1,] 0.2874501 0.8818687
 
-visreg(stipe_mod7, "niche2") 
+visreg(stipe_mod8, "niche2") 
 
-tukey_stipe_7 <- summary(glht(stipe_mod7, linfct=mcp(niche2="Tukey")))  
-stipe7_siglets <-cld(tukey_stipe_7)
-stipeN7_siglets2 <- stipe7_siglets$mcletters$Letters
-
-#if no interaction, then terrestrial greater
-
-
-emmip(stipe_mod7, niche2 ~ site) ##visualize interaction
-emm_lamina7 <- emmeans(stipe_mod7, pairwise ~ niche2 | site)
-emm_lamina7
+tukey_stipe_8 <- summary(glht(stipe_mod8, linfct=mcp(niche2="Tukey")))  
+stipe8_siglets <-cld(tukey_stipe_8)
+#epiphyte hemi-epiphyte   terrestrial 
+#"a"           "a"           "b"

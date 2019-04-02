@@ -15,20 +15,28 @@ sd_agg <- doBy::summaryBy(sd_mm2 ~ site + species + plant_no + niche2 + genusspe
 #plot bits-------
 boxlabs <- c("Terrestrial", "Hemi-epiphyte", "Epiphyte")
 
-gradient <- colorRampPalette(c("forestgreen","orange"))
+gradient <- colorRampPalette(c("forestgreen","darkorange1"))
 palette(gradient(3))
 trtcols <- palette(gradient(3))
+library(scales)
+trtcols2 <- c(alpha(trtcols[1], .5), alpha(trtcols[2], .5),alpha(trtcols[3], .5))
 
 #sd plot ----------
+sd_new <- droplevels(sd_agg[!sd_agg$genusspecies == "oleart",])
+#drop oleart as we do in model
+cldstomata <- c("a","b","b" )
 
 # windows()
 
 jpeg(filename = "output/stomatadensity.jpeg",
      width = 7, height = 7, units = "in", res= 400)
 
-par(mgp=c(2.5,1,0), mar=c(4,4,1,1), cex.lab=1.1)
-boxplot(sd_mm2 ~ niche2, data=sd_agg, xaxt='n',ylim=c(0, 210),
-        ylab=expression(Stomatal~density~~(mm^2)),col=trtcols)
+par(mgp=c(2.5,1,0), mar=c(4,4,1,1), cex.lab=1)
+boxplot(sd_mm2 ~ niche2, data=sd_new, xaxt='n',ylim=c(0, 162),varwidth=TRUE,
+        ylab=expression(Stomatal~density~~(mm^2)),border=trtcols)
 axis(1, boxlabs, at=1:3, cex=1.1)
-
+stripchart(sd_mm2 ~ niche2, data = sd_new,
+           vertical = TRUE, method = "jitter",
+           pch = 16,  col= trtcols2, xaxt='n', add=TRUE) 
+text(x=1:3, y=157, cldstomata)
 dev.off()

@@ -38,19 +38,13 @@ frond_siglets <-cld(tukey_frond)
 frond_siglets2 <- frond_siglets$mcletters$Letters
 #terrestrial longer frond length than  epi, hemi same as epi
 
-#check for effect of site
-frond_mod3 <- lm(frond_length_cm ~ niche2 + site,
-                 data=traits[-c(205, 206,226,228,203),])
-# plot(frond_mod3)
-# qqPlot(frond_mod3)
-
-summary(frond_mod3)
-anova(frond_mod3) ##no effect of site
 
 ##linear mixed model with species as random (account for species variation)
 library(lme4)
 library(MuMIn)
 library(arm)
+
+boxplot(frond_length_cm ~ niche2, data=traits)
 
 frond_mod4 <- lmer(frond_length_cm ~ niche2 * site + (1|species), 
                    data=traits[-c(205, 206,226,228,203),])
