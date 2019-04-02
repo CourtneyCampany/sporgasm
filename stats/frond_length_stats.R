@@ -7,6 +7,10 @@ traits <- read.csv("calculated_data/fern_traits.csv")
 traits$niche2 <- traits$niche
   traits$niche2 <- gsub("climber", "terrestrial", traits$niche2)
   traits$niche2 <- as.factor(traits$niche2)
+  
+#reorder from ground to canopy 
+  traits$niche2<-factor(traits$niche2, 
+                         levels=c("terrestrial", "hemi-epiphyte", "epiphyte"))
 
 ## stats on basic leaf morphology-------
 library(visreg)
@@ -45,25 +49,41 @@ library(MuMIn)
 library(arm)
 
 boxplot(frond_length_cm ~ niche2, data=traits)
+#drop row 203
+frond_dat <- traits[-203,]
 
-frond_mod4 <- lmer(frond_length_cm ~ niche2 * site + (1|species), 
-                   data=traits[-c(205, 206,226,228,203),])
+frond_mod4 <- lmer(sqrt(frond_length_cm) ~ niche2 * site + (1|species), 
+                   data=frond_dat)
+frond_mod5 <- lmer(sqrt(frond_length_cm) ~ niche2 + site + (1|species), 
+                   data=frond_dat)
   
-  plot(frond_mod4)
-  qqnorm(resid(frond_mod4))
-  qqline(resid(frond_mod4))
+hist(frond_dat$frond_length_cm)
+plot(frond_mod4)
+qqPlot(residuals(frond_mod4))
 
-  Anova(frond_mod4) 
-  summary(frond_mod4)
+#model summary
+Anova(frond_mod4, type="3") #niche but no interaction
+anova(frond_mod4, frond_mod5) #not different
+AIC(frond_mod4, frond_mod5) #first model is slighly better
 
-  r.squaredGLMM(frond_mod4)
-# R2m       R2c 
-# 0.256307 0.7870744
-#P<o.ooo1
-  
-# niche effect still present depsite large amount of species variation
-  
-tukey_frond_mm <- glht(frond_mod4, linfct = mcp(niche2 = "Tukey"))
-  frond_siglets_mm <-cld(tukey_frond_mm)
-  frond_siglets2_mm <- frond_siglets_mm$mcletters$Letters
-  frond_siglets2_mm ##same as before
+#use model without interaction
+summary(frond_mod5)
+Anova(frond_mod5, type="3")
+r.squaredGLMM(frond_mod5)
+
+# R2m       R2c
+# [1,] 0.1669024 0.8094553
+
+#niche2 0.01418 *
+
+
+visreg(frond_mod5)
+##frond longer in terrestrial
+
+tukey_fr <- glht(frond_mod5, linfct = mcp(niche2 = "Tukey"))
+fr_siglets <-cld(tukey_fr)
+
+# terrestrial hemi-epiphyte      epiphyte 
+# "a"          "ab"           "b" 
+
+

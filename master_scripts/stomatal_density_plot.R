@@ -19,6 +19,7 @@ gradient <- colorRampPalette(c("forestgreen","darkorange1"))
 palette(gradient(3))
 trtcols <- palette(gradient(3))
 library(scales)
+library(doBy)
 trtcols2 <- c(alpha(trtcols[1], .5), alpha(trtcols[2], .5),alpha(trtcols[3], .5))
 
 #sd plot ----------
@@ -28,8 +29,8 @@ cldstomata <- c("a","b","b" )
 
 # windows()
 
-jpeg(filename = "output/stomatadensity.jpeg",
-     width = 7, height = 7, units = "in", res= 400)
+# jpeg(filename = "output/stomatadensity.jpeg",
+#      width = 7, height = 7, units = "in", res= 400)
 
 par(mgp=c(2.5,1,0), mar=c(4,4,1,1), cex.lab=1)
 boxplot(sd_mm2 ~ niche2, data=sd_new, xaxt='n',ylim=c(0, 162),varwidth=TRUE,
@@ -39,4 +40,4 @@ stripchart(sd_mm2 ~ niche2, data = sd_new,
            vertical = TRUE, method = "jitter",
            pch = 16,  col= trtcols2, xaxt='n', add=TRUE) 
 text(x=1:3, y=157, cldstomata)
-dev.off()
+# dev.off()
