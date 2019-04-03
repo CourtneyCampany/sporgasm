@@ -1,6 +1,6 @@
 ---
 title: "Tropical Fern Leaf Water Relations"
-output: html_document
+output: pdf_document
 ---
 
 ```{r, results="asis", echo=FALSE, warning=FALSE}
@@ -48,12 +48,20 @@ Below are a series of figures visualizing traits between terrestrial, epiphytic 
 source("master_scripts/morphology_plots.R")
 ```
 No differences in lamina area, however, this depends on which model I choose (with or without niche x site interaction).  There is a massive amount of variation tied up in species-specific differences. Stipes in terrestrial species are 56% longer than epiphytic or hemi-epiphytic species. Total frond length is 30% longer in terrestrial than epiphytic species, with hemi-epiphytic species as intermediates.
+
+\
+
+```{r sla,  echo=FALSE, fig.align='center',fig.width = 6, fig.height = 6}
+source("master_scripts/sla_plot.R")
+```
+Specific leaf area is 35% higher in terrestrials ferns compared to epiphytic ferns, with hemi-epiphytes as intermediates.
+
 \
 
 ```{r bivar,  echo=FALSE, fig.align='center',fig.width = 6, fig.height = 6}
 source("master_scripts/frondlength_laminaarea_plot.R")
 ```
-Not surprising, but frond area - length relationships are strong within across all fern species.
+Not surprising, but frond area-length relationships are strong across all fern species.
 
 ## Stomatal Traits
 
@@ -67,8 +75,7 @@ Epiphytic and hemi-epiphytic species have 54% fewer stomata per given area than 
 ```{r ss,  echo=FALSE, fig.align='center',fig.width = 6, fig.height = 10, warning=FALSE}
 source("master_scripts/stomata_size_plot.R")
 ```
-Our undergraduate researcher as pushed through Juliette's beautiful pictures from Las Cruces. He has just now started Alex and Court's pictures from La Selva (pray for him). I have not analyzed these yet. 
-
+Our undergraduate researcher as pushed through Juliette's beautiful pictures from Las Cruces. He has just now started Alex and Court's pictures from La Selva (pray for him). I have not analyzed these yet. Gurad cell width is the average of the two guard cells.
 
 ## Vein Density
 

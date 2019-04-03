@@ -1,12 +1,8 @@
 
 sla <- read.csv("calculated_data/fern_sla.csv")
-
-##too much variance within peculma pectinata (something is wrong)
-##toom much variance within oleandra articulata
-
-##double check reliability of asplenium_uniseriale (really high)
-##pictures show it is really thin though
-
+  #reorder from ground to canopy 
+  sla$niche2<-factor(sla$niche2, 
+                   levels=c("terrestrial", "hemi-epiphyte", "epiphyte"))
 
 ##run stats------
 library(visreg)
@@ -17,73 +13,45 @@ library(moments)
 library(MASS)
 library(outliers)
 
-#simple model
-sla_mod <- lm(sla_cm2g ~ niche2, data=sla)
-
-#model diagnostics
-qqPlot(sla_mod) 
-plot(sla_mod) 
-
-#asplenium uniseriale is a problem, get rid for now but double check data
-
-sla2 <- droplevels(sla[sla$species != "asplenium_uniseriale",])
-
-sla_mod2 <- lm(1/sla_cm2g ~ niche2, data=sla2)
-
-#model diagnostics
-qqPlot(sla_mod2) 
-plot(sla_mod2) 
-
-
-skewness(sla_mod2$residuals) #less than 1
-kurtosis(sla_mod2$residuals) 
-hist(sla_mod2$residuals)
-
-summary(sla_mod2)
-anova(sla_mod2) #broad differences in niche
-
-Ltest_frond <- leveneTest(1/sla_cm2g ~ niche2 , data = sla)
-Ltest_frond ##variances not equal!!
-
+Ltest_frond <- leveneTest(sla_cm2g ~ niche2 , data = sla)
 
 
 ##full mixed model---------------------
-boxplot(sla_cm2g ~ niche2, data=sla2) #lots of outliers
+boxplot(sla_cm2g ~ niche2, data=sla)
 
-sla_mod2 <- lmer(sla_cm2g ~ niche2 * site + (1|species), data=sla2)
-sla_mod2 <- lmer(sla_cm2g ~ niche2 + site + (1|species), data=sla2)
+sla_mod2 <- lmer(sqrt(sla_cm2g) ~ niche2 * site + (1|species), data=sla)
+sla_mod3 <- lmer(sqrt(sla_cm2g) ~ niche2 + site + (1|species), data=sla)
 
-
-hist(sd_new$sd_mm2)
-plot(sd_mod2)
-qqPlot(residuals(sd_mod2))
+hist(sla$sla_cm2g)
+skewness(sla_mod2$residuals) #less than 1
+plot(sla_mod2)
+qqPlot(residuals(sla_mod2))
 
 #model summary
-Anova(sd_mod2, type="3") #niche but no interaction
-anova(sd_mod2, sd_mod3) #not different
-AIC(sd_mod2, sd_mod3) #model 2 is slighly better
+Anova(sla_mod2, type="3") #niche but no interaction
+anova(sla_mod2, sla_mod3) #not different
+AIC(sla_mod2, sla_mod3) #model with interaction in better
 
 #use model without interaction
-summary(sd_mod3)
-Anova(sd_mod3, type="3")
-r.squaredGLMM(sd_mod3)
+summary(sla_mod3)
+Anova(sla_mod3, type="3")
+r.squaredGLMM(sla_mod3)
 #R2m       R2c
-#0.3069365 0.9220326
+#0.1348911 0.8231442
 
-#niche2       14.3531  2  0.0007643 ***
-# site          2.7325  1  0.0983235 .  
+#niche2        7.2506  2    0.02664
 
-visreg(sd_mod3)
+visreg(sla_mod3)
 ##slightly higher SD at las cruces
 
-tukey_sd3 <- glht(sd_mod3, linfct = mcp(niche2 = "Tukey"))
-sd3_siglets <-cld(tukey_sd3)
+tukey_sla <- glht(sla_mod3, linfct = mcp(niche2 = "Tukey"))
+sla_siglets <-cld(tukey_sla)
 
 #terrestrial hemi-epiphyte      epiphyte 
-# "b"           "a"           "a"
+# "b"           "ab"           "a"
 
-terr_sd <- mean(sd_new[sd_new$niche2 == "terrestrial", "sd_mm2"]) #68.2
-notterr_sd <- mean(sd_new[!sd_new$niche2 == "terrestrial", "sd_mm2"]) #37.1
+terr <- mean(sla[sla$niche2 == "terrestrial", "sla_cm2g"]) #88.6
+epi <- mean(sla[sla$niche2 == "epiphyte", "sla_cm2g"]) #57.4
 
 
 

@@ -20,19 +20,19 @@ sla$niche2<-factor(sla$niche2,
                       levels=c("terrestrial", "hemi-epiphyte", "epiphyte"))
 
 boxlabs <- c("Terrestrial", "Hemi-epiphyte", "Epiphyte")
+cldsla <- c("a", "ab", "b")
 
+# jpeg(filename = "output/sla.jpeg",
+#      width = 7, height = 7, units = "in", res= 400)
 
-jpeg(filename = "output/sla.jpeg",
-     width = 7, height = 7, units = "in", res= 400)
+par(mgp=c(2.5,1,0), mar=c(4,4,1,1), cex.lab=1)
 
-par(mgp=c(2.5,1,0), mar=c(4,4,1,1), cex.lab=1.1)
-
-boxplot(sla_cm2g ~ niche2, data=sla,xaxt='n',ylim=c(0, 225),
+boxplot(sla_cm2g ~ niche2, data=sla,xaxt='n',ylim=c(0, 235),
         ylab=sla_lab, outline=FALSE, border=trtcols, varwidth=TRUE)
 axis(1, boxlabs, at=1:3, cex=1.1)
 stripchart(sla_cm2g ~ niche2, data = sla,
            vertical = TRUE, method = "jitter",
            pch = 16,  col= trtcols2, xaxt='n', add=TRUE) 
-text(x=1:3, y=157, cldstomata)
+text(x=1:3, y=230, cldsla)
 
-dev.off()
+# dev.off()

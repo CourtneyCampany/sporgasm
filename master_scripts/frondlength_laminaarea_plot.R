@@ -23,8 +23,8 @@ fronddat <- traits[-203,] #same as stats
 
 
 ##bivariate
-jpeg(filename = "output/arealength.jpeg",
-     width = 7, height = 7, units = "in", res= 400) 
+# jpeg(filename = "output/arealength.jpeg",
+#      width = 7, height = 7, units = "in", res= 400) 
 
 # windows()
 par(mgp=c(2.5,1,0), mar=c(4,4,1,1), cex.lab=1.1)
@@ -33,4 +33,4 @@ plot(lamina_area_cm2 ~ frond_length_cm , pch=21, bg=trtcols2[niche2],
      data=fronddat)
 legend("topleft", legend = boxlabs, pch=21, pt.bg=trtcols, bty="n", inset=.01)
 
-dev.off()
+# dev.off()

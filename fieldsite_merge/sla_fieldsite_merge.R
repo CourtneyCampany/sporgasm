@@ -1,5 +1,5 @@
 #sla from la selva
-drymass_ls <- read.csv("raw_data/fern_dryweights2.csv")
+drymass_ls <- read.csv("raw_data/fern_dryweights_laselva_clean.csv")
 
 #there are gonna be some redos with pv curves and sla so index drymass 
 #where sladrymass !is.na
@@ -11,7 +11,7 @@ sla_ls <- sla_mass_ls[,c(1,3,4,6,10)]
   names(sla_ls)[2] <- "genusspecies"
   
 #sla from las cruces
-drymass_lc <- read.csv("raw_data/sla_dryweights_lc.csv")  
+drymass_lc <- read.csv("raw_data/sla_dryweights_lc_clean.csv")  
 #there are 2 sets that need to be split, with leaf punchs or with full area
 #calculate SLA appropirately
 
@@ -45,7 +45,5 @@ sla_fern2 <- merge(sla_fern, niche, all=TRUE)
   sla_fern2$niche2 <- sla_fern2$niche
   sla_fern2$niche2 <- gsub("climber", "terrestrial", sla_fern2$niche2)
   sla_fern2$niche2 <- as.factor(sla_fern2$niche2)
-    ##add interaction term
-  sla_fern2$nichesite <- interaction(sla_fern2$niche2, sla_fern2$site)
 
 write.csv(sla_fern2,"calculated_data/fern_sla.csv", row.names = FALSE)
