@@ -1,5 +1,5 @@
 ---
-title: "Tropical Fern Functional Traits"
+title: "Tropical Fern Leaf Water Relations"
 output: html_document
 ---
 
@@ -10,18 +10,19 @@ opts_knit$set(root.dir = '../')
 
 # Background
 
-Below is the compliation of the working data sets for the leaf realtions paper.  Eventually the paper will present findings from the following traits (traits in bold are fully analyzed):
+Below is the compilation of the working data sets we plan to use for the manuscript. Eventually the paper will inclide findings from the following traits (traits in **bold** are analyzed):
 
 * PV Curves
 * Stomata: size and **density**
 * Vein density
 * **SLA**
+* **Foliar Nitrogen**
 * **Isotopes**
-* **Morphometrics- length/width/stipe length etc.**
+* **Morphometrics**
 * Phylogeny
 * **Chlorophyll**
 
-# Statistics
+# Data Analysis
 
 I have set up a linear mixed effect model design for each trait analysis. The general model equation is:
 
@@ -31,72 +32,84 @@ I have set up a linear mixed effect model design for each trait analysis. The ge
 
 \
 
-Niche2 recodes our one climbing species as a terrestrial species. In this setup, species is used a a random effect, since individual species effects are not included in our central questions. This model returns 2 R^2^ values, one for the whole model and one for the fixed effect only. This allows us to evaluate the amount of variation atribute soley to species differences.
+Niche2 re-codes our one climbing species as a terrestrial species. In this setup, species is used a a random effect, since individual species effects are not one of our central questions. This model returns 2 R^2^ values, one for the whole model and one for the fixed effect only. This allows us to evaluate the amount of variation in a trait attributed solely to species differences.
 
 \
 
-First, I check for the presence of an interaction.  Most of the time there is not one. I re-run the model with only niche2 and site as main effects, and then evaluate the models against each other (AIC scores). In most cases, I drop the interaction term and use the simpliest model. Depending on our question, the setup can change. For example, if we have no interest in site effects, I can embed species within site and treat them both as random effects. Currently, I am using a type 3 ANOVA because we have a unbalanced design (hemi-epiphytes)
+First, I check for the presence of an interaction. Most of the time there is not one. I also re-run the model with only niche2 and site as main effects, and then evaluate the models against each other (AIC scores). In most cases, I drop the interaction term and use the simplest model. Depending on our question, this setup can change. For example, if we have no interest in site effects, I can embed species within site and treat them both as random effects. Currently, I am using a type 3 ANOVA because we have a unbalanced design (hemi-epiphytes)
 
 # Data visualizations
 
-Below are a series figures of analyzed traits between terrestrial, epiphytic and hemi-epiphytic tropical ferns. I have overlayed the raw data on top of boxplots for either niche or site treatments. The width or each boxplots is proportional to the square-root of the number of observations in each group. If there are significant main effects ($alpha$ level of 0.05) I have included significance letters from a post-hoc Tukey's test.
+Below are a series of figures visualizing traits between terrestrial, epiphytic and hemi-epiphytic tropical ferns. I have overlayed the raw data on top of box plots for each treatment. The width or each box plots is proportional to the square-root of the number of observations in each group. If there are significant main effects ($\alpha$ level of 0.05) I have included significance letters from a post-hoc Tukey's test.
 
-# Leaf Morphology
+## Frond Morphology
 
-```{r morph,  echo=FALSE, fig.align='center',fig.width = 9, fig.height = 12}
+```{r morph,  echo=FALSE, fig.align='center',fig.width = 6, fig.height = 6, warning=FALSE}
 source("master_scripts/morphology_plots.R")
 ```
-
+No differences in lamina area, however, this depends on which model I choose (with or without niche x site interaction).  There is a massive amount of variation tied up in species-specific differences. Stipes in terrestrial species are 56% longer than epiphytic or hemi-epiphytic species. Total frond length is 30% longer in terrestrial than epiphytic species, with hemi-epiphytic species as intermediates.
 \
 
-```{r bivar,  echo=FALSE, fig.align='center',fig.width = 9, fig.height = 12}
+```{r bivar,  echo=FALSE, fig.align='center',fig.width = 6, fig.height = 6}
 source("master_scripts/frondlength_laminaarea_plot.R")
 ```
+Not surprising, but frond area - length relationships are strong within across all fern species.
 
-## Stomata
+## Stomatal Traits
 
-```{r sd,  echo=FALSE, fig.align='center',fig.width = 7, fig.height = 7}
+```{r sd,  echo=FALSE, fig.align='center',fig.width = 6, fig.height = 6,warning=FALSE}
 source("master_scripts/stomatal_density_plot.R")
 ```
+Epiphytic and hemi-epiphytic species have 54% fewer stomata per given area than terrestrial species!
 
 \
 
-```{r ss,  echo=FALSE, fig.align='center',fig.width = 7, fig.height = 10}
+```{r ss,  echo=FALSE, fig.align='center',fig.width = 6, fig.height = 10, warning=FALSE}
 source("master_scripts/stomata_size_plot.R")
 ```
+Our undergraduate researcher as pushed through Juliette's beautiful pictures from Las Cruces. He has just now started Alex and Court's pictures from La Selva (pray for him). I have not analyzed these yet. 
 
 
-## Leaf Chemistry 
+## Vein Density
 
-```{r nitro,  echo=FALSE, fig.align='center',fig.width = 7, fig.height = 7}
+```{r vd,  echo=FALSE, fig.align='center',fig.width = 6, fig.height = 6}
+source("master_scripts/vein_density_plots.R")
+```
+
+
+## Foliar Chemistry 
+
+```{r nitro,  echo=FALSE, fig.align='center',fig.width = 6, fig.height = 6}
 source("master_scripts/leaf_chemistry_plots.R")
 ```
+Foliar nitrogen is 29% lower in epiphytes than terrestrial species, with hemi-epiphytes as intermediates.
 
 \
 
-```{r 13c,  echo=FALSE, fig.align='center',fig.width = 10, fig.height = 7}
+```{r 13c,  echo=FALSE, fig.align='center',fig.width = 10, fig.height = 6}
 source("master_scripts/13C_plots.R")
 ```
+Mean foliar $\delta$^13^C for epiphytes is -34.4&permil; compared with -32.5&permil; for terrestrial + hemi-epiphytes. These is also a significant site effect. Is this relevant? 
 
 \
 
-```{r 15n,  echo=FALSE, fig.align='center',fig.width = 7, fig.height = 7}
+```{r 15n,  echo=FALSE, fig.align='center',fig.width = 6, fig.height = 6}
 source("master_scripts/15N_plots.R")
 ```
 There is an interaction between site and niche that is likely not biologically relevant; some treatments for niche are lower at Las Cruces (but not all).  
 
-# Chlorophyll 
+# Chlorophyll Content
 
-```{r chl,  echo=FALSE, fig.align='center',fig.width = 7, fig.height = 7}
+```{r chl,  echo=FALSE, fig.align='center',fig.width = 6, fig.height = 6}
 source("master_scripts/chlorophyll_plots.R")
 ```
-I had to perform a little data magic to make this happen.  I dropped one epiphytic species with way to variable data (400-800 units) and a few outliers.
+I had to perform a little data mining to get this result. I dropped one epiphytic species with way to variable data (400-800 mg m^-2^) and a few outliers. Not sure how meaningful these differences are.
 
-# Hydrauliic Traits Figures
+# Foliar Hydrauliic Traits
 
-Below are visualizations for some of the hyrdaulic traits we derived from pressure volume curves. These traits are calculated from Sacks's excel macro. 
+Below are visualizations for some of the hydraulic traits we derived from pressure volume curves. These traits are calculated from Sacks's excel macro. I am worried that I have messed up 2 calculations from the macro when I first ran La Selva curves. Since I need to check them thoroughly, I only show Las Cruces below. I will run stats once I am confident with La Selva data, but it looks like we may have some niche differences emerging.
 
-```{r pv,  echo=FALSE, fig.align='center',fig.width = 7, fig.height = 7}
+```{r pv,  echo=FALSE, fig.align='center',fig.width = 6, fig.height = 6}
 source("master_scripts/pv_plots.R")
 ```
 

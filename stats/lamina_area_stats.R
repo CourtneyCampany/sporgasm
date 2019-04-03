@@ -16,6 +16,8 @@ library(multcomp)
 library(car)
 library(lattice)
 library(outliers)
+library(lme4)
+library(MuMIn)
 
 ##full mixed model:
 boxplot(lamina_area_cm2 ~ niche2, data=lamina) #outliers, but they were big

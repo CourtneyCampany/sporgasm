@@ -9,12 +9,12 @@ library(outliers)
 
 
 leafchem <- read.csv("calculated_data/leaf_chemistry.csv")
-leafchem$niche2 <- gsub("climber", "terrestrial", leafchem$niche)
-leafchem$niche2 <- as.factor(leafchem$niche2)
-leafchem$percN <- leafchem$n_perc/100
+  leafchem$niche2 <- gsub("climber", "terrestrial", leafchem$niche)
+  leafchem$niche2 <- as.factor(leafchem$niche2)
+  leafchem$percN <- leafchem$n_perc/100
 
-#reorder from ground to canopy 
-leafchem$niche2<-factor(leafchem$niche2, 
+  #reorder from ground to canopy 
+  leafchem$niche2<-factor(leafchem$niche2, 
                         levels=c("terrestrial", "hemi-epiphyte", "epiphyte"))
 
 
@@ -55,6 +55,9 @@ nitro_siglets <-cld(tukey_nitro)
 #"b"          "ab"           "a" 
 
 #epi lower, hemi is intermediate
+terr_N <- mean(leafchem[leafchem$niche2 == "terrestrial", "percN"],na.rm=TRUE) #2.93
+epi_N <- mean(leafchem[leafchem$niche2 == "epiphyte", "percN"], na.rm=TRUE) #2.08
+
 
 
 # c13 ---------
@@ -99,11 +102,17 @@ c13niche_siglets <-cld(tukey_c13_niche)
 #"a"           "a"           "b" 
 
 
+epi <- mean(c13dat[c13dat$niche2 == "epiphyte", "d13C"],na.rm=TRUE) #-32.5
+noepi <- mean(c13dat[!c13dat$niche2 == "epiphyte", "d13C"], na.rm=TRUE) #-34.4
+
+
 tukey_c13_site <- glht(c13_mod2, linfct = mcp(site = "Tukey"))
 c13site_siglets <-cld(tukey_c13_site)
 #la_selva las_cruces 
 #"a"        "b" 
 
+ls <- mean(c13dat[c13dat$site == "la_selva", "d13C"],na.rm=TRUE) #-34.0
+lc <- mean(c13dat[c13dat$site == "las_cruces", "d13C"], na.rm=TRUE) #-33.0
 
 
 

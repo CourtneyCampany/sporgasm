@@ -34,6 +34,7 @@ trtcols2 <- c(alpha(trtcols[1], .5), alpha(trtcols[2], .5),alpha(trtcols[3], .5)
 
 #drop oleart as we do in model
 chlstomata <- c("ab","b","a" )
+chllab <- expression(Chlorophyll~content~~(mg~m^-2))
 
 # windows()
 
@@ -42,7 +43,7 @@ chlstomata <- c("ab","b","a" )
 
 par(mgp=c(2.5,1,0), mar=c(4,4,1,1), cex.lab=1)
 boxplot(chl_mg_m2 ~ niche2, data=chloro4, xaxt='n',ylim=c(0, 900),varwidth=TRUE,
-        ylab="Chlorophyll  (units)",border=trtcols)
+        ylab=chllab,border=trtcols)
 axis(1, boxlabs, at=1:3, cex=1.1)
 stripchart(chl_mg_m2 ~ niche2, data = chloro4,
            vertical = TRUE, method = "jitter",

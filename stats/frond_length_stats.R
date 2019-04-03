@@ -17,6 +17,8 @@ library(visreg)
 library(multcomp)
 library(car)
 library(lattice)
+library(lme4)
+library(MuMIn)
   
 frond_mod <- lm(frond_length_cm ~ niche2, data=traits)
 #model diagnostics
@@ -44,9 +46,6 @@ frond_siglets2 <- frond_siglets$mcletters$Letters
 
 
 ##linear mixed model with species as random (account for species variation)
-library(lme4)
-library(MuMIn)
-library(arm)
 
 boxplot(frond_length_cm ~ niche2, data=traits)
 #drop row 203
@@ -86,4 +85,8 @@ fr_siglets <-cld(tukey_fr)
 # terrestrial hemi-epiphyte      epiphyte 
 # "a"          "ab"           "b" 
 
+terr <- mean(frond_dat[frond_dat$niche2 == "terrestrial", "frond_length_cm"], 
+             na.rm=TRUE)
+epi <- mean(frond_dat[frond_dat$niche2 == "epiphyte", "frond_length_cm"], 
+               na.rm=TRUE)
 

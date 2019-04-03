@@ -22,6 +22,8 @@ library(lattice)
 library(moments)
 library(MASS)
 library(outliers)
+library(lme4)
+library(MuMIn)
 
 stipe_mod <- lm(stipe_length_cm ~ niche2, data=stipe)
 
@@ -99,3 +101,10 @@ tukey_stipe_8 <- summary(glht(stipe_mod8, linfct=mcp(niche2="Tukey")))
 stipe8_siglets <-cld(tukey_stipe_8)
 #epiphyte hemi-epiphyte   terrestrial 
 #"a"           "a"           "b"
+
+
+terr <- mean(traits[traits$niche2 == "terrestrial", "stipe_length_cm"], na.rm=TRUE)
+noterr <- mean(traits[!traits$niche2 == "terrestrial", "stipe_length_cm"], 
+               na.rm=TRUE)
+
+
