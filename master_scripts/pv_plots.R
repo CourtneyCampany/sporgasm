@@ -74,4 +74,14 @@ axis(1, boxlabs, at=1:3, cex=1.1)
 stripchart(capacitance_full ~ niche2, data = cruces,
            vertical = TRUE, method = "jitter",
            pch = 16,  col= trtcols2, xaxt='n', add=TRUE)
-           
+
+## RWC @TLP
+          
+par(mgp=c(2.5,1,0), mar=c(4,4,1,1), cex.lab=1)
+boxplot(rwc_tlp ~ niche2, data=cruces, xaxt='n',
+        varwidth=TRUE,ylab="RWC @ TLP",
+        border=trtcols)
+axis(1, boxlabs, at=1:3, cex=1.1)
+stripchart(rwc_tlp ~ niche2, data = cruces,
+           vertical = TRUE, method = "jitter",
+           pch = 16,  col= trtcols2, xaxt='n', add=TRUE) 

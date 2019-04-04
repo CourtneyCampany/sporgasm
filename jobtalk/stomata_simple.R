@@ -20,7 +20,7 @@ boxlabs <- c("Terrestrial", "Epiphyte")
 trtcols <- c("forestgreen","steelblue4")
 library(scales)
 library(doBy)
-trtcols2 <- c(alpha(trtcols[1], .5), alpha(trtcols[2], .5))
+trtcols2 <- c(alpha(trtcols[1], .4), alpha(trtcols[2], .4))
 
 #sd plot ----------
 sd_new <- droplevels(sd_agg_nohemi[!sd_agg_nohemi$genusspecies == "oleart",])
@@ -30,9 +30,13 @@ sd_new <- droplevels(sd_agg_nohemi[!sd_agg_nohemi$genusspecies == "oleart",])
 jpeg(filename = "jobtalk/stomatadensity.jpeg",
      width = 7, height = 7, units = "in", res= 400)
 
-par(mgp=c(2.5,1,0), mar=c(4,4,1,1), cex.lab=1)
-boxplot(sd_mm2 ~ niche2, data=sd_new, xaxt='n',ylim=c(0, 162),varwidth=TRUE,
-        ylab=expression(Stomatal~density~~(mm^2)),col=trtcols)
-axis(1, boxlabs, at=1:2, cex=1.1)
+par(mgp=c(3,1,0), mar=c(5,5,1,1), cex.lab=1.25)
+boxplot(sd_mm2 ~ niche2, data=sd_new, xaxt='n',ylim=c(0, 162),
+        boxlwd=2,whisklwd=2, staplelwd=2,
+        ylab=expression(Stomatal~density~~(mm^2)),col=trtcols2)
+axis(1, boxlabs, at=1:2, cex.axis=1.25)
+stripchart(sd_mm2 ~ niche2, data = sd_new,cex=1.5,
+           vertical = TRUE, method = "jitter",
+           pch = 16,  col= trtcols, xaxt='n', add=TRUE)
 
 dev.off()
