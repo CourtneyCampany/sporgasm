@@ -18,7 +18,7 @@ lma_lab <- expression(Leaf~Thickness~~(g~m^-2))
 trtcols <- c("forestgreen","steelblue4")
 library(scales)
 library(doBy)
-trtcols2 <- c(alpha(trtcols[1], .5), alpha(trtcols[2], .5))
+trtcols2 <- c(alpha(trtcols[1], .4), alpha(trtcols[2], .4))
 
 jpeg(filename = "jobtalk/lma.jpeg",
      width = 7, height = 7, units = "in", res= 400)
@@ -27,10 +27,10 @@ par(mgp=c(3,1,0), mar=c(5,5,1,1), cex.lab=1.25)
 
 boxplot(sla_cm2g ~ niche2, data=sla_nohemi,xaxt='n',ylim=c(0, 235),
         boxlwd=2,whisklwd=2, staplelwd=2,
-        ylab=lma_lab, outline=FALSE, border=trtcols ,col=trtcols2)
+        ylab=lma_lab, outline=FALSE ,col=trtcols2)
 axis(1, boxlabs, at=1:2, cex.axis=1.25)
 stripchart(sla_cm2g ~ niche2, data = sla_nohemi,
            vertical = TRUE, method = "jitter",cex=1.5,
-           pch = 16,  col= trtcols2, xaxt='n', add=TRUE) 
+           pch = 16,  col= trtcols, xaxt='n', add=TRUE) 
 
 dev.off()

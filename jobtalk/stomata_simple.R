@@ -37,6 +37,6 @@ boxplot(sd_mm2 ~ niche2, data=sd_new, xaxt='n',ylim=c(0, 162),
 axis(1, boxlabs, at=1:2, cex.axis=1.25)
 stripchart(sd_mm2 ~ niche2, data = sd_new,cex=1.5,
            vertical = TRUE, method = "jitter",
-           pch = 16,  col= trtcols, xaxt='n', add=TRUE)
+           pch = 16,  col= trtcols2, xaxt='n', add=TRUE)
 
 dev.off()

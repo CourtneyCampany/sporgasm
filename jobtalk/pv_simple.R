@@ -34,7 +34,7 @@ jpeg(filename = "jobtalk/turgorlosspoint.jpeg",
 par(mgp=c(3,1,0), mar=c(5,5,1,1), cex.lab=1.25)
 boxplot(waterpot_tlp ~ niche2, data=cruces_nohemi, xaxt='n',ylim=c(-2,0.1),
         ylab=tlp_lab,boxlwd=2,whisklwd=2, staplelwd=2,
-        border=trtcols ,col=trtcols2)
+        col=trtcols2)
 axis(1, boxlabs, at=1:2, cex.axis=1.25)
 stripchart(waterpot_tlp ~ niche2, data = cruces_nohemi,
            vertical = TRUE, method = "jitter",cex=1.5,
