@@ -39,6 +39,10 @@ library(doBy)
 trtcols2 <- c(alpha(trtcols[1], .5), alpha(trtcols[2], .5),alpha(trtcols[3], .5))
 
 # windows(7,10)
+
+# jpeg(filename = "output/stomatasize.jpeg",
+#      width = 7, height = 7, units = "in", res= 400)
+
 par(mfrow=c(2,1),mgp=c(2.5,1,0),oma=c(4,4,1,1), cex.lab=1)
 
 #stomata length
@@ -63,3 +67,5 @@ stripchart(guard_width ~ niche2, data = ss_agg,
            pch = 16,  col= trtcols2, xaxt='n', add=TRUE) 
 mtext(side=2, at=.011, line=2.5,text="Guard cell width  (um)", 
       xpd=TRUE, las=3, cex=.9)
+
+# dev.off()
