@@ -1,7 +1,7 @@
 source("master_scripts/plot_objects.R")
 
 leafchem <- read.csv("calculated_data/leaf_chemistry.csv")
-  leafchem$niche2 <- gsub("climber", "terrestrial", leafchem$niche)
+  leafchem$niche2 <- gsub("climber", "hemi-epiphyte", leafchem$niche)
   leafchem$niche2 <- as.factor(leafchem$niche2)
 
 #reorder from ground to canopy 
@@ -19,7 +19,7 @@ library(scales)
 trtcols2 <- c(alpha(trtcols[1], .5), alpha(trtcols[2], .5),alpha(trtcols[3], .5))
   
 #nperc -----
-cldnitro <- c("a","ab","b" )
+cldnitro <- c("a","a","b" )
 
 # windows()
 # jpeg(filename = "output/nitrogen.jpeg",

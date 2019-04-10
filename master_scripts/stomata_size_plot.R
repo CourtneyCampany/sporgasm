@@ -11,7 +11,7 @@ ss2 <- ss[, -c(2:3)]  #remove genus and species codes
 niche <- read.csv("raw_data/species_niches.csv")
 
 ss3 <-  merge(ss2, niche, by=c("genusspecies", "site"))
-  ss3$niche2 <- gsub("climber", "terrestrial", ss3$niche)
+  ss3$niche2 <- gsub("climber", "hemi-epiphyte", ss3$niche)
   ss3$niche2 <- as.factor(ss3$niche2)
 
   #reorder from ground to canopy 

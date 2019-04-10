@@ -9,7 +9,7 @@ library(outliers)
 
 
 leafchem <- read.csv("calculated_data/leaf_chemistry.csv")
-  leafchem$niche2 <- gsub("climber", "terrestrial", leafchem$niche)
+  leafchem$niche2 <- gsub("climber", "hemi-epiphyte", leafchem$niche)
   leafchem$niche2 <- as.factor(leafchem$niche2)
   leafchem$percN <- leafchem$n_perc/100
 
@@ -38,24 +38,24 @@ AIC(nitro_mod, nitro_mod2) #model 2 is slighly better
 
 #using model without interaction
 summary(nitro_mod2)
-Anova(nitro_mod, type="3")
-r.squaredGLMM(nitro_mod)
+Anova(nitro_mod2, type="3")
+r.squaredGLMM(nitro_mod2)
 #R2m       R2c
-#0.1988045 0.8050532
+#0.1758401 0.7982714
 
-#niche2        4.8309  2    0.08933
+#niche2    0.007098
 
 visreg(nitro_mod2)
-##slightly lower nitrogen for epiphyes
+# lower nitrogen for epiphyes
 
 tukey_nitro <- glht(nitro_mod2, linfct = mcp(niche2 = "Tukey"))
 nitro_siglets <-cld(tukey_nitro)
 
 #terrestrial hemi-epiphyte      epiphyte 
-#"b"          "ab"           "a" 
+#"b"          "b"           "a" 
 
-#epi lower, hemi is intermediate
-terr_N <- mean(leafchem[leafchem$niche2 == "terrestrial", "percN"],na.rm=TRUE) #2.93
+#epi lower than other croups
+terr_N <- mean(leafchem[!leafchem$niche2 == "epiphyte", "percN"],na.rm=TRUE) #2.95
 epi_N <- mean(leafchem[leafchem$niche2 == "epiphyte", "percN"], na.rm=TRUE) #2.08
 
 
@@ -86,11 +86,11 @@ AIC(c13_mod, c13_mod2) #close together, use simple model
 summary(c13_mod2)
 Anova(c13_mod2, type="3")
 r.squaredGLMM(c13_mod2)
-#R2m       R2c
+#R2m       R2
 #0.269034 0.685494
 
-#niche2        17.1304  2  0.0001906 ***
-#site           4.7686  1  0.0289836 * 
+#niche2        17.1304  2  0.0001427
+#site           4.7686  1  0.0400207
 
 visreg(c13_mod2)
 ##d13 higher in epi
@@ -102,17 +102,16 @@ c13niche_siglets <-cld(tukey_c13_niche)
 #"a"           "a"           "b" 
 
 
-epi <- mean(c13dat[c13dat$niche2 == "epiphyte", "d13C"],na.rm=TRUE) #-32.5
-noepi <- mean(c13dat[!c13dat$niche2 == "epiphyte", "d13C"], na.rm=TRUE) #-34.4
-
+epi <- mean(c13dat[c13dat$niche2 == "epiphyte", "d13C"],na.rm=TRUE) #-32.46
+noepi <- mean(c13dat[!c13dat$niche2 == "epiphyte", "d13C"], na.rm=TRUE) #-34.38
 
 tukey_c13_site <- glht(c13_mod2, linfct = mcp(site = "Tukey"))
 c13site_siglets <-cld(tukey_c13_site)
 #la_selva las_cruces 
 #"a"        "b" 
 
-ls <- mean(c13dat[c13dat$site == "la_selva", "d13C"],na.rm=TRUE) #-34.0
-lc <- mean(c13dat[c13dat$site == "las_cruces", "d13C"], na.rm=TRUE) #-33.0
+ls <- mean(c13dat[c13dat$site == "la_selva", "d13C"],na.rm=TRUE) #-33.98324
+lc <- mean(c13dat[c13dat$site == "las_cruces", "d13C"], na.rm=TRUE) #-32.95949
 
 
 
@@ -128,27 +127,22 @@ plot(d15N_mod) #looks good
 qqPlot(residuals(d15N_mod)) #looks good
 
 #model summary
-Anova(d15N_mod, type="3") #niche & site but no interaction
+Anova(d15N_mod, type="3") #site but no interaction
 anova(d15N_mod, d15N_mod2) #not different
 AIC(d15N_mod, d15N_mod2) #model one is slighly better
 
 #using model with interaction tem
 summary(d15N_mod)
-Anova(d15N_mod, type="3") #site effect and marginal niche
+Anova(d15N_mod, type="3") #site effect only
 r.squaredGLMM(d15N_mod)
 
 #R2m       R2c
-#[1,] 0.3833842 0.6705619
+#[1,] 0.3666595 0.6715925
 
-#niche2       2.8613  2    0.23915    
-#site        29.5920  1  5.332e-08 ***
-#niche2:site  4.9591  2    0.08378 .  
-
+#site        29.5920  1  3.48e-06
 
 visreg(d15N_mod, "niche2", by="site")
 ##dn15 higher in la selva
-##pretty mess interaction, likely terrestrial and epi lower at las cruces only
-
 
 tukey_n15_site <- glht(d15N_mod, linfct = mcp(site = "Tukey"))
 n15site_siglets <-cld(tukey_n15_site)

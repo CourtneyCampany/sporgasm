@@ -5,7 +5,7 @@ veins <- read.csv("raw_data/vein_density_lascruces.csv")
 
 veinden <- merge(veins, niche, by=c("site", "genusspecies"))
   veinden$niche2 <- veinden$niche
-  veinden$niche2 <- gsub("climber", "terrestrial", veinden$niche2)
+  veinden$niche2 <- gsub("climber", "hemi-epiphyte", veinden$niche2)
   veinden$niche2 <- as.factor(veinden$niche2)
  
   #reorder from ground to canopy 

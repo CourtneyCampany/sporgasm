@@ -5,7 +5,7 @@ traits <- read.csv("calculated_data/fern_traits.csv")
 ## create new variable that adds climber to terrestrial category
 
 traits$niche2 <- traits$niche
-  traits$niche2 <- gsub("climber", "terrestrial", traits$niche2)
+  traits$niche2 <- gsub("climber", "hemi-epiphyte", traits$niche2)
   traits$niche2 <- as.factor(traits$niche2)
   
 lamina <- traits[complete.cases(traits$lamina_area_cm2),]
@@ -30,7 +30,7 @@ lamina_mod2 <- lmer(log10(lamina_area_cm2) ~ niche2 + site + (1|species),
 
 #model diagnostics
 qqPlot(residuals(lamina_mod2)) #pretty good
-plot(lamina_mod62) ##negative skewed so we need a transformation
+plot(lamina_mod2) ##negative skewed so we need a transformation
 
 #model summary
 Anova(lamina_mod, type="3") #no interactions
@@ -56,4 +56,3 @@ la_siglets <-cld(tukey_la)
 #terrestrial hemi-epiphyte      epiphyte 
 # "a"           "a"           "a"
 
-###depends heavily on the model, but simples model says no!

@@ -5,7 +5,7 @@ traits <- read.csv("calculated_data/fern_traits.csv")
 ## create new variable that adds climber to terrestrial category
 
 traits$niche2 <- traits$niche
-  traits$niche2 <- gsub("climber", "terrestrial", traits$niche2)
+  traits$niche2 <- gsub("climber", "hemi-epiphyte", traits$niche2)
   traits$niche2 <- as.factor(traits$niche2)
   
 #reorder from ground to canopy 
@@ -31,7 +31,7 @@ frond_mod2 <- lm(frond_length_cm ~ niche2, data=traits[-c(205, 206,226,228,203),
   qqPlot(frond_mod2)
 
   Ltest_frond <- leveneTest(frond_length_cm ~ niche2 , data = traits)
-  summary(Ltest_frond) # not signficant so variance are equal
+  summary(Ltest_frond) # signficant so variance are not equal
 
 bwplot(frond_length_cm ~ niche2 | site , data = traits) 
 visreg(frond_mod2)  
@@ -71,9 +71,9 @@ Anova(frond_mod5, type="3")
 r.squaredGLMM(frond_mod5)
 
 # R2m       R2c
-# [1,] 0.1669024 0.8094553
+# [1,] 0.1419035 0.8099322
 
-#niche2 0.01418 *
+#niche2 0.0332 *
 
 
 visreg(frond_mod5)
@@ -86,7 +86,7 @@ fr_siglets <-cld(tukey_fr)
 # "a"          "ab"           "b" 
 
 terr <- mean(frond_dat[frond_dat$niche2 == "terrestrial", "frond_length_cm"], 
-             na.rm=TRUE)
+             na.rm=TRUE) #84.7887
 epi <- mean(frond_dat[frond_dat$niche2 == "epiphyte", "frond_length_cm"], 
-               na.rm=TRUE)
+               na.rm=TRUE) #58.94787
 

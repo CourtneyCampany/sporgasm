@@ -1,7 +1,7 @@
 source("master_scripts/plot_objects.R")
 
 traits <- read.csv("calculated_data/fern_traits.csv")
-  traits$niche2 <- gsub("climber", "terrestrial", traits$niche)
+  traits$niche2 <- gsub("climber", "hemi-epiphyte", traits$niche)
   traits$niche2 <- as.factor(traits$niche2)
 
 #reorder from ground to canopy 
@@ -19,7 +19,7 @@ trtcols2 <- c(alpha(trtcols[1], .5), alpha(trtcols[2], .5),alpha(trtcols[3], .5)
 
 
 #lamina area ----------
-##all same (depends on model)
+##all same  ##depending on model there is a marginal effect of site
 
 # jpeg(filename = "output/laminasize.jpeg",
 #      width = 7, height = 7, units = "in", res= 400)  

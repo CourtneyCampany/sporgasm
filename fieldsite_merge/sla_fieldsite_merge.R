@@ -43,7 +43,7 @@ niche <- read.csv("raw_data/species_niches.csv")
 
 sla_fern2 <- merge(sla_fern, niche, all=TRUE)                 
   sla_fern2$niche2 <- sla_fern2$niche
-  sla_fern2$niche2 <- gsub("climber", "terrestrial", sla_fern2$niche2)
+  sla_fern2$niche2 <- gsub("climber", "hemi-epiphyte", sla_fern2$niche2)
   sla_fern2$niche2 <- as.factor(sla_fern2$niche2)
 
 write.csv(sla_fern2,"calculated_data/fern_sla.csv", row.names = FALSE)

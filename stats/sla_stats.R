@@ -1,6 +1,8 @@
 
 sla <- read.csv("calculated_data/fern_sla.csv")
-  #reorder from ground to canopy 
+  
+
+#reorder from ground to canopy 
   sla$niche2<-factor(sla$niche2, 
                    levels=c("terrestrial", "hemi-epiphyte", "epiphyte"))
 
@@ -32,12 +34,12 @@ Anova(sla_mod2, type="3") #niche but no interaction
 anova(sla_mod2, sla_mod3) #not different
 AIC(sla_mod2, sla_mod3) #model with interaction in better
 
-#use model without interaction
+#use model with interaction
 summary(sla_mod3)
-Anova(sla_mod3, type="3")
+Anova(sla_mod2, type="3")
 r.squaredGLMM(sla_mod3)
 #R2m       R2c
-#0.1348911 0.8231442
+#0.134389 0.8231503
 
 #niche2        7.2506  2    0.02664
 

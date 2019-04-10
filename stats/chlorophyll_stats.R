@@ -4,7 +4,7 @@ traits <- read.csv("calculated_data/fern_traits.csv")
   ## Climber seems to be close to terrestrial and it still is technically-------
   ## create new variable that adds climber to terrestrial category
   traits$niche2 <- traits$niche
-  traits$niche2 <- gsub("climber", "terrestrial", traits$niche2)
+  traits$niche2 <- gsub("climber", "hemi-epiphyte", traits$niche2)
   traits$niche2 <- as.factor(traits$niche2)
 
 chloro <- traits[complete.cases(traits$chl_mg_m2),]  
@@ -68,13 +68,13 @@ Anova(chl_mod4, type="3") #niche effect
 anova(chl_mod3, chl_mod4) #not different
 AIC(chl_mod3, chl_mod4) 
 
-#dropping interaction
-summary(chl_mod4)
-Anova(chl_mod4, type="3")
+#AIC way better,keep interaction
+summary(chl_mod3)
+Anova(chl_mod3, type="3")
 r.squaredGLMM(chl_mod3)
 #R2m       R2c
-#0.1184706 0.5990968
-# niche2    0.02136 * 
+#0.1261207 0.5984076
+# niche2    0.03146 * 
 
 visreg(chl_mod4)
 ##slightly higher SD at las cruces

@@ -66,9 +66,9 @@ Not surprising, but frond area-length relationships are strong across all fern s
 ## Stomatal Traits
 
 ```{r sd,  echo=FALSE, fig.align='center',fig.width = 6, fig.height = 6,warning=FALSE}
-source("master_scripts/stomatal_density_plot.R")
+source("master_scripts/stomatal_density_plot2.R")
 ```
-Epiphytic and hemi-epiphytic species have 54% fewer stomata per given area than terrestrial species!
+Epiphytic and hemi-epiphytic species have 51% fewer stomata per given area than terrestrial species!
 
 \
 
@@ -89,7 +89,7 @@ source("master_scripts/vein_density_plots.R")
 ```{r nitro,  echo=FALSE, fig.align='center',fig.width = 6, fig.height = 6}
 source("master_scripts/leaf_chemistry_plots.R")
 ```
-Foliar nitrogen is 29% lower in epiphytes than terrestrial species, with hemi-epiphytes as intermediates.
+Foliar nitrogen is 29.8% lower in epiphytes compared to other groupgs
 
 \
 
@@ -103,7 +103,7 @@ Mean foliar $\delta$^13^C for epiphytes is -34.4&permil; compared with -32.5&per
 ```{r 15n,  echo=FALSE, fig.align='center',fig.width = 6, fig.height = 6}
 source("master_scripts/15N_plots.R")
 ```
-There is an interaction between site and niche that is likely not biologically relevant; some treatments for niche are lower at Las Cruces (but not all).  
+There is only a site effect.  
 
 # Chlorophyll Content
 
