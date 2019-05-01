@@ -56,7 +56,7 @@ fitgam <- function(X,Y,dfr, k=-1, R=NULL){
 
 
 ####addpoly
-addpoly <- function(x,y1,y2,col=alpha("lightgrey",0.45),...){
+addpoly <- function(x,y1,y2,col=alpha("lightgrey",0.65),...){
   ii <- order(x)
   y1 <- y1[ii]
   y2 <- y2[ii]
