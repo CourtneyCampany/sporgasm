@@ -1,0 +1,189 @@
+---
+title: "Leaf water relations in epiphytic ferns are driven by avoidance rather than tolerance mechanims "
+author: 
+date: 
+output:
+  word_document:
+    reference_docx: manuscriptstyle.docx
+  pdf_document: default
+  html_document:
+    number_sections: yes
+csl: new-phytologist.csl
+bibliography: epi_leaf_zotero.bib
+---
+
+\
+Courtney E. Campany^1^, Alex Baer^2^, Helen Holmlund^3^, Jarmila Pitterman^2^ and James E. Watkins Jr. ^1^
+
+\
+^1^ Department of Biology, Colgate University, Hamilton, NY, USA
+
+\
+^2^  Department of Ecology and Evolutionary Biology, University of California, Santa Cruz, California 95064, USA
+
+\
+Corresponding author: C.E. Campany, email: courtneycampany@gmail.com, 
+
+\
+Running Head: Terrestrial and epiphtic fern functional traits
+
+```{r, results="asis", echo=FALSE, warning=FALSE}
+library(knitr)
+opts_knit$set(root.dir = '../')
+```
+
+```{r global data/sourcing, echo=FALSE, message=FALSE, warning=FALSE}
+# Set Flag to include figures in text or not.
+includeFigs <- TRUE
+```
+
+```{r figtabs, echo=FALSE}
+
+
+```
+# Abstract
+
+\
+
+Key Words:
+
+# Introduction
+
+Within forests, epiphytes grow at many levels. Some
+are restricted to the dark understory, whereas others grow on
+the exposed twigs of emergent tree (Watkeins 2012)
+
+Kohn 2010).
+These data suggest that terrestrial ferns have reduced water
+use efficiency, which would be consistent with Brodribb and
+McAdam’s hypothesis of inefficient stomatal control
+
+# Methods
+
+## Study Site and Species Selection
+
+Within the Polypod clade, there is a fundamental split, with one clade radiating into the canopy and a sister clade diversifying on the forest floor (fig. 2). This split takes place between the eupolypod I clade that is predominantly epiphytic and the eupolypod II that is more than 90% terrestrial (estimates derived from counts in Moran and Riba 1995 and Mickel and Smith 2004). Within the eupolypod II clade, were it not for Aspleniaceae, there would be essentially no epiphytes in this lineage. (watkins 2012).
+
+## Plant Material
+
+## Strucutral anatomy
+
+## Leaf 
+
+## Pressure volume curves
+
+We used a modifi ed pressure–volume technique of Tyree and Hammel (1972) to estimate the following tissue-water relations: osmotic potential at full tissue hydration ( Ψ π , sat ), osmotic potential at the turgor loss point of tissues ( Ψ π , tlp ), bulk modulus of tissue elasticity ( ε ), and tissue-water capacitance ( C ). Th e method used has been fully described by Davis and Mooney (1986). Frond samples were gathered early in the morning, between
+6:00 - 7:30am, following natural overnight hydration. Fronds were cut in the field and immediately placed in dark plastic bags with wet paper towels. Fronds were immediately transported back to the laboratory were fronds were recut under water and rehydrated for 1-6 hrs (until time of measurement).
+
+\
+
+We generated pressure–volume curves by taking sequential water potential measurements ( Ψ ) as fronds were allowed to air dry on a bench top. The mass immediately before and after each Ψ determination was obtained using an analytical balance. After the curve was complete,
+leaf samples were dried to a constant mass at 70C in order to further calculate relative water content (RWC).
+
+Lawren Sack's  = something here
+ To determine Ψπ, tlp , a plot of 1/ Ψ vs. RWC was generated, and the
+point at which the graph linearized was taken as the Ψπ, tlp ( Davis and
+Mooney, 1986 ).  Ψπ, sat was determined by extending the regression line to the point where x = 0 (RWC =100). ε was determined from the slope m of the line of Ψpvs. RWC and the RWC at the turgor loss point (RWC°), such that ε= m RWC ° ,
+and C was determined as the slope of RWC vs. Ψ ( Table 2 ). 
+
+#Results
+
+## Frond Morphology
+
+```{r morph,  echo=FALSE, fig.align='center',fig.width = 6, fig.height = 6, warning=FALSE}
+source("master_scripts/morphology_plots.R")
+```
+No differences in lamina area, however, this depends on which model I choose (with or without niche x site interaction).  There is a massive amount of variation tied up in species-specific differences. Stipes in terrestrial species are 56% longer than epiphytic or hemi-epiphytic species. Total frond length is 30% longer in terrestrial than epiphytic species, with hemi-epiphytic species as intermediates.
+
+\
+
+```{r sla,  echo=FALSE, fig.align='center',fig.width = 6, fig.height = 6}
+source("master_scripts/sla_plot.R")
+```
+Specific leaf area is 35% higher in terrestrials ferns compared to epiphytic ferns, with hemi-epiphytes as intermediates.
+
+\
+
+```{r bivar,  echo=FALSE, fig.align='center',fig.width = 6, fig.height = 6}
+source("master_scripts/frondlength_laminaarea_plot.R")
+```
+Not surprising, but frond area-length relationships are strong across all fern species.
+
+## Stomatal Traits
+
+```{r sd,  echo=FALSE, fig.align='center',fig.width = 6, fig.height = 6,warning=FALSE}
+source("master_scripts/stomatal_density_plot2.R")
+```
+Epiphytic and hemi-epiphytic species have 51% fewer stomata per given area than terrestrial species!
+
+\
+
+```{r ss,  echo=FALSE, fig.align='center',fig.width = 6, fig.height = 10, warning=FALSE}
+source("master_scripts/stomata_size_plot.R")
+```
+Our undergraduate researcher as pushed through Juliette's beautiful pictures from Las Cruces. He has just now started Alex and Court's pictures from La Selva (pray for him). I have not analyzed these yet. Gurad cell width is the average of the two guard cells.
+
+## Vein Density
+
+```{r vd,  echo=FALSE, fig.align='center',fig.width = 6, fig.height = 6}
+source("master_scripts/vein_density_plots.R")
+```
+
+
+## Foliar Chemistry 
+
+```{r nitro,  echo=FALSE, fig.align='center',fig.width = 6, fig.height = 6}
+source("master_scripts/leaf_chemistry_plots.R")
+```
+Foliar nitrogen is 29.8% lower in epiphytes compared to other groupgs
+
+\
+
+
+```{r nitro,  echo=FALSE, fig.align='center',fig.width = 6, fig.height = 6}
+source("master_scripts/nitro_lma.R")
+```
+Foliar nitrogen and lma relationships differ between habitat groups
+
+\
+
+```{r 13c,  echo=FALSE, fig.align='center',fig.width = 10, fig.height = 6}
+source("master_scripts/13C_plots.R")
+```
+Mean foliar $\delta$^13^C for epiphytes is -34.4&permil; compared with -32.5&permil; for terrestrial + hemi-epiphytes. These is also a significant site effect. Is this relevant? 
+
+\
+
+```{r 15n,  echo=FALSE, fig.align='center',fig.width = 6, fig.height = 6}
+source("master_scripts/15N_plots.R")
+```
+There is only a site effect.  
+
+## Chlorophyll Content
+
+```{r chl,  echo=FALSE, fig.align='center',fig.width = 6, fig.height = 6}
+source("master_scripts/chlorophyll_plots.R")
+```
+I had to perform a little data mining to get this result. I dropped one epiphytic species with way to variable data (400-800 mg m^-2^) and a few outliers. Not sure how meaningful these differences are.
+
+## Foliar Hydraulic Traits
+
+Below are visualizations for some of the hydraulic traits we derived from pressure volume curves. These traits are calculated from Sacks's excel macro. I am worried that I have messed up 2 calculations from the macro when I first ran La Selva curves. Since I need to check them thoroughly, I only show Las Cruces below. I will run stats once I am confident with La Selva data, but it looks like we may have some niche differences emerging.
+
+```{r pv,  echo=FALSE, fig.align='center',fig.width = 6, fig.height = 6}
+source("master_scripts/pv_plots.R")
+```
+
+```{r pv,  echo=FALSE, fig.align='center',fig.width = 6, fig.height = 6}
+source("master_scripts/tlp_osmpot_plot.R")
+```
+
+```{r pv,  echo=FALSE, fig.align='center',fig.width = 6, fig.height = 6}
+source("master_scripts/tlp_elasticity_plot.R")
+```
+
+
+
+# Discussion
+
+(Brodribb 2017): A passive linkage between leaf water status and guard cell turgor observed in extant basal vascular plants appears to be sufficient to prevent xylem cavitation during diurnal changes in evaporative demand (Martins et al., 2015). However, without more sophisticated mechanisms to reduce guard cell turgor and produce complete stomatal closure, it has been hypothesized that passive closure does not provide a sufficiently tight stomatal seal capable of preventing ferns and lycophytes from rapidly reaching critical leaf water potentials when soil water is depleted during drought (McAdam and Brodribb, 2013). As a result, ferns and lycophytes in dry environments rely on either a high plant capacitance or low stomatal density (McAdam and Brodribb, 2013), desiccation tolerance (Hietz, 2010), and in some cases, rather cavitation-resistant xylem (Baer et al., 2016)

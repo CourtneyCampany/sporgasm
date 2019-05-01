@@ -12,7 +12,7 @@ opts_knit$set(root.dir = '../')
 
 Below is the compilation of the working data sets we plan to use for the manuscript. Eventually the paper will inclide findings from the following traits (traits in **bold** are analyzed):
 
-* PV Curves
+* **PV Curves**
 * Stomata: size and **density**
 * Vein density
 * **SLA**
@@ -119,4 +119,28 @@ Below are visualizations for some of the hydraulic traits we derived from pressu
 ```{r pv,  echo=FALSE, fig.align='center',fig.width = 6, fig.height = 6}
 source("master_scripts/pv_plots.R")
 ```
+
+```{r pv2,  echo=FALSE, fig.align='center',fig.width = 10, fig.height = 6}
+source("master_scripts/tlp_osmpot_elasticity_plots.R")
+```
+
+\
+
+Do we want to construct an overview figure of the pv curve plots?  Something like below (quickly made plot with La Selva) but much nicer looking?
+
+```{r pv36, echo=FALSE, fig.align='center', fig.height=6, fig.width=6,message=FALSE, warning=FALSE}
+source("master_scripts/pv_curve_plots2.R")
+```
+
+
+# Kmax leaf (la selva)
+
+Here is a snapshot of leaf corrected Kmax from *La Selva* species
+
+```{r kleaf,  echo=FALSE, fig.align='center',fig.width = 6, fig.height = 6}
+source("master_scripts/Kleaf_plot.R")
+```
+
+
+
 

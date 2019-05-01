@@ -40,6 +40,8 @@ stripchart(osmotic_potential ~ niche2, data = pv,
            
            
 ## water potential turgor loss point 
+# jpeg(filename = "output/tlp.jpeg",
+#      width = 7, height = 7, units = "in", res= 400)
 
 par(mgp=c(2.5,1,0), mar=c(4,4,1,1), cex.lab=1)
 boxplot(waterpot_tlp ~ niche2, data=pv, xaxt='n',ylim=c(-2,0.1),
@@ -49,6 +51,7 @@ axis(1, boxlabs, at=1:3, cex=1.1)
 stripchart(waterpot_tlp ~ niche2, data = pv,
            vertical = TRUE, method = "jitter",
            pch = 16,  col= trtcols2, xaxt='n', add=TRUE)
+# dev.off()
 
 ## elasticity
 
