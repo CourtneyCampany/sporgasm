@@ -2,6 +2,10 @@
 
 kleaf <- read.csv("calculated_data/kleaf.csv")
 
+#reorder from ground to canopy 
+kleaf$niche2<-factor(kleaf$niche2, 
+                     levels=c("terrestrial", "hemi-epiphyte", "epiphyte"))
+
 
 #plotbits
 boxlabs <- c("Terrestrial", "Hemi-epiphyte", "Epiphyte")

@@ -58,17 +58,25 @@ These data suggest that terrestrial ferns have reduced water
 use efficiency, which would be consistent with Brodribb and
 McAdam’s hypothesis of inefficient stomatal control
 
+Within the Polypod clade, there is a fundamental split, with one clade radiating into the canopy and a sister clade diversifying on the forest floor (fig. 2). This split takes place between the eupolypod I clade that is predominantly epiphytic and the eupolypod II that is more than 90% terrestrial (estimates derived from counts in Moran and Riba 1995 and Mickel and Smith 2004). Within the eupolypod II clade, were it not for Aspleniaceae, there would be essentially no epiphytes in this lineage. (watkins 2012).
+
 # Methods
 
 ## Study Site and Species Selection
+
+The sites used for this study included two Costa Rican wet tropical forest locations at La Selva Biological Research Station in Heredia (84⁰00’12W, 10⁰25’52N) and Las Cruce Research Station in San Vito (8° 47′ 7” N, 82° 57′ 32” W). The La Selva site is a low elevation (35-137m) tropical forest, which receives 4m of annual rainfall with a moderate dry season. The Las Cruces site is a premontane tropical forest at a higher elvation (~950m?).  
+
+A survey of physiological and stoichiometric parameters was conducted for 39 fern species across 3 fundamentally distinct habitats (Table 1). Vouchers for each species were deposited at both the La Selva (LSCR) and Las Cruces (LCCR) herbariums.
 
 Within the Polypod clade, there is a fundamental split, with one clade radiating into the canopy and a sister clade diversifying on the forest floor (fig. 2). This split takes place between the eupolypod I clade that is predominantly epiphytic and the eupolypod II that is more than 90% terrestrial (estimates derived from counts in Moran and Riba 1995 and Mickel and Smith 2004). Within the eupolypod II clade, were it not for Aspleniaceae, there would be essentially no epiphytes in this lineage. (watkins 2012).
 
 ## Plant Material
 
-## Strucutral anatomy
+## Leaf Morphometric traits
 
-## Leaf 
+## Structural anatomy
+
+## Foliar chemistry
 
 ## Pressure volume curves
 

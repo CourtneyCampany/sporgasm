@@ -19,16 +19,16 @@ pv_data3 <- pv_data[pv_data$rwc_100 < 10 & pv_data$rwc_100 >= 0 &
                       pv_data$psi2 < 40,]
 
 # windows()
-par(mar=c(5,5,1,1))
-plot(psi2~rwc_100, data=pv_data3 , type='n',xlim=c(0,11),
-     ylim=c(-1,15), ylab= psi2lab, xlab = "100-RWC ( %)")
-
-legend("topright", boxlabs, pch=16, col=trtcols, bty='n', inset = .01)
-
-points(psi2~rwc_100, data=pv_data3 , pch=16, col=trtcols2[niche2])
-
-smoothplot(rwc_100, psi2, niche2,data=pv_data3, kgam=4, R="species",
-           linecol=trtcols,pch="", add=TRUE)
+# par(mar=c(5,5,1,1))
+# plot(psi2~rwc_100, data=pv_data3 , type='n',xlim=c(0,11),
+#      ylim=c(-1,15), ylab= psi2lab, xlab = "100-RWC ( %)")
+# 
+# legend("topright", boxlabs, pch=16, col=trtcols, bty='n', inset = .01)
+# 
+# points(psi2~rwc_100, data=pv_data3 , pch=16, col=trtcols2[niche2])
+# 
+# smoothplot(rwc_100, psi2, niche2,data=pv_data3, kgam=4, R="species",
+#            linecol=trtcols,pch="", add=TRUE)
 
 
 ##see with ggplots
@@ -54,8 +54,9 @@ theme_update(text = element_text(size=12),
 )
 
 #ggplot version
-windows(7,7)
-ggplot(data=pv_data3) + 
+# windows(7,7)
+
+test <- ggplot(data=pv_data3) + 
     geom_point(mapping = aes(x=rwc_100, y=psi2, col=niche2), alpha=1/5) +
     ylim(0,15) +
     xlim(0,10.5) +
@@ -64,3 +65,5 @@ ggplot(data=pv_data3) +
     geom_smooth(mapping = aes(x=rwc_100, y=psi2, col=niche2)) +
     scale_color_manual(name = "Relationship", 
                        values = c(trtcols[1], trtcols[2], trtcols[3]))
+
+print(test)

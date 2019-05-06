@@ -1,6 +1,6 @@
 ---
 title: "Tropical Fern Leaf Water Relations"
-output: pdf_document
+output: html_document
 ---
 
 ```{r, results="asis", echo=FALSE, warning=FALSE}
@@ -75,7 +75,11 @@ Epiphytic and hemi-epiphytic species have 51% fewer stomata per given area than 
 ```{r ss,  echo=FALSE, fig.align='center',fig.width = 6, fig.height = 10, warning=FALSE}
 source("master_scripts/stomata_size_plot.R")
 ```
-Our undergraduate researcher as pushed through Juliette's beautiful pictures from Las Cruces. He has just now started Alex and Court's pictures from La Selva (pray for him). I have not analyzed these yet. Gurad cell width is the average of the two guard cells.
+Stomatal size is 40.4% higher epiphytes and hemi-epiphyutes compared to terrestrial species.  Stomatal size is calculated as stomatal length x paired guaurd cell width.  Average guard cell width drives this response, with stomatal length being similar between habitats.  
+
+\
+
+There are 2 aspenium species that appear to be outliers (epiphytes).  There are quite a few indidviudals, within each species that have high values.  You can see this from the plots.  I am unsure whether or not it is appropriate to drop them.  Regardless of whether they are dropped or not, the habitat effect remains.  Dropping them adds a messy site interaction. There is also a habitat * site interaction with stomatal width. Terrestrial stomatal only have a smaller width at La Selva.  
 
 ## Vein Density
 
@@ -120,27 +124,27 @@ Below are visualizations for some of the hydraulic traits we derived from pressu
 source("master_scripts/pv_plots.R")
 ```
 
+\
+
+
 ```{r pv2,  echo=FALSE, fig.align='center',fig.width = 10, fig.height = 6}
 source("master_scripts/tlp_osmpot_elasticity_plots.R")
 ```
 
 \
 
-Do we want to construct an overview figure of the pv curve plots?  Something like below (quickly made plot with La Selva) but much nicer looking?
 
-```{r pv36, echo=FALSE, fig.align='center', fig.height=6, fig.width=6,message=FALSE, warning=FALSE}
-source("master_scripts/pv_curve_plots2.R")
+```{r pv3, echo=FALSE, fig.align='center', fig.height=6, fig.width=8,message=FALSE, warning=FALSE}
+source("master_scripts/pv_curve_plots.R")
 ```
+Here is a broad snapshot of all the pv curves raw data.  It could be cleaner, because all points have been included. This means random bad points or oversaturation points are still in here.  It would take forever to go back through each curve.  I have also trimmed the x axis.  A lot of this could be changed, but wanted to see if you guys were interested. 
 
-
-# Kmax leaf (la selva)
-
-Here is a snapshot of leaf corrected Kmax from *La Selva* species
+# Kmax leaf
 
 ```{r kleaf,  echo=FALSE, fig.align='center',fig.width = 6, fig.height = 6}
 source("master_scripts/Kleaf_plot.R")
 ```
 
-
+Kleaf is statistically similar among habitats. 
 
 
