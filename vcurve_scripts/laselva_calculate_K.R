@@ -125,7 +125,7 @@ laselva_list <-  split(laselva_cond, as.factor(laselva_cond$curve_id))
 percloss_func <- function(x){
   Kdata <- data.frame(x)
   kmax <- Kdata[Kdata$MPa == 0.00, "K"] #isolate kmax for each curve
-  Kdata$perc_loss_k <- Kdata$K/kmax #percent loss K at each MPa
+  Kdata$perc_loss_k <- 1-Kdata$K/kmax #percent loss K at each MPa
   Kdata$PLC <-  Kdata$perc_loss_k * 100
   return(Kdata)
 }

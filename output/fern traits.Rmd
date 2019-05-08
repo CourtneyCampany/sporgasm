@@ -1,6 +1,6 @@
 ---
 title: "Tropical Fern Leaf Water Relations"
-output: html_document
+output: pdf_document
 ---
 
 ```{r, results="asis", echo=FALSE, warning=FALSE}
@@ -13,7 +13,7 @@ opts_knit$set(root.dir = '../')
 Below is the compilation of the working data sets we plan to use for the manuscript. Eventually the paper will inclide findings from the following traits (traits in **bold** are analyzed):
 
 * **PV Curves**
-* Stomata: size and **density**
+* **Stomata: size and density**
 * Vein density
 * **SLA**
 * **Foliar Nitrogen**
@@ -147,4 +147,17 @@ source("master_scripts/Kleaf_plot.R")
 
 Kleaf is statistically similar among habitats. 
 
+# Vulnerability curve parameters
 
+```{r vc1,  echo=FALSE, fig.align='center',fig.width = 6, fig.height = 6}
+source("vcurve_scripts/vcurve_species_random_effect.R")
+```
+
+Here is an example of a composite curve for one species, with indiviual as a random effect when fitting curve parameters.
+
+
+```{r vc2,  echo=FALSE, fig.align='center',fig.width = 8, fig.height = 12}
+source("vcurve_scripts/fern_fitplc.R")
+```
+
+Here are global composite curves for habitats.

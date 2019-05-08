@@ -17,7 +17,7 @@ library(scales)
 library(doBy)
 trtcols2 <- c(alpha(trtcols[1], .5), alpha(trtcols[2], .5),alpha(trtcols[3], .5))
 
-# windows()
+ # windows()
 par(mgp=c(2.5,1,0),mar=c(4,4,1,1), cex.lab=1)
 
 #kmax leaf

@@ -18,15 +18,20 @@ species_info <- read.csv("raw_data/species_niches.csv")
 fern_plc_habitat <- merge(fern_plc, species_info, by=c("genusspecies", "site"))
 #have only one climber to reclassify as terrestrial
 fern_plc_habitat$niche2 <- fern_plc_habitat$niche 
-fern_plc_habitat$niche2 <- gsub("climber", "terrestrial", 
-                                fern_plc_habitat$niche2) %>% 
-  as.factor()
+fern_plc_habitat$niche2 <- gsub("climber", "hemi-epiphyte", 
+                                fern_plc_habitat$niche2) %>% as.factor()
+
+#reorder from ground to canopy 
+fern_plc_habitat$niche2<-factor(fern_plc_habitat$niche2, 
+                     levels=c("terrestrial", "hemi-epiphyte", "epiphyte"))
+
+
 
 ## there are a few species that only have Kmax, lets remove them     
 fern_plc_curves <- fern_plc_habitat[!fern_plc_habitat$genusspecies 
-                                    %in% c("aspuni", "eladec","nipcra") & 
-                                      !fern_plc_habitat$curve_id 
-                                    %in% c("lommax-2", "lommax-5", "lommax-6","lommax-7"),]
+                    %in% c("aspuni", "eladec","nipcra") & 
+                    !fern_plc_habitat$curve_id 
+                    %in% c("lommax-2", "lommax-5", "lommax-6","lommax-7"),]
 
 ##load fitplc (can use remko's dev version or updated CRAN package)
 
@@ -63,6 +68,7 @@ epiphyte <- fitplc(epi_species, rescale_Px=TRUE, model="loess",rescale_Px=TRUE,
 plot(epiphyte)
 plot(epiphyte, what="embol")
 epi_p50 <- getPx(epiphyte)
+epi_Px <- getPx(epiphyte, x=c(12, 50, 88))
 
 #2. terrestrial
 terrestrial <- fitplc(terr_species, 
@@ -71,7 +77,7 @@ terrestrial <- fitplc(terr_species,
                        varnames=var_names)
 plot(terrestrial, what="embol")
 terr_p50 <- getPx(terrestrial)
-
+terr_Px <- getPx(terrestrial, x=c(12, 50, 88))
 
 #3. hemiepiphyte
 hemi_epi <- fitplc(hemi_species, 
@@ -80,6 +86,8 @@ hemi_epi <- fitplc(hemi_species,
                     varnames=var_names)
 plot(hemi_epi, what='embol')
 hemi_p50 <- getPx(hemi_epi)
+hemi_Px <- getPx(hemi_epi, x=c(12, 50, 88))
+
 
 
 ## global plotting by habitat-------------
@@ -88,22 +96,26 @@ PLC_lab <- "Percent loss conductivity  (%)"
 p50_lab <- expression(P[50])
 
 #habitat colors
-gradient <- colorRampPalette(c("orange", "forestgreen"))
+gradient <- colorRampPalette(c("forestgreen","darkorange1"))
 palette(gradient(3))
 trtcols <- palette(gradient(3))
-boxlabs <- c("Epiphyte", "Hemi-epiphyte", "Terrestrial")
+library(scales)
+library(doBy)
+trtcols2 <- c(alpha(trtcols[1], .5), alpha(trtcols[2], .5),alpha(trtcols[3], .5))
+
+boxlabs <- c("Terrestrial", "Hemi-epiphyte", "Epiphyte")
 
 # windows(8, 12)
 
-jpeg(filename = "output/PLC.jpeg",
-     width = 10, height = 12, units = "in", res= 400)
+# jpeg(filename = "output/PLC.jpeg",
+#      width = 10, height = 12, units = "in", res= 400)
 
 par(mfrow=c(3,1), las=1, cex.axis=1, cex.lab=1, cex=1.25,
     mgp=c(2.5,1,0),oma=c(5, 0, 1,1))
 
 par(mar=c(.5,5.5,.5,0))
-plot(epiphyte, ylab = "", cicol=alpha(trtcols[1], .75), xlab="", ylim=c(0,101),
-     pch=21, bg=alpha(trtcols[1], .5), xlim=c(0,4.1),xaxt='n',px_ci_label = FALSE,
+plot(epiphyte, ylab = "", cicol=alpha(trtcols[3], .75), xlab="", ylim=c(0,101),
+     pch=21, bg=alpha(trtcols[3], .5), xlim=c(0,4.1),xaxt='n',px_ci_label = FALSE,
      what='embol')
 axis(side=1, labels=FALSE, tick=TRUE)
 legend(x=3.3, y=100,boxlabs, pch=21, pt.bg=trtcols, bty='n',cex=1, pt.cex = 1,
@@ -119,10 +131,10 @@ text(x=-.6, y=50, PLC_lab, srt=90, xpd=NA)
 text(x=2.5,y=95,  bquote(bold(P[50] == .(round(hemi_p50[[2]],2)))), cex=1)
 
 par(mar=c(.5,5.5,.5,0))
-plot(terrestrial, ylab = "", cicol=alpha(trtcols[3], .75), ylim=c(0,101),
-     pch=21, bg=alpha(trtcols[3], .5), xlim=c(0,4.1),
+plot(terrestrial, ylab = "", cicol=alpha(trtcols[1], .75), ylim=c(0,101),
+     pch=21, bg=alpha(trtcols[1], .5), xlim=c(0,4.1),
      px_ci_label = FALSE, what='embol')
-mtext("Water Potential  (MPa)", side=1, line=3, cex=1.25)
+mtext("Water Potential  (-MPa)", side=1, line=3, cex=1.25)
 text(x=2.5,y=95,  bquote(bold(P[50] == .(round(terr_p50[[2]],2)))), cex=1)
 
-dev.off()
+# dev.off()
