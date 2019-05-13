@@ -94,6 +94,10 @@ point at which the graph linearized was taken as the Ψπ, tlp ( Davis and
 Mooney, 1986 ).  Ψπ, sat was determined by extending the regression line to the point where x = 0 (RWC =100). ε was determined from the slope m of the line of Ψpvs. RWC and the RWC at the turgor loss point (RWC°), such that ε= m RWC ° ,
 and C was determined as the slope of RWC vs. Ψ ( Table 2 ). 
 
+## Statistical analysis
+
+Tests of allometric relationships between log-transformed biomass components were implemented using standardized major axis regression in the 'smatr' package in R [@warton2012smatr]. All tests of statistical significance were conducted at an $\alpha$ level of 0.05.
+
 #Results
 
 ## Frond Morphology
