@@ -47,6 +47,10 @@ trtcols2 <- c(alpha(trtcols[1], .7), alpha(trtcols[2], .7),alpha(trtcols[3], .7)
 
 
 windows()
+
+jpeg(filename = "output/stomata_regression.jpeg",
+     width = 10, height = 7, units = "in", res= 400)
 plot(stomatal_size ~ sd_mm2, data=stomata, col=niche2, pch=16)
+dev.off()
 
                  
