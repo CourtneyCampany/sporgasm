@@ -41,6 +41,7 @@ kleaf <- read.csv("calculated_data/kleaf.csv")
   names(kleaf)[2] <- "plant_no"
   
 huberstipe <- merge(huber, traits[,c(1:2,4,6)])
+huberleaf <- merge(huber, traits[,c(1:2,4,7)])
 hubersd <- merge(huber, sd)
 huberpv <- merge(huber, pv)
 khuber <- merge(kleaf, huber)
@@ -72,6 +73,19 @@ plot(sd_mm2 ~ waterpot_tlp, data=pvsd, pch=16, col=trtcols2[niche2])
 plot(sd_mm2 ~ osmotic_potential, data=pvsd, pch=16, col=trtcols2[niche2])
 plot(sd_mm2 ~ elasticity, data=pvsd, pch=16, col=trtcols2[niche2])
 plot(waterpot_tlp ~ K, data=pvk, pch=16, col=trtcols2[niche2])
+
+
+plot(log10(lamina_area_cm2) ~ log10(xylem_area_mm2) , data=huberleaf, pch=16, col=trtcols2[niche2])
+
+library(magicaxis)
+par(mgp=c(2,.75,0), mar=c(4,4,1,1), cex.lab=1.1)
+with(huberleaf, plot(log10(lamina_area_cm2) ~ log10(xylem_area_mm2),
+                    xlab=lamina_lab, ylab=xylem_lab,axes=FALSE,
+                    pch=16, col=trtcols2[niche2],cex=1.25))
+magaxis(side=c(1,2), unlog=c(1,2), frame.plot=TRUE)
+legend("topleft", legend = boxlabs, pch=16, col=trtcols, bty="n", inset=.01)
+
+
 
 plot(K ~ sd_mm2, data=ksd, pch=16, col=trtcols2[niche2])
 
