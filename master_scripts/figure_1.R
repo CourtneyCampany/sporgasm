@@ -57,13 +57,7 @@ epi_mod2 <- lm(n_perc ~ lma_g_m2, data=epi2[epi2$lma_g_m2 < 600,])
 
 
 #plot bits-------
-boxlabs <- c("Terrestrial", "Hemi-epiphyte", "Epiphyte")
-
-gradient <- colorRampPalette(c("forestgreen","darkorange3"))
-palette(gradient(3))
-trtcols <- palette(gradient(3))
-library(scales)
-trtcols2 <- c(alpha(trtcols[1], .7), alpha(trtcols[2], .7),alpha(trtcols[3], .7))
+library(magicaxis)
 library(plotrix)
 stipecld <- c("a", "b", "b")
 cldlma <- c("a", "ab", "b")
@@ -76,12 +70,12 @@ lma_lab <- expression(LMA~~(g~m^-2))
 jpeg(filename = "output/figure1.jpeg",
       width = 10, height = 10, units = "in", res= 400)  
 
-par(mfrow=c(2,2),mgp=c(2.5,1,0), mar=c(5,5,1,1), cex.lab=1)
+par(mfrow=c(2,2),mgp=c(2.5,.75,0), mar=c(4,4,1,1), cex.lab=1.1)
 
 # stipe length
 boxplot(stipe_length_cm ~ niche2, data=traits, ylim=c(0, 82),xaxt='n',
         ylab = stipe_lab,border=trtcols, varwidth=TRUE, outline=FALSE)
-axis(1, boxlabs, at=1:3, cex=1.1)
+axis(1, boxlabs, at=1:3, cex.axis=1.1)
 stripchart(stipe_length_cm ~ niche2, data = traits,
            vertical = TRUE, method = "jitter",cex=1.25,
            pch = 16,  col= trtcols2, xaxt='n', add=TRUE)
@@ -91,7 +85,8 @@ text(3.5, 0, "A", cex=1.25)
 # allometry
 with(fronddat, plot(log10(lamina_area_cm2) ~ log10(frond_length_cm),
                     xlab=frond_lab, ylab=lamina_lab,axes=FALSE,
-                    pch=16, col=trtcols2[niche2],cex=1.25),xlim=c(0,3))
+                    pch=16, col=trtcols2[niche2],cex=1.25,xlim=c(1,2.4),
+                    ylim=c(1, 3.5)))
 magaxis(side=c(1,2), unlog=c(1,2), frame.plot=TRUE)
 legend("topleft", legend = boxlabs, pch=16, col=trtcols, bty="n", inset=.01)
 ablineclip(terr_mod, x1=log10(min(terr$frond_length_cm)), 
@@ -109,7 +104,7 @@ text(log10(200), log10(25), "B", cex=1.25)
 
 boxplot(lma_g_m2 ~ niche2, data=nitro,xaxt='n',ylim=c(0, 610),
         ylab=lma_lab, outline=FALSE, border=trtcols, varwidth=TRUE)
-axis(1, boxlabs, at=1:3, cex=1.1)
+axis(1, boxlabs, at=1:3, cex.axis=1.1)
 stripchart(lma_g_m2 ~ niche2, data = nitro,cex=1.25,
            vertical = TRUE, method = "jitter",
            pch=16, col=trtcols2,
@@ -121,11 +116,11 @@ text(3.5, 0, "C", cex=1.25)
 plot(n_perc ~ lma_g_m2, data=nitro[nitro$lma_g_m2 < 600,],
      ylim=c(0,6), xlim=c(0,525),
      ylab="Foliar Nitrogen (%)",xlab=lmalab, type='n')
-points(n_perc ~ lma_g_m2, data=nitro[nitro$lma_g_m2 < 600,], 
-       pch=16, col=trtcols2[niche2],cex=1.25)
 predline(hemi_mod2, col=trtcols[2], lwd=2, lty=2)
 predline(terr_mod2, col=trtcols[1], lwd=2, lty=2)
 predline(epi_mod2, col=trtcols[3], lwd=2, lty=2)
+points(n_perc ~ lma_g_m2, data=nitro[nitro$lma_g_m2 < 600,], 
+       pch=16, col=trtcols2[niche2],cex=1.25)
 text(530, 0, "D", cex=1.25)
 
 # legend("topleft", legend = boxlabs, pch=21, pt.bg=trtcols, bty="n", inset=.01)

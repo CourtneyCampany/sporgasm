@@ -1,7 +1,7 @@
 #stomata size plots
 
 #stomatal size from both sites
-ss <- read.csv("raw_data/stomata_size.csv")
+ss <- read.csv("raw_data/stomata_size_cec.csv")
   ss$plant_no <- gsub("[^0-9]", "", ss$individual)
 
 #species habitats  
@@ -30,7 +30,7 @@ ss_agg <- doBy::summaryBy(guardcell_length_um + average_guardcell_width_um +
 #plot bits-------
 boxlabs <- c("Terrestrial", "Hemi-epiphyte", "Epiphyte")
 
-gradient <- colorRampPalette(c("forestgreen","darkorange1"))
+gradient <- colorRampPalette(c("forestgreen","darkorange3"))
 palette(gradient(3))
 trtcols <- palette(gradient(3))
 library(scales)
@@ -47,8 +47,8 @@ cld_s2 <- c("a", "b", "b")
 ##multiple panel plot of anatomy -------
 # windows(10,12)
 
-# jpeg(filename = "output/stomatasize.jpeg",
-#      width = 7, height = 7, units = "in", res= 400)
+jpeg(filename = "output/stomatasize.jpeg",
+     width = 10, height = 12, units = "in", res= 400)
 
 par(mfrow=c(3,1),mgp=c(2.5,1,0),oma=c(5,5,1,1), cex.lab=1)
 
@@ -85,4 +85,4 @@ text(x=1:3, y=.00375, cld_ss)
 mtext(side=2, at=.002, line=2.5,text=ss_lab, 
        xpd=TRUE, las=3, cex=.9)
 
-# dev.off()
+dev.off()

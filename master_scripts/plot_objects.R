@@ -14,10 +14,6 @@ n_hemi <- length(unique(makelabels[makelabels$niche =="hemi-epiphyte", "species"
 niche_count <- c(n_climb, n_epi, n_hemi, n_terr)
 niche_lab2 <- paste("n=", niche_count, sep = "")
 
-gradient <- colorRampPalette(c("darkgreen", "orange"))
-palette(gradient(4))
-nichcols <- palette(gradient(4))
-
 
 ##plot axis labels
 lamina_lab <- expression(Lamina~area~~(cm^2))
@@ -29,3 +25,17 @@ slalab<- expression(SLA[TNC~free]~~(m^2~g^-1))
 lmalab <- expression(LMA~~(g~m^-2))
 nitrolab <- expression(Leaf~Nitrogen~~(g~g^-1))
 n15lab <-expression(paste(delta^{15}, "N (\u2030)"))
+boxlabs <- c("Terrestrial", "Hemi-epiphyte", "Epiphyte")
+ss_lab <- expression(Stomatal~size~~(mu*m^2))
+sl_lab <- expression(Stomatal~length~~(mu*m))
+sw_lab <- expression(Stomatal~width[mean]~~(mu*m))
+sd_lab <- expression(Stomatal~density~~(mm^2))
+xylem_lab <- expression(Total~xylem~area[stipe]~~(mm^-2))
+
+#colors
+gradient <- colorRampPalette(c("forestgreen","darkorange3"))
+palette(gradient(3))
+trtcols <- palette(gradient(3))
+library(scales)
+trtcols2 <- c(alpha(trtcols[1], .7), alpha(trtcols[2], .7),alpha(trtcols[3], .7))
+
