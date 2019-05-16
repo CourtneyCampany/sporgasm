@@ -16,9 +16,16 @@ traits <- read.csv("calculated_data/fern_traits.csv")
   #reorder from ground to canopy 
   traits$niche2<-factor(traits$niche2, 
                         levels=c("terrestrial", "hemi-epiphyte", "epiphyte"))
+  
+allferns <- merge(traits, huber, all=TRUE)
 
 #stomata density
 sd <- read.csv("calculated_data/stomata_density_means.csv")  
+ss <- read.csv("calculated_data/stomata_size_means.csv")
+stom <- merge(ss, sd, all=TRUE)
+
+
+allferns2 <- merge(allferns, stom, all=TRUE)
   
 #pressure volume curves
 pv <- read.csv("calculated_data/pv_curves2.csv")
@@ -29,16 +36,23 @@ pv <- read.csv("calculated_data/pv_curves2.csv")
                   levels=c("terrestrial", "hemi-epiphyte", "epiphyte"))
   pv$plant_no <- as.integer(pv$plant_no)
   
+allferns3<- merge(allferns2, pv, all=TRUE)
+  
 sla <- read.csv("calculated_data/fern_sla.csv")
   #reorder from ground to canopy 
   sla$niche2<-factor(sla$niche2, 
                      levels=c("terrestrial", "hemi-epiphyte", "epiphyte"))
+
+allferns4<- merge(allferns3, sla, all=TRUE)  
   
 kleaf <- read.csv("calculated_data/kleaf.csv")
 #reorder from ground to canopy 
   kleaf$niche2<-factor(kleaf$niche2, 
                        levels=c("terrestrial", "hemi-epiphyte", "epiphyte"))
   names(kleaf)[2] <- "plant_no"
+  
+allferns5<- merge(allferns4, kleaf, all=TRUE)  
+write.csv(allferns4, "calculated_data/ferns_traits_complete.csv", row.names = FALSE)
   
 huberstipe <- merge(huber, traits[,c(1:2,4,6)])
 huberleaf <- merge(huber, traits[,c(1:2,4,7)])

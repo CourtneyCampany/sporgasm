@@ -64,29 +64,50 @@ Within the Polypod clade, there is a fundamental split, with one clade radiating
 
 ## Study Site and Species Selection
 
-The sites used for this study included two Costa Rican wet tropical forest locations at La Selva Biological Research Station in Heredia (84⁰00’12W, 10⁰25’52N) and Las Cruce Research Station in San Vito (8° 47′ 7” N, 82° 57′ 32” W). The La Selva site is a low elevation (35-137m) tropical forest, which receives 4m of annual rainfall with a moderate dry season. The Las Cruces site is a premontane tropical forest at a higher elvation (~950m?).  
-
-A survey of physiological and stoichiometric parameters was conducted for 39 fern species across 3 fundamentally distinct habitats (Table 1). Vouchers for each species were deposited at both the La Selva (LSCR) and Las Cruces (LCCR) herbariums.
-
-Within the Polypod clade, there is a fundamental split, with one clade radiating into the canopy and a sister clade diversifying on the forest floor (fig. 2). This split takes place between the eupolypod I clade that is predominantly epiphytic and the eupolypod II that is more than 90% terrestrial (estimates derived from counts in Moran and Riba 1995 and Mickel and Smith 2004). Within the eupolypod II clade, were it not for Aspleniaceae, there would be essentially no epiphytes in this lineage. (watkins 2012).
-
-## Plant Material
-
-## Leaf Morphometric traits
-
-## Structural anatomy
-
-## Foliar chemistry
-
-## Pressure volume curves
-
-We used a modifi ed pressure–volume technique of Tyree and Hammel (1972) to estimate the following tissue-water relations: osmotic potential at full tissue hydration ( Ψ π , sat ), osmotic potential at the turgor loss point of tissues ( Ψ π , tlp ), bulk modulus of tissue elasticity ( ε ), and tissue-water capacitance ( C ). Th e method used has been fully described by Davis and Mooney (1986). Frond samples were gathered early in the morning, between
-6:00 - 7:30am, following natural overnight hydration. Fronds were cut in the field and immediately placed in dark plastic bags with wet paper towels. Fronds were immediately transported back to the laboratory were fronds were recut under water and rehydrated for 1-6 hrs (until time of measurement).
+The sites used for this study included two Costa Rican wet tropical forest locations at La Selva Biological Research Station in Heredia (84⁰00’12W, 10⁰25’52N) and Las Cruce Research Station in San Vito (8° 47′ 7” N, 82° 57′ 32” W). The La Selva site is a low elevation (ca 50 m) tropical forest, with a moderate dry season. The Las Cruces site is a premontane tropical forest located at a higher elvation (ca 1200 m). Both sites receive approximately 4m of annual rainfall [@holdridge_life_1967,@gentry_four_1993].
 
 \
 
-We generated pressure–volume curves by taking sequential water potential measurements ( Ψ ) as fronds were allowed to air dry on a bench top. The mass immediately before and after each Ψ determination was obtained using an analytical balance. After the curve was complete,
-leaf samples were dried to a constant mass at 70C in order to further calculate relative water content (RWC).
+A survey of morphological, stoichiometric, anatomical and leaf water relations parameters were conducted for six individuals from 39 fern species across three fundamentally distinct life froms (Table 1). Across both sites, 18 terrestrial, 15 epiphytic and 6 hemi-epiphytic species were collected and meausured.  In this study, terrestrial life froms were all collected from shaded closed canopy understories in the forest floor. Epiphyitc life forms were sampled from trunks or within tree canopies,depending on the species. Epiphytic species were collected from canopy trees using single-rope climbing techniques. Hemi-epiphytic species were all collected along lower sections of trees trunks (1-3 m).  Importantly, all sampled hemi-epiphtic species are known to have root connections to forest floor soils at some point in their life history. Individuals of species were collected across multiple populations but within similar microhabitat conditions. All sampled fern species were restricted to the eupolypod I and II clades. Vouchers for each species were deposited at the sites of collection at either the La Selva (LSCR) or Las Cruces (LCCR) herbariums. 
+
+## Plant Material
+
+Two complete fronds from sampled individuals were field collected in the early morning (6-7:00 am). Stipes were cut at the base of the rhizome and cut ends were wrapped in wet paper towels and transported to the lab in black plastic bags.  Stipes were re-cut under water adn rehydrated until time of hydaulic measurement (1-6 hours). Due to the difficulty in sampling some canopy species; whole epiphytic individuals were removed, maintained overnight in well-watered conditions in an abient air laboratory and sampled the following day. One frond from each individual was utlized for presssure volume curves, while the other was sampled for strucutral morphology, lamina stoichmetry and anatomical traits. 
+## Leaf Morphometric traits
+
+Stipe length (cm) and lamina length (cm) were calculated from one sampled frond per indiviudal. Total lamina area for each frond was measured with a Li-3100 leaf area meter (LiCor Biosciences, ). Leaf mass per unit area (LMA, g cm^-2^) was calculated using the tissue punch method. For each individual, ten lamina punches (5 mm ^2^) were dried to a constant mass and LMA was calculated as the total dry mass divided by the total area of all leaf punches. 
+
+## Anatomical traits
+
+Total **xylem vascular** area was determined for stipe segments from hand cross-sections. Each cross section was stained with toulune blue....for. 
+Images under 10x were ...
+Total vascular area was determined by measuring the area of all vascular bundles within a stipe cross section. Images were analyzed using Image J software (National Institutes of Health, Bethesda Maryland, USA). 
+
+\
+
+Stomatal density (SD) was measured by directly counting stomata on the abaxial leaf surface under 40x magnification. Three leaf punches (4 mm^2^ diameter) were sampled across random locations on different pinnae from each individual. The number of stomata in each field of fiew were counted in three random regions on each of three leaf punches. The stomatal density for each indivudal is presented as the mean SD across all 9 sampled regions
+
+\
+
+Indiviudal images of stomata were directly photographed under 40x magnification (AmCcope FMA050) across all three leaf punches per individual. Stomatal length and width of both guard cells were calculated for 9 stomata for each individual using Image J. Stomatal size (SS) was calculated as guard cell length multipled by the combined width of each guard cell pair, as in @franks_maximum_2009.
+
+## Foliar chemistry
+
+Subsamples of foliar tissue used for lamina area calculation were samples across muliple pinnae for each individual.  These subsamples were dired to a constant mass and ground using a Wig-L-Bug (Sigma-Aldrich Co. St. Louis, USA).
+
+Nitrogen content and deltaC^13^  were measured using a 
+
+ by comparison with certified standards.
+
+## Pressure volume curves
+
+We used a modified pressure–volume technique of Tyree and Hammel (1972) to estimate the following tissue-water relations: osmotic potential at full tissue hydration ( Ψ π , sat ), osmotic potential at the turgor loss point of tissues ( Ψ π , tlp ), bulk modulus of tissue elasticity ( ε ), and tissue-water capacitance ( C ). This method has been fully described by Davis and Mooney (1986). 
+
+\
+
+For each pressure-volume curve we sampled top most intact pinnae for each fully hydrated frond. We generated pressure–volume curves by taking sequential water potential measurements ( Ψ ) as fronds air dried first in closed plastic bages (0-2 hrs) and then on a bench top. The fresh mass was recored immediately before and after each Ψ determination. Following each PV curve, samples were dried to a constant mass to calculate relative water content (RWC).
+
+\
 
 Lawren Sack's  = something here
  To determine Ψπ, tlp , a plot of 1/ Ψ vs. RWC was generated, and the

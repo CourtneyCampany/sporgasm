@@ -24,8 +24,7 @@ ss2 <-  merge(ss, niche, by="genusspecies")
 ss_agg <- doBy::summaryBy(guardcell_length_um + average_guardcell_width_um +
                             stomatal_size ~ site + species + plant_no 
                           + niche2, data=ss2, FUN=mean, keep.names = TRUE)
-
-
+#write.csv(ss_agg, "calculated_data/stomata_size_means.csv", row.names = FALSE)
 
 #plot bits-------
 boxlabs <- c("Terrestrial", "Hemi-epiphyte", "Epiphyte")
