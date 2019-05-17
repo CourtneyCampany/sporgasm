@@ -39,7 +39,7 @@ AIC(lamina_mod, lamina_mod2)
 
 
 #use model withinteraction
-summary(lamina_mod2)
+summary(lamina_mod)
 Anova(lamina_mod2, type="3")
 r.squaredGLMM(lamina_mod)
 #R2m       R2c

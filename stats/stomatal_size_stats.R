@@ -1,3 +1,5 @@
+source("functions_packages/basic_functions.R")
+
 #stomata size stats
 library(visreg)
 library(lme4)
@@ -52,23 +54,24 @@ hist(ss_agg$stomatal_size) ## likely affect frequency distribution
 ##full mixed model for stomatal size ---------
 ss_mod2 <- lmer(sqrt(stomatal_size) ~ niche2 * site + (1|species), data=ss_agg)
 ss_mod3 <- lmer(sqrt(stomatal_size) ~ niche2 + site + (1|species), data=ss_agg)
+ss_mod4 <- lmer(sqrt(stomatal_size) ~ niche2 + (1|species), data=ss_agg)
 
 boxplot(stomatal_size ~ niche2, data=ss_agg) #aspenium species outliers?
 qqPlot(residuals(ss_mod2)) #sqrt transformation works best
+plot(ss_mod2)
 
 #model summary
-anova(ss_mod2, ss_mod3) #not different
-AIC(ss_mod2, ss_mod3) #model 2 is better (less than 2)
 Anova(ss_mod2, type="3") #niche, no interaction
+anova(ss_mod2, ss_mod4) #not different
+AIC(ss_mod3, ss_mod4) #model 2 is better (less than 2)
+
 
 #use model with interaction
-
 r.squaredGLMM(ss_mod2)
 #R2m       R2c
 #0.1424696 0.879826
 
 #niche2        6.2322  2    0.04433 *
-
 tukey_ss <- glht(ss_mod2, linfct = mcp(niche2 = "Tukey"))
 ss_siglets <-cld(tukey_ss)
 

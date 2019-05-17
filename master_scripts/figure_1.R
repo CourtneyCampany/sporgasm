@@ -50,16 +50,18 @@ terr2 <- droplevels(nitro[nitro$niche2 == "terrestrial", ])
 hemi2 <- droplevels(nitro[nitro$niche2 == "hemi-epiphyte", ])
 epi2 <- droplevels(nitro[nitro$niche2 == "epiphyte", ])
 
-terr_mod2 <- lm(n_perc ~ lma_g_m2, data=terr2[terr2$lma_g_m2 < 600,])
-hemi_mod2 <- lm(n_perc ~ lma_g_m2, data=hemi2[hemi2$lma_g_m2 < 600,])
-epi_mod2 <- lm(n_perc ~ lma_g_m2, data=epi2[epi2$lma_g_m2 < 600,])
+# terr_mod2 <- lm(n_perc ~ lma_g_m2, data=terr2[terr2$lma_g_m2 < 600,])
+# hemi_mod2 <- lm(n_perc ~ lma_g_m2, data=hemi2[hemi2$lma_g_m2 < 600,])
+# epi_mod2 <- lm(n_perc ~ lma_g_m2, data=epi2[epi2$lma_g_m2 < 600,])
 
-
+terr_mod2 <- lm(n_perc ~ lma_g_m2, data=terr2)
+hemi_mod2 <- lm(n_perc ~ lma_g_m2, data=hemi2)
+epi_mod2 <- lm(n_perc ~ lma_g_m2, data=epi2)
 
 #plot bits-------
 library(magicaxis)
 library(plotrix)
-stipecld <- c("a", "b", "b")
+stipecld <- c("a", "ab", "b")
 cldlma <- c("a", "ab", "b")
 lma_lab <- expression(LMA~~(g~m^-2))
 
@@ -71,16 +73,6 @@ jpeg(filename = "output/figure1.jpeg",
       width = 10, height = 10, units = "in", res= 400)  
 
 par(mfrow=c(2,2),mgp=c(2.5,.75,0), mar=c(4,4,1,1), cex.lab=1.1)
-
-# stipe length
-boxplot(stipe_length_cm ~ niche2, data=traits, ylim=c(0, 82),xaxt='n',
-        ylab = stipe_lab,border=trtcols, varwidth=TRUE, outline=FALSE)
-axis(1, boxlabs, at=1:3, cex.axis=1.1)
-stripchart(stipe_length_cm ~ niche2, data = traits,
-           vertical = TRUE, method = "jitter",cex=1.25,
-           pch = 16,  col= trtcols2, xaxt='n', add=TRUE)
-text(x=1:3, y=80, stipecld)
-text(3.5, 0, "A", cex=1.25)
 
 # allometry
 with(fronddat, plot(log10(lamina_area_cm2) ~ log10(frond_length_cm),
@@ -98,30 +90,43 @@ ablineclip(hemi_mod, x1=log10(min(hemi$frond_length_cm)),
 ablineclip(epi_mod, x1=log10(min(epi$frond_length_cm)), 
            x2=log10(max(epi$frond_length_cm)),
            col=trtcols[3], lwd=3, lty=2)
-text(log10(200), log10(25), "B", cex=1.25)
+text(log10(250), log10(10), "A", cex=1.25)
+
+# stipe length
+boxplot(stipe_length_cm ~ niche2, data=traits, ylim=c(0, 82),xaxt='n',
+        boxlwd=2,whisklwd=2,staplelwd=2,
+        ylab = stipe_lab,border=trtcols, varwidth=TRUE, outline=FALSE)
+axis(1, boxlabs, at=1:3, cex.axis=1.1)
+stripchart(stipe_length_cm ~ niche2, data = traits,
+           vertical = TRUE, method = "jitter",cex=1.25,
+           pch = 16,  col= trtcols2, xaxt='n', add=TRUE)
+text(x=1:3, y=80, stipecld)
+text(3.5, 0, "B", cex=1.25)
+
 
 ##lma
 
-boxplot(lma_g_m2 ~ niche2, data=nitro,xaxt='n',ylim=c(0, 610),
+boxplot(lma_g_m2 ~ niche2, data=nitro,xaxt='n',ylim=c(0,630),
+        boxlwd=2, whisklwd=2,staplelwd=2,
         ylab=lma_lab, outline=FALSE, border=trtcols, varwidth=TRUE)
 axis(1, boxlabs, at=1:3, cex.axis=1.1)
 stripchart(lma_g_m2 ~ niche2, data = nitro,cex=1.25,
            vertical = TRUE, method = "jitter",
            pch=16, col=trtcols2,
            xaxt='n', add=TRUE) 
-text(x=1:3, y=590, cldlma)
+text(x=1:3, y=600, cldlma)
 text(3.5, 0, "C", cex=1.25)
 
 #lma v nitro
-plot(n_perc ~ lma_g_m2, data=nitro[nitro$lma_g_m2 < 600,],
-     ylim=c(0,6), xlim=c(0,525),
+plot(n_perc ~ lma_g_m2, data=nitro,
+     ylim=c(0,6), xlim=c(0,600),
      ylab="Foliar Nitrogen (%)",xlab=lmalab, type='n')
 predline(hemi_mod2, col=trtcols[2], lwd=2, lty=2)
 predline(terr_mod2, col=trtcols[1], lwd=2, lty=2)
 predline(epi_mod2, col=trtcols[3], lwd=2, lty=2)
 points(n_perc ~ lma_g_m2, data=nitro[nitro$lma_g_m2 < 600,], 
        pch=16, col=trtcols2[niche2],cex=1.25)
-text(530, 0, "D", cex=1.25)
+text(600, 0, "D", cex=1.25)
 
 # legend("topleft", legend = boxlabs, pch=21, pt.bg=trtcols, bty="n", inset=.01)
 # text(455,.2,"LMA x Niche, P < 0.001")

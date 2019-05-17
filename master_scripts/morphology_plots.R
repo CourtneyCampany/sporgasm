@@ -37,7 +37,7 @@ stripchart(lamina_area_cm2 ~ niche2, data = traits,
 
 
 # stipe length -------
-stipecld <- c("a", "b", "b")
+stipecld <- c("a", "ab", "b")
 
 # jpeg(filename = "output/stipe.jpeg",
 #      width = 7, height = 7, units = "in", res= 400)  

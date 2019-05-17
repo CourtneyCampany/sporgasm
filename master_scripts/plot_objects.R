@@ -33,9 +33,11 @@ sd_lab <- expression(Stomatal~density~~(mm^2))
 xylem_lab <- expression(Total~xylem~area[stipe]~~(mm^-2))
 
 #colors
-gradient <- colorRampPalette(c("forestgreen","darkorange3"))
-palette(gradient(3))
-trtcols <- palette(gradient(3))
+# gradient <- colorRampPalette(c("dodgerblue4","darkorange3"))
+# palette(gradient(3))
+# trtcols <- palette(gradient(3))
+
+trtcols <- c("dodgerblue4","yellow4","darkorange3")
 library(scales)
 trtcols2 <- c(alpha(trtcols[1], .7), alpha(trtcols[2], .7),alpha(trtcols[3], .7))
 

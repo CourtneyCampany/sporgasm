@@ -1,5 +1,5 @@
 ---
-title: "Leaf water relations in epiphytic ferns are driven by avoidance rather than tolerance mechanims "
+title: "Leaf water relations in epiphytic ferns are driven by avoidance rather than tolerance mechanisms "
 author: 
 date: 
 output:
@@ -9,7 +9,7 @@ output:
   html_document:
     number_sections: yes
 csl: new-phytologist.csl
-bibliography: epi_leaf_zotero.bib
+bibliography: epi_leaf_water.bib
 ---
 
 \
@@ -49,16 +49,28 @@ Key Words:
 
 # Introduction
 
-Within forests, epiphytes grow at many levels. Some
-are restricted to the dark understory, whereas others grow on
-the exposed twigs of emergent tree (Watkeins 2012)
++ Epiphytism, ferns and evoln. history
 
-Kohn 2010).
-These data suggest that terrestrial ferns have reduced water
-use efficiency, which would be consistent with Brodribb and
-McAdam’s hypothesis of inefficient stomatal control
+Within forests, epiphytes grow at many levels. Some are restricted to the dark understory, whereas others grow on the exposed twigs of emergent tree (Watkeins 2012)
 
-Within the Polypod clade, there is a fundamental split, with one clade radiating into the canopy and a sister clade diversifying on the forest floor (fig. 2). This split takes place between the eupolypod I clade that is predominantly epiphytic and the eupolypod II that is more than 90% terrestrial (estimates derived from counts in Moran and Riba 1995 and Mickel and Smith 2004). Within the eupolypod II clade, were it not for Aspleniaceae, there would be essentially no epiphytes in this lineage. (watkins 2012).
++ microhabitat differences
+
++ Consequences of radiation of plants into canopy, seed vs spore
+
++ Evolution of traits
+With tropical ferns, there is a fundamental evolutionary clade where one clade of ferns (Euploypoid I) had predomintaley radiated into epiphytic nihces, while a sister clade (Eupolypoid II) has mostley diversified on the forest floor (Watkings 2012).
+Previous works by Zhang shows how these traits influence gas exchange however, what lead to these initial success is unclear
+
++ water relations and stomata
+
+Terrestrial ferns may have reduced water use efficiency, which would be consistent with Brodribb and McAdam’s hypothesis of inefficient stomatal control.
+
+if stomata are regulated by leaf water status, what traits realted to water relations allows ferns to succeed.
+
++ this study seeks...
+      looking within E1 and E2
+Additionally, a hemi-epiphyitc life form co-exists with both these groups which may represent an evolutionary transition between terrestrial and epipythic life histories. 
+
 
 # Methods
 
@@ -117,106 +129,60 @@ and C was determined as the slope of RWC vs. Ψ ( Table 2 ).
 
 ## Statistical analysis
 
-Tests of allometric relationships between log-transformed biomass components were implemented using standardized major axis regression in the 'smatr' package in R [@warton2012smatr]. All tests of statistical significance were conducted at an $\alpha$ level of 0.05.
+Linear mixed-effect models were used to test responses of functional traits to categorical fixed effects of life form and site. The interaction between life form and site was tested to confirm any potential environmental or climate infunce on trait patterns. Generally, there were few life form x site interactions, so models with life form and site as main effects were compared to full models (AIC scores). Depending on the AIC scores, the most parsimonious model was selected. To test for broad differences among life forms, individual plant species were treated as random effects in each model. Tukey’s post-hoc test were performed in conjunction with ANOVA to determine which mean values of functional traits were different among fixed effect treatments with the ‘multcomp’ package [@hothorn_simultaneous_2008]. We utlized a type 3 ANOVA due to an unbalanced design with the limited number of hemi-epiphytes species available. When interactions were present, we computed pairwise comparisons with the ‘emmeans’ package [@lenth_emmeans:_2019] to investigate interactions between life form and site.
+
+\
+
+**A phylogenetic tree for these 30 fern species was constructed based on chloroplast rbcL sequences obtained from the GenBank website (http://www.ncbi.nlm.nih.gov/genbank/). Phylogenetic analyses for each matrix were carried out using the maximum likelihood method in PAUP* v.4.0b10 [44]. Schneider et al. (2004) has integrated Colysis and major components of Microsorum into Leptochilus by using nucleotide sequences derived from three plastid loci [45]. For simplicity, the old Latin names of species in Colysis and Microsorum were used in the present study. The phylogenetic signal (K-statistic) for each trait was calculated using ‘picante’ based on the R package. Such K-statistics can express the conservatism of traits. Cases where the K-value is ,1 indicate convergent traits while K.1 represents that traits are more conserved than would be presumed from a Brownian expectation [47]. Relationships among variables were evaluated by both pair-wise Pearson correlations in the R package and a phylogenetically independent contrast (PIC). Possible evolutionary associations were assessed via PIC analysis, utilizing the molecular phylogenetic tree. This PIC analysis was examined with the ‘‘analysis of traits’’ module in Phylocom, which calculates the internal node values for continuous traits [48].**
+
+\
+
+For bivariate trait relationships, responses of dependent variables were analysed with linear mixed-effect models, with species as a random effect and plant group and/or canopy type as categorical fixed effects. Explained variance (R^2^) of mixed models were computed as in @nakagawa_general_2013, in which the marginal R^2^ represents variance explained by fixed factors and the conditional R^2^ by both fixed and random factors. Tests of allometric relationships between log-transformed biomass components were implemented using standardized major axis regression in the 'smatr' package in R [@warton2012smatr]. Principal component analysis, utilizing the ‘vegan’ package [@oksanen_vegan:_2019], was used to explore how measured functional traits were distributed and co-varied among species (mean values) and life form. All tests of statistical significance were conducted at an $\alpha$ level of 0.05. All analyses were performed with R 3.5.1 [@r_core_team_r:_2018].
 
 #Results
 
 ## Frond Morphology
 
-```{r morph,  echo=FALSE, fig.align='center',fig.width = 6, fig.height = 6, warning=FALSE}
-source("master_scripts/morphology_plots.R")
-```
-No differences in lamina area, however, this depends on which model I choose (with or without niche x site interaction).  There is a massive amount of variation tied up in species-specific differences. Stipes in terrestrial species are 56% longer than epiphytic or hemi-epiphytic species. Total frond length is 30% longer in terrestrial than epiphytic species, with hemi-epiphytic species as intermediates.
+Allomteric relationships between lamina area and total frond length had similar slopes across all three life forms (Figure 1a). This broad convergence in frond allometry suggests that tropical ferns build leaf structures in predicatble proportions, despite variation in frond structural traits. Total frond length was reduced by 26 % in epiphytic (59$\pm$2.5) compared to terrestrial (85$\pm$3.3) species, with frond length of hemi-epiphytes an intermediate between both groups (*P* = 0.021). The reduction in total frond length was driven by a large reduction (-54 %) of stipe length in epiphytic compared to terrestrial species (*P* = 0.001, Figure 1b). Leaf mass per unit area was 67% higher in epiphytic compared to terrestrial species, with hemi-epiphytic species intermediates between both life forms (*P* = 0.002, Figure 1C). Do differences were detected in total lamina area between any of the life form groups, due to the large amount of variation in lamina area across all species (R^2^ marginal = 0.17 & R^2^ conditional = 0.89).
 
-\
+## Anatomical traits (xylem and stomata)
 
-```{r sla,  echo=FALSE, fig.align='center',fig.width = 6, fig.height = 6}
-source("master_scripts/sla_plot.R")
-```
-Specific leaf area is 35% higher in terrestrials ferns compared to epiphytic ferns, with hemi-epiphytes as intermediates.
 
-\
+Epiphytic and hemi-epiphytic species had 51% lower stomatal density (36$\pm$1.7 mm^-2^) compared to terrestrial species (72$\pm$3.1, *P* < 0.001). 
 
-```{r bivar,  echo=FALSE, fig.align='center',fig.width = 6, fig.height = 6}
-source("master_scripts/frondlength_laminaarea_plot.R")
-```
-Not surprising, but frond area-length relationships are strong across all fern species.
-
-## Stomatal Traits
-
-```{r sd,  echo=FALSE, fig.align='center',fig.width = 6, fig.height = 6,warning=FALSE}
-source("master_scripts/stomatal_density_plot2.R")
-```
-Epiphytic and hemi-epiphytic species have 51% fewer stomata per given area than terrestrial species!
-
-\
-
-```{r ss,  echo=FALSE, fig.align='center',fig.width = 6, fig.height = 10, warning=FALSE}
-source("master_scripts/stomata_size_plot.R")
-```
-Our undergraduate researcher as pushed through Juliette's beautiful pictures from Las Cruces. He has just now started Alex and Court's pictures from La Selva (pray for him). I have not analyzed these yet. Gurad cell width is the average of the two guard cells.
-
-## Vein Density
-
-```{r vd,  echo=FALSE, fig.align='center',fig.width = 6, fig.height = 6}
-source("master_scripts/vein_density_plots.R")
-```
+**no interaction with stomatal size, however, if only main effect model then 
 
 
 ## Foliar Chemistry 
 
-```{r nitro,  echo=FALSE, fig.align='center',fig.width = 6, fig.height = 6}
-source("master_scripts/leaf_chemistry_plots.R")
-```
 Foliar nitrogen is 29.8% lower in epiphytes compared to other groupgs
 
-\
 
-
-```{r nitro,  echo=FALSE, fig.align='center',fig.width = 6, fig.height = 6}
-source("master_scripts/nitro_lma.R")
-```
 Foliar nitrogen and lma relationships differ between habitat groups
 
-\
-
-```{r 13c,  echo=FALSE, fig.align='center',fig.width = 10, fig.height = 6}
-source("master_scripts/13C_plots.R")
-```
 Mean foliar $\delta$^13^C for epiphytes is -34.4&permil; compared with -32.5&permil; for terrestrial + hemi-epiphytes. These is also a significant site effect. Is this relevant? 
 
-\
-
-```{r 15n,  echo=FALSE, fig.align='center',fig.width = 6, fig.height = 6}
-source("master_scripts/15N_plots.R")
-```
-There is only a site effect.  
-
-## Chlorophyll Content
-
-```{r chl,  echo=FALSE, fig.align='center',fig.width = 6, fig.height = 6}
-source("master_scripts/chlorophyll_plots.R")
-```
+*chlorp
+hyll*?
 I had to perform a little data mining to get this result. I dropped one epiphytic species with way to variable data (400-800 mg m^-2^) and a few outliers. Not sure how meaningful these differences are.
 
 ## Foliar Hydraulic Traits
 
-Below are visualizations for some of the hydraulic traits we derived from pressure volume curves. These traits are calculated from Sacks's excel macro. I am worried that I have messed up 2 calculations from the macro when I first ran La Selva curves. Since I need to check them thoroughly, I only show Las Cruces below. I will run stats once I am confident with La Selva data, but it looks like we may have some niche differences emerging.
 
-```{r pv,  echo=FALSE, fig.align='center',fig.width = 6, fig.height = 6}
-source("master_scripts/pv_plots.R")
-```
+## bivariate traits relationships:
 
-```{r pv,  echo=FALSE, fig.align='center',fig.width = 6, fig.height = 6}
-source("master_scripts/tlp_osmpot_plot.R")
-```
-
-```{r pv,  echo=FALSE, fig.align='center',fig.width = 6, fig.height = 6}
-source("master_scripts/tlp_elasticity_plot.R")
-```
-
-
+leaf area with xylem
+lma and nitrogen 
+density vs size
 
 # Discussion
 
-(Brodribb 2017): A passive linkage between leaf water status and guard cell turgor observed in extant basal vascular plants appears to be sufficient to prevent xylem cavitation during diurnal changes in evaporative demand (Martins et al., 2015). However, without more sophisticated mechanisms to reduce guard cell turgor and produce complete stomatal closure, it has been hypothesized that passive closure does not provide a sufficiently tight stomatal seal capable of preventing ferns and lycophytes from rapidly reaching critical leaf water potentials when soil water is depleted during drought (McAdam and Brodribb, 2013). As a result, ferns and lycophytes in dry environments rely on either a high plant capacitance or low stomatal density (McAdam and Brodribb, 2013), desiccation tolerance (Hietz, 2010), and in some cases, rather cavitation-resistant xylem (Baer et al., 2016)
+(Brodribb 2017): A passive linkage between leaf water status and guard cell turgor observed in extant basal vascular plants appears to be sufficient to prevent xylem cavitation during diurnal changes in evaporative demand (Martins et al., 2015). However, without more sophisticated mechanisms to reduce guard cell turgor and produce complete stomatal closure, it has been hypothesized that passive closure does not provide a sufficiently tight stomatal seal capable of preventing ferns and lycophytes from rapidly reaching critical leaf water potentials when soil water is depleted during drought (McAdam and Brodribb, 2013). As a result, ferns and lycophytes in dry environments rely on either a high plant capacitance or low stomatal density (McAdam and Brodribb, 2013), desiccation tolerance (Hietz, 2010), and in some cases, rather cavitation-resistant xylem (Baer et al., 2016).  
+We foudn that cavaitaion-resistant xylem where not the case here (see review too)
+
+
+# Acknowledgements
+
+We would like to thank Juliette Bechard, Kathleen Bynon, Luke Calderaro and Alexandra Russell for their hard work in the field and in the lab. We would also like to thank Rodolfo Quiros Flores and Bernal Matarrita Carranza for their organizational support at each OTS field station.
+
+# Bibliography

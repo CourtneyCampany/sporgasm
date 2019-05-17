@@ -1,10 +1,10 @@
 
 sla <- read.csv("calculated_data/fern_sla.csv")
-  
-
+#climbed already properly classified in niche2
 #reorder from ground to canopy 
   sla$niche2<-factor(sla$niche2, 
                    levels=c("terrestrial", "hemi-epiphyte", "epiphyte"))
+  sla$lma <- with(sla, 1/(sla_cm2g/10000)) #g m-2
 
 ##run stats------
 library(visreg)
@@ -15,45 +15,45 @@ library(moments)
 library(MASS)
 library(outliers)
 
-Ltest_frond <- leveneTest(sla_cm2g ~ niche2 , data = sla)
-
+# Ltest_frond <- leveneTest(sla_cm2g ~ niche2 , data = sla)
 
 ##full mixed model---------------------
 boxplot(sla_cm2g ~ niche2, data=sla)
-
-sla_mod2 <- lmer(sqrt(sla_cm2g) ~ niche2 * site + (1|species), data=sla)
-sla_mod3 <- lmer(sqrt(sla_cm2g) ~ niche2 + site + (1|species), data=sla)
-
+boxplot(lma ~ niche2, data=sla)
 hist(sla$sla_cm2g)
-skewness(sla_mod2$residuals) #less than 1
+hist(sla$lma)
+
+#run stats on LMA because it jives better with other common regrssions
+sla_mod2 <- lmer(log10(lma) ~ niche2 * site + (1|species), data=sla)
+sla_mod3 <- lmer(log10(lma) ~ niche2 + site + (1|species), data=sla)
+
 plot(sla_mod2)
 qqPlot(residuals(sla_mod2))
 
 #model summary
-Anova(sla_mod2, type="3") #niche but no interaction
 anova(sla_mod2, sla_mod3) #not different
 AIC(sla_mod2, sla_mod3) #model with interaction in better
 
 #use model with interaction
-summary(sla_mod3)
-Anova(sla_mod2, type="3")
-r.squaredGLMM(sla_mod3)
+# summary(sla_mod3)
+Anova(sla_mod2, type="3") #only niche effect
+r.squaredGLMM(sla_mod2)
 #R2m       R2c
-#0.134389 0.8231503
+#0.2236678 0.8169862
 
-#niche2        7.2506  2    0.02664
+#niche2   12.7224  2   0.001727
 
-visreg(sla_mod3)
+visreg(sla_mod2)
 ##slightly higher SD at las cruces
 
-tukey_sla <- glht(sla_mod3, linfct = mcp(niche2 = "Tukey"))
+tukey_sla <- glht(sla_mod2, linfct = mcp(niche2 = "Tukey"))
 sla_siglets <-cld(tukey_sla)
 
 #terrestrial hemi-epiphyte      epiphyte 
-# "b"           "ab"           "a"
+#     "a"          "ab"           "b"
 
-terr <- mean(sla[sla$niche2 == "terrestrial", "sla_cm2g"]) #88.6
-epi <- mean(sla[sla$niche2 == "epiphyte", "sla_cm2g"]) #57.4
+terr <- mean(sla[sla$niche2 == "terrestrial", "lma"]) #129.3988
+epi <- mean(sla[sla$niche2 == "epiphyte", "lma"]) #216.4421
 
 
 

@@ -1,3 +1,5 @@
+source("functions_packages/basic_functions.R")
+
 ## stats on basic leaf morphology-------
 library(visreg)
 library(lme4)
@@ -23,23 +25,24 @@ sd_agg <- doBy::summaryBy(sd_mm2 ~ site + species + plant_no + niche2 + genusspe
 chisq.out.test(sd_agg$sd_mm2) #2448 is an outier
 hist(sd_agg$sd_mm2)
 
-#simple model check
-sd_mod <- lm(sd_mm2 ~ niche2, data=sd_agg)
-#model diagnostics
-qqPlot(residuals(sd_mod)) #pretty good
-residualPlot(sd_mod)
-plot(sd_mod) ##negative skewed so we need a transformation
-skewness(sd_mod$residuals) 
-
-visreg(sd_mod)
-summary(sd_mod)
-anova(sd_mod)
-
-tukey_sd <- glht(sd_mod, linfct = mcp(niche2 = "Tukey"))
-sd_siglets <-cld(tukey_sd)
+# #simple model check
+# sd_mod <- lm(sd_mm2 ~ niche2, data=sd_agg)
+# #model diagnostics
+# qqPlot(residuals(sd_mod)) #pretty good
+# residualPlot(sd_mod)
+# plot(sd_mod) ##negative skewed so we need a transformation
+# skewness(sd_mod$residuals) 
+# 
+# visreg(sd_mod)
+# summary(sd_mod)
+# anova(sd_mod)
+# 
+# tukey_sd <- glht(sd_mod, linfct = mcp(niche2 = "Tukey"))
+# sd_siglets <-cld(tukey_sd)
 
 ### boxplot shows outliers from epiphyte, can see it on visreg too
 ### drop oleandra articulata
+boxplot(sd_mm2 ~ niche2, data=sd_agg)
 
 sd_new <- droplevels(sd_agg[!sd_agg$genusspecies == "oleart",])
 
@@ -55,7 +58,7 @@ qqPlot(residuals(sd_mod2))
 #model summary
 Anova(sd_mod2, type="3") #niche but no interaction
 anova(sd_mod2, sd_mod3) #not different
-AIC(sd_mod2, sd_mod3) #model 2 is slighly better (less than 2)
+AIC(sd_mod2, sd_mod3) #model 3 is better, no interaction
 
 #use model without interaction
 summary(sd_mod3)
@@ -73,8 +76,11 @@ sd3_siglets <-cld(tukey_sd3)
 # "b"           "a"           "a"
 
 terr_sd <- mean(sd_new[sd_new$niche2 == "terrestrial", "sd_mm2"]) #72.3
-notterr_sd <- mean(sd_new[!sd_new$niche2 == "terrestrial", "sd_mm2"]) #36.6
+terr_se <- se(sd_new[sd_new$niche2 == "terrestrial", "sd_mm2"]) #72.3
 
+
+notterr_sd <- mean(sd_new[!sd_new$niche2 == "terrestrial", "sd_mm2"]) #36.6
+notterr_se <- se(sd_new[!sd_new$niche2 == "terrestrial", "sd_mm2"]) #36.6
 
 
 

@@ -87,7 +87,8 @@ points(sd_mm2 ~ stomatal_size,data=stomata_noout,pch=16,  col= trtcols2[niche2])
 legend("topright", legend = boxlabs, pch=16, col=trtcols, bty="n", inset=.01)
 
 #c13
-boxplot(d13C ~ niche2, data=c13dat, xaxt='n',ylim=c(-40, -25),
+boxplot(d13C ~ niche2, data=c13dat, xaxt='n',ylim=c(-40, -25),boxlwd=2,
+        whisklwd=2,staplelwd=2,
         ylab=c13lab,border=trtcols,  varwidth=TRUE, outline=FALSE)
 stripchart(d13C ~ niche2, data = c13dat,
            vertical = TRUE, method = "jitter",

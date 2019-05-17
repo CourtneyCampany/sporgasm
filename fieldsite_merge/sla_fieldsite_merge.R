@@ -1,9 +1,12 @@
 #sla from la selva
-drymass_ls <- read.csv("raw_data/fern_dryweights_laselva_clean.csv")
+drymass_ls <- read.csv("raw_data/fern_dryweights_laselva_clean2.csv")
+
+##pecpec 5&6 are wrong, need to be dropped
+drymass_ls2 <- drymass_ls[-c(94:95),]
 
 #there are gonna be some redos with pv curves and sla so index drymass 
 #where sladrymass !is.na
-sla_mass_ls <- drymass_ls[!(is.na(drymass_ls$sla_dry)),]
+sla_mass_ls <- drymass_ls2[!(is.na(drymass_ls2$sla_dry)),]
   sla_mass_ls$totalarea_cm2 <- with(sla_mass_ls, (sla_no_disks * size_mm2)/100)
   sla_mass_ls$sla <- with(sla_mass_ls, totalarea_cm2/sla_dry)
   
@@ -23,7 +26,6 @@ pinnule_sla <- drymass_lc[is.na(drymass_lc$no_disks), ]
   pinnule_sla$sla <- with(pinnule_sla, pinnule_area_cm2/sla_dry)
 
 #merge las cruces data
-
 sla_lc <- rbind(leafpunch[,c(1:5,10)], pinnule_sla[,c(1:5,9)])
 #drop the robin moran plant
 sla_lc2 <- droplevels(sla_lc[!sla_lc$genus%in% "moranopteris",])
