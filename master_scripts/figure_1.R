@@ -14,16 +14,16 @@ traits$niche2<-factor(traits$niche2,
 
 ##separate habitat dataframes for all traits -----
 terr <- traits[traits$niche2 == "terrestrial" & 
-                 complete.cases(traits$frond_length_cm),]
+                 complete.cases(traits$stipe_length_cm),]
 hemi <- traits[traits$niche2 == "hemi-epiphyte" &
-                 complete.cases(traits$frond_length_cm),]
+                 complete.cases(traits$stipe_length_cm),]
 epi <- traits[traits$niche2 == "epiphyte"&
-                complete.cases(traits$frond_length_cm),]
+                complete.cases(traits$stipe_length_cm),]
 
 #log model fits for allometry plotting
-terr_mod <- lm(log10(lamina_area_cm2) ~ log10(frond_length_cm) ,data=terr)
-hemi_mod <- lm(log10(lamina_area_cm2) ~ log10(frond_length_cm) , data=hemi)
-epi_mod <- lm(log10(lamina_area_cm2) ~ log10(frond_length_cm) ,data=epi)
+terr_mod <- lm(log10(lamina_area_cm2) ~ log10(stipe_length_cm + .1) ,data=terr)
+hemi_mod <- lm(log10(lamina_area_cm2) ~ log10(stipe_length_cm + .1) , data=hemi)
+epi_mod <- lm(log10(lamina_area_cm2) ~ log10(stipe_length_cm + .1) ,data=epi)
 fronddat <- traits[-203,] ##loses one outlier so same as stats
 
 
@@ -75,20 +75,21 @@ jpeg(filename = "output/figure1.jpeg",
 par(mfrow=c(2,2),mgp=c(2.5,.75,0), mar=c(4,4,1,1), cex.lab=1.1)
 
 # allometry
-with(fronddat, plot(log10(lamina_area_cm2) ~ log10(frond_length_cm),
-                    xlab=frond_lab, ylab=lamina_lab,axes=FALSE,
-                    pch=16, col=trtcols2[niche2],cex=1.25,xlim=c(1,2.4),
+with(fronddat, plot(log10(lamina_area_cm2) ~ log10(stipe_length_cm),
+                    xlab=stipe_lab, ylab=lamina_lab,axes=FALSE,
+                    pch=16, col=trtcols2[niche2],cex=1.25,
+                    xlim=c(-0.05,2.05),
                     ylim=c(1, 3.5)))
 magaxis(side=c(1,2), unlog=c(1,2), frame.plot=TRUE)
-legend("topleft", legend = boxlabs, pch=16, col=trtcols, bty="n", inset=.01)
-ablineclip(terr_mod, x1=log10(min(terr$frond_length_cm)), 
-           x2=log10(max(193.7)),
+legend("bottomright", legend = boxlabs, pch=16, col=trtcols, bty="n", inset=.01)
+ablineclip(terr_mod, x1=log10(min(terr$stipe_length_cm+.1)), 
+           x2=log10(max(terr$stipe_length_cm+1)),
            col=trtcols[1], lwd=3, lty=2)
-ablineclip(hemi_mod, x1=log10(min(hemi$frond_length_cm)), 
-           x2=log10(max(hemi$frond_length_cm)),
+ablineclip(hemi_mod, x1=log10(min(hemi$stipe_length_cm+.1)), 
+           x2=log10(max(hemi$stipe_length_cm)),
            col=trtcols[2], lwd=3, lty=2)
-ablineclip(epi_mod, x1=log10(min(epi$frond_length_cm)), 
-           x2=log10(max(epi$frond_length_cm)),
+ablineclip(epi_mod, x1=log10(min(epi$stipe_length_cm+.1)), 
+           x2=log10(max(epi$stipe_length_cm)),
            col=trtcols[3], lwd=3, lty=2)
 text(log10(250), log10(10), "A", cex=1.25)
 

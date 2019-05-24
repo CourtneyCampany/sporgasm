@@ -34,7 +34,7 @@ qqPlot(residuals(nitro_mod)) #looks good
 #model summary
 Anova(nitro_mod, type="3") #niche but no interaction
 anova(nitro_mod, nitro_mod2) #not different
-AIC(nitro_mod, nitro_mod2) #model 2 is slighly better
+AIC(nitro_mod, nitro_mod2) 
 
 #using model without interaction
 summary(nitro_mod2)

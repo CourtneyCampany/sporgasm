@@ -85,9 +85,10 @@ A survey of morphological, stoichiometric, anatomical and leaf water relations p
 ## Plant Material
 
 Two complete fronds from sampled individuals were field collected in the early morning (6-7:00 am). Stipes were cut at the base of the rhizome and cut ends were wrapped in wet paper towels and transported to the lab in black plastic bags.  Stipes were re-cut under water adn rehydrated until time of hydaulic measurement (1-6 hours). Due to the difficulty in sampling some canopy species; whole epiphytic individuals were removed, maintained overnight in well-watered conditions in an abient air laboratory and sampled the following day. One frond from each individual was utlized for presssure volume curves, while the other was sampled for strucutral morphology, lamina stoichmetry and anatomical traits. 
+
 ## Leaf Morphometric traits
 
-Stipe length (cm) and lamina length (cm) were calculated from one sampled frond per indiviudal. Total lamina area for each frond was measured with a Li-3100 leaf area meter (LiCor Biosciences, ). Leaf mass per unit area (LMA, g cm^-2^) was calculated using the tissue punch method. For each individual, ten lamina punches (5 mm ^2^) were dried to a constant mass and LMA was calculated as the total dry mass divided by the total area of all leaf punches. 
+Stipe length (cm) and lamina length (cm) were calculated from one sampled frond per indiviudal. Total lamina area for each frond was measured with a Li-3100 leaf area meter (LiCor Biosciences, Lincoln, NE, USA). Leaf mass per unit area (LMA, g cm^-2^) was calculated using the tissue punch method. For each individual, ten lamina punches (5 mm ^2^) were dried to a constant mass and LMA was calculated as the total dry mass divided by the total area of all leaf punches. 
 
 ## Anatomical traits
 
@@ -101,35 +102,34 @@ Stomatal density (SD) was measured by directly counting stomata on the abaxial l
 
 \
 
-Indiviudal images of stomata were directly photographed under 40x magnification (AmCcope FMA050) across all three leaf punches per individual. Stomatal length and width of both guard cells were calculated for 9 stomata for each individual using Image J. Stomatal size (SS) was calculated as guard cell length multipled by the combined width of each guard cell pair, as in @franks_maximum_2009.
+Indiviudal images of stomata were directly photographed under 40x magnification (AmScope FMA050) across all three leaf punches per individual. Stomatal length and width of both guard cells were calculated for 9 stomata for each individual using Image J. Stomatal size (SS) was calculated as guard cell length multipled by the combined width of each guard cell pair, as in @franks_maximum_2009.
 
 ## Foliar chemistry
 
-Subsamples of foliar tissue used for lamina area calculation were samples across muliple pinnae for each individual.  These subsamples were dired to a constant mass and ground using a Wig-L-Bug (Sigma-Aldrich Co. St. Louis, USA).
+Subsamples of foliar tissue used for lamina area calculation were samples across muliple pinnae for each individual. These subsamples were dired to a constant mass and ground using a Wig-L-Bug (Sigma-Aldrich Co. St. Louis, USA). Nitrogen content and deltaC^13^ were measured using a Delta V isotope ratio mass spectrometer interfaced to a NC2500 elemental analyzer (Thermo Scientific) and corrected by comparison with certified standards.
 
-Nitrogen content and deltaC^13^  were measured using a 
+## Pressure-volume relations
 
- by comparison with certified standards.
-
-## Pressure volume curves
-
-We used a modified pressure–volume technique of Tyree and Hammel (1972) to estimate the following tissue-water relations: osmotic potential at full tissue hydration ( Ψ π , sat ), osmotic potential at the turgor loss point of tissues ( Ψ π , tlp ), bulk modulus of tissue elasticity ( ε ), and tissue-water capacitance ( C ). This method has been fully described by Davis and Mooney (1986). 
+Tissue-water relations were determined with pressure–volume analysis [@tyree_measurement_1972] on fully expanded fronds with a Scholander pressure bomb (PMS Instruments Co., Corvallis, OR, USA). For each pressure-volume curve we sampled top most intact pinnae after full rehydration. We generated pressure–volume curves by taking sequential water potential measurements ($\Psi$~leaf~) as fronds air dried, first in closed plastic bags (0-2 hrs), and then in open bags. The fresh mass was recored immediately before and after each $\Psi$ determination. Following each PV curve, foliar samples were dried to a constant mass to calculate relative water content (RWC).
 
 \
 
-For each pressure-volume curve we sampled top most intact pinnae for each fully hydrated frond. We generated pressure–volume curves by taking sequential water potential measurements ( Ψ ) as fronds air dried first in closed plastic bages (0-2 hrs) and then on a bench top. The fresh mass was recored immediately before and after each Ψ determination. Following each PV curve, samples were dried to a constant mass to calculate relative water content (RWC).
-
-\
-
-Lawren Sack's  = something here
- To determine Ψπ, tlp , a plot of 1/ Ψ vs. RWC was generated, and the
-point at which the graph linearized was taken as the Ψπ, tlp ( Davis and
-Mooney, 1986 ).  Ψπ, sat was determined by extending the regression line to the point where x = 0 (RWC =100). ε was determined from the slope m of the line of Ψpvs. RWC and the RWC at the turgor loss point (RWC°), such that ε= m RWC ° ,
-and C was determined as the slope of RWC vs. Ψ ( Table 2 ). 
-
+For each pressure volume curve, we graphed the relationship between 1/$\Psi$~leaf~ and leaf mass to estimate parameters related to leaf turgor and bulk tissue water realtions. Next, we calculated leaf water potential at turgor loss ($\Psi$~tlp~), the osmotic potential at full tissue hydration ($\Pi$~o~), the bulk modulus of tissue elasticity ($\epsilon$) and tissue capacitance (C) according to  @sack_prometheuswiki_2011. 
+ 
 ## Statistical analysis
 
 Linear mixed-effect models were used to test responses of functional traits to categorical fixed effects of life form and site. The interaction between life form and site was tested to confirm any potential environmental or climate infunce on trait patterns. Generally, there were few life form x site interactions, so models with life form and site as main effects were compared to full models (AIC scores). Depending on the AIC scores, the most parsimonious model was selected. To test for broad differences among life forms, individual plant species were treated as random effects in each model. Tukey’s post-hoc test were performed in conjunction with ANOVA to determine which mean values of functional traits were different among fixed effect treatments with the ‘multcomp’ package [@hothorn_simultaneous_2008]. We utlized a type 3 ANOVA due to an unbalanced design with the limited number of hemi-epiphytes species available. When interactions were present, we computed pairwise comparisons with the ‘emmeans’ package [@lenth_emmeans:_2019] to investigate interactions between life form and site.
+
+
+Models
+were initially constructed using all variables and interactions (e.g.
+treatment 9 season 9 sensitivity status), and were manually simplified by systematically removing nonsignificant variables and
+interactions. The best model (Table 2) was selected on the basis
+of the Akaike information criterion (AIC). The distribution of
+the data was assessed using the profile function as per Bates et al.
+(2015) and the data were transformed accordingly. The conditional and marginal r
+2 values were calculated as per Nakagawa &
+Schielzeth (2013)
 
 \
 
@@ -155,12 +155,10 @@ Epiphytic and hemi-epiphytic species had 51% lower stomatal density (36$\pm$1.7 
 
 ## Foliar Chemistry 
 
-Foliar nitrogen is 29.8% lower in epiphytes compared to other groupgs
+Foliar nitrogen content was 29.8% lower in epiphytic ferns compared to terrestrial and hemi-epiphytic ferns (*P* = 0.007). 
 
 
-Foliar nitrogen and lma relationships differ between habitat groups
-
-Mean foliar $\delta$^13^C for epiphytes is -34.4&permil; compared with -32.5&permil; for terrestrial + hemi-epiphytes. These is also a significant site effect. Is this relevant? 
+Foliar $\delta$^13^C for terrestrial and hemi-epiphytic species were more negative that epiphytic species (*P* = 0.004, Figure 2x). Additionally, foliar$\delta$^13^C for fern species at the higher elevation Las Cruces site were less negative (-32.6 &permil) than fern species at the low elevation La Selva site (34.0 &permil,*P* = 0.015). 
 
 *chlorp
 hyll*?
@@ -168,6 +166,7 @@ I had to perform a little data mining to get this result. I dropped one epiphyti
 
 ## Foliar Hydraulic Traits
 
+Surprisingly, minimal functional differences in drought tolerance where detected among the three life ferns from pressure volume curve parameters (Figure 2a). The turgor loss point ($\Pi$~tlp~) varied by fern life form (*P* = 0.042), however, post-hoc multiple comparisons did not detect differences in $\Psi$~tlp~ across terrestrial, hemi-epiphytic or epipohyitc ferns. Broadly, terrestrial and hemi-epiphytic fern species had slightly lower $\Psi$~tlp~ than epiphytic species (Figure 2b). Additionally, the osmotic potential ($\Pi$~o~) decreased in terrestrial and hemi-epiphytic species (*P* = 0.009, Figure 2C), while the modulus of elasticity ($\epsilon$) was similar across all life forms. Consequently, the broad decreases in $\Psi$~tlp~ among terrestrial and hemi-epiphytic fern species appeared to be driven by osmotic adjustments via solute accumulations rather than shifts in cell wall flexibility (see @bartlett).
 
 ## bivariate traits relationships:
 

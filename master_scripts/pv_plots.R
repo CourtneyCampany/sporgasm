@@ -1,5 +1,5 @@
 ## pv curve figures
-
+source("master_scripts/plot_objects.R")
 
 pv <- read.csv("calculated_data/pv_curves2.csv")
   pv$niche2 <- gsub("climber", "hemi-epiphyte", pv$niche)
@@ -11,16 +11,6 @@ pv <- read.csv("calculated_data/pv_curves2.csv")
 
   
 #plot bits-------
-boxlabs <- c("Terrestrial", "Hemi-epiphyte", "Epiphyte")
-  
-gradient <- colorRampPalette(c("forestgreen","darkorange1"))
-palette(gradient(3))
-trtcols <- palette(gradient(3))
-library(scales)
-library(doBy)
-trtcols2 <- c(alpha(trtcols[1], .5), alpha(trtcols[2], .5),alpha(trtcols[3], .5))
-  
-#labels
 
 op_lab <- expression(paste(Psi[S], "  (MPa)"))
 elasticity_lab <- expression(paste(epsilon, "  (MPa)")) 

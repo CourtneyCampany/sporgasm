@@ -13,23 +13,17 @@ se_na <- function(x) sqrt(var(x,na.rm=TRUE)/length(na.omit(x)))
 mean_na <- function(x) mean(x, na.rm=TRUE)
 
 
-alldata2 <- alldata[,-c(6:7,9, 14:17, 20:21, 24:26, 29, 32:34)]
+alldata2 <- alldata[,-c(6:7, 15:16,22, 24:26, 29:30)]
+#drop unneeded traits from pca
 
-trait_means <- doBy::summaryBy(.~ species + site + genusspecies + niche2 + group,
+#for now lets run pca on trait means
+trait_means <- doBy::summaryBy(.~ species + site + genusspecies + niche2,
                                data=alldata2, FUN=mean_na, keep.names = TRUE)
-trait_se <- doBy::summaryBy(.~ species + site + genusspecies + niche2 + group,
+trait_se <- doBy::summaryBy(.~ species + site + genusspecies + niche2,
                                data=alldata2, FUN=se_na, keep.names = TRUE)
 
 
 library(vegan)
-
-#drop unneeded traits from pca
-# droptraits <- c("SWC", "rwc_tlp", "capacitance_zero.", "capacitance_absolute",
-#                 "dry_mass_g", "dry_mass", "lamina_area_mm2","xylem_area_um2")
-# traits_pca <- trait_means[,!(names(trait_means) %in% droptraits)]
-
-
-
 #no diplazium attirenses due to extra muclieage
 #3 other missing xylem areas that are coming soon
 #2-3 missing for stomatal size
@@ -54,8 +48,8 @@ fern_id <- trait_means[, c(1:5)]
 fern_rda2<- rda(fern_traitsonly,scale=T)
 
 len <- .8 #length of arrow scaling
-traitnames <- c("LA", "FL", "SL", "LL", "CHL", "XA", "HV", "SS", "SD", "OM",
-                "TLP","E", "CAP", "SLA")
+traitnames <- c("LA", "FL", "SL", "LL", "CHL", "XA", "HV", "SS", "SD", "SWC",
+                "OP","TLP","E", "SLA", "13C", "N")
 
 sites <- scores(fern_rda2, display='sites')
 spp <- scores(fern_rda2, display='species')
@@ -64,7 +58,7 @@ jpeg(filename = "output/pca.jpeg",
      width = 7, height = 7, units = "in", res= 400)  
 
 par(mgp=c(2.5,.75,0), mar=c(4,4,1,1), cex.lab=1.1)
-plot(sites,ylab="PC 2 (24.3 %)", xlab="PC 1 (29.9%)",type='n',
+plot(sites,ylab="PC 2 (21.4 %)", xlab="PC 1 (26.8%)",type='n',
      xlim=c(-1.5, 2), ylim=c(-2, 2.25))
 abline(v=0, lty='dashed')
 abline(h=0, lty='dashed')
