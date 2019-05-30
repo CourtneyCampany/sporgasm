@@ -13,7 +13,7 @@ bibliography: epi_leaf_water.bib
 ---
 
 \
-Courtney E. Campany^1^, Alex Baer^2^, Helen Holmlund^3^, Jarmila Pitterman^2^ and James E. Watkins Jr. ^1^
+Courtney E. Campany^1^, Alex Baer^2^, Helen Holmlund^3^, Jarmila Pitterman^2^ James E. Watkins Jr. ^1^ and others
 
 \
 ^1^ Department of Biology, Colgate University, Hamilton, NY, USA
@@ -37,10 +37,6 @@ opts_knit$set(root.dir = '../')
 includeFigs <- TRUE
 ```
 
-```{r figtabs, echo=FALSE}
-
-
-```
 # Abstract
 
 \
@@ -49,87 +45,80 @@ Key Words:
 
 # Introduction
 
-+ Epiphytism, ferns and evoln. history
+* Paragraph: epiphytism, ferns and evoln. history
 
-Within forests, epiphytes grow at many levels. Some are restricted to the dark understory, whereas others grow on the exposed twigs of emergent tree (Watkeins 2012)
 
-+ microhabitat differences
 
-+ Consequences of radiation of plants into canopy, seed vs spore
+* Paragraph: microhabitat differences
 
-+ Evolution of traits
-With tropical ferns, there is a fundamental evolutionary clade where one clade of ferns (Euploypoid I) had predomintaley radiated into epiphytic nihces, while a sister clade (Eupolypoid II) has mostley diversified on the forest floor (Watkings 2012).
-Previous works by Zhang shows how these traits influence gas exchange however, what lead to these initial success is unclear
+  + terrestrial vs epiphytes (cardelus)
+  + Within forests, epiphytes grow at many levels. Some are restricted to the dark understory, whereas others grow on the exposed twigs of emergent tree (Watkins 2012)
+  + hemi-epiphyitc life form co-exists with both these groups which may represent an evolutionary transition between terrestrial and epipythic life histories. 
 
-+ water relations and stomata
+* Paragraph: Consequences of radiation of plants into canopy, Evolution of traits
+  + With tropical ferns, there is a fundamental evolutionary clade where one clade of ferns (Euploypoid I) had predomintaley radiated into epiphytic nihces, while a sister clade (Eupolypoid II) has mostly diversified on the forest floor (Watkins 2012).
++ A host of studies reveal how hydraulic traits directly influence gas echange in ferns in a manner that is functionally different from seed plants (@Zhang, @brodersen @brodribb2004).
++ It appears likely that the canalization of stomatal traits...
++ Regardless, epiphytic ferns span a vast arraw of micrhabitats that will undergo a suite of environmental stresses (high light, high ph, limited water) that should....
 
-Terrestrial ferns may have reduced water use efficiency, which would be consistent with Brodribb and McAdam’s hypothesis of inefficient stomatal control.
-
-if stomata are regulated by leaf water status, what traits realted to water relations allows ferns to succeed.
-
-+ this study seeks...
-      looking within E1 and E2
-Additionally, a hemi-epiphyitc life form co-exists with both these groups which may represent an evolutionary transition between terrestrial and epipythic life histories. 
-
+* Paragraph: water relations and strucutre
+  + As water transport in ferns occurs exclusively through primary vascular tissue, wrapped in discrete bundles that can span the entire frond [@pittermann 2011]...
+  + Terrestrial ferns may have reduced water use efficiency, which would be consistent with Brodribb and McAdam’s hypothesis of inefficient stomatal control.
+  + if stomata are regulated by leaf water status, what traits related to water relations allows ferns to succeed.
+  +The evolution of xylem and that of stomata are
+tightly interconnected (Sperry, 2004). (read) - 
+* Paragraph: this study seeks...
+  + looking within E1 and E2 at traits related to water relations
+  + hemi as intermediaries?
 
 # Methods
 
 ## Study Site and Species Selection
 
-The sites used for this study included two Costa Rican wet tropical forest locations at La Selva Biological Research Station in Heredia (84⁰00’12W, 10⁰25’52N) and Las Cruce Research Station in San Vito (8° 47′ 7” N, 82° 57′ 32” W). The La Selva site is a low elevation (ca 50 m) tropical forest, with a moderate dry season. The Las Cruces site is a premontane tropical forest located at a higher elvation (ca 1200 m). Both sites receive approximately 4m of annual rainfall [@holdridge_life_1967,@gentry_four_1993].
+The sites used for this study included two Costa Rican wet tropical forest locations at La Selva Biological Research Station in Heredia (84⁰00’12W, 10⁰25’52N) and Las Cruces Research Station in San Vito (8° 47′ 7” N, 82° 57′ 32” W). The La Selva site is a low elevation (ca 50 m) tropical forest, with a moderate dry season. The Las Cruces site is a premontane tropical forest located at a higher elevation (ca 1200 m). Both sites receive approximately 4m of annual rainfall [@holdridge_life_1967,@gentry_four_1993].
 
 \
 
-A survey of morphological, stoichiometric, anatomical and leaf water relations parameters were conducted for six individuals from 39 fern species across three fundamentally distinct life froms (Table 1). Across both sites, 18 terrestrial, 15 epiphytic and 6 hemi-epiphytic species were collected and meausured.  In this study, terrestrial life froms were all collected from shaded closed canopy understories in the forest floor. Epiphyitc life forms were sampled from trunks or within tree canopies,depending on the species. Epiphytic species were collected from canopy trees using single-rope climbing techniques. Hemi-epiphytic species were all collected along lower sections of trees trunks (1-3 m).  Importantly, all sampled hemi-epiphtic species are known to have root connections to forest floor soils at some point in their life history. Individuals of species were collected across multiple populations but within similar microhabitat conditions. All sampled fern species were restricted to the eupolypod I and II clades. Vouchers for each species were deposited at the sites of collection at either the La Selva (LSCR) or Las Cruces (LCCR) herbariums. 
+A survey of morphological, stoichiometric, anatomical and leaf water relations parameters were conducted for six individuals from 39 fern species across three fundamentally distinct life forms (Table 1). Across both sites, 18 terrestrial, 15 epiphytic and 6 hemi-epiphytic species were collected and measured.  In this study, terrestrial life forms were all collected from shaded closed canopy understories in the forest floor. Epiphyitc life forms were sampled from trunks or within tree canopies, depending on the species. Epiphytic species were collected from canopy trees using single-rope climbing techniques. Hemi-epiphytic species were all collected along lower sections of trees trunks (1-3 m).  Importantly, all sampled hemi-epiphytic species are known to have root connections to forest floor soils at some point in their life history. Individuals of species were collected across multiple populations but within similar microhabitat conditions. Most sampled fern species, with the exception of hemi-epiphytes, were restricted to the eupolypod I and II clades. Vouchers for each species were deposited at the respective site of collection at either the La Selva (LSCR) or Las Cruces (LCCR) herbariums. 
 
 ## Plant Material
 
-Two complete fronds from sampled individuals were field collected in the early morning (6-7:00 am). Stipes were cut at the base of the rhizome and cut ends were wrapped in wet paper towels and transported to the lab in black plastic bags.  Stipes were re-cut under water adn rehydrated until time of hydaulic measurement (1-6 hours). Due to the difficulty in sampling some canopy species; whole epiphytic individuals were removed, maintained overnight in well-watered conditions in an abient air laboratory and sampled the following day. One frond from each individual was utlized for presssure volume curves, while the other was sampled for strucutral morphology, lamina stoichmetry and anatomical traits. 
+Two complete fronds from sampled individuals were field collected in the early morning (6-7:00 am). One frond from each individual was utilized for pressure volume curves, while the other was sampled for structural morphology, lamina stoichmetry and anatomical traits. Stipes were cut at the base of the rhizome and cut ends were wrapped in wet paper towels and transported to the lab in black plastic bags. Stipes were re-cut under water and re-hydrated until time of hydraulic measurement (1-6 hours). Due to the difficulty in sampling some high canopy species; whole epiphytic individuals were carefully removed, maintained overnight in well-watered conditions in an ambient air laboratory and sampled the following day. 
 
 ## Leaf Morphometric traits
 
-Stipe length (cm) and lamina length (cm) were calculated from one sampled frond per indiviudal. Total lamina area for each frond was measured with a Li-3100 leaf area meter (LiCor Biosciences, Lincoln, NE, USA). Leaf mass per unit area (LMA, g cm^-2^) was calculated using the tissue punch method. For each individual, ten lamina punches (5 mm ^2^) were dried to a constant mass and LMA was calculated as the total dry mass divided by the total area of all leaf punches. 
+Stipe length (cm) and lamina length (cm) were calculated from one sampled frond per individual. Total frond length was calculated as the sum of stipe and lamina lengths. Total lamina area for each frond was measured with a Li-3100 leaf area meter (LiCor Biosciences, Lincoln, NE, USA). Leaf mass per unit area (LMA, g cm^-2^) was calculated using the tissue punch method. For each individual, ten lamina punches (5 mm^2^) were dried to a constant mass and LMA was calculated as the total dry mass divided by the total area of all leaf punches. 
 
 ## Anatomical traits
 
-Total **xylem vascular** area was determined for stipe segments from hand cross-sections. Each cross section was stained with toulune blue....for. 
-Images under 10x were ...
-Total vascular area was determined by measuring the area of all vascular bundles within a stipe cross section. Images were analyzed using Image J software (National Institutes of Health, Bethesda Maryland, USA). 
+Stomatal density (SD) was measured by directly counting stomata on the abaxial leaf surface under 40x magnification. Three leaf punches (4 mm^2^ diameter) were sampled across random locations on different pinnae from each individual. The number of stomata in each field of view were counted in three random regions on each of three leaf punches. The stomatal density (# mm^2^) for each individual is presented as the mean SD across all 9 sampled regions. Individual images of stomata were directly photographed under 40x magnification (AmScope FMA050) across all three leaf punches per individual. Stomatal length (mm) and width (mm) of both guard cells were calculated for 9 stomata for each individual using Image J. Stomatal size (SS, mm^2^) was calculated as guard cell length multiplied by the combined width of each guard cell pair, as in @franks_maximum_2009.
 
 \
 
-Stomatal density (SD) was measured by directly counting stomata on the abaxial leaf surface under 40x magnification. Three leaf punches (4 mm^2^ diameter) were sampled across random locations on different pinnae from each individual. The number of stomata in each field of fiew were counted in three random regions on each of three leaf punches. The stomatal density for each indivudal is presented as the mean SD across all 9 sampled regions
-
-\
-
-Indiviudal images of stomata were directly photographed under 40x magnification (AmScope FMA050) across all three leaf punches per individual. Stomatal length and width of both guard cells were calculated for 9 stomata for each individual using Image J. Stomatal size (SS) was calculated as guard cell length multipled by the combined width of each guard cell pair, as in @franks_maximum_2009.
+Total xylem vascular area (mm^2^) was determined for stipe segments from hand cross-sections. Each cross section was stained with toluene blue and then photographed under 40x magnification. Total xylem vascular area was determined by measuring the area of all xylem element for each vascular bundle within a stipe cross section. Images were analyzed using Image J software (National Institutes of Health, Bethesda Maryland, USA). Huber values (HV) were calculated as the ratio of the xylem vascular area to the supported lamina area for each individual. 
 
 ## Foliar chemistry
 
-Subsamples of foliar tissue used for lamina area calculation were samples across muliple pinnae for each individual. These subsamples were dired to a constant mass and ground using a Wig-L-Bug (Sigma-Aldrich Co. St. Louis, USA). Nitrogen content and deltaC^13^ were measured using a Delta V isotope ratio mass spectrometer interfaced to a NC2500 elemental analyzer (Thermo Scientific) and corrected by comparison with certified standards.
-
-## Pressure-volume relations
-
-Tissue-water relations were determined with pressure–volume analysis [@tyree_measurement_1972] on fully expanded fronds with a Scholander pressure bomb (PMS Instruments Co., Corvallis, OR, USA). For each pressure-volume curve we sampled top most intact pinnae after full rehydration. We generated pressure–volume curves by taking sequential water potential measurements ($\Psi$~leaf~) as fronds air dried, first in closed plastic bags (0-2 hrs), and then in open bags. The fresh mass was recored immediately before and after each $\Psi$ determination. Following each PV curve, foliar samples were dried to a constant mass to calculate relative water content (RWC).
+Sub-samples of foliage tissue used for lamina area calculation were collected across multiple pinnae for each individual. These sub-samples were dried to a constant mass and ground using a Wig-L-Bug (Sigma-Aldrich Co. St. Louis, USA). Nitrogen content and deltaC^13^ were measured using a Delta V isotope ratio mass spectrometer interfaced to a NC2500 elemental analyzer (Thermo Scientific) and corrected by comparison with certified standards. 
 
 \
 
-For each pressure volume curve, we graphed the relationship between 1/$\Psi$~leaf~ and leaf mass to estimate parameters related to leaf turgor and bulk tissue water realtions. Next, we calculated leaf water potential at turgor loss ($\Psi$~tlp~), the osmotic potential at full tissue hydration ($\Pi$~o~), the bulk modulus of tissue elasticity ($\epsilon$) and tissue capacitance (C) according to  @sack_prometheuswiki_2011. 
+Lamina chlorophyll content was determined on three different pinnae for each individual. Single point measurements of chlorophyll content (mg m^-2^) were measured within a 3 mm diameter circle with the CCM-300 chlorophyll content meter (Opti-Sciences, Hudson, NH, USA). Chlorophyll content per individual is expressed as the mean of point measurements across the entire frond. 
+
+## Pressure-volume relations
+
+Tissue-water relations were determined with pressure–volume analysis [@tyree_measurement_1972] on fully expanded fronds with a Scholander pressure bomb (PMS Instruments Co., Corvallis, OR, USA). For each pressure-volume (PV) curve we sampled top most intact pinnae after full re-hydration. We generated pressure–volume curves by taking sequential water potential measurements ($\Psi$~leaf~) as fronds air dried, first in closed plastic bags (0-2 hrs), and then in open bags. The fresh mass was recorded immediately before and after each $\Psi$ determination. Following each PV curve, foliar samples were dried to a constant mass to calculate relative water content (RWC).
+
+\
+
+For each PV curve, we graphed the relationship between 1/$\Psi$~leaf~ and leaf mass to estimate parameters related to leaf turgor and bulk tissue water relations. We then calculated leaf water potential at turgor loss ($\Psi$~tlp~), the osmotic potential at full tissue hydration ($\Pi$~o~), the bulk modulus of tissue elasticity ($\epsilon$) and tissue capacitance (C) according to  @sack_prometheuswiki_2011. 
  
 ## Statistical analysis
 
-Linear mixed-effect models were used to test responses of functional traits to categorical fixed effects of life form and site. The interaction between life form and site was tested to confirm any potential environmental or climate infunce on trait patterns. Generally, there were few life form x site interactions, so models with life form and site as main effects were compared to full models (AIC scores). Depending on the AIC scores, the most parsimonious model was selected. To test for broad differences among life forms, individual plant species were treated as random effects in each model. Tukey’s post-hoc test were performed in conjunction with ANOVA to determine which mean values of functional traits were different among fixed effect treatments with the ‘multcomp’ package [@hothorn_simultaneous_2008]. We utlized a type 3 ANOVA due to an unbalanced design with the limited number of hemi-epiphytes species available. When interactions were present, we computed pairwise comparisons with the ‘emmeans’ package [@lenth_emmeans:_2019] to investigate interactions between life form and site.
+Linear mixed-effect models were used to test responses of functional traits to categorical fixed effects of life form and site. The interaction between life form and site was tested to confirm any potential environmental or climate influence on trait patterns. Generally, there were few life form x site interactions, so models with life form and site as main effects were compared to full models (AIC scores) and the most parsimonious model was selected. To test for broad differences among life forms, individual plant species were treated as random effects in each model. Tukey’s post-hoc test were performed in conjunction with ANOVA to determine which mean values of functional traits were different among fixed effect treatments with the ‘multcomp’ package [@hothorn_simultaneous_2008]. We utilized a type 3 ANOVA due to an unbalanced design with the limited number of hemi-epiphytes species available. When interactions were present, we computed pairwise comparisons with the ‘emmeans’ package [@lenth_emmeans:_2018] to investigate interactions between life form and site.
 
 
-Models
-were initially constructed using all variables and interactions (e.g.
-treatment 9 season 9 sensitivity status), and were manually simplified by systematically removing nonsignificant variables and
-interactions. The best model (Table 2) was selected on the basis
-of the Akaike information criterion (AIC). The distribution of
-the data was assessed using the profile function as per Bates et al.
-(2015) and the data were transformed accordingly. The conditional and marginal r
-2 values were calculated as per Nakagawa &
-Schielzeth (2013)
+The conditional and marginal r2 values were calculated as per Nakagawa & Schielzeth (2013)
 
 \
 
@@ -137,47 +126,133 @@ Schielzeth (2013)
 
 \
 
-For bivariate trait relationships, responses of dependent variables were analysed with linear mixed-effect models, with species as a random effect and plant group and/or canopy type as categorical fixed effects. Explained variance (R^2^) of mixed models were computed as in @nakagawa_general_2013, in which the marginal R^2^ represents variance explained by fixed factors and the conditional R^2^ by both fixed and random factors. Tests of allometric relationships between log-transformed biomass components were implemented using standardized major axis regression in the 'smatr' package in R [@warton2012smatr]. Principal component analysis, utilizing the ‘vegan’ package [@oksanen_vegan:_2019], was used to explore how measured functional traits were distributed and co-varied among species (mean values) and life form. All tests of statistical significance were conducted at an $\alpha$ level of 0.05. All analyses were performed with R 3.5.1 [@r_core_team_r:_2018].
+For bivariate trait relationships, responses of dependent variables were analysed with linear mixed-effect models, with species as a random effect and life form as a categorical fixed effect. Explained variance (R^2^) of mixed models were computed as in @nakagawa_general_2013, in which the marginal R^2^ represents variance explained by fixed factors and the conditional R^2^ by both fixed and random factors. Tests of allometric relationships between log-transformed biomass components were implemented using standardized major axis regression in the 'smatr' package in R [@warton2012smatr]. Principal component analysis, utilizing the ‘vegan’ package [@oksanen_vegan:_2019], was used to explore how measured functional traits were distributed and co-varied among species (mean values) and life form. All tests of statistical significance were conducted at an $\alpha$ level of 0.05. All analyses were performed with R 3.5.1 [@r_core_team_r:_2018].
 
-#Results
+# Results
 
-## Frond Morphology
+## Frond morphology
 
-Allomteric relationships between lamina area and total frond length had similar slopes across all three life forms (Figure 1a). This broad convergence in frond allometry suggests that tropical ferns build leaf structures in predicatble proportions, despite variation in frond structural traits. Total frond length was reduced by 26 % in epiphytic (59$\pm$2.5) compared to terrestrial (85$\pm$3.3) species, with frond length of hemi-epiphytes an intermediate between both groups (*P* = 0.021). The reduction in total frond length was driven by a large reduction (-54 %) of stipe length in epiphytic compared to terrestrial species (*P* = 0.001, Figure 1b). Leaf mass per unit area was 67% higher in epiphytic compared to terrestrial species, with hemi-epiphytic species intermediates between both life forms (*P* = 0.002, Figure 1C). Do differences were detected in total lamina area between any of the life form groups, due to the large amount of variation in lamina area across all species (R^2^ marginal = 0.17 & R^2^ conditional = 0.89).
+**Allomteric relationships between lamina area and total frond length had similar slopes across all three life forms (Figure 1a). This broad convergence in frond allometry suggests that tropical ferns build leaf structures in predictable proportions, despite variation in frond structural traits.**
 
-## Anatomical traits (xylem and stomata)
+\
+
+Allometric relationships between lamina area and stipe length were functionally different between epiphytic species compared to terrestrial and hemi-epiphytic species (Figure 1A). Log relationships of stipe length and lamina area were positively correlated for each life form, however, pair wise differences were detected in both the slopes (*P* < 0.001) and elevation (*P* < 0.001) of this allometric relationship for epiphytic species. This functional shift in leaf structural relationships for epiphtic species likely represents adaptation to the reduce the path length of water transport. Total frond length was reduced by 26 % in epiphytic (59&pm;2.5) compared to terrestrial (85&pm;3.3) species, with frond length of hemi-epiphytes an intermediate between both groups (*P* = 0.021). The reduction in total frond length was driven by a large reduction (-54 %) in stipe length in epiphytic compared to terrestrial species (*P* = 0.001, Figure 1B). 
+
+\
+
+No differences were detected in total lamina area between any of the life form groups, due to the large amount of variation in lamina area across species (R^2^ marginal = 0.17 & R^2^ conditional = 0.89). However, leaf mass per unit area was 67% higher in epiphytic compared to terrestrial species, with hemi-epiphytic species intermediates between both life forms (*P* = 0.002, Figure 1C). 
+
+## Anatomical traits
+
+Epiphytic and hemi-epiphytic species had 51% lower stomatal density (36&pm;1.7 mm^-2^) compared to terrestrial species (72&pm;3.1, *P* < 0.001). Stomatal length was similar across all species, however, guard cell width differed across life forms. Mean width of individual guard cells was 18 % smaller in terrestrial species compared to hemi-epiphytic of epiphytic species. Overall, stomatal size of terrestrial and epiphytic species were statistical similar, yet epiphytes had broadly higher stomatal size. Stomatal size in hemi-epiphtic species was 27 % larger than terrestrial or epiphytic life forms (*P* = 0.044).
+
+\
+
+Total xylem area was 65 % smaller in epiphytic species compared to terrestrial species (*P* = 0.003), with hemi-epiphytic species has intermediates (**add means here if no figure**). Consequently, terrestrial species produced more xylem area per unit leaf area than epiphytic or hemi-epiphytic species, resulting in a higher Huber value (*P* = 0.001). (**add means here if no figure**)
+
+## Foliar chemistry 
+
+Foliar nitrogen content was 29.8% lower in epiphytic ferns compared to terrestrial and hemi-epiphytic ferns (*P* = 0.007). Foliar $\delta$^13^C for terrestrial and hemi-epiphytic species were more negative that epiphytic species (*P* = 0.004, Figure 2x). Additionally, foliar$\delta$^13^C for fern species at the higher elevation Las Cruces site were less negative (-32.6 &permil) than fern species at the low elevation La Selva site (34.0 &permil,*P* = 0.015). 
+
+\
+
+Total chlorophyll content was similar between terrestrial and epiphytic species, although epiphytic species had a lower range of chlorophyll content.  Hemi-epiphytic species had similar chlorophyll content to terrestrial species, but were 37 % higher than epiphytic species (*P = 0.031).
+
+## Frond hydraulic traits
+
+Surprisingly, minimal functional differences in drought tolerance where detected among the three life ferns from pressure volume curve parameters (Figure 2a). The turgor loss point ($\Pi$~tlp~) varied by fern life form (*P* = 0.042), however, post-hoc multiple comparisons did not detect differences in $\Psi$~tlp~ across terrestrial, hemi-epiphytic or epiphytic ferns. Broadly, terrestrial and hemi-epiphytic fern species had slightly lower $\Psi$~tlp~ than epiphytic species (Figure 2b). Additionally, the osmotic potential ($\Pi$~o~) decreased in terrestrial and hemi-epiphytic species (*P* = 0.009, Figure 2C), while the modulus of elasticity ($\epsilon$) was similar across all life forms. Consequently, the broad decreases in $\Psi$~tlp~ among terrestrial and hemi-epiphytic fern species appeared to be driven by osmotic adjustments via solute accumulations rather than shifts in cell wall flexibility (see @bartlett_determinants_2012).
+
+\
+
+Tissue capacitance at turgor loss point (**capacitance zero?**) was 54 % lower in epiphytic compared to terrestrial species (*P* = 0.010), with hemi-epiphytic species has intermediates.
+
+## Bivariate traits relationships:
+
+* leaf area/stipe or others with with xylem
+* lma and nitrogen 
+* density vs size (not much with stomata and other traits)
+* others?
+
+# Figures
+
+```{r figure1,  echo=FALSE, fig.align='center',fig.width = 10, fig.height = 6, warning=FALSE, message=FALSE}
+source("master_scripts/figure_1_short.R")
+
+```
+Figure 1. Functional shift in path length to transport water, via stipe length, alters how different fern life forms build conductive structures
+
+\
+
+```{r figure2,  echo=FALSE, fig.align='center',fig.width = 10, fig.height = 10, warning=FALSE, message=FALSE}
+source("master_scripts/figure2_lma.R")
+
+```
+Figure 2. Shifts in LMA between life forms alters relationships with nitrogen and water use efficiency
+
+```{r stipe,  echo=FALSE, fig.align='center',fig.width = 10, fig.height = 6, warning=FALSE}
+source("master_scripts/stipe_xa_plot.R")
+```
+Figure 3. Stipe length and xylem anatomy define water supply.
+
+\
+
+```{r figure3,  echo=FALSE, fig.align='center',fig.width = 10, fig.height = 10, warning=FALSE, message=FALSE}
+source("master_scripts/internal_anatomy_plot.R")
+
+```
+Figure 4. Stomatal traits and xylem area are functional different between life forms.
+
+\
+
+```{r figure4a,  echo=FALSE, fig.align='center',fig.width = 6, fig.height = 6, warning=FALSE, message=FALSE}
+source("master_scripts/pv_global_plot.R")
+
+```
+Figure 5A. Global view of pv curves. I am currently making this with ggplots, which means it looks different and I need to figure out how to combine with pv parameter figures (below). 
+
+\
+
+```{r figure4b,  echo=FALSE, fig.align='center',fig.width = 12, fig.height = 6, warning=FALSE, message=FALSE}
+source("master_scripts/pv_curve_plots.R")
+
+```
+Figure 5B. Epiphytic not more drought tolerant.  Osmotic adjustments, not shifts in cell wall flexibility explain differences in TLP. I am not sure what capacitance at TLP means. There are possibly a few low outliers that may help TLP stats....
+
+\
 
 
-Epiphytic and hemi-epiphytic species had 51% lower stomatal density (36$\pm$1.7 mm^-2^) compared to terrestrial species (72$\pm$3.1, *P* < 0.001). 
+```{r figure5,  echo=FALSE, fig.align='center',fig.width = 6, fig.height = 6, warning=FALSE, message=FALSE}
+source("master_scripts/traits_pca_plot.R")
 
-**no interaction with stomatal size, however, if only main effect model then 
-
-
-## Foliar Chemistry 
-
-Foliar nitrogen content was 29.8% lower in epiphytic ferns compared to terrestrial and hemi-epiphytic ferns (*P* = 0.007). 
+```
+Figure 6. This PCA is a mostly a placeholder, I imagine we will replace it with trait phylogeny mapping
 
 
-Foliar $\delta$^13^C for terrestrial and hemi-epiphytic species were more negative that epiphytic species (*P* = 0.004, Figure 2x). Additionally, foliar$\delta$^13^C for fern species at the higher elevation Las Cruces site were less negative (-32.6 &permil) than fern species at the low elevation La Selva site (34.0 &permil,*P* = 0.015). 
 
-*chlorp
-hyll*?
-I had to perform a little data mining to get this result. I dropped one epiphytic species with way to variable data (400-800 mg m^-2^) and a few outliers. Not sure how meaningful these differences are.
+# More Plots
 
-## Foliar Hydraulic Traits
+```{r middays,  echo=FALSE, fig.align='center',fig.width = 6, fig.height = 6, warning=FALSE}
+source("master_scripts/wp_plots.R")
+```
+Midday water potential similar across life forms.
 
-Surprisingly, minimal functional differences in drought tolerance where detected among the three life ferns from pressure volume curve parameters (Figure 2a). The turgor loss point ($\Pi$~tlp~) varied by fern life form (*P* = 0.042), however, post-hoc multiple comparisons did not detect differences in $\Psi$~tlp~ across terrestrial, hemi-epiphytic or epipohyitc ferns. Broadly, terrestrial and hemi-epiphytic fern species had slightly lower $\Psi$~tlp~ than epiphytic species (Figure 2b). Additionally, the osmotic potential ($\Pi$~o~) decreased in terrestrial and hemi-epiphytic species (*P* = 0.009, Figure 2C), while the modulus of elasticity ($\epsilon$) was similar across all life forms. Consequently, the broad decreases in $\Psi$~tlp~ among terrestrial and hemi-epiphytic fern species appeared to be driven by osmotic adjustments via solute accumulations rather than shifts in cell wall flexibility (see @bartlett).
+\
 
-## bivariate traits relationships:
+```{r allom2,  echo=FALSE, fig.align='center',fig.width = 6, fig.height = 6, warning=FALSE, message=FALSE}
+source("scripts/frondlength_laminaarea_plot.R")
+```
+Frond length and lamina area allometry same among life forms.
 
-leaf area with xylem
-lma and nitrogen 
-density vs size
 
 # Discussion
 
-(Brodribb 2017): A passive linkage between leaf water status and guard cell turgor observed in extant basal vascular plants appears to be sufficient to prevent xylem cavitation during diurnal changes in evaporative demand (Martins et al., 2015). However, without more sophisticated mechanisms to reduce guard cell turgor and produce complete stomatal closure, it has been hypothesized that passive closure does not provide a sufficiently tight stomatal seal capable of preventing ferns and lycophytes from rapidly reaching critical leaf water potentials when soil water is depleted during drought (McAdam and Brodribb, 2013). As a result, ferns and lycophytes in dry environments rely on either a high plant capacitance or low stomatal density (McAdam and Brodribb, 2013), desiccation tolerance (Hietz, 2010), and in some cases, rather cavitation-resistant xylem (Baer et al., 2016).  
-We foudn that cavaitaion-resistant xylem where not the case here (see review too)
+## Do biomechanical relationships define water transport capacity?
+
+* Differences in slopes of scaling realtionships between epiphyitc and terrestrial (more than with phyloegny) ferns have been detected with LMA and petiole width, suggesting a balance is required between optimizing hydaulic support and providing sufficient biomechanical support [@peppe_2014]
+
+*  Foliar Narea increases with LMA () in terrestrial temperate ferns understory [@karst; *campany
+
+## Do canalized traits define leaf water status?
 
 
 # Acknowledgements

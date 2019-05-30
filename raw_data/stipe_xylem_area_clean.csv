@@ -125,7 +125,7 @@ year,species,plant_no,xylem_area_um2,lamina_area_cm2
 2017,nephrolepis_rivularis,1,26959,643.5
 2017,nephrolepis_rivularis,2,33942,104.6
 2017,nephrolepis_rivularis,3,20066,110.9
-2017,nephrolepis_rivularis,4,2522,138.4
+2017,nephrolepis_rivularis,4,25220,138.4
 2017,nephrolepis_rivularis,5,23370,111.4
 2017,nephrolepis_rivularis,6,23344,118.1
 2018,niphidium_crassifolium,1,53172.936,242.41
@@ -205,8 +205,20 @@ year,species,plant_no,xylem_area_um2,lamina_area_cm2
 2017,thelypteris_dentata,3,467076.199,640.8
 2017,thelypteris_dentata,4,305742.292,381.7
 2017,thelypteris_dentata,6,311707.257,405.2
-2017,thelypteris_nicaraguensis,1,293698.564,1
-2017,thelypteris_nicaraguensis,2,530291.779,2
-2017,thelypteris_nicaraguensis,3,654374.037,3
-2017,thelypteris_nicaraguensis,5,696313.95,5
-2017,thelypteris_nicaraguensis,6,353989.268,6
+2017,thelypteris_nicaraguensis,1,293698.564,344.5
+2017,thelypteris_nicaraguensis,2,530291.779,597.2
+2017,thelypteris_nicaraguensis,3,654374.037,683.9
+2017,thelypteris_nicaraguensis,5,696313.95,375.1
+2017,thelypteris_nicaraguensis,6,353989.268,501.9
+2017,serpocaulon_loriciforme,4,23833.66,665.4
+2017,serpocaulon_loriciforme,5,40876.898,172.7
+2017,serpocaulon_loriciforme,6,37919.059,274.6
+2017,serpocaulon_loriciforme,9,41068.633,225.8
+2017,serpocaulon_loriciforme,10,42425.407,192.8
+2017,Serpocaulon loriciforme,12,20100.025,190.7
+2018,serpocaulon_triseriale,1,334375,701.67
+2018,serpocaulon_triseriale,2,271531.06,830.37
+2018,serpocaulon_triseriale,3,388377.703,1307.84
+2018,serpocaulon_triseriale,4,341176.24,658.98
+2018,serpocaulon_triseriale,5,145474.508,325.79
+2018,serpocaulon_triseriale,6,236731.811,510.64

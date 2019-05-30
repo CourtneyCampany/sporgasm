@@ -31,96 +31,55 @@ terr <- pv_data3[pv_data3$niche2 == "terrestrial",]
 hemi <- pv_data3[pv_data3$niche2 == "hemi-epiphyte",]
 epi <- pv_data3[pv_data3$niche2 == "epiphyte",]
 
-# windows()
-# par(mar=c(5,5,1,1))
-# plot(psi2~rwc_100, data=pv_data3 , type='n',xlim=c(0,11),
-#      ylim=c(-1,15), ylab= psi2lab, xlab = "100-RWC ( %)")
-# 
-# legend("topright", boxlabs, pch=16, col=trtcols, bty='n', inset = .01)
-# 
-# points(psi2~rwc_100, data=pv_data3 , pch=16, col=trtcols2[niche2])
-# 
-# smoothplot(rwc_100, psi2, data=terr, kgam=4, R="species",
-#            linecol=trtcols[1],pch="", add=TRUE)
-# 
-# smoothplot(rwc_100, psi2, data=hemi, kgam=.5, R="species",
-#            linecol=trtcols[2],pch="", add=TRUE)
-# 
-# smoothplot(rwc_100, psi2, data=epi, kgam=4, R="species",
-#            linecol=trtcols[3],pch="", add=TRUE)
-
-
-##see with ggplots
-library(ggplot2)
-library(ggpubr)
-
-theme_set(theme_bw())
-theme_update(text = element_text(size=12),
-             panel.grid.major = element_blank(),
-             panel.grid.minor = element_blank(),
-             strip.background = element_blank(),
-             axis.text = element_text(colour = "black"),
-             legend.justification=c(1,1), 
-             legend.position=c(1,1),
-             legend.background = element_blank(),
-             legend.box.background = element_blank(),
-             legend.key = element_blank(),
-             legend.title = element_blank(),
-             axis.text.x   = element_text(size=12),
-             axis.text.y   = element_text(size=12),
-             axis.title.y  = element_text(size=12),
-             axis.title.x  = element_text(size=12),
-)
-
+#clean up data:
 pv_data4 <- pv_data3[complete.cases(pv_data3$niche2),]
+abs <-  pv[pv$capacitance_absolute < .4,]
 
+tlp_cld <- c("a","a","a" )
+op_cld <- c("a","a","b" )
+cap_cld <- c("a","ab","b" )
 
-# test <- ggplot(data=pv_data4) + 
-#     geom_point(mapping = aes(x=rwc_100, y=psi2, col=niche2), alpha=1/5) +
-#     ylim(0,15) +
-#     xlim(0,10.5) +
-#     ylab(psi2lab) + 
-#     xlab("100-RWC ( %)") +
-#     geom_smooth(mapping = aes(x=rwc_100, y=psi2, col=niche2)) +
-#     scale_color_manual(name = "Relationship", 
-#                        values = c(trtcols[3], trtcols[2], trtcols[1]))
-# 
-# #global curves
-# print(test)
-
-jpeg(filename = "output/plot_4.jpeg",
-     width = 12, height = 5, units = "in", res= 400)
+# jpeg(filename = "output/plot_4_pvparams.jpeg",
+#      width = 12, height = 6, units = "in", res= 400)
 
 par(oma=c(4,4,1,1), mfrow=c(1,3),mgp=c(2.5,.75,0),cex.lab=1.1)
 
-ggplot(data=pv_data4) + 
-    geom_point(mapping = aes(x=rwc_100, y=psi2, col=niche2), alpha=1/5,
-               size=2) +
-    ylim(0,15) +
-    xlim(0,10.5) +
-    ylab(psi2lab) + 
-    xlab("100-RWC ( %)") +
-    geom_smooth(mapping = aes(x=rwc_100, y=psi2, col=niche2)) +
-    scale_color_manual(name = "Relationship", 
-                       values = c(trtcols[3], trtcols[2], trtcols[1]))
-
 #tlp
 boxplot(waterpot_tlp ~ niche2, data=pv, xaxt='n',ylim=c(-2,0.1),
+        boxlwd=2,whisklwd=2,staplelwd=2,xlab="",
         varwidth=TRUE,ylab=tlp_lab,
         border=trtcols)
 axis(1, boxlabs, at=1:3, cex=1.1)
 stripchart(waterpot_tlp ~ niche2, data = pv,
            vertical = TRUE, method = "jitter",
            pch = 16,  col= trtcols2, xaxt='n', add=TRUE)
+text(x=1:3, y=0, tlp_cld)
+text(3.5, -2, "A", cex=1.25)
 
 
 ## osmotic potential
 boxplot(osmotic_potential ~ niche2, data=pv, xaxt='n',
+        boxlwd=2,whisklwd=2,staplelwd=2,xlab="",
         varwidth=TRUE,ylab=op_lab,ylim=c(-2,0.1),
         border=trtcols)
 axis(1, boxlabs, at=1:3, cex=1.1)
 stripchart(osmotic_potential ~ niche2, data = pv,
            vertical = TRUE, method = "jitter",
            pch = 16,  col= trtcols2, xaxt='n', add=TRUE)
-dev.off()
+text(x=1:3, y=0, op_cld)
+text(3.5, -2, "B", cex=1.25)
 
+#capacitance
+
+boxplot(capacitance_zero. ~ niche2, data=abs, xaxt='n',
+        boxlwd=2,whisklwd=2,staplelwd=2,ylim=c(0, 1.3),
+        varwidth=TRUE,ylab=cap_lab,outline=FALSE,xlab="",
+        border=trtcols)
+axis(1, boxlabs, at=1:3, cex=1.1)
+stripchart(capacitance_zero. ~ niche2, data = abs,
+           vertical = TRUE, method = "jitter",
+           pch = 16,  col= trtcols2, xaxt='n', add=TRUE)
+text(x=1:3, y=1.2, cap_cld)
+text(3.5, 0, "C", cex=1.25)
+
+# dev.off()

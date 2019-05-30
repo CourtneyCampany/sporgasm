@@ -6,7 +6,7 @@ treat <- read.csv("raw_data/species_niches.csv")
 
 
 xylem2 <- merge(xylem, treat)
-  # 3 missing species
+  # 1 missing species (pec pec)
   xylem2$niche2 <- gsub("climber", "hemi-epiphyte", xylem2$niche)
   xylem2$niche2 <- as.factor(xylem2$niche2)
     #reorder from ground to canopy 

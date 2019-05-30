@@ -11,7 +11,7 @@ library(LMERConvenienceFunctions)
 ## compare slopes of treatments with leaf allometry
 
 traits <- read.csv("calculated_data/fern_traits.csv")
-traits$niche2 <- gsub("climber", "terrestrial", traits$niche)
+traits$niche2 <- gsub("climber", "hemi-epiphyte", traits$niche)
 traits$niche2 <- as.factor(traits$niche2)
 
 #reorder from ground to canopy 

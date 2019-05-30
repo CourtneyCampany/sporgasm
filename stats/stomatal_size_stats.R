@@ -33,6 +33,7 @@ ss2 <-  merge(ss, niche, by=c("genusspecies", "site"))
 ss_agg <- doBy::summaryBy(guardcell_length_um + average_guardcell_width_um +
                             stomatal_size ~ site + species + plant_no 
                           + niche2, data=ss2, FUN=mean, keep.names = TRUE)
+ss_nohemi <- droplevels(ss_agg[!ss_agg$niche2 == "hemi-epiphyte",])
 
 
 ##stats --------
@@ -54,7 +55,9 @@ hist(ss_agg$stomatal_size) ## likely affect frequency distribution
 ##full mixed model for stomatal size ---------
 ss_mod2 <- lmer(sqrt(stomatal_size) ~ niche2 * site + (1|species), data=ss_agg)
 ss_mod3 <- lmer(sqrt(stomatal_size) ~ niche2 + site + (1|species), data=ss_agg)
-ss_mod4 <- lmer(sqrt(stomatal_size) ~ niche2 + (1|species), data=ss_agg)
+
+ss_mod4 <- lmer(sqrt(stomatal_size) ~ niche2 * site + (1|species), data=ss_nohemi)
+Anova(ss_mod4)
 
 boxplot(stomatal_size ~ niche2, data=ss_agg) #aspenium species outliers?
 qqPlot(residuals(ss_mod2)) #sqrt transformation works best
@@ -62,8 +65,8 @@ plot(ss_mod2)
 
 #model summary
 Anova(ss_mod2, type="3") #niche, no interaction
-anova(ss_mod2, ss_mod4) #not different
-AIC(ss_mod3, ss_mod4) #model 2 is better (less than 2)
+anova(ss_mod2, ss_mod3) #not different
+AIC(ss_mod2, ss_mod4) #model 2 is better (less than 2)
 
 
 #use model with interaction
@@ -78,12 +81,13 @@ ss_siglets <-cld(tukey_ss)
 #terrestrial hemi-epiphyte      epiphyte 
 # "a"           "b"           "ab"
 
-# terr_ss <- mean(ss_agg[ss_agg$niche2 == "terrestrial", "stomatal_size"]) 
-# #0.00107
-# notterr_ss <- mean(ss_agg[!ss_agg$niche2 == "terrestrial", "stomatal_size"])
-# #0.001508102
-# 
-# ##non terrestrial are 40.4% larger
+nohemi_ss <- mean(ss_agg[!ss_agg$niche2 == "hemi-epiphyte", "stomatal_size"])
+#0.001178799
+hemi_ss <- mean(ss_agg[ss_agg$niche2 == "hemi-epiphyte", "stomatal_size"])
+#0.00150345
+
+##non terrestrial are 40.4% larger
+visreg(ss_mod2)
 
 
 ###test for whether it is length or width?
@@ -95,16 +99,32 @@ Anova(sl_mod, type="3")  ###not length
 
 sw_mod <- lmer(average_guardcell_width_um  ~ niche2 * site + (1|species), 
                data=ss_agg)
+sw_mod2 <- lmer(average_guardcell_width_um  ~ niche2 + site + (1|species), 
+               data=ss_agg)
 qqPlot(residuals(sw_mod))
 
-Anova(sw_mod, type="3") ##interaction is significant
-visreg(sw_mod, "niche2", by="site")
-##terrestrial at la selva lower
+Anova(sw_mod, type="3") ##interaction is not significant
+anova(sw_mod, sw_mod2)
+AIC(sw_mod, sw_mod2) #us no interaction model
 
-library(emmeans)
-emmip(sw_mod, niche2 ~ site) 
-ss_contrasts <- emmeans(sw_mod, pairwise ~ niche2)
-ss_contrasts <- emmeans(sw_mod, pairwise ~ niche2|site)
+Anova(sw_mod2, type="3")
+visreg(sw_mod2)
+
+tukey_sw <- glht(sw_mod2, linfct = mcp(niche2 = "Tukey"))
+sw_siglets <-cld(tukey_sw)
+
+terr_sw <- mean(ss_agg[ss_agg$niche2 == "terrestrial", "average_guardcell_width_um"])
+#0.01111373
+noterr_sw <- mean(ss_agg[!ss_agg$niche2 == "terrestrial", "average_guardcell_width_um"])
+#0.01349161
+
+
+
+##if use interaction model::
+# library(emmeans)
+# emmip(sw_mod, niche2 ~ site) 
+# ss_contrasts <- emmeans(sw_mod, pairwise ~ niche2)
+# ss_contrasts <- emmeans(sw_mod, pairwise ~ niche2|site)
 #if ignore site effect, then terrestrial smaller than epiphyte
 
 ##looks like terrestrial only lower at la selva, all equal at las cruces

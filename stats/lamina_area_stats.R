@@ -35,15 +35,14 @@ plot(lamina_mod2) ##negative skewed so we need a transformation
 #model summary
 Anova(lamina_mod, type="3") #no interactions
 anova(lamina_mod, lamina_mod2) #not different
-AIC(lamina_mod, lamina_mod2) 
+AIC(lamina_mod, lamina_mod2)
 
-
-#use model withinteraction
-summary(lamina_mod)
+#use model without interaction
+summary(lamina_mod2)
 Anova(lamina_mod2, type="3")
 r.squaredGLMM(lamina_mod)
 #R2m       R2c
-#0.1689838 0.8865733
+#0.1286234 0.8875239
 
 # no diff, related to species
 

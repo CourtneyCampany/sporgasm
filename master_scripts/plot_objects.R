@@ -31,6 +31,9 @@ sl_lab <- expression(Stomatal~length~~(mm))
 sw_lab <- expression(Stomatal~width[mean]~~(mm))
 sd_lab <- expression(Stomatal~density~~(mm^2))
 xylem_lab <- expression(Total~xylem~area[stipe]~~(mm^-2))
+wp_lab <- expression(Psi[midday]~~(MPa))
+lma_lab <- expression(LMA~~(g~m^-2))
+cap_lab <- expression(C[tlp]~~(units))
 
 #colors
 # gradient <- colorRampPalette(c("dodgerblue4","darkorange3"))

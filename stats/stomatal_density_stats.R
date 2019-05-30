@@ -58,18 +58,18 @@ qqPlot(residuals(sd_mod2))
 #model summary
 Anova(sd_mod2, type="3") #niche but no interaction
 anova(sd_mod2, sd_mod3) #not different
-AIC(sd_mod2, sd_mod3) #model 3 is better, no interaction
+AIC(sd_mod2, sd_mod3) #model 2 is better, with interaction
 
 #use model without interaction
-summary(sd_mod3)
-Anova(sd_mod3, type="3")
+summary(sd_mod2)
+Anova(sd_mod2, type="3")
 r.squaredGLMM(sd_mod3)
 #R2m       R2c
 #0.3494343 0.9215529
 
-#niche2       14.3531  2  0.0001115***
+#niche2       14.3531  2  0.0001032***
 
-tukey_sd3 <- glht(sd_mod3, linfct = mcp(niche2 = "Tukey"))
+tukey_sd3 <- glht(sd_mod2, linfct = mcp(niche2 = "Tukey"))
 sd3_siglets <-cld(tukey_sd3)
 
 #terrestrial hemi-epiphyte      epiphyte 

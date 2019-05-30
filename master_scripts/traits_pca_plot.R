@@ -54,8 +54,8 @@ traitnames <- c("LA", "FL", "SL", "LL", "CHL", "XA", "HV", "SS", "SD", "SWC",
 sites <- scores(fern_rda2, display='sites')
 spp <- scores(fern_rda2, display='species')
 
-jpeg(filename = "output/pca.jpeg",
-     width = 7, height = 7, units = "in", res= 400)  
+# jpeg(filename = "output/pca.jpeg",
+#      width = 7, height = 7, units = "in", res= 400)  
 
 par(mgp=c(2.5,.75,0), mar=c(4,4,1,1), cex.lab=1.1)
 plot(sites,ylab="PC 2 (21.4 %)", xlab="PC 1 (26.8%)",type='n',
@@ -70,4 +70,4 @@ text(spp,labels=traitnames,cex=1)
 legend("topleft", legend= boxlabs,
        pch=21, inset=0.01, bty='n', cex=1,pt.cex=1.25, pt.bg=trtcols)
 
-dev.off()
+# dev.off()

@@ -22,27 +22,27 @@ library(moments)
 library(MASS)
 library(outliers)
 
-chl_mod <- lm(chl_mg_m2 ~ niche2, data=chloro)
-
-#model diagnostics
-qqPlot(chl_mod) 
-plot(chl_mod) #looks pretty good
-skewness(chl_mod$residuals) #less than 1
-kurtosis(chl_mod$residuals) 
-hist(chl_mod$residuals)
-
-summary(chl_mod)
-anova(chl_mod) #broad differences in niche
-
-Ltest_frond <- leveneTest(chl_mg_m2 ~ niche2 , data = chloro)
-Ltest_frond ##all good
-
+# chl_mod <- lm(chl_mg_m2 ~ niche2, data=chloro)
+# 
+# #model diagnostics
+# qqPlot(chl_mod) 
+# plot(chl_mod) #looks pretty good
+# skewness(chl_mod$residuals) #less than 1
+# kurtosis(chl_mod$residuals) 
+# hist(chl_mod$residuals)
+# 
+# summary(chl_mod)
+# anova(chl_mod) #broad differences in niche
+# 
+# Ltest_frond <- leveneTest(chl_mg_m2 ~ niche2 , data = chloro)
+# Ltest_frond ##all good
 
 
 ##linear mixed model with species as random --------
 library(lme4)
 library(MuMIn)
 library(arm)
+
 
 boxplot(chl_mg_m2 ~ niche2, data=chloro) #couple of outlers
 #if keep outliers in nothing is significant, but epi looks lower
@@ -56,6 +56,7 @@ chloro3 <- chloro[chloro$chl_mg_m2 < 800,]
 chloro4 <- chloro[chloro$chl_mg_m2 < 800 & !chloro$genusspecies == "elaher",]
 boxplot(chl_mg_m2 ~ niche2, data=chloro4)
 
+#models
 chl_mod3 <- lmer(chl_mg_m2 ~ niche2 * site + (1|species), data=chloro4)
 chl_mod4 <- lmer(chl_mg_m2 ~ niche2 + site + (1|species), data=chloro4)
 
@@ -64,7 +65,7 @@ plot(chl_mod3) #not bad
 qqPlot(residuals(chl_mod3)) #not bad
 
 #model summary
-Anova(chl_mod4, type="3") #niche effect
+Anova(chl_mod3, type="3") #niche effect
 anova(chl_mod3, chl_mod4) #not different
 AIC(chl_mod3, chl_mod4) 
 
@@ -76,12 +77,16 @@ r.squaredGLMM(chl_mod3)
 #0.1261207 0.5984076
 # niche2    0.03146 * 
 
-visreg(chl_mod4)
-##slightly higher SD at las cruces
+visreg(chl_mod3)
+##slightly higher chat las cruces
 
-tukey_chl <- glht(chl_mod4, linfct = mcp(niche2 = "Tukey"))
+tukey_chl <- glht(chl_mod3, linfct = mcp(niche2 = "Tukey"))
 chl_siglets <-cld(tukey_chl)
 
 # terrestrial hemi-epiphyte      epiphyte 
 # "ab"           "b"           "a" 
 
+epi <- mean(chloro4[chloro4$niche2 == "epiphyte", "chl_mg_m2"])
+#390.9373
+hemi <- mean(chloro4[chloro4$niche2 == "hemi-epiphyte", "chl_mg_m2"])
+#536.0926

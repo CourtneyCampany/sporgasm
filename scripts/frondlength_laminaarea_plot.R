@@ -27,12 +27,6 @@ epi_mod <- lm(log10(lamina_area_cm2) ~ log10(frond_length_cm) ,data=epi)
 #plot bits-------
 boxlabs <- c("Terrestrial", "Hemi-epiphyte", "Epiphyte")
 
-gradient <- colorRampPalette(c("forestgreen","darkorange1"))
-palette(gradient(3))
-trtcols <- palette(gradient(3))
-library(scales)
-trtcols2 <- c(alpha(trtcols[1], .7), alpha(trtcols[2], .7),alpha(trtcols[3], .7))
-
 fronddat <- traits[-203,] #same as stats
 
 library(magicaxis)

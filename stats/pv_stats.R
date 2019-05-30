@@ -113,4 +113,82 @@ AIC(e_mod, e_mod2) #use model with interaction
 summary(e_mod)
 Anova(e_mod, type="3")
 r.squaredGLMM(e_mod)
-                
+
+### capacitance -------
+
+boxplot(capacitance_full ~ niche2, data=pv)
+boxplot(capacitance_zero. ~ niche2, data=pv)
+boxplot(capacitance_absolute ~ niche2, data=pv)
+
+hist(pv$capacitance_full) 
+hist(pv$capacitance_zero.)
+hist(pv$capacitance_absolute)
+
+full <- pv[pv$capacitance_full < .2,]
+zero <- pv[pv$capacitance_zero. < 1,]
+abs <-  pv[pv$capacitance_absolute < .4,]
+            
+boxplot(capacitance_full ~ niche2, data=full)
+boxplot(capacitance_zero. ~ niche2, data=zero)
+boxplot(capacitance_absolute ~ niche2, data=abs)
+
+hist(full$capacitance_full) 
+hist(zero$capacitance_zero.)
+hist(abs$capacitance_absolute)    
+
+#capcitance full
+full_mod <- lmer(log10(capacitance_full) ~ niche2 * site + (1|species), data=full)
+full_mod2 <- lmer(log10(capacitance_full) ~ niche2 + site + (1|species), data=full)
+
+plot(full_mod) #not bad
+qqPlot(residuals(full_mod)) #not bad
+
+#model summary
+Anova(full_mod2, type="3") #no effects
+
+#capcitance absolute
+abs_mod <- lmer(log10(capacitance_absolute) ~ niche2 * site + (1|species), data=full)
+abs_mod2 <- lmer(log10(capacitance_absolute) ~ niche2 + site + (1|species), data=full)
+
+plot(abs_mod) #not bad
+qqPlot(residuals(abs_mod)) #not bad
+
+#model summary
+Anova(abs_mod2, type="3") #no effect
+
+
+#capcitance zero
+zero_mod <- lmer(log10(capacitance_zero.) ~ niche2 * site + (1|species), data=full)
+zero_mod2 <- lmer(log10(capacitance_zero.) ~ niche2 + site + (1|species), data=full)
+
+plot(zero_mod) #not bad
+qqPlot(residuals(zero_mod)) #not bad
+
+#model summary
+Anova(zero_mod, type="3") #niche2
+
+anova(zero_mod, zero_mod2) #not different
+AIC(zero_mod, zero_mod2) #use model with interaction
+
+summary(zero_mod)
+Anova(zero_mod, type="3")
+r.squaredGLMM(zero_mod)
+
+# R2m       R2c
+# [1,] 0.3180491 0.6268394
+
+# niche2       9.1368  2    0.01037 *
+visreg(zero_mod)
+
+tukey_zero <- glht(zero_mod, linfct = mcp(niche2 = "Tukey"))
+zero_siglets <-cld(tukey_zero)
+
+# terrestrial hemi-epiphyte      epiphyte 
+# "b"          "ab"           "a" 
+
+#capcitance zero is lower in epiphytes
+
+terr <- mean(zero[zero$niche2 == "terrestrial", "capacitance_zero."]) #0.3455018
+epi <- mean(zero[zero$niche2 == "epiphyte", "capacitance_zero."]) #0.1583137
+
+

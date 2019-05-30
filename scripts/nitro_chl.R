@@ -42,3 +42,7 @@ nitro2 <- merge(nitro, chloro4, all = TRUE)
 nitro2$lma_g_m2 <- with(nitro2, 1/(sla_cm2g/10000))
 nitro2$nitro_area <- with(nitro2,lma_g_m2 * (n_perc/100))
 nitro2$chl_mg_cm2 <- nitro2$chl_mg_m2/1000
+
+# plot(chl_mg_cm2 ~ lma_g_m2, data=nitro2,pch=16, col=trtcols2[niche2],cex=1.25)
+# plot(chl_mg_cm2 ~ nitro_area, data=nitro2,pch=16, col=trtcols2[niche2],cex=1.25)
+plot(nitro_area ~ lma_g_m2, data=nitro2,pch=16, col=trtcols2[niche2],cex=1.25)

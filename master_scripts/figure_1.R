@@ -2,7 +2,6 @@
 source("master_scripts/plot_objects.R")
 source("functions_packages/ci_functions.R")
 
-
 #traits data -----
 traits <- read.csv("calculated_data/fern_traits.csv")
 traits$niche2 <- gsub("climber", "hemi-epiphyte", traits$niche)
@@ -69,8 +68,8 @@ lma_lab <- expression(LMA~~(g~m^-2))
 #plot ----------
 # windows(12,8)
 
-jpeg(filename = "output/figure1.jpeg",
-      width = 10, height = 10, units = "in", res= 400)  
+# jpeg(filename = "output/figure1.jpeg",
+#       width = 10, height = 10, units = "in", res= 400)  
 
 par(mfrow=c(2,2),mgp=c(2.5,.75,0), mar=c(4,4,1,1), cex.lab=1.1)
 
@@ -132,4 +131,4 @@ text(600, 0, "D", cex=1.25)
 # legend("topleft", legend = boxlabs, pch=21, pt.bg=trtcols, bty="n", inset=.01)
 # text(455,.2,"LMA x Niche, P < 0.001")
 
-dev.off()
+# dev.off()

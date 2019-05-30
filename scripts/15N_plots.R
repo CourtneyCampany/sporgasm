@@ -9,16 +9,6 @@ leafchem$niche2<-factor(leafchem$niche2,
                         levels=c("terrestrial", "hemi-epiphyte", "epiphyte"))
 
 
-#plot bits-------
-boxlabs <- c("Terrestrial", "Hemi-epiphyte", "Epiphyte")
-
-gradient <- colorRampPalette(c("forestgreen","darkorange1"))
-palette(gradient(3))
-trtcols <- palette(gradient(3))
-library(scales)
-trtcols2 <- c(alpha(trtcols[1], .5), alpha(trtcols[2], .5),alpha(trtcols[3], .5))
-
-
 #15N
 
 # windows()
