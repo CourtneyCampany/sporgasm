@@ -14,14 +14,6 @@ sd_agg <- doBy::summaryBy(sd_mm2 ~ site + species + plant_no + niche2 + genusspe
 # write.csv(sd_agg, "calculated_data/stomata_density_means.csv", row.names = FALSE)
 
 #plot bits-------
-boxlabs <- c("Terrestrial", "Root Climbers", "Epiphyte")
-
-gradient <- colorRampPalette(c("forestgreen","darkorange1"))
-palette(gradient(3))
-trtcols <- palette(gradient(3))
-library(scales)
-library(doBy)
-trtcols2 <- c(alpha(trtcols[1], .5), alpha(trtcols[2], .5),alpha(trtcols[3], .5))
 
 #sd plot ----------
 sd_new <- droplevels(sd_agg[!sd_agg$genusspecies == "oleart",])

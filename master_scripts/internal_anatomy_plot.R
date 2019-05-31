@@ -26,15 +26,10 @@ terr_mod_xala <- lm(log10(lamina_area_cm2) ~ log10(xylem_area_mm2), data=terr)
 hemi_mod_xala <- lm(log10(lamina_area_cm2) ~ log10(xylem_area_mm2), data=hemi)
 epi_mod_xala <- lm(log10(lamina_area_cm2) ~ log10(xylem_area_mm2), data=epi)
 
-#huber by niche
-huber <- read.csv("calculated_data/xylem_area_huber.csv")
-huber$niche2<-factor(huber$niche2, 
-                     levels=c("terrestrial", "hemi-epiphyte", "epiphyte"))
-xylem2 <- huber[huber$xylem_area_mm2 < 0.8,]
+
 
 cldstomata <- c("a","b","b" )
-cldxylem <- c("a","ab","b" )
-cldhuber <- c("a", "b", "b")
+
 
 #plot
 # jpeg(filename = "output/figure3_anatomy.jpeg",
@@ -64,33 +59,5 @@ points(sd_mm2 ~ stomatal_size,data=stomata_noout,pch=16,  col= trtcols2[niche2])
 legend("topright", legend = boxlabs, pch=16, col=trtcols, bty="n", inset=.01)
 text(0.0003, 160, "B", cex=1.25)
 
-#xylem area
-boxplot(xylem_area_mm2 ~ niche2, data=xylem2,xaxt='n',ylim=c(0, .85),
-        border=trtcols, varwidth=TRUE, outline=FALSE,
-        boxlwd=2,whisklwd=2,staplelwd=2, ylab=xylem_lab)
-axis(1, boxlabs, at=1:3, cex.axis=1.1)
-stripchart(xylem_area_mm2 ~ niche2, data = xylem2,
-           vertical = TRUE, method = "jitter",
-           pch = 16,  col= trtcols2, xaxt='n', add=TRUE)
-text(.5, 0.8, "C", cex=1.25)
-text(x=1:3, y=.775, cldxylem)
-
-#huber
-with(alldata, plot(log10(lamina_area_cm2) ~ log10(xylem_area_mm2),
-                   ylab=lamina_lab, xlab=xylem_lab,axes=FALSE,
-                   pch=16, col=trtcols2[niche2],cex=1.25))
-magaxis(side=c(1,2), unlog=c(1,2), frame.plot=TRUE)
-# legend("topleft", legend = boxlabs, pch=16, col=trtcols, bty="n", inset=.01)
-ablineclip(terr_mod_xala, x1=log10(0.00252200), 
-           x2=log10(0.89649758),
-           col=trtcols[1], lwd=3, lty=2)
-ablineclip(hemi_mod_xala, x1=log10(0.00140100), 
-           x2=log10(0.65607611),
-           col=trtcols[2], lwd=3, lty=2)
-ablineclip(epi_mod_xala, x1=log10(0.00939000), 
-           x2=log10(0.25124324),
-           col=trtcols[3], lwd=3, lty=2)
-
-text(log10(0.0015), log10(1900), "D", cex=1.25)
 
 # dev.off()

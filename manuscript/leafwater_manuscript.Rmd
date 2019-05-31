@@ -47,17 +47,19 @@ Key Words:
 
 * Paragraph: epiphytism, ferns and evoln. history
 
-
+  + Following the rise of angiosperms, a major radiation event in ferns occurred in the Cretaceous period, leading to diversification and proliferation of modern fern taxa [@schettpelz]. Globally, fern species continue to adapt and thrive in shaded understory environments. Part of this recent Cretaceous radiation event in ferns (polypods), however, included oppourtunistic diversification into more complex ecological niches provided by now dominant angiosperm canopies [@schneider]. Consquently, one clade of ferns (Euploypoid I) has largely radiated into epiphytic niches, while a sister clade (Eupolypoid II) remained and diversified on the forest floor in tropical ecosystems (Watkins 2012).
 
 * Paragraph: microhabitat differences
 
   + terrestrial vs epiphytes (cardelus)
-  + Within forests, epiphytes grow at many levels. Some are restricted to the dark understory, whereas others grow on the exposed twigs of emergent tree (Watkins 2012)
+  + Within forests, epiphytes grow at many levels. Some are restricted to the dark understory, whereas others grow on the exposed twigs of emergent tree (Watkins 2012).
+  + As non-parasites, epiphyitc plants face a variety of ecological stressors, regardless of canopy position, that drive selection of functional traits key across their life history. 
   + hemi-epiphyitc life form co-exists with both these groups which may represent an evolutionary transition between terrestrial and epipythic life histories. 
 
 * Paragraph: Consequences of radiation of plants into canopy, Evolution of traits
-  + With tropical ferns, there is a fundamental evolutionary clade where one clade of ferns (Euploypoid I) had predomintaley radiated into epiphytic nihces, while a sister clade (Eupolypoid II) has mostly diversified on the forest floor (Watkins 2012).
-+ A host of studies reveal how hydraulic traits directly influence gas echange in ferns in a manner that is functionally different from seed plants (@Zhang, @brodersen @brodribb2004).
+  + 
++ A host of studies reveal how anatomical traits directly influence physiology in ferns in a manner that is functionally different from seed plants (@woodhouse, @Zhang, @brodersen @brodribb2004).
++ includes drought tolerance in gametophyte life stage, in both life stages [@watkins]
 + It appears likely that the canalization of stomatal traits...
 + Regardless, epiphytic ferns span a vast arraw of micrhabitats that will undergo a suite of environmental stresses (high light, high ph, limited water) that should....
 
@@ -67,9 +69,10 @@ Key Words:
   + if stomata are regulated by leaf water status, what traits related to water relations allows ferns to succeed.
   +The evolution of xylem and that of stomata are
 tightly interconnected (Sperry, 2004). (read) - 
+
 * Paragraph: this study seeks...
   + looking within E1 and E2 at traits related to water relations
-  + hemi as intermediaries?
+  + hemi as intermediaries? hemiepiphytic species begin life as epiphytes and transform into hemiepiphytes by eventually developing terrestrial root systems [@moffett]
 
 # Methods
 
@@ -95,7 +98,7 @@ Stomatal density (SD) was measured by directly counting stomata on the abaxial l
 
 \
 
-Total xylem vascular area (mm^2^) was determined for stipe segments from hand cross-sections. Each cross section was stained with toluene blue and then photographed under 40x magnification. Total xylem vascular area was determined by measuring the area of all xylem element for each vascular bundle within a stipe cross section. Images were analyzed using Image J software (National Institutes of Health, Bethesda Maryland, USA). Huber values (HV) were calculated as the ratio of the xylem vascular area to the supported lamina area for each individual. 
+Stipes measured for vulnerability to cavitation were transversely sectioned by hand using razorblade. Stipes were sectioned at the distal end, where conduit resistivity impacts hydraulic conductivity the most. Sections were stained in toluidine blue and then mounted in glycerine on microscope slides. Each section was photographed using a light microscope mounted with a digital camera (Amscope FMA050). Section photographs were anatomically analyzed using ImageJ (National Institutes of Health, Bethesda, ML, USA). Total xylem vascular area (mm^2^) was considered the conduit lumen area and the wall area for all xylem in each cross section. 
 
 ## Foliar chemistry
 
@@ -130,25 +133,29 @@ For bivariate trait relationships, responses of dependent variables were analyse
 
 # Results
 
-## Frond morphology
+## Frond morphology and anatomy
 
-**Allomteric relationships between lamina area and total frond length had similar slopes across all three life forms (Figure 1a). This broad convergence in frond allometry suggests that tropical ferns build leaf structures in predictable proportions, despite variation in frond structural traits.**
+
+Functional shifts in frond structural relationships for epiphtic species likely represent adaptation to the reduce the path length of water transport to lamina tissues. Total frond length was reduced by 26 % in epiphytic (59&pm;2.5) compared to terrestrial (85&pm;3.3) species, with frond length of hemi-epiphytes an intermediate between both groups (*P* = 0.021). The reduction in total frond length was driven by a large reduction (-54 %) in stipe length in epiphytic compared to terrestrial species (*P* = 0.001, Figure 1A). The majority of epiphytic and hemi-epiphytic ferns had stipes restricted to less than 20 cm (80% quantiles), while maximum stipe length of terrestrial ferns from the same probablity distribution was 42.3 cm. Allometric relationships between  stipe length and lamina area were functionally different between epiphytic species compared to terrestrial and hemi-epiphytic species (Figure 1B). Log relationships of stipe length and lamina area were positively correlated for each life form, however, pair wise differences were detected in both the slopes (*P* < 0.001) and elevation (*P* < 0.001) of this structural relationship for epiphytic species. 
 
 \
 
-Allometric relationships between lamina area and stipe length were functionally different between epiphytic species compared to terrestrial and hemi-epiphytic species (Figure 1A). Log relationships of stipe length and lamina area were positively correlated for each life form, however, pair wise differences were detected in both the slopes (*P* < 0.001) and elevation (*P* < 0.001) of this allometric relationship for epiphytic species. This functional shift in leaf structural relationships for epiphtic species likely represents adaptation to the reduce the path length of water transport. Total frond length was reduced by 26 % in epiphytic (59&pm;2.5) compared to terrestrial (85&pm;3.3) species, with frond length of hemi-epiphytes an intermediate between both groups (*P* = 0.021). The reduction in total frond length was driven by a large reduction (-54 %) in stipe length in epiphytic compared to terrestrial species (*P* = 0.001, Figure 1B). 
+Total xylem area was 65 % smaller in epiphytic species compared to terrestrial species (*P* = 0.003), with hemi-epiphytic species has intermediates (Figure 2A). Consequently, terrestrial species produced more xylem area per unit leaf area than epiphytic or hemi-epiphytic species, resulting in higher Huber valuec (*P* = 0.001). (**add means here if no figure**). Overall, increases in total xylem area were postively correlated with increases in stipe length (*P* < 0.0001, Figure 2B), with a marginally significant effect of fern life form.  The relationship between total xylem area and stipe length in hemi-epiphytes 
+
+
+**data check for stipe xylem regression, then start here**
+**you cannot have a large stipe without a large xylem area**
+
 
 \
 
 No differences were detected in total lamina area between any of the life form groups, due to the large amount of variation in lamina area across species (R^2^ marginal = 0.17 & R^2^ conditional = 0.89). However, leaf mass per unit area was 67% higher in epiphytic compared to terrestrial species, with hemi-epiphytic species intermediates between both life forms (*P* = 0.002, Figure 1C). 
 
-## Anatomical traits
+\
 
 Epiphytic and hemi-epiphytic species had 51% lower stomatal density (36&pm;1.7 mm^-2^) compared to terrestrial species (72&pm;3.1, *P* < 0.001). Stomatal length was similar across all species, however, guard cell width differed across life forms. Mean width of individual guard cells was 18 % smaller in terrestrial species compared to hemi-epiphytic of epiphytic species. Overall, stomatal size of terrestrial and epiphytic species were statistical similar, yet epiphytes had broadly higher stomatal size. Stomatal size in hemi-epiphtic species was 27 % larger than terrestrial or epiphytic life forms (*P* = 0.044).
 
-\
 
-Total xylem area was 65 % smaller in epiphytic species compared to terrestrial species (*P* = 0.003), with hemi-epiphytic species has intermediates (**add means here if no figure**). Consequently, terrestrial species produced more xylem area per unit leaf area than epiphytic or hemi-epiphytic species, resulting in a higher Huber value (*P* = 0.001). (**add means here if no figure**)
 
 ## Foliar chemistry 
 
@@ -183,16 +190,18 @@ Figure 1. Functional shift in path length to transport water, via stipe length, 
 
 \
 
+```{r stipe,  echo=FALSE, fig.align='center',fig.width = 10, fig.height = 6, warning=FALSE}
+source("master_scripts/stipe_xa_plot.R")
+```
+Figure 2. Stipe length and xylem anatomy define water supply.
+
+\
+
 ```{r figure2,  echo=FALSE, fig.align='center',fig.width = 10, fig.height = 10, warning=FALSE, message=FALSE}
 source("master_scripts/figure2_lma.R")
 
 ```
-Figure 2. Shifts in LMA between life forms alters relationships with nitrogen and water use efficiency
-
-```{r stipe,  echo=FALSE, fig.align='center',fig.width = 10, fig.height = 6, warning=FALSE}
-source("master_scripts/stipe_xa_plot.R")
-```
-Figure 3. Stipe length and xylem anatomy define water supply.
+Figure 3. Shifts in LMA between life forms alters relationships with nitrogen and water use efficiency
 
 \
 

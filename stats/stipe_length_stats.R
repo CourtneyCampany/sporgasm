@@ -14,6 +14,20 @@ traits$niche2 <- traits$niche
 stipe <- traits[complete.cases(traits$stipe_length_cm),]
 #stipe length has zeros, may be difficult to normalize
 
+### custom quantiles for paper
+terr <- stipe[stipe$niche2 == "terrestrial",]
+epi <- stipe[stipe$niche2 == "epiphyte",]
+hemi <- stipe[stipe$niche2 == "hemi-epiphyte",]
+
+b20epi <- nrow(epi[epi$stipe_length_cm <= 20 ,])
+a20epi <- nrow(epi[epi$stipe_length_cm > 20 ,])
+
+b20terr <- nrow(terr[terr$stipe_length_cm <= 20 ,])
+a20terr <- nrow(terr[terr$stipe_length_cm > 20 ,])
+
+b20hemi <- nrow(hemi[hemi$stipe_length_cm <= 20 ,])
+a20hemi <- nrow(hemi[hemi$stipe_length_cm > 20 ,])
+
 boxplot(stipe_length_cm ~ niche2, data=traits)
 #quite a few, lets see if the matter
 
