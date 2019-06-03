@@ -1,0 +1,41 @@
+species,site,niche,genusspecies,group,sort,genus,epithet,author,>genus_epithet,genbank,Comments
+,,,,out,,Dennstaedtia,dissecta,(Sw.) Moore,>Dennstaedtia_dissecta,EF463166,
+asplenium_auritum,la_selva,epiphyte,aspaur,E2,8,Asplenium,auritum,Sw.,>Asplenium_auritum,EF463146,
+asplenium_juglandifolia,la_selva,epiphyte,aspjug,E2,9,Asplenium,juglandifolium,Lam.,>Asplenium_juglandifolium,AF525269,
+asplenium_serratum,la_selva,epiphyte,aspser,E2,10,Asplenium,serratum,L.,>Asplenium_serratum,KJ628633,
+asplenium_uniseriale,las_cruces,terrestrial,aspuni,E2,23,Asplenium,uniseriale,Raddi,>Asplenium_uniseriale,GU929858,Sequence is from A. radicans
+blechnum_occidentale,la_selva,terrestrial,bleocc,E2,30,Blechnum,occidentale,L.,>Blechnum_occidentale,EU352296,
+campyloneurum_brevifolium,la_selva,epiphyte,cambre,E1,11,Campyloneurum,brevifolium,(Lodd. ex Link) Link,>Campyloneurum_brevifolium,MF317994,
+thelypteris_dentata,la_selva,terrestrial,theden,E2,38,Christella,dentata,(Forsk.) Brownsey & Jermy,>Christella_dentata,KY099782,
+cyclopeltis_semicordata,la_selva,terrestrial,cycsem,E1,31,Cyclopeltis,semicordata,(Sw.) J. Sm.,>Cyclopeltis_semicordata,EF463234,
+diplazium_atirrense,las_cruces,terrestrial,dipati,E2,25,Diplazium,atirrense,(J. D. Sm.) Lellinger,>Diplazium_atirrense,KT329392,Sequence is from D. macrodictyon
+diplazium_prominulum,las_cruces,terrestrial,dippro,E2,26,Diplazium,prominulum,Maxon,>Diplazium_prominulum,EF463310,Sequence is from D. cristatum
+diplazium_straitastrum,la_selva,terrestrial,dipstr,E2,32,Diplazium,striatastrum,Lellinger,>Diplazium_striatastrum,KY427346,Sequence is from D. striatum (plastome)
+dryopteris_patula,las_cruces,epiphyte,drypat,E1,3,Dryopteris,patula,(Sw.) Underw.,>Dryopteris_patula,KJ464427,
+elaphoglossum_amygdalifolium,la_selva,hemi-epiphyte,elaamy,E1,20,Elaphoglossum,amygdalifolium,(Mett. ex Kuhn) Christ,>Elaphoglossum_amygdalifolium,EF463184,
+elaphoglossum_decursivum,las_cruces,epiphyte,eladec,E1,4,Elaphoglossum,decursivum,Mickel,>Elaphoglossum_decursivum,AY818698,Sequence is from E. lonchophyllum
+elaphoglossum_herminieri,la_selva,epiphyte,elaher,E1,12,Elaphoglossum,herminieri,(Bory & Fée) T. Moore,>Elaphoglossum_herminieri,EF463193,
+elaphoglossum_latifolium,la_selva,epiphyte,elalat,E1,13,Elaphoglossum,latifolium,(Sw.) J. Sm.,>Elaphoglossum_latifolium,KJ628702,
+thelypteris_curtii,la_selva,terrestrial,thecur,E2,37,Goniopteris,curta,(Christ) A. R. Sm.,>Goniopteris_curta,EF463285,Sequence is from G. gemmulifera
+thelypteris_nicaraguensis,la_selva,terrestrial,thenic,E2,39,Goniopteris,nicaraguensis,(E. Fourn.) Salino & T. E. Almeida,>Goniopteris_nicaraguensis,KJ628860,
+lomariopsis_japurensis,la_selva,hemi-epiphyte,lomjap,E1,21,Lomariopsis,japurensis,(Mart.) J. Sm.,>Lomariopsis_japurensis,KJ628760,
+lomariopsis_maxonii,las_cruces,hemi-epiphyte,lommax,E1,18,Lomariopsis,maxonii,(Underw.) Holtt.,>Lomariopsis_maxonii,KJ628767,Sequence is from L. vestita
+mickelia_nicotianifolia,la_selva,climber,micnic,E1,1,Mickelia,nicotianifolia,"(Sw.) R. C. Moran, Labiak & Sundue",>Mickelia_nicotianifolia,EF463171,
+nephrolepis_biserrata,la_selva,terrestrial,nepbis,E1,33,Nephrolepis,biserrata,(Sw.) Schott,>Nephrolepis_biserrata,KY099834,
+nephrolepis_brownii,las_cruces,terrestrial,nepbro,E1,27,Nephrolepis,brownii,(Desv.) Hovenk. & Miyam.,>Nephrolepis_brownii,KR816691,
+nephrolepis_rivularis,la_selva,terrestrial,nepriv,E1,34,Nephrolepis,rivularis,(Vahl) Mett. ex Krug,>Nephrolepis_rivularis,HM748158,
+niphidium_crassifolium,las_cruces,epiphyte,nipcra,E1,5,Niphidium,crassifolium,(L.) Lellinger,>Niphidium_crassifolium,EF463254,
+oleandra_articulata,la_selva,epiphyte,oleart,E1,14,Oleandra,articulata,(Sw.) C. Presl,>Oleandra_articulata,KF667644,
+oleandra_costaricensis,las_cruces,terrestrial,olecos,E1,19,Oleandra,costaricensis,Maxon,>Oleandra_costaricensis,KF667646,Sequence is from O. pilosa
+olfersia_cervina,las_cruces,terrestrial,olfcer,E1,28,Olfersia,cervina,(L.) Kunze,>Olfersia_cervina,EF463213,
+blechnum_schiedeanum,las_cruces,terrestrial,blesch,E2,24,Parablechnum,schiedeanum,(Schltdl. ex C. Presl) Gasper & Salino,>Parablechnum_schiedeanum,KU898655,
+parapolystichum_excultum,las_cruces,terrestrial,parexc,E1,29,Parapolystichum,excultum,"(Mett.) Labiak, Sundue & R. C. Moran",>Parapolystichum_excultum,KJ464444,
+pecluma_pectinata,la_selva,epiphyte,pecpec,E1,15,Pecluma,pectinata,(L.) M. G. Price,>Pecluma_pectinata,KT780741,
+phlebodium_aureum,la_selva,epiphyte,phlaur,E1,16,Phlebodium,aureum,(L.) J. Sm.,>Phlebodium_aureum,KR816694,
+pleopeltis_bradeorum,la_selva,hemi-epiphyte,plebra,E1,22,Pleopeltis,bradeorum,(Rosenst.) A. R. Sm. & Tejero,>Pleopeltis_bradeorum,AY362614,
+polybotrya_osmundacea,la_selva,climber,polosm,E1,2,Polybotrya,osmundacea,Humb. & Bonpl. ex Willd.,>Polybotrya_osmundacea,KM495215,
+salpichlaena_volubilis,la_selva,terrestrial,salvol,E2,35,Salpichlaena,volubilis,(Kaulf.) J. Sm.,>Salpichlaena_volubilis,EF463162,
+serpocaulon_fraxinifolium,las_cruces,epiphyte,serfra,E1,6,Serpocaulon,fraxinifolium,(Jacq.) A. R. Sm.,>Serpocaulon_fraxinifolium,EF551071,
+serpocaulon_loriciforme,la_selva,epiphyte,serlor,E1,17,Serpocaulon,loriciforme,(Rosenst.) A. R. Sm.,>Serpocaulon_loriciforme,KJ628812,
+serpocaulon_triseriale,las_cruces,epiphyte,sertri,E1,7,Serpocaulon,triseriale,(Sw.) A. R. Sm.,>Serpocaulon_triseriale,EF463263,
+tectaria_incisa,la_selva,terrestrial,tecinc,E1,36,Tectaria,incisa,Cav.,>Tectaria_incisa,EF463272,
