@@ -1,13 +1,7 @@
-#testing trait correlations
-
-source("master_scripts/plot_objects.R")
-source("functions_packages/ci_functions.R")
+#mergin all traits
 
 #huber by niche
 huber <- read.csv("calculated_data/xylem_area_huber.csv")
-
-boxplot(huber ~ niche2, data=huber,xaxt='n',
-        ylab = "Huber values",border=trtcols, varwidth=TRUE, outline=FALSE)
 
 #morphology traits
 traits <- read.csv("calculated_data/fern_traits.csv")

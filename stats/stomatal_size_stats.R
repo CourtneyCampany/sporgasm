@@ -29,6 +29,7 @@ ss2 <-  merge(ss, niche, by=c("genusspecies", "site"))
   ss2$stomatal_size <- with(ss2, (guardcell_width1_um + guardcell_width1_um) *
                             guardcell_length_um)
 
+
 #mean of stomatal size per plant number
 ss_agg <- doBy::summaryBy(guardcell_length_um + average_guardcell_width_um +
                             stomatal_size ~ site + species + plant_no 
