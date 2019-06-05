@@ -13,7 +13,7 @@ se_na <- function(x) sqrt(var(x,na.rm=TRUE)/length(na.omit(x)))
 mean_na <- function(x) mean(x, na.rm=TRUE)
 
 
-alldata2 <- alldata[,-c(6:7, 15:16,22, 24:26, 29:30)]
+alldata2 <- alldata[,-c(5:6,9,14:17,20:21,24:26,29,32:34, 37:38)]
 #drop unneeded traits from pca
 
 #for now lets run pca on trait means
@@ -48,8 +48,8 @@ fern_id <- trait_means[, c(1:5)]
 fern_rda2<- rda(fern_traitsonly,scale=T)
 
 len <- .8 #length of arrow scaling
-traitnames <- c("LA", "FL", "SL", "LL", "CHL", "XA", "HV", "SS", "SD", "SWC",
-                "OP","TLP","E", "SLA", "13C", "N")
+traitnames <- c("LA", "FL", "SL", "LL", "CHL", "XA", "HV", "SS", "SD",
+                "OP","TLP","E", "CAP", "SLA", "13C", "N")
 
 sites <- scores(fern_rda2, display='sites')
 spp <- scores(fern_rda2, display='species')

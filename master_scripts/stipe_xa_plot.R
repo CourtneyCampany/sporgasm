@@ -43,7 +43,7 @@ boxplot(xylem_area_mm2 ~ niche2, data=xylem2,xaxt='n',ylim=c(0, .85),
         boxlwd=2,whisklwd=2,staplelwd=2, ylab="")
 axis(1, boxlabs, at=1:3, cex.axis=1.1)
 stripchart(xylem_area_mm2 ~ niche2, data = xylem2,
-           vertical = TRUE, method = "jitter",
+           vertical = TRUE, method = "jitter",cex=1.25,
            pch = 16,  col= trtcols2, xaxt='n', add=TRUE)
 text(0.5, 0.85, "A", cex=1.25)
 text(x=1:3, y=.775, cldxylem)

@@ -11,7 +11,7 @@ stodens$niche2<-factor(stodens$niche2,
 #get means of stomata density per individual (3 disks total)
 sd_agg <- doBy::summaryBy(sd_mm2 ~ site + species + plant_no + niche2 + genusspecies,
                           data=stodens, FUN=mean, keep.names = TRUE)
-# write.csv(sd_agg, "calculated_data/stomata_density_means.csv", row.names = FALSE)
+write.csv(sd_agg, "calculated_data/stomata_density_means.csv", row.names = FALSE)
 
 #plot bits-------
 

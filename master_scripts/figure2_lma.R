@@ -94,7 +94,7 @@ legend("topright", legend = boxlabs, pch=21, pt.bg=trtcols, bty="n", inset=.01)
 boxplot(d13C ~ niche2, data=c13dat, xaxt='n',ylim=c(-40, -25),xlab="",
         boxlwd=2, whisklwd=2,staplelwd=2,
         ylab=c13lab,border=trtcols,  varwidth=TRUE, outline=FALSE)
-stripchart(d13C ~ niche2, data = c13dat,
+stripchart(d13C ~ niche2, data = c13dat,cex=1.25,
            vertical = TRUE, method = "jitter",
            pch = 16,  col= trtcols2, xaxt='n', add=TRUE) 
 axis(1, boxlabs, at=1:3, cex.axis=1.1)

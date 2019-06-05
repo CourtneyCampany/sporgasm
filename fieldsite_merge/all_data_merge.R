@@ -1,3 +1,5 @@
+niche <- read.csv("raw_data/species_niches.csv")
+
 #mergin all traits
 
 #huber by niche
@@ -14,9 +16,13 @@ traits <- read.csv("calculated_data/fern_traits.csv")
 allferns <- merge(traits, huber, all=TRUE)
 
 #stomata density
-sd <- read.csv("calculated_data/stomata_density_means.csv")  
+sd <- read.csv("calculated_data/stomata_density_means.csv") 
+sd2 <- merge(sd, niche)
+
 ss <- read.csv("calculated_data/stomata_size_means.csv")
-stom <- merge(ss, sd, all=TRUE)
+ss2 <- merge(ss, niche)
+
+stom <- merge(ss2, sd2, all=TRUE)
 
 
 allferns2 <- merge(allferns, stom, all=TRUE)
