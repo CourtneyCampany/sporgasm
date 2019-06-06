@@ -120,10 +120,21 @@ Linear mixed-effect models were used to test responses of functional traits to c
 The conditional and marginal r2 values were calculated as per Nakagawa & Schielzeth (2013)
 
 \
-**A phylogenetic tree for these 30 fern species was constructed based on chloroplast rbcL sequences obtained from the GenBank website (http://www.ncbi.nlm.nih.gov/genbank/). Phylogenetic analyses for each matrix were carried out using the maximum likelihood method in PAUP* v.4.0b10 [44]. Schneider et al. (2004) has integrated Colysis and major components of Microsorum into Leptochilus by using nucleotide sequences derived from three plastid loci [45]. For simplicity, the old Latin names of species in Colysis and Microsorum were used in the present study. The phylogenetic signal (K-statistic) for each trait was calculated using ‘picante’ based on the R package. Such K-statistics can express the conservatism of traits. Cases where the K-value is ,1 indicate convergent traits while K.1 represents that traits are more conserved than would be presumed from a Brownian expectation [47]. Relationships among variables were evaluated by both pair-wise Pearson correlations in the R package and a phylogenetically independent contrast (PIC). Possible evolutionary associations were assessed via PIC analysis, utilizing the molecular phylogenetic tree. This PIC analysis was examined with the ‘‘analysis of traits’’ module in Phylocom, which calculates the internal node values for continuous traits [48].**
+**A phylogenetic tree for these 30 fern species was constructed based on chloroplast rbcL sequences obtained from the GenBank website (http://www.ncbi.nlm.nih.gov/genbank/). Phylogenetic analyses for each matrix were carried out using the maximum likelihood method in PAUP* v.4.0b10 [44]. Schneider et al. (2004) has integrated Colysis and major components of Microsorum into Leptochilus by using nucleotide sequences derived from three plastid loci [45]. For simplicity, the old Latin names of species in Colysis and Microsorum were used in the present study. 
 
 \
-For bivariate trait relationships, responses of dependent variables were analysed with linear mixed-effect models, with species as a random effect and life form as a categorical fixed effect. Explained variance (R^2^) of mixed models were computed as in @nakagawa_general_2013, in which the marginal R^2^ represents variance explained by fixed factors and the conditional R^2^ by both fixed and random factors. Tests of allometric relationships between log-transformed biomass components were implemented using standardized major axis regression in the 'smatr' package in R [@warton2012smatr]. Principal component analysis, utilizing the ‘vegan’ package [@oksanen_vegan:_2019], was used to explore how measured functional traits were distributed and co-varied among species (mean values) and life form. All tests of statistical significance were conducted at an $\alpha$ level of 0.05. All analyses were performed with R 3.5.1 [@r_core_team_r:_2018].
+The phylogenetic signal (K-statistic) based on Brownian motion-based metrics was calculated for each continuous trait using the ‘picante’ package in R[@kembel]. Values of 'K' for a given trait that are below 1 mean that relatives resesmble one another less than we would expect for Brownian motion (lower phlogenetic signal), and vice verse for values of 'K' above 1 [@bloomberg]. Signifcant *P* values for 'K' indicates that close relatives are more similar than random species pairs for the given trait.
+
+\
+Relationships among variables were evaluated by both pair-wise Pearson correlations in the R package and a phylogenetically independent contrast (PIC). Possible evolutionary associations were assessed via PIC analysis, utilizing the molecular phylogenetic tree.
+
+\
+Bivariate relationships among continuous traits were analysed with phylogenetically independent contrasts (PIC) in the 'ape' package in R [@paradis].
+
+\
+Tests of allometric relationships between log-transformed morphological traits were implemented using standardized major axis regression in the 'smatr' package in R [@warton2012smatr]. 
+ 
+Principal component analysis, utilizing the ‘vegan’ package [@oksanen_vegan:_2019], was used to explore how measured functional traits were distributed and co-varied among species (mean values) and life form. All tests of statistical significance were conducted at an $\alpha$ level of 0.05. All analyses were performed with R 3.5.1 [@r_core_team_r:_2018].
 
 # Results
 
@@ -203,7 +214,7 @@ Figure 4. Stomatal traits and xylem area are functional different between life f
 \
 
 ```{r figure4a,  echo=FALSE, fig.align='center',fig.width = 6, fig.height = 6, warning=FALSE, message=FALSE}
-source("master_scripts/pv_global_plot.R")
+source("master_scripts/pv_global_plot_new.R")
 
 ```
 Figure 5A. Global view of pv curves. I am currently making this with ggplots, which means it looks different and I need to figure out how to combine with pv parameter figures (below). 
@@ -225,7 +236,6 @@ source("master_scripts/traits_pca_plot.R")
 Figure 6. This PCA is a mostly a placeholder, I imagine we will replace it with trait phylogeny mapping
 
 
-
 # More Plots
 
 Figures to make:
@@ -241,6 +251,20 @@ Ancestral state reconstruction for frond length
 source("master_scripts/wp_plots.R")
 ```
 Midday water potential similar across life forms.
+
+# Tables
+Table 1. Phylogenetic signal for X functional traits of tropical ferns sampled across the Euploypoid I & II clades. Meausured species (n=39) encompass tererstrial, hemi-spiphytic and epiphytic habitats across two Costa Rican forest sites.
+
+```{r table1, echo=FALSE, warning=FALSE}
+library(pixiedust)
+table1 <- read.csv("calculated_data/K_statistic_traits.csv")
+table1_new <- table1[,c(6,1,4)]
+
+dust(table1_new)%>%
+  sprinkle_colnames("Functional Trait", "K-statistic", "*P*") %>%
+  sprinkle(rows= 1, part="head",bold=TRUE)%>%
+  sprinkle_print_method("markdown")
+```
 
 
 # Discussion

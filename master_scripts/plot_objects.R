@@ -44,3 +44,4 @@ trtcols <- c("dodgerblue4","yellow4","darkorange3")
 library(scales)
 trtcols2 <- c(alpha(trtcols[1], .7), alpha(trtcols[2], .7),alpha(trtcols[3], .7))
 
+trtcols3 <- c(alpha(trtcols[1], .4), alpha(trtcols[2], .4),alpha(trtcols[3], .4))
