@@ -17,32 +17,60 @@ pv_data <- read.csv("calculated_data/pv_curves_full.csv")
 pv_data$niche2<-factor(pv_data$niche2, 
                   levels=c("terrestrial", "hemi-epiphyte", "epiphyte"))
 
-##plotting curves
-psi2lab <- expression(1/Psi~~(MPa^-1))
-op_lab <- expression(paste(Psi[o], "  (MPa)"))
-tlp_lab <- expression(paste(Psi[TLP], "  (MPa)"))
 
 ## trim weird data
 pv_data2 <- pv_data[pv_data$rwc_100 < 15 & pv_data$rwc_100 >= 0,]
 pv_data3 <- pv_data[pv_data$rwc_100 < 10 & pv_data$rwc_100 >= 0 &
                       pv_data$psi2 < 40,]
 
-terr <- pv_data3[pv_data3$niche2 == "terrestrial",]
-hemi <- pv_data3[pv_data3$niche2 == "hemi-epiphyte",]
-epi <- pv_data3[pv_data3$niche2 == "epiphyte",]
+pv_data4 <- pv_data3[complete.cases(pv_data3$psi2),]
 
-#clean up data:
-pv_data4 <- pv_data3[complete.cases(pv_data3$niche2),]
-abs <-  pv[pv$capacitance_absolute < .4,]
+terr <- pv_data4[pv_data4$niche2 == "terrestrial",]
+hemi <- pv_data4[pv_data4$niche2 == "hemi-epiphyte",]
+epi <- pv_data4[pv_data4$niche2 == "epiphyte",]
+
+#try loess
+loess_terr <- loess(psi2 ~ rwc_100, data=terr, span=.5)
+terr$smooth_terr <- predict(loess_terr)
+# pred_terr_se <-predict(loess_terr, se=T)
+
+loess_hemi<- loess(psi2 ~ rwc_100, data=hemi, span=.5)
+hemi$smooth_hemi <- predict(loess_hemi)
+
+loess_epi <- loess(psi2 ~ rwc_100, data=epi, span=.5)
+epi$smooth_epi <- predict(loess_epi)
+
+##plot bits
+psi2lab <- expression(1/Psi~~(MPa^-1))
+op_lab <- expression(paste(Psi[o], "  (MPa)"))
+tlp_lab <- expression(paste(Psi[TLP], "  (MPa)"))
+elas_lab <- expression(epsilon~~(MPa))
 
 tlp_cld <- c("a","a","a" )
 op_cld <- c("a","a","b" )
 cap_cld <- c("a","ab","b" )
 
-# jpeg(filename = "output/plot_4_pvparams.jpeg",
-#      width = 12, height = 6, units = "in", res= 400)
+#pv curve plots-------
 
-par(oma=c(4,4,1,1), mfrow=c(1,3),mgp=c(2.5,.75,0),cex.lab=1.1)
+jpeg(filename = "output/plot_4_pvparams.jpeg",
+      width = 12, height = 6, units = "in", res= 400)
+
+par(oma=c(4,4,1,1), mfrow=c(2,2),mgp=c(2.5,.75,0),cex.lab=1.1)
+
+#global pv curve
+plot(psi2~rwc_100, data=pv_data3 , type='n',xlim=c(0,11),
+     ylim=c(0,20), ylab= psi2lab, xlab = "100-RWC ( %)")
+points(psi2~rwc_100, data=pv_data4 , pch=16, col=trtcols3[niche2],
+       cex=1.25)
+lines(x=terr[order(terr$rwc_100),"rwc_100"], 
+      y=terr[order(terr$rwc_100),"smooth_terr"], type='l',
+      lwd=4, lty=2, col=trtcols[1])
+lines(x=hemi[order(hemi$rwc_100),"rwc_100"], 
+      y=hemi[order(hemi$rwc_100),"smooth_hemi"], type='l',
+      lwd=4, lty=2, col=trtcols[2])
+lines(x=epi[order(epi$rwc_100),"rwc_100"], 
+      y=epi[order(epi$rwc_100),"smooth_epi"], type='l',
+      lwd=4, lty=2,col=trtcols[3])
 
 #tlp
 boxplot(waterpot_tlp ~ niche2, data=pv, xaxt='n',ylim=c(-2,0.1),
@@ -82,4 +110,4 @@ stripchart(capacitance_zero. ~ niche2, data = abs,
 text(x=1:3, y=1.2, cap_cld)
 text(3.5, 0, "C", cex=1.25)
 
-# dev.off()
+dev.off()
