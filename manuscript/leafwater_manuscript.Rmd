@@ -47,27 +47,27 @@ Key Words:
 
 * Paragraph: epiphytism, ferns and evoln. history
 
-  + Following the rise of angiosperms, a major radiation event in ferns occurred in the Cretaceous period, leading to diversification and proliferation of modern fern taxa [@schettpelz]. Globally, fern species continue to adapt and thrive in shaded understory environments. Part of this recent Cretaceous radiation event in ferns (polypods), however, included oppourtunistic diversification into more complex ecological niches provided by now dominant angiosperm canopies [@schneider]. Consquently, one clade of ferns (Euploypoid I) has largely radiated into epiphytic niches, while a sister clade (Eupolypoid II) remained and diversified on the forest floor in tropical ecosystems (Watkins 2012).
+  + Following the rise of angiosperms, a major radiation event in ferns occurred in the Cretaceous period, leading to diversification and proliferation of modern fern taxa [@schuettpelz_evidence_2009]. Globally, fern species continue to adapt and thrive in shaded understory environments. Part of this recent Cretaceous radiation event in ferns (polypods), however, included oppourtunistic diversification into more complex ecological niches provided by now dominant angiosperm canopies [@schneider_ferns_2004]. Consquently, one clade of ferns (Euploypoid I) has largely radiated into epiphytic niches, while a sister clade (Eupolypoid II) remained and diversified on the forest floor in tropical ecosystems [@watkins_ferns_2012].
 
 * Paragraph: microhabitat differences
 
   + terrestrial vs epiphytes (cardelus)
-  + Within forests, epiphytes grow at many levels. Some are restricted to the dark understory, whereas others grow on the exposed twigs of emergent tree (Watkins 2012).
+  + Within forests, epiphytes grow at many levels. Some are restricted to the dark understory, whereas others grow on the exposed twigs of emergent tree [@watkins_ferns_2012].
   + As non-parasites, epiphyitc plants face a variety of ecological stressors, regardless of canopy position, that drive selection of functional traits key across their life history. 
   + hemi-epiphyitc life form co-exists with both these groups which may represent an evolutionary transition between terrestrial and epipythic life histories. 
 
 * Paragraph: Consequences of radiation of plants into canopy, Evolution of traits
-  + A host of studies reveal how anatomical traits directly influence physiology in ferns in a manner that is functionally different from seed plants (@woodhouse, @Zhang, @brodersen @brodribb2004).
+  + A host of studies reveal how anatomical traits directly influence physiology in ferns in a manner that is functionally different from seed plants (@woodhouse_stipe_1982, @zhang_epiphytes_2009, @brodersen_physiological_2012, @brodribb_leaf_2005).
   + includes drought tolerance in gametophyte life stage, in both life stages [@watkins]
   + It appears likely that the canalization of stomatal traits...
-  + Regardless, epiphytic ferns span a vast arraw of micrhabitats that will undergo a suite of environmental stresses (high light, high ph, limited water) that should....
+  + Regardless, epiphytic ferns span a vast arraw of microhabitats that will undergo a suite of environmental stresses (high light, high ph, limited water) that should....
 
 * Paragraph: water relations and strucutre
-  + As water transport in ferns occurs exclusively through primary vascular tissue, wrapped in discrete bundles that can span the entire frond [@pittermann 2011]...
+  + As water transport in ferns occurs exclusively through primary vascular tissue, wrapped in discrete bundles that can span the entire frond [@pittermann_structure-function_2011]...
   + Terrestrial ferns may have reduced water use efficiency, which would be consistent with Brodribb and McAdam’s hypothesis of inefficient stomatal control.
   + if stomata are regulated by leaf water status, what traits related to water relations allows ferns to succeed.
   +The evolution of xylem and that of stomata are
-tightly interconnected (Sperry, 2004). (read) - 
+tightly interconnected [@sperry_coordinating_2004]. (read) - 
 
 * Paragraph: this study seeks...
   + looking within E1 and E2 at traits related to water relations
@@ -119,21 +119,22 @@ Linear mixed-effect models were used to test responses of functional traits to c
 The conditional and marginal r2 values were calculated as per Nakagawa & Schielzeth (2013)
 
 \
-**A phylogenetic tree for these 30 fern species was constructed based on chloroplast rbcL sequences obtained from the GenBank website (http://www.ncbi.nlm.nih.gov/genbank/). Phylogenetic analyses for each matrix were carried out using the maximum likelihood method in PAUP* v.4.0b10 [44]. Schneider et al. (2004) has integrated Colysis and major components of Microsorum into Leptochilus by using nucleotide sequences derived from three plastid loci [45]. For simplicity, the old Latin names of species in Colysis and Microsorum were used in the present study. 
+A phylogenetic tree for these 39 fern species was constructed using the Maximum Likelihood method based on the Tamura 3-parameter model [@tamura_estimation_1992] and all evolitionary analyses were conducted in MEGA7 [@kumar_mega7_2016]. The tree with the highest log likelihood (-7696.70) is shown. The percentage of trees in which the associated taxa clustered together is shown next to the branches. Initial tree(s) for the heuristic search were obtained automatically by applying Neighbor-Join and BioNJ algorithms to a matrix of pairwise distances estimated using the Maximum Composite Likelihood (MCL) approach, and then selecting the topology with superior log likelihood value. The rate variation model allowed for some sites to be evolutionarily invariable ([+I], 64.89% sites). The analysis involved 40 nucleotide sequences. All positions containing gaps and missing data were eliminated. There were a total of 1131 positions in the final dataset. 
 
 \
-The phylogenetic signal (K-statistic) based on Brownian motion-based metrics was calculated for each continuous trait using the ‘picante’ package in R[@kembel]. Values of 'K' for a given trait that are below 1 mean that relatives resesmble one another less than we would expect for Brownian motion (lower phlogenetic signal), and vice verse for values of 'K' above 1 [@bloomberg]. Signifcant *P* values for 'K' indicates that close relatives are more similar than random species pairs for the given trait.
+The phylogenetic signal (K-statistic) based on Brownian motion-based metrics was calculated for each continuous trait using the ‘picante’ package in R[@kembel_picante_2010]. Values of 'K' for a given trait that are below 1 mean that relatives resesmble one another less than we would expect for Brownian motion (lower phlogenetic signal), and vice verse for values of 'K' above 1 [@blomberg_testing_2003]. Signifcant *P* values for 'K' indicates that close relatives are more similar than random species pairs for the given trait.
 
 \
 Relationships among variables were evaluated by both pair-wise Pearson correlations in the R package and a phylogenetically independent contrast (PIC). Possible evolutionary associations were assessed via PIC analysis, utilizing the molecular phylogenetic tree.
 
 \
-Bivariate relationships among continuous traits were analysed with phylogenetically independent contrasts (PIC) in the 'ape' package in R [@paradis].
+Bivariate relationships among continuous traits were analysed with phylogenetically independent contrasts (PIC) in the 'ape' package in R [@paradis_ape_2019].
 
 \
 Tests of allometric relationships between log-transformed morphological traits were implemented using standardized major axis regression in the 'smatr' package in R [@warton2012smatr]. 
- 
-Principal component analysis, utilizing the ‘vegan’ package [@oksanen_vegan:_2019], was used to explore how measured functional traits were distributed and co-varied among species (mean values) and life form. All tests of statistical significance were conducted at an $\alpha$ level of 0.05. All analyses were performed with R 3.5.1 [@r_core_team_r:_2018].
+
+\ 
+All tests of statistical significance were conducted at an $\alpha$ level of 0.05. All analyses were performed with R 3.5.1 [@r_core_team_r:_2018].
 
 # Results
 
@@ -155,8 +156,6 @@ No differences were detected in total lamina area between any of the life form g
 \
 Epiphytic and hemi-epiphytic species had 51% lower stomatal density (36&pm;1.7 mm^-2^) compared to terrestrial species (72&pm;3.1, *P* < 0.001). Stomatal length was similar across all species, however, guard cell width differed across life forms. Mean width of individual guard cells was 18 % smaller in terrestrial species compared to hemi-epiphytic of epiphytic species. Overall, stomatal size of terrestrial and epiphytic species were statistical similar, yet epiphytes had broadly higher stomatal size. Stomatal size in hemi-epiphtic species was 27 % larger than terrestrial or epiphytic life forms (*P* = 0.044).
 
-
-
 ## Foliar chemistry 
 
 Foliar nitrogen content was 29.8% lower in epiphytic ferns compared to terrestrial and hemi-epiphytic ferns (*P* = 0.007). Foliar $\delta$^13^C for terrestrial and hemi-epiphytic species were more negative that epiphytic species (*P* = 0.004, Figure 2x). Additionally, foliar$\delta$^13^C for fern species at the higher elevation Las Cruces site were less negative (-32.6 &permil) than fern species at the low elevation La Selva site (34.0 &permil,*P* = 0.015). 
@@ -171,12 +170,14 @@ Surprisingly, minimal functional differences in drought tolerance where detected
 \
 Tissue capacitance at turgor loss point (**capacitance zero?**) was 54 % lower in epiphytic compared to terrestrial species (*P* = 0.010), with hemi-epiphytic species has intermediates. **add normal capactiance instead**
 
-## Bivariate traits relationships:
+## Phylogentic traits relationships:
 
 * leaf area/stipe or others with with xylem
 * lma and nitrogen 
 * density vs size (not much with stomata and other traits)
 * others?
+
+* Kstats (table 1)
 
 # Figures
 
@@ -220,14 +221,19 @@ Figure 5. Epiphytic ferns species are not more drought tolerant. Osmotic adjustm
 
 \
 
-```{r figure5, echo=FALSE, fig.align='center',fig.width = 6, fig.height = 6, warning=FALSE, message=FALSE}
-source("phylogeny/stipe_phylo.R")
-```
-Figure 6. Ancestral state reconstructions for biomechanical and hhydraulic traits
+![](asr_stipe.jpeg)
+\
+Figure 6. Ancestral state reconstructions for stipe length
 
+\
+
+![](asr_stomata.jpeg)
+\
+Figure 7. Ancestral state reconstructions for stomatal density
 
 # Tables
-Table 1. Phylogenetic signal for X functional traits of tropical ferns sampled across the Euploypoid I & II clades. Meausured species (n=39) encompass tererstrial, hemi-spiphytic and epiphytic habitats across two Costa Rican forest sites.
+
+Table 1. Phylogenetic signal for X functional traits of tropical ferns sampled across the Euploypoid I & II clades. Meausured species (n=39) encompass tererstrial, hemi-spiphytic and epiphytic habitats across two Costa Rican forest sites. **Eventually we will drop some of these**
 
 ```{r table1, echo=FALSE, warning=FALSE, message=FALSE}
 library(pixiedust)
