@@ -57,11 +57,10 @@ Key Words:
   + hemi-epiphyitc life form co-exists with both these groups which may represent an evolutionary transition between terrestrial and epipythic life histories. 
 
 * Paragraph: Consequences of radiation of plants into canopy, Evolution of traits
-  + 
-+ A host of studies reveal how anatomical traits directly influence physiology in ferns in a manner that is functionally different from seed plants (@woodhouse, @Zhang, @brodersen @brodribb2004).
-+ includes drought tolerance in gametophyte life stage, in both life stages [@watkins]
-+ It appears likely that the canalization of stomatal traits...
-+ Regardless, epiphytic ferns span a vast arraw of micrhabitats that will undergo a suite of environmental stresses (high light, high ph, limited water) that should....
+  + A host of studies reveal how anatomical traits directly influence physiology in ferns in a manner that is functionally different from seed plants (@woodhouse, @Zhang, @brodersen @brodribb2004).
+  + includes drought tolerance in gametophyte life stage, in both life stages [@watkins]
+  + It appears likely that the canalization of stomatal traits...
+  + Regardless, epiphytic ferns span a vast arraw of micrhabitats that will undergo a suite of environmental stresses (high light, high ph, limited water) that should....
 
 * Paragraph: water relations and strucutre
   + As water transport in ferns occurs exclusively through primary vascular tissue, wrapped in discrete bundles that can span the entire frond [@pittermann 2011]...
@@ -213,49 +212,24 @@ Figure 4. Stomatal traits and xylem area are functional different between life f
 
 \
 
-```{r figure4a,  echo=FALSE, fig.align='center',fig.width = 6, fig.height = 6, warning=FALSE, message=FALSE}
-source("master_scripts/pv_global_plot_new.R")
-
-```
-Figure 5A. Global view of pv curves. I am currently making this with ggplots, which means it looks different and I need to figure out how to combine with pv parameter figures (below). 
-
-\
-
-```{r figure4b,  echo=FALSE, fig.align='center',fig.width = 12, fig.height = 6, warning=FALSE, message=FALSE}
+```{r figure4,  echo=FALSE, fig.align='center',fig.width = 12, fig.height = 12, warning=FALSE, message=FALSE}
 source("master_scripts/pv_curve_plots.R")
 
 ```
-Figure 5B. Epiphytic not more drought tolerant.  Osmotic adjustments, not shifts in cell wall flexibility explain differences in TLP. I am not sure what capacitance at TLP means. There are possibly a few low outliers that may help TLP stats....
+Figure 5. Epiphytic ferns species are not more drought tolerant. Osmotic adjustments, not shifts in cell wall flexibility explain differences in TLP. I am not sure what capacitance at TLP means.
 
 \
 
-```{r figure5,  echo=FALSE, fig.align='center',fig.width = 6, fig.height = 6, warning=FALSE, message=FALSE}
-source("master_scripts/traits_pca_plot.R")
-
-```
-Figure 6. This PCA is a mostly a placeholder, I imagine we will replace it with trait phylogeny mapping
-
-
-# More Plots
-
-Figures to make:
-
-```{r acr, echo=FALSE, fig.align='center',fig.width = 10, fig.height = 6, warning=FALSE, message=FALSE}
+```{r figure5, echo=FALSE, fig.align='center',fig.width = 6, fig.height = 6, warning=FALSE, message=FALSE}
 source("phylogeny/stipe_phylo.R")
 ```
-Ancestral state reconstruction for frond length
+Figure 6. Ancestral state reconstructions for biomechanical and hhydraulic traits
 
-\
-
-```{r middays,  echo=FALSE, fig.align='center',fig.width = 6, fig.height = 6, warning=FALSE}
-source("master_scripts/wp_plots.R")
-```
-Midday water potential similar across life forms.
 
 # Tables
 Table 1. Phylogenetic signal for X functional traits of tropical ferns sampled across the Euploypoid I & II clades. Meausured species (n=39) encompass tererstrial, hemi-spiphytic and epiphytic habitats across two Costa Rican forest sites.
 
-```{r table1, echo=FALSE, warning=FALSE}
+```{r table1, echo=FALSE, warning=FALSE, message=FALSE}
 library(pixiedust)
 table1 <- read.csv("calculated_data/K_statistic_traits.csv")
 table1_new <- table1[,c(6,1,4)]
