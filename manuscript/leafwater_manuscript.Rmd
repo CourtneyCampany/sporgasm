@@ -58,11 +58,11 @@ Key Words:
 
 * Paragraph: Consequences of radiation of plants into canopy, Evolution of traits
   + A host of studies reveal how anatomical traits directly influence physiology in ferns in a manner that is functionally different from seed plants (@woodhouse_stipe_1982, @zhang_epiphytes_2009, @brodersen_physiological_2012, @brodribb_leaf_2005).
-  + includes drought tolerance in gametophyte life stage, in both life stages [@watkins]
+  + includes drought tolerance in gametophyte life stage, in both life stages [watkins]
   + It appears likely that the canalization of stomatal traits...
-  + Regardless, epiphytic ferns span a vast arraw of microhabitats that will undergo a suite of environmental stresses (high light, high ph, limited water) that should....
+  + Regardless, epiphytic ferns span a vast arraw of micro-habitats that will undergo a suite of environmental stresses (high light, high pH, limited water) that should....
 
-* Paragraph: water relations and strucutre
+* Paragraph: water relations and structure
   + As water transport in ferns occurs exclusively through primary vascular tissue, wrapped in discrete bundles that can span the entire frond [@pittermann_structure-function_2011]...
   + Terrestrial ferns may have reduced water use efficiency, which would be consistent with Brodribb and McAdam’s hypothesis of inefficient stomatal control.
   + if stomata are regulated by leaf water status, what traits related to water relations allows ferns to succeed.
@@ -71,7 +71,7 @@ tightly interconnected [@sperry_coordinating_2004]. (read) -
 
 * Paragraph: this study seeks...
   + looking within E1 and E2 at traits related to water relations
-  + hemi as intermediaries? hemiepiphytic species begin life as epiphytes and transform into hemiepiphytes by eventually developing terrestrial root systems [@moffett]
+  + hemi as intermediaries? hemi-epiphytic species begin life as epiphytes and transform into hemi-epiphytes by eventually developing terrestrial root systems [@moffett_whats_2000]. Add watts new paper.
 
 # Methods
 
@@ -80,7 +80,7 @@ tightly interconnected [@sperry_coordinating_2004]. (read) -
 The sites used for this study included two Costa Rican wet tropical forest locations at La Selva Biological Research Station in Heredia (84⁰00’12W, 10⁰25’52N) and Las Cruces Research Station in San Vito (8° 47′ 7” N, 82° 57′ 32” W). The La Selva site is a low elevation (ca 50 m) tropical forest, with a moderate dry season. The Las Cruces site is a premontane tropical forest located at a higher elevation (ca 1200 m). Both sites receive approximately 4m of annual rainfall [@holdridge_life_1967,@gentry_four_1993].
 
 \
-A survey of morphological, stoichiometric, anatomical and leaf water relations parameters were conducted for six individuals from 39 fern species across three fundamentally distinct life forms (Table 1). Across both sites, 18 terrestrial, 15 epiphytic and 6 hemi-epiphytic species were collected and measured.  In this study, terrestrial life forms were all collected from shaded closed canopy understories in the forest floor. Epiphyitc life forms were sampled from trunks or within tree canopies, depending on the species. Epiphytic species were collected from canopy trees using single-rope climbing techniques. Hemi-epiphytic species were all collected along lower sections of trees trunks (1-3 m).  Importantly, all sampled hemi-epiphytic species are known to have root connections to forest floor soils at some point in their life history. Individuals of species were collected across multiple populations but within similar microhabitat conditions. Most sampled fern species, with the exception of hemi-epiphytes, were restricted to the eupolypod I and II clades. Vouchers for each species were deposited at the respective site of collection at either the La Selva (LSCR) or Las Cruces (LCCR) herbariums. 
+A survey of morphological, stoichiometric, anatomical and leaf water relations parameters were conducted for six individuals from 39 fern species across three fundamentally distinct life forms (Table 1). Across both sites, 18 terrestrial, 15 epiphytic and 6 hemi-epiphytic species were collected and measured.  In this study, terrestrial life forms were all collected from shaded closed canopy understories in the forest floor. Epiphytic life forms were sampled from trunks or within tree canopies, depending on the species. Epiphytic species were collected from canopy trees using single-rope climbing techniques. Hemi-epiphytic species were all collected along lower sections of trees trunks (1-3 m).  Importantly, all sampled hemi-epiphytic species are known to have root connections to forest floor soils at some point in their life history. Individuals of species were collected across multiple populations but within similar micro-habitat conditions. Most sampled fern species, with the exception of hemi-epiphytes, were restricted to the eupolypod I and II clades. Vouchers for each species were deposited at the respective site of collection at either the La Selva (LSCR) or Las Cruces (LCCR) herbariums. 
 
 ## Plant Material
 
@@ -95,7 +95,7 @@ Stipe length (cm) and lamina length (cm) were calculated from one sampled frond 
 Stomatal density (SD) was measured by directly counting stomata on the abaxial leaf surface under 40x magnification. Three leaf punches (4 mm^2^ diameter) were sampled across random locations on different pinnae from each individual. The number of stomata in each field of view were counted in three random regions on each of three leaf punches. The stomatal density (# mm^2^) for each individual is presented as the mean SD across all 9 sampled regions. Individual images of stomata were directly photographed under 40x magnification (AmScope FMA050) across all three leaf punches per individual. Stomatal length (mm) and width (mm) of both guard cells were calculated for 9 stomata for each individual using Image J. Stomatal size (SS, mm^2^) was calculated as guard cell length multiplied by the combined width of each guard cell pair, as in @franks_maximum_2009.
 
 \
-Stipes measured for vulnerability to cavitation were transversely sectioned by hand using razorblade. Stipes were sectioned at the distal end, where conduit resistivity impacts hydraulic conductivity the most. Sections were stained in toluidine blue and then mounted in glycerine on microscope slides. Each section was photographed using a light microscope mounted with a digital camera (Amscope FMA050). Section photographs were anatomically analyzed using ImageJ (National Institutes of Health, Bethesda, ML, USA). Total xylem vascular area (mm^2^) was considered the conduit lumen area and the wall area for all xylem in each cross section. 
+Stipes measured for vulnerability to cavitation were transversely sectioned by hand using razor blade. Stipes were sectioned at the distal end, where conduit resistivity impacts hydraulic conductivity the most. Sections were stained in toluidine blue and then mounted in glycerine on microscope slides. Each section was photographed using a light microscope mounted with a digital camera (Amscope FMA050). Section photographs were anatomically analyzed using ImageJ (National Institutes of Health, Bethesda, ML, USA). Total xylem vascular area (mm^2^) was considered the conduit lumen area and the wall area for all xylem in each cross section. 
 
 ## Foliar chemistry
 
@@ -122,7 +122,7 @@ The conditional and marginal r2 values were calculated as per Nakagawa & Schielz
 A phylogenetic tree for these 39 fern species was constructed using the Maximum Likelihood method based on the Tamura 3-parameter model [@tamura_estimation_1992] and all evolitionary analyses were conducted in MEGA7 [@kumar_mega7_2016]. The tree with the highest log likelihood (-7696.70) is shown. The percentage of trees in which the associated taxa clustered together is shown next to the branches. Initial tree(s) for the heuristic search were obtained automatically by applying Neighbor-Join and BioNJ algorithms to a matrix of pairwise distances estimated using the Maximum Composite Likelihood (MCL) approach, and then selecting the topology with superior log likelihood value. The rate variation model allowed for some sites to be evolutionarily invariable ([+I], 64.89% sites). The analysis involved 40 nucleotide sequences. All positions containing gaps and missing data were eliminated. There were a total of 1131 positions in the final dataset. 
 
 \
-The phylogenetic signal (K-statistic) based on Brownian motion-based metrics was calculated for each continuous trait using the ‘picante’ package in R[@kembel_picante_2010]. Values of 'K' for a given trait that are below 1 mean that relatives resesmble one another less than we would expect for Brownian motion (lower phlogenetic signal), and vice verse for values of 'K' above 1 [@blomberg_testing_2003]. Signifcant *P* values for 'K' indicates that close relatives are more similar than random species pairs for the given trait.
+The phylogenetic signal (K-statistic) based on Brownian motion-based metrics was calculated for each continuous trait using the ‘picante’ package in R[@kembel_picante_2010]. Values of 'K' for a given trait that are below 1 mean that relatives resemble one another less than we would expect for Brownian motion (lower phlogenetic signal), and vice verse for values of 'K' above 1 [@blomberg_testing_2003]. Signifcant *P* values for 'K' indicates that close relatives are more similar than random species pairs for the given trait.
 
 \
 Relationships among variables were evaluated by both pair-wise Pearson correlations in the R package and a phylogenetically independent contrast (PIC). Possible evolutionary associations were assessed via PIC analysis, utilizing the molecular phylogenetic tree.
@@ -131,10 +131,10 @@ Relationships among variables were evaluated by both pair-wise Pearson correlati
 Bivariate relationships among continuous traits were analysed with phylogenetically independent contrasts (PIC) in the 'ape' package in R [@paradis_ape_2019].
 
 \
-Tests of allometric relationships between log-transformed morphological traits were implemented using standardized major axis regression in the 'smatr' package in R [@warton2012smatr]. 
+Tests of allometric relationships between log-transformed morphological traits were implemented using standardized major axis regression in the 'smatr' package in R [@warton_smatr_2012]. 
 
 \ 
-All tests of statistical significance were conducted at an $\alpha$ level of 0.05. All analyses were performed with R 3.5.1 [@r_core_team_r:_2018].
+All tests of statistical significance were conducted at an $\alpha$ level of 0.05. All analyses were performed with R 3.5.1 [@team_r_2013].
 
 # Results
 
@@ -223,13 +223,13 @@ Figure 5. Epiphytic ferns species are not more drought tolerant. Osmotic adjustm
 
 ![](asr_stipe.jpeg)
 \
-Figure 6. Ancestral state reconstructions for stipe length
+Figure 6. Ancestral state reconstruction for stipe length mapped onto the phylogeny of the selected ferns examined in this study. A bootstrap value is associated with each node.
 
 \
 
 ![](asr_stomata.jpeg)
 \
-Figure 7. Ancestral state reconstructions for stomatal density
+Figure 7. Ancestral state reconstruction for stomatal density mapped onto the phylogeny of the selected ferns examined in this study. A bootstrap value is associated with each node.
 
 # Tables
 
@@ -251,9 +251,9 @@ dust(table1_new)%>%
 
 ## Do biomechanical relationships define water transport capacity?
 
-* Differences in slopes of scaling realtionships between epiphyitc and terrestrial (more than with phyloegny) ferns have been detected with LMA and petiole width, suggesting a balance is required between optimizing hydaulic support and providing sufficient biomechanical support [@peppe_2014]
+* Differences in slopes of scaling realtionships between epiphyitc and terrestrial (more than with phyloegny) ferns have been detected with LMA and petiole width, suggesting a balance is required between optimizing hydaulic support and providing sufficient biomechanical support [@peppe_biomechanical_2014]
 
-*  Foliar Narea increases with LMA () in terrestrial temperate ferns understory [@karst; *campany
+*  Foliar Narea increases with LMA () in terrestrial temperate ferns understory [@karst_are_2007] add campany
 
 ## Do canalized traits define leaf water status?
 

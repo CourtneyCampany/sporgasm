@@ -57,7 +57,7 @@ library(phytools)
 #plot bits
 phycols <- c("grey85","grey20")
 
-obj <- contMap(mytree2, stom, plot=FALSE)
+obj <- contMap(mytree2, stom)
 obj2 <-setMap(obj,colors=phycols)
 lastPP<-get("last_plot.phylo",envir=.PlotPhyloEnv)
 
@@ -74,6 +74,11 @@ plot(obj2, ftype="off", xlim=c(0,.15),ylim=c(-4,39),
      #ylim=lastPP$y.lim,xlim=lastPP$x.lim,
      outline=F,res=200, sig=2,lwd=3,
      legend=FALSE, mar=c(.4,0.4,0.4,0))
+
+nodelabels(round(as.numeric(mytree2$node.label) * 100,0),
+           node=2:mytree2$Nnode+Ntip(mytree2),
+           adj=c(1.25,-.4),
+           frame="none", cex=.5)
 
 text(xval,yval, obj2$tree$tip.label, pos=4, 
      col=sd_agg$sppcols, font=3, cex=.6)

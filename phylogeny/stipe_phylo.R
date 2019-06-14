@@ -51,7 +51,7 @@ library(phytools)
 
 phycols <- c("grey85","grey20")
  
-obj <- contMap(mytree2, stipe, plot=FALSE)
+obj <- contMap(mytree2, stipe)
 obj2 <-setMap(obj,colors=phycols)
 lastPP<-get("last_plot.phylo",envir=.PlotPhyloEnv)
 
@@ -59,8 +59,8 @@ xval <- lastPP$xx[1:39]
 yval <- lastPP$yy[1:39]
 
 #ancestrial state reconstruction
-# jpeg(filename = "manuscript/asr_stipe.jpeg",
-#       width = 6, height = 6, units = "in", res= 400)
+jpeg(filename = "manuscript/asr_stipe.jpeg",
+      width = 6, height = 6, units = "in", res= 400)
 
 # windows()
 
@@ -68,6 +68,11 @@ plot(obj2, ftype="off", xlim=c(0,.15),ylim=c(-4,39),
      #ylim=lastPP$y.lim,xlim=lastPP$x.lim,
      outline=F,res=200, sig=2,lwd=3,
      legend=FALSE, mar=c(.4,0.4,0.4,0))
+
+nodelabels(round(as.numeric(mytree2$node.label) * 100,0),
+           node=2:mytree2$Nnode+Ntip(mytree2),
+           adj=c(1.25,-.4),
+           frame="none", cex=.5)
 
 text(xval,yval, obj2$tree$tip.label, pos=4, 
      col=stipe_agg$sppcols, font=3, cex=.6)
@@ -82,4 +87,4 @@ add.simmap.legend(leg = niche_lab_goodorder,outline=FALSE,
                   colors=trtcols,prompt=FALSE,
                   x=.07,y=-1.75,vertical=TRUE,fsize=0.6)
 
-# dev.off()
+dev.off()
