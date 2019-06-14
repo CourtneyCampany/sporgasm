@@ -35,6 +35,8 @@ xylem_lab <- expression(Total~xylem~area[stipe]~~(mm^-2))
 wp_lab <- expression(Psi[midday]~~(MPa))
 lma_lab <- expression(LMA~~(g~m^-2))
 cap_lab <- expression(C[tlp]~~(units))
+veinlab <- expression(Vein~Density~~(mm~mm^-2))
+
 
 #colors
 # gradient <- colorRampPalette(c("dodgerblue4","darkorange3"))
