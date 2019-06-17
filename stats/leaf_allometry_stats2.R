@@ -52,8 +52,6 @@ summary(arealength_mod5)
 #traits correlated within groups, weakest with epiphytes
 
 
-
-
 # H0 : slopes are equal.
 # Likelihood ratio statistic : 0.135 with 2 degrees of freedom
 # P-value : 0.93473 ###yes slopes are equal

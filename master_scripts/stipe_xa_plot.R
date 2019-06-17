@@ -1,3 +1,7 @@
+#redo order of xylem and stipe length here and in stats
+
+
+
 #stipe bivariate plots
 
 source("master_scripts/plot_objects.R")
@@ -51,11 +55,32 @@ mtext(xylem_lab, 2, line=2.5, cex=1.1)
 
 #xylem stipe
 par(mar=c(0,0,0,0))
+with(alldata2, plot(log10(xylem_area_mm2) ~ log10(stipe_length_cm+1.01),
+                    xlab=stipe_lab, ylab=lamina_lab,axes=FALSE,
+                    pch=16, col=trtcols2[niche2],cex=1.25,
+                    xlim=c(0,2.05),
+                    ylim=c(1, 3.5)))
+magaxis(side=c(1,2), unlog=c(1,2), frame.plot=TRUE)
+legend("topleft", legend = boxlabs, pch=16, col=trtcols, bty="n", inset=.01)
+ablineclip(terr_mod, x1=log10(min(terr$stipe_length_cm+1)), 
+           x2=log10(max(terr$stipe_length_cm+1)),
+           col=trtcols[1], lwd=3, lty=2)
+ablineclip(hemi_mod, x1=log10(min(hemi$stipe_length_cm+1)), 
+           x2=log10(max(hemi$stipe_length_cm+1)),
+           col=trtcols[2], lwd=3, lty=2)
+ablineclip(epi_mod, x1=log10(min(epi$stipe_length_cm+1)), 
+           x2=log10(max(epi$stipe_length_cm+1)),
+           col=trtcols[3], lwd=3, lty=2)
+text(log10(100), log10(10), "B", cex=1.25)
+
+#xylem stipe
+par(mar=c(0,0,0,0))
 plot(xylem_area_mm2 ~ stipe_length_cm, data=alldata2, type='n',yaxt='n',
      xlab="", ylab=xylem_lab, ylim=c(0,.85), xlim=c(0,80))
 axis(2, labels=FALSE, tcl=-.25)
 axis(2, labels=FALSE, tcl=.25)
 predline(terr_mod_xa, col=trtcols[1], lwd=2, lty=2)
+# predline(hemi_mod_xa, col=trtcols[2], lwd=2, lty=2)
 predline(epi_mod_xa, col=trtcols[3], lwd=2, lty=2)
 points(xylem_area_mm2 ~ stipe_length_cm, data=alldata2, col=trtcols2[niche2],
      pch=16,cex=1.25)

@@ -1,12 +1,3 @@
-#regression between stipe length and xylem area
-
-
-alldata <- read.csv("calculated_data/ferns_traits_complete.csv")
-#reorder from ground to canopy 
-alldata$niche2<-factor(alldata$niche2, 
-                       levels=c("terrestrial", "hemi-epiphyte", "epiphyte"))
-alldata2 <- alldata[alldata$xylem_area_mm2 < .8,]
-
 library(visreg)
 library(multcomp)
 library(smatr)
@@ -17,47 +8,52 @@ library(MuMIn)
 library(lmerTest)
 library(LMERConvenienceFunctions)
 
+#regression between stipe length and xylem area
 
-arealength <- lmer(xylem_area_mm2 ~ stipe_length_cm * niche2  + (1|species),
-                   data=alldata2)
-
-Anova(arealength, type=3)
-r.squaredGLMM(arealength)
-
-
-#test hemi bad species
-hemi_nolomlap <- alldata2[alldata2$niche2 == "hemi-epiphyte" & 
-                            complete.cases(alldata2$stipe_length_cm),]
-                          
-                          & 
-                            !alldata2$genusspecies %in% "lomjap",]
-arealength_hemi <- lmer(xylem_area_mm2 ~ stipe_length_cm  + (1|species),
-                   data=hemi_nolomlap)
-Anova(arealength_hemi, type=3)
+alldata <- read.csv("calculated_data/ferns_traits_complete.csv")
+#reorder from ground to canopy 
+alldata$niche2<-factor(alldata$niche2, 
+                       levels=c("terrestrial", "hemi-epiphyte", "epiphyte"))
+alldata2 <- alldata[alldata$xylem_area_mm2 < .8,]
+alldata3 <- alldata2[complete.cases(alldata2$xylem_area_mm2) & 
+                       complete.cases(alldata2$species),]
+alldata3$stipe_nozero <- alldata3$stipe_length_cm + .1
 
 
-al_slopes <- lstrends(arealength, "niche2", var="stipe_length_cm")
-pairs(al_slopes) ##terr-epi same, hemi-epi diff, 
+#bivariate mixed model
+xylemlength <- lmer(log10(xylem_area_mm2) ~ log10(stipe_nozero) * niche2  + (1|species),
+                   data=alldata3)
+
+#model diagnostics
+qqPlot(residuals(xylemlength)) 
+plot(xylemlength)
+
+#model summary
+Anova(xylemlength, type="3") #no interactions
+r.squaredGLMM(xylemlength)
 
 
-library(emmeans)
-emmip(arealength, stipe_length_cm ~ niche2)
-emmeans(arealength, pairwise ~ stipe_length_cm : niche2)
+xylemlength3 <- sma(xylem_area_mm2 ~ stipe_nozero * niche2,
+                    data=alldata3, multcomp = TRUE,log="xy",
+                    multcompmethod='adjusted') #slopes not equal
+summary(xylemlength3) #slopes not equal, all different
+
+xylemlength4 <- sma(xylem_area_mm2 ~ stipe_nozero + niche2,
+                    data=alldata3, multcomp = TRUE,log="xy",
+                    multcompmethod='adjusted') #slopes not equal
+summary(xylemlength4) #elevations different
 
 
-arealength_mod2 <- sma(xylem_area_mm2 ~ stipe_length_cm * niche2,
-                       data=alldata2, multcomp = TRUE,
-                       multcompmethod='adjusted') #slopes not equal
-summary(arealength_mod2)
+# ------------------------------------------------------------
+#   Results of comparing lines among groups.
+# 
+# H0 : slopes are equal.
+# Likelihood ratio statistic : 65.94 with 2 degrees of freedom
+# P-value : 4.774e-15 
+# ------------------------------------------------------------
+#   
+#   H0 : no difference in elevation.
+# Wald statistic: 9.036 with 2 degrees of freedom
+# P-value : 0.010912 
+# ------------------------------------------------------------
 
-
-
-plot(xylem_area_mm2 ~ stipe_length_cm, data=hemi_nolomlap)
-
-
-plot(stipe_length_cm ~ xylem_area_mm2, data=alldata2, col=trtcols2[niche2],
-     pch=16)
-
-arealength3 <- lmer(stipe_length_cm ~ xylem_area_mm2 * niche2  + (1|species),
-                   data=alldata2)
-Anova(arealength)

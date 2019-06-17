@@ -30,25 +30,26 @@ traits <- read.csv("calculated_data/fern_traits.csv")
                         levels=c("terrestrial", "hemi-epiphyte", "epiphyte"))
   
 library(doBy)
-traits_agg <- summaryBy(frond_length_cm + stipe_length_cm ~ species + niche2,
+traits_agg <- summaryBy(lamina_area_cm2 + stipe_length_cm ~ species + niche2,
                         data=traits, FUN=mean2, keep.names = TRUE)
   
 #set species order to match phylogeny
 rownames(traits_agg) <- traits_agg$species
 traits_agg<- traits_agg[mytree3$tip.label,]
 
+#calcualte pics for 2 regression traits
+pic_lamina <- pic(traits_agg$lamina_area_cm2, mytree3,var.contrasts=TRUE)
+pic_stipe <- pic(traits_agg$stipe_length_cm, mytree3,var.contrasts=TRUE)
 
-pic_frond <- pic(traits_agg$frond_length_cm, mytree3)
-pic_niche2 <- pic(traits_agg$niche2, mytree3)
-
-frond_pic_lm <- lm(pic_frond ~ pic_niche2 -1)
-  plot(frond_pic_lm)
-  summary(frond_pic_lm)
-  confint(frond_pic_lm) 
-  anova(frond_pic_lm)
+frondstipe_pic <- lm(pic_lamina[,1] ~ pic_stipe[,1] -1)
+  plot(frondstipe_pic)
+  summary(frondstipe_pic)
+  confint(frondstipe_pic) 
+  anova(frondstipe_pic)
 
 #correlation coefficient
-cc <- sqrt(summary(frond_pic_lm)$r.squared)
+cc <- sqrt(summary(frondstipe_pic)$r.squared)
+
 
 
 #correlation matrix ---------
