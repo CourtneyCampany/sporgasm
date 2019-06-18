@@ -32,13 +32,15 @@ huber3 <- huber2[!(huber2$id %in% c("elalat-4", "aspjug-3","phlaur-4",
 boxplot(huber ~ niche2, data=huber3)
 
 xylem2 <- huber[huber$xylem_area_mm2 < 0.8,]
-boxplot(xylem_area_mm2 ~ niche2, data=xylem2)
-hist(xylem2$xylem_area_mm2) #going to need a transformation
+xylem3 <- xylem2[! xylem2$id  %in% c("lomjap-4","lomjap-3","lomjap-6"),]
 
+boxplot(xylem_area_mm2 ~ niche2, data=xylem3)
+hist(sqrt(xylem3$xylem_area_mm2)) #going to need a transformation
 
-#run stats on LMA because it jives better with other common regrssions
-xa_mod <- lmer(log10(xylem_area_mm2) ~ niche2 * site + (1|species), data=xylem2)
-xa_mod2 <- lmer(log10(xylem_area_mm2) ~ niche2 + site + (1|species), data=xylem2)
+#mixed model
+
+xa_mod <- lmer(sqrt(xylem_area_mm2) ~ niche2 * site + (1|species), data=xylem3)
+xa_mod2 <- lmer(sqrt(xylem_area_mm2) ~ niche2 + site + (1|species), data=xylem3)
 
 plot(xa_mod)
 qqPlot(residuals(xa_mod))
@@ -54,7 +56,7 @@ r.squaredGLMM(xa_mod2)
 #niche2      11.4126  2   0.003325 ** 
 
 # R2m       R2c
-# [1,] 0.2498919 0.9218862
+# [1,] 0.3016933 0.8853995
 
 visreg(xa_mod2)
 
@@ -62,10 +64,10 @@ tukey_xa <- glht(xa_mod2, linfct = mcp(niche2 = "Tukey"))
 xa_siglets <-cld(tukey_xa)
 
 # terrestrial hemi-epiphyte      epiphyte 
-# "a"          "ab"           "b" 
+# "a"          "b"           "b" 
 
 terr <- mean(xylem2[xylem2$niche2 == "terrestrial", "xylem_area_mm2"]) #0.259551
-epi <- mean(xylem2[xylem2$niche2 == "epiphyte", "xylem_area_mm2"]) #0.09025681
+epi_hemi <- mean(xylem2[!xylem2$niche2 == "terrestrial", "xylem_area_mm2"]) #0.1041174
 
 
 ###huber values ------

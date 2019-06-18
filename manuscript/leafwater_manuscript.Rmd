@@ -125,13 +125,13 @@ The phylogenetic signal (K-statistic) based on Brownian motion-based metrics was
 
 ## Frond morphology and anatomy
 
-Functional shifts in frond structural relationships for epiphtic species likely represent adaptation to the reduce the path length of water transport to lamina tissues. Total frond length was reduced by 26 % in epiphytic (59&pm;2.5) compared to terrestrial (85&pm;3.3) species, with frond length of hemi-epiphytes an intermediate between both groups (*P* = 0.021). The reduction in total frond length was driven by a large reduction (-54 %) in stipe length in epiphytic compared to terrestrial species (*P* = 0.001, Figure 1A). The majority of epiphytic and hemi-epiphytic ferns had stipes restricted to less than 20 cm (80% quantiles), while maximum stipe length of terrestrial ferns from the same probablity distribution was 42.3 cm. Allometric relationships between  stipe length and lamina area were functionally different between epiphytic species compared to terrestrial and hemi-epiphytic species (Figure 1B). Log relationships of stipe length and lamina area were positively correlated for each life form, however, pair wise differences were detected in both the slopes (*P* < 0.0001) and elevation (*P* < 0.0001) of this structural relationship for epiphytic species. Phylogenetic independent constrasts support the postive relationship between stipe length and lamina area for measured species (*P* < 0.001, r^2^ = 0.49).
+Functional shifts in frond structural relationships for epiphtic species likely represent adaptation to the reduce the path length of water transport to lamina tissues. Total frond length was reduced by 26 % in epiphytic (59&pm;2.5) compared to terrestrial (85&pm;3.3) species, with frond length of hemi-epiphytes an intermediate between both groups (*P* = 0.021). The reduction in total frond length was driven by a large reduction (-54 %) in stipe length in epiphytic compared to terrestrial species (*P* = 0.001, Figure 1A). The majority of epiphytic and hemi-epiphytic ferns had stipes restricted to less than 20 cm (80% quantiles), while maximum stipe length of terrestrial ferns from the same probablity distribution was 42.3 cm. Allometric relationships between  stipe length and lamina area were functionally different between epiphytic species compared to terrestrial and hemi-epiphytic species (Figure 1B, stipe length x life form; *P* = 0.002). Log relationships of stipe length and lamina area were positively correlated for each life form, however, pair wise differences were detected in both the slopes (*P* < 0.0001) and elevation (*P* < 0.0001) of this structural relationship for epiphytic species. Phylogenetic independent constrasts support the postive relationship between stipe length and lamina area for measured species (*P* < 0.001, r^2^ = 0.49).
 
 \
-Total xylem area was 65 % smaller in epiphytic species compared to terrestrial species (*P* = 0.003), with hemi-epiphytic species has intermediates (Figure 2A). Consequently, terrestrial species produced more xylem area per unit leaf area than epiphytic or hemi-epiphytic species, resulting in higher Huber values (*P* = 0.001). (**add means here if no figure**). Increases in total xylem area were postively correlated with increases in stipe length across all life froms (*P* = 0.0002). Pair-wise differences were detected for the slopes of this postive relationship between xylem area and stipe length across life forms, while elevations were similar (Figure 2B). Phylogenetic independent constrasts support the postive relationship between xylem area and stipe length for measured species (*P* = 0.003, r^2^ = 0.19). **Broadly, you cannot have a large stipe without large xylem area**
-
+Total xylem area was 60 % smaller in epiphytic and hemi-epiphytic species compared to terrestrial species (*P* = 0.003, Figure 2A). Consequently, terrestrial species produced more xylem area per unit leaf area than epiphytic or hemi-epiphytic species, resulting in higher Huber values (*P* = 0.001). (**add means here if no figure**). Increases in stipe length were postively correlated with increases in total xylem area across all life froms (*P* = 0.0002). Pair-wise differences were detected for the slopes (*P* < 0.0001) of this postive relationship between stipe length and xylem area across life forms, while elevations were similar (Figure 2B). Phylogenetic independent constrasts support the postive relationship between xylem area and stipe length for measured species (*P* = 0.001, r^2^ = 0.23).
 
 \
+**start here with stats and LMA figures and PICS**
 No differences were detected in total lamina area between any of the life form groups, due to the large amount of variation in lamina area across species (R^2^ marginal = 0.17 & R^2^ conditional = 0.89). However, leaf mass per unit area was 67% higher in epiphytic compared to terrestrial species, with hemi-epiphytic species intermediates between both life forms (*P* = 0.002, Figure 1C). 
 
 \
@@ -166,14 +166,14 @@ Tissue capacitance at turgor loss point (**capacitance zero?**) was 54 % lower i
 source("master_scripts/figure_1_short.R")
 
 ```
-Figure 1. Functional shift in path length to transport water, via stipe length, alters how different fern life forms build conductive structures
+Figure 1. Structural shifts in path lengths to transport water, via stipe length, alters how tropical fern life forms build conductive structures. (A) Stipe length is reduced in epiphytic tropical fern species that develop without permanent connections to soil. (B) Lamina area in tropical ferns is allometrically (log-based) related to  stipe length and this relationship varies by life form. The conditional and marginal r^2^ for the overall allometric relationship between lamina area and stipe length are 0.23 and 0.88, respectively. Significant log-linear fits for each life from are shown with dashed lines.
 
 \
 
 ```{r stipe,  echo=FALSE, fig.align='center',fig.width = 10, fig.height = 6, warning=FALSE}
 source("master_scripts/stipe_xa_plot.R")
 ```
-Figure 2. Stipe length and xylem anatomy define water supply.
+Figure 2. Conductive hydraulic supply, via total xylem area, constrains stipe lenth in tropical fern species. (A) Total xylem area is both reduced and constained in tropical epiphitic and hemi-epiphytic ferns. (B) The capacity for greater total xylem area in terretrial tropical ferns supports construction of large stipes. The conditional and marginal r^2^ for the overall postive relationship between stipe length and total xylem area are 0.30 and 0.88, respectively. Significant linear relations for each life from are shown with dashed lines representing model fits and grey shaded areas as 95 % confidence intervals for the mean.
 
 \
 
@@ -235,9 +235,12 @@ dust(table1_new)%>%
 * Differences in slopes of scaling realtionships between epiphyitc and terrestrial (more than with phyloegny) ferns have been detected with LMA and petiole width, suggesting a balance is required between optimizing hydaulic support and providing sufficient biomechanical support [@peppe_biomechanical_2014]
 
 *  Foliar Narea increases with LMA () in terrestrial temperate ferns understory [@karst_are_2007] add campany
+\
+**Broadly, you cannot have a large stipe without large xylem area**
 
-## Do canalized traits define leaf water status?
+## Do canalized traits define drought avoidance?
 
+## where do hemi-epiphytes fit?
 
 # Acknowledgements
 
