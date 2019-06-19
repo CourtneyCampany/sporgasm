@@ -4,3 +4,6 @@ We foudn that cavaitaion-resistant xylem where not the case here (see review too
 
 **Allomteric relationships between lamina area and total frond length had similar slopes across all three life forms (Figure 1a). This broad convergence in frond allometry suggests that tropical ferns build leaf structures in predictable proportions, despite variation in frond structural traits.**
   
+  
+  \
+Total chlorophyll content was similar between terrestrial and epiphytic species, although epiphytic species had a lower range of chlorophyll content.  Hemi-epiphytic species had similar chlorophyll content to terrestrial species, but were 37 % higher than epiphytic species (*P = 0.031).

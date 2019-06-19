@@ -27,11 +27,9 @@ sd_agg$sppcols <- ifelse(sd_agg$niche2 == "epiphyte", trtcols[3],
 
 
 ##phylogeny
-mytree <- read.tree("phylogeny/court_phylo.nwk")
-mytree$tip.label <- gsub("_1428_bp", "", mytree$tip.label)
+mytree <- read.tree("phylogeny/Tree_Court_MrBayes_newick.nwk")
+# mytree$tip.label <- gsub("_1428_bp", "", mytree$tip.label)
 mytree$tip.label <- gsub("_", " ", mytree$tip.label)
-
-treeorder <- mytree$tip.label
 
 #need to drop the extra species he added
 mytree2 <- drop.tip(mytree, "Dennstaedtia dissecta")
@@ -55,7 +53,7 @@ library(phytools)
 #ancestrial state reconstruction
 
 #plot bits
-phycols <- c("grey85","grey20")
+phycols <- c("grey85","black")
 
 obj <- contMap(mytree2, stom)
 obj2 <-setMap(obj,colors=phycols)

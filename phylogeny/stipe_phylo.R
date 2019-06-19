@@ -25,8 +25,8 @@ library(Hmisc)
 stipe_agg$species <- capitalize(stipe_agg$species)
 
 ##phylogeny
-mytree <- read.tree("phylogeny/court_phylo.nwk")
-  mytree$tip.label <- gsub("_1428_bp", "", mytree$tip.label)
+mytree <- read.tree("phylogeny/Tree_Court_MrBayes_newick.nwk")
+# mytree$tip.label <- gsub("_1428_bp", "", mytree$tip.label)
   mytree$tip.label <- gsub("_", " ", mytree$tip.label)
 
 treeorder <- mytree$tip.label
@@ -49,7 +49,7 @@ names(stipe)<-row.names(stipe_agg)
   
 library(phytools)
 
-phycols <- c("grey85","grey20")
+phycols <- c("grey85","black")
  
 obj <- contMap(mytree2, stipe)
 obj2 <-setMap(obj,colors=phycols)

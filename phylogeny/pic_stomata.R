@@ -10,7 +10,8 @@ mytree$tip.label <- gsub("_", " ", mytree$tip.label)
 mytree$tip.label <- tolower(mytree$tip.label)
 
 #need to drop the extra species he added
-mytree2 <- drop.tip(mytree, c("dennstaedtia dissecta", "pecluma pectinata"))
+mytree2 <- drop.tip(mytree, c("dennstaedtia dissecta","pleopeltis bradeorum",
+                              "elaphoglossum amygdalifolium"))
 
 #fix the 'not rooted' error because of zero branch lengths
 is.binary(mytree2)
@@ -24,35 +25,29 @@ alldata <- read.csv("calculated_data/ferns_traits_complete.csv")
 alldata$niche2<-factor(alldata$niche2, 
                        levels=c("terrestrial", "hemi-epiphyte", "epiphyte"))
 alldata$id <- paste(alldata$genusspecies, alldata$plant_no, sep="-")
-alldata2 <- alldata[alldata$xylem_area_mm2 < .8,]
-alldata3 <- alldata2[complete.cases(alldata2$xylem_area_mm2) & 
-                       complete.cases(alldata2$species),]
-alldata3$stipe_nozero <- alldata3$stipe_length_cm + .1
-alldata4 <- alldata3[! alldata3$id  %in% c("lomjap-4","lomjap-3","lomjap-6"),]
-  
-library(doBy)
-traits_agg <- summaryBy(xylem_area_mm2 + stipe_length_cm + stipe_nozero ~ species 
-                        + niche2,
-                        data=alldata4, FUN=mean2, keep.names = TRUE)
 
-#drop missing species
+library(doBy)
+traits_agg <- summaryBy(sd_mm2 + stomatal_size ~ species  + niche2,
+                        data=alldata, FUN=mean2, keep.names = TRUE)
   
 #set species order to match phylogeny
 traits_agg$species <- gsub("_", " ", traits_agg$species)
 rownames(traits_agg) <- traits_agg$species
+
+stomata_data <- traits_agg[complete.cases(traits_agg$stomatal_size),]
 traits_agg<- traits_agg[mytree3$tip.label,]
 
 #calcualte pics for 2 regression traits
-pic_xylem <- pic(traits_agg$xylem_area_mm2, mytree3,var.contrasts=TRUE)
-pic_stipe <- pic(traits_agg$stipe_length_cm, mytree3,var.contrasts=TRUE)
+pic_sd <- pic(traits_agg$sd_mm2, mytree3,var.contrasts=TRUE)
+pic_ss <- pic(traits_agg$stomatal_size, mytree3,var.contrasts=TRUE)
 
-xylemstipe_pic <- lm(pic_stipe[,1] ~ pic_xylem[,1]  -1) #through origin
-  plot(xylemstipe_pic)
-  summary(xylemstipe_pic)
-  confint(xylemstipe_pic) 
-  anova(xylemstipe_pic)
+stomata_pic <- lm(pic_sd[,1] ~ pic_ss[,1] -1)
+  plot(stomata_pic)
+  summary(stomata_pic)
+  confint(stomata_pic) 
+  anova(stomata_pic)
 
 #correlation coefficient
-cc <- sqrt(summary(xylemstipe_pic)$r.squared)
+cc <- sqrt(summary(stomata_pic)$r.squared)
 
 

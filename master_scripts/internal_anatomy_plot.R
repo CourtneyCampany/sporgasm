@@ -22,16 +22,8 @@ terr_mod <- lm(sd_mm2 ~ stomatal_size, data=stomata_noout[stomata_noout$niche2 =
 hemi_mod <- lm(sd_mm2 ~ stomatal_size, data=stomata_noout[stomata_noout$niche2 == "hemi-epiphyte",])
 epi_mod <- lm(sd_mm2 ~ stomatal_size, data=stomata_noout[stomata_noout$niche2 == "epiphyte",])
 
-terr_mod_xala <- lm(log10(lamina_area_cm2) ~ log10(xylem_area_mm2), data=terr)
-hemi_mod_xala <- lm(log10(lamina_area_cm2) ~ log10(xylem_area_mm2), data=hemi)
-epi_mod_xala <- lm(log10(lamina_area_cm2) ~ log10(xylem_area_mm2), data=epi)
-
-
-
 cldstomata <- c("a","b","b" )
 
-
-#plot
 # jpeg(filename = "output/figure3_anatomy.jpeg",
 #      width = 10, height = 6, units = "in", res= 400)
 
@@ -59,6 +51,5 @@ points(sd_mm2 ~ stomatal_size,data=stomata_noout,pch=16,  col= trtcols2[niche2],
        cex=1.25)
 legend("topright", legend = boxlabs, pch=16, col=trtcols, bty="n", inset=.01)
 text(0.0003, 170, "B", cex=1.25)
-
 
 # dev.off()

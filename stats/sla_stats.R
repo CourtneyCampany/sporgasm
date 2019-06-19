@@ -55,7 +55,24 @@ sla_siglets <-cld(tukey_sla)
 terr <- mean(sla[sla$niche2 == "terrestrial", "lma"]) #129.3988
 epi <- mean(sla[sla$niche2 == "epiphyte", "lma"]) #216.4421
 
+### custom quantiles for paper
+terr <- sla[sla$niche2 == "terrestrial",]
+epi <- sla[sla$niche2 == "epiphyte",]
+hemi <- sla[sla$niche2 == "hemi-epiphyte",]
+notterr <- sla[!sla$niche2 == "epiphyte",]
 
+b20epi <- nrow(epi[epi$stipe_length_cm <= 20 ,])
+a20epi <- nrow(epi[epi$stipe_length_cm > 20 ,])
+quantile(terr$lma)
+quantile(epi$lma)
+quantile(hemi$lma)
+quantile(notterr$lma)
+
+b20terr <- nrow(epi[epi$lma <= 292.5 ,])
+a20terr <- nrow(epi[epi$lma > 292.5 ,])
+
+b20hemi <- nrow(hemi[hemi$stipe_length_cm <= 20 ,])
+a20hemi <- nrow(hemi[hemi$stipe_length_cm > 20 ,])
 
 
 

@@ -3,8 +3,8 @@ source("functions_packages/basic_functions.R")
 
 
 ##phylogeny
-mytree <- read.tree("phylogeny/court_phylo.nwk")
-  mytree$tip.label <- gsub("_1428_bp", "", mytree$tip.label)
+mytree <- read.tree("phylogeny/Tree_Court_MrBayes_newick.nwk")
+  # mytree$tip.label <- gsub("_1428_bp", "", mytree$tip.label)
   mytree$tip.label <- tolower(mytree$tip.label)
   
 #need to drop the extra species he added
@@ -86,10 +86,7 @@ xa_K <- phylosignal(xadat$xylem_area_mm2, mytree_xa)
 hv_K <- phylosignal(xadat$huber, mytree_xa)
 
 
-
 library(dplyr)
-
-
 kstats <- bind_rows(c(sd_K, ss_K,length_K, width_K, xa_K, hv_K, tlp_K,
                       op_K, ela_K, capf_K, capz_K, fl_K, sl_K, la_K, chl_K,
                       sla_K, d13_K, nitro_K))

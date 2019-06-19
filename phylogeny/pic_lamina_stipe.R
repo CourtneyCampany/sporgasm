@@ -5,14 +5,12 @@ library(phytools)
 library(tidytree)
 
 ##phylogeny
-mytree <- read.tree("phylogeny/court_phylo.nwk")
-mytree$tip.label <- gsub("_1428_bp", "", mytree$tip.label)
+mytree <- read.tree("phylogeny/Tree_Court_MrBAyes_newick.nwk")
+mytree$tip.label <- gsub("_", " ", mytree$tip.label)
 mytree$tip.label <- tolower(mytree$tip.label)
 
-treeorder <- mytree$tip.label
-
 #need to drop the extra species he added
-mytree2 <- drop.tip(mytree, "dennstaedtia_dissecta")
+mytree2 <- drop.tip(mytree, "dennstaedtia dissecta")
 
 #fix the 'not rooted' error because of zero branch lengths
 is.binary(mytree2)
@@ -34,6 +32,7 @@ traits_agg <- summaryBy(lamina_area_cm2 + stipe_length_cm ~ species + niche2,
                         data=traits, FUN=mean2, keep.names = TRUE)
   
 #set species order to match phylogeny
+traits_agg$species <- gsub("_", " ", traits_agg$species)
 rownames(traits_agg) <- traits_agg$species
 traits_agg<- traits_agg[mytree3$tip.label,]
 
