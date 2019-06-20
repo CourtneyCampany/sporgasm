@@ -52,6 +52,8 @@ names(stom)<-row.names(sd_agg)
 library(phytools)
 #ancestrial state reconstruction
 
+node.label <- fernnode_perc
+
 #plot bits
 phycols <- c("grey85","black")
 
@@ -73,8 +75,8 @@ plot(obj2, ftype="off", xlim=c(0,.15),ylim=c(-4,39),
      outline=F,res=200, sig=2,lwd=3,
      legend=FALSE, mar=c(.4,0.4,0.4,0))
 
-nodelabels(round(as.numeric(mytree2$node.label) * 100,0),
-           node=2:mytree2$Nnode+Ntip(mytree2),
+nodelabels(node.label,
+           node=1:mytree2$Nnode+Ntip(mytree2),
            adj=c(1.25,-.4),
            frame="none", cex=.5)
 
@@ -85,6 +87,14 @@ add.color.bar(.06,obj2$cols,title=sd_lab,
               lims=obj$lims,digits=1,prompt=FALSE,
               outline=FALSE,
               x=0, y=-3,
+              lwd=3,fsize=.6,subtitle="")
+
+add.color.bar(.019,"black",title="",
+              lims=c(0,0.02),digits=2,
+              subtitle="nucleotide substitutions per site",
+              prompt=FALSE,
+              outline=FALSE,
+              x=.120, y=-3,
               lwd=3,fsize=.6,subtitle="")
 
 add.simmap.legend(leg = niche_lab_goodorder,outline=FALSE,

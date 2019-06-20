@@ -47,5 +47,11 @@ veinlab <- expression(Vein~Density~~(mm~mm^-2))
 trtcols <- c("dodgerblue4","yellow4","darkorange3")
 library(scales)
 trtcols2 <- c(alpha(trtcols[1], .7), alpha(trtcols[2], .7),alpha(trtcols[3], .7))
-
 trtcols3 <- c(alpha(trtcols[1], .4), alpha(trtcols[2], .4),alpha(trtcols[3], .4))
+
+
+#phylogeny bits
+
+fernnode_perc <- c(100,100,95,75,100,97,100,88,100,90,100,100,
+                   100,100,100,71,100,79,96,98,76,100,100,100,
+                   100,100,100,100,100,71,100,98,100,100,100,100)

@@ -2,58 +2,54 @@ library(picante)
 source("functions_packages/basic_functions.R")
 source("master_scripts/plot_objects.R")
 
-
-##frond morphology data
-traits <- read.csv("calculated_data/fern_traits.csv")
-  traits$niche2 <- traits$niche
-  traits$niche2 <- gsub("climber", "hemi-epiphyte", traits$niche2)
-  traits$niche2 <- as.factor(traits$niche2)
-  #reorder from ground to canopy 
-  traits$niche2<-factor(traits$niche2, 
-                        levels=c("terrestrial", "hemi-epiphyte", "epiphyte"))
+#lma data
+sla <- read.csv("calculated_data/fern_sla.csv")
+sla$niche2<-factor(sla$niche2, 
+                   levels=c("terrestrial", "hemi-epiphyte", "epiphyte"))
+sla$lma <- with(sla, 1/(sla_cm2g/10000)) #g m-2
 
 library(doBy)
-stipe_agg <- summaryBy(stipe_length_cm ~ species + niche2,
-                        data=traits, FUN=mean2, keep.names = TRUE)
-stipe_agg$sppcols <- ifelse(stipe_agg$niche2 == "terrestrial", trtcols[1], "red")
-stipe_agg$sppcols <- ifelse(stipe_agg$niche2 == "hemi-epiphyte", trtcols[2], 
-                            stipe_agg$sppcols)
-stipe_agg$sppcols <- ifelse(stipe_agg$niche2 == "epiphyte", trtcols[3], 
-                            stipe_agg$sppcols)
-stipe_agg$species <- gsub("_", " ", stipe_agg$species)
+lma_agg <- summaryBy(lma ~ species + niche2,
+                       data=sla, FUN=mean2, keep.names = TRUE)
+lma_agg$sppcols <- ifelse(lma_agg$niche2 == "terrestrial", trtcols[1], "red")
+lma_agg$sppcols <- ifelse(lma_agg$niche2 == "hemi-epiphyte", trtcols[2], 
+                          lma_agg$sppcols)
+lma_agg$sppcols <- ifelse(lma_agg$niche2 == "epiphyte", trtcols[3], 
+                            lma_agg$sppcols)
+lma_agg$species <- gsub("_", " ", lma_agg$species)
 library(Hmisc)
-stipe_agg$species <- capitalize(stipe_agg$species)
+lma_agg$species <- capitalize(lma_agg$species)
 
 ##phylogeny
 mytree <- read.tree("phylogeny/Tree_Court_MrBayes_newick.nwk")
-# mytree$tip.label <- gsub("_1428_bp", "", mytree$tip.label)
-  mytree$tip.label <- gsub("_", " ", mytree$tip.label)
+# test <- read.nexus("phylogeny/Tree_Court_MrBayes_nexus.nxs")
 
-treeorder <- mytree$tip.label
-
-#need to drop the extra species he added
+mytree$tip.label <- gsub("_", " ", mytree$tip.label)
+#need to drop the root species he added
 mytree2 <- drop.tip(mytree, "Dennstaedtia dissecta")
-
 #fix the 'not rooted' error because of zero branch lengths
 mytree3<-multi2di(mytree2)
 
+# out <- c("Christella dentata","Goniopteris curta", "Goniopteris nicaraguensis")
+# rooted_tree <- root(mytree2, out, resolve.root=TRUE)
+
 #make sure species are in same order for data and tree
-rownames(stipe_agg) <- stipe_agg$species
-stipe_agg<- stipe_agg[mytree3$tip.label,]
+rownames(lma_agg) <- lma_agg$species
+lma_agg<- lma_agg[mytree$tip.label[1:39],]
 
 ##plot bits ------
 
 # #add species as names of each value
-stipe <- stipe_agg$stipe_length_cm
-names(stipe)<-row.names(stipe_agg)
+lma <- lma_agg$lma
+names(lma)<-row.names(lma_agg)
+
+node.label <- fernnode_perc
   
 library(phytools)
 
 phycols <- c("grey85","black")
-
-node.label <- fernnode_perc
  
-obj <- contMap(mytree2, stipe)
+obj <- contMap(mytree2, lma)
 obj2 <-setMap(obj,colors=phycols)
 lastPP<-get("last_plot.phylo",envir=.PlotPhyloEnv)
 
@@ -61,11 +57,9 @@ xval <- lastPP$xx[1:39]
 yval <- lastPP$yy[1:39]
 
 #ancestrial state reconstruction
-jpeg(filename = "manuscript/asr_stipe.jpeg",
+jpeg(filename = "manuscript/asr_lma.jpeg",
       width = 6, height = 6, units = "in", res= 400)
-
 # windows()
-
 plot(obj2, ftype="off", xlim=c(0,.15),ylim=c(-4,39),
      #ylim=lastPP$y.lim,xlim=lastPP$x.lim,
      outline=F,res=200, sig=2,lwd=3,
@@ -77,9 +71,9 @@ nodelabels(node.label,
            frame="none", cex=.5)
 
 text(xval,yval, obj2$tree$tip.label, pos=4, 
-     col=stipe_agg$sppcols, font=3, cex=.6)
+     col=lma_agg$sppcols, font=3, cex=.6)
 
-add.color.bar(.06,obj2$cols,title="Stipe length  (cm)",
+add.color.bar(.06,obj2$cols,title=lma_lab,
               lims=obj$lims,digits=3,prompt=FALSE,
               outline=FALSE,
               x=0, y=-3,
