@@ -70,9 +70,9 @@ op_cld <- c("a","a","b" )
 cap_cld <- c("a","ab","b" )
 
 #pv curve plots-------
-# 
-jpeg(filename = "output/plot_4_pvparams.jpeg",
-      width = 12, height = 12, units = "in", res= 400)
+
+# jpeg(filename = "output/plot_4_pvparams.jpeg",
+#       width = 12, height = 12, units = "in", res= 400)
 
 par(mar=c(4,4,1,1), mfrow=c(2,2),mgp=c(2.5,.75,0),cex.lab=1.1)
 
@@ -149,4 +149,4 @@ stripchart(capacitance_zero. ~ niche2, data = pv,
            pch = 16,  col= trtcols2, xaxt='n', add=TRUE)
 text(x=1:3, y=1.2, cap_cld)
 
-dev.off()
+# dev.off()
