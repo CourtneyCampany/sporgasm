@@ -188,21 +188,21 @@ dust(table1_new)%>%
 # Figures
 
 ```{r figure1,  echo=FALSE, fig.align='center',fig.width = 10, fig.height = 6, warning=FALSE, message=FALSE}
-source("master_scripts/figure_1_short.R")
+source("master_scripts/figure_1.R")
 
 ```
 Figure 1. Structural shifts in path lengths to transport water, via stipe length, alters how tropical fern life forms build conductive structures. (A) Boxplots of stipe length across tropical fern life forms. (B) Lamina area in tropical ferns is allometrically (log-based) related to  stipe length and this relationship varies by life form. The conditional and marginal R^2^ for the overall allometric relationship between lamina area and stipe length are 0.23 and 0.88, respectively. Significant log-linear fits for each life from are shown with dashed lines. The width of boxplots are drawn proportional to the number of observations in each life form.
 
 \
 
-```{r stipe,  echo=FALSE, fig.align='center',fig.width = 10, fig.height = 6, warning=FALSE}
-source("master_scripts/stipe_xa_plot.R")
+```{r figure2,  echo=FALSE, fig.align='center',fig.width = 10, fig.height = 6, warning=FALSE}
+source("master_scripts/figure2.R")
 ```
 Figure 2. Conductive hydraulic supply, via total xylem area, constrains stipe lenth in tropical fern species. (A) Boxplots of Total xylem area across tropical fern life forms. (B) The capacity for greater total xylem area in terrestrial tropical ferns supports construction of large stipes. The conditional and marginal R^2^ for the overall postive relationship between stipe length and total xylem area are 0.30 and 0.88, respectively. Significant linear relationships for each life from are shown with dashed lines representing model fits and grey shaded areas as 95 % confidence intervals for the mean. The width of boxplots are drawn proportional to the number of observations in each life form.
 
 \
 
-```{r figure2,  echo=FALSE, fig.align='center',fig.width = 12, fig.height = 6, warning=FALSE, message=FALSE}
+```{r figure3,  echo=FALSE, fig.align='center',fig.width = 12, fig.height = 6, warning=FALSE, message=FALSE}
 source("master_scripts/figure2_lma.R")
 
 ```
@@ -210,7 +210,7 @@ Figure 3. Shifts in lamina thickness (LMA) and lamina chemistry differ between t
 
 \
 
-```{r figure3,  echo=FALSE, fig.align='center',fig.width = 12, fig.height = 6, warning=FALSE, message=FALSE}
+```{r figure4,  echo=FALSE, fig.align='center',fig.width = 12, fig.height = 6, warning=FALSE, message=FALSE}
 
 source("master_scripts/internal_anatomy_plot.R")
 
@@ -219,7 +219,7 @@ Figure 4. Stomatal traits differed between tropical fern life forms. (A) Boxplot
 
 \
 
-```{r figure4,  echo=FALSE, fig.align='center',fig.width = 12, fig.height = 12, warning=FALSE, message=FALSE}
+```{r figure5,  echo=FALSE, fig.align='center',fig.width = 12, fig.height = 12, warning=FALSE, message=FALSE}
 source("master_scripts/pv_curve_plots.R")
 
 ```
