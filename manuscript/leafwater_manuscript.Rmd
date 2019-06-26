@@ -42,34 +42,25 @@ Key Words:
 
 # Introduction
 
-* Paragraph: epiphytism, ferns and evoln. history
+Following the rise of angiosperms, a major radiation event in ferns occurred in the Cretaceous period that led to the diversification and proliferation of modern fern taxa [@schuettpelz_evidence_2009]. Globally, fern species continue to adapt, thrive and serve important ecological roles in shaded understory environments. However, part of this large Cretaceous radiation event in tropical ferns (Polypods) included opportunistic diversification into more complex ecological niches provided by now dominant angiosperm canopies [@schneider_ferns_2004]. Consequently, one clade of ferns (Euploypoid I) has largely radiated into epiphytic niches, while a sister clade (Eupolypoid II) remained and diversified on the forest floor in tropical ecosystems [@watkins_ferns_2012]. Extant ferns and orchids are the predominant tropical vascular epiphytes and ferns account for eight of the largest epiphyte genera [@gentry1987, @cardeulus2006]. Epiphytes may be vulnerable to global change factors because they reside at an interesting interface of vegetation and the atmosphere, but selection of tolerance mechanisms in epiphytic species may dampen this projection [@zotz2009, @gotsch2015].
 
-  + Following the rise of angiosperms, a major radiation event in ferns occurred in the Cretaceous period, leading to diversification and proliferation of modern fern taxa [@schuettpelz_evidence_2009]. Globally, fern species continue to adapt and thrive in shaded understory environments. Part of this recent Cretaceous radiation event in ferns (polypods), however, included oppourtunistic diversification into more complex ecological niches provided by now dominant angiosperm canopies [@schneider_ferns_2004]. Consquently, one clade of ferns (Euploypoid I) has largely radiated into epiphytic niches, while a sister clade (Eupolypoid II) remained and diversified on the forest floor in tropical ecosystems [@watkins_ferns_2012].
+\
+Epiphytic tropical ferns grow across a continuum of canopy positions, from heavily shaded low trunk positions to exposed twigs of emergent trees [@watkins_ferns_2012]. Hemi-epiphyitc life form also exists in tropical ferns, with germination and establishment as an epiphyte that eventually establishes a terresitrial root-soil connection [@zotz2013]. Consequently, the ecophysiology of all epiphytic ferns (and to some degree hemi-epiphytes) is moderated by variable and uncertain supplies of irradiance, mineral nutrition and water [@Luttge2012]. For example, vapor pressure deficit,light exposure and wind speed fluctuate with canopy position and size of tropical trees [@Cardelus 2005, Watkins2010, @woods2015], nitrogen and phospohorus availbility can be limited to highly variable foliar leaching and canopy soil [@cardelus2010] and water supply can be impacted by the lack of soil connections, even with ample precipitation [@gotsch2015]. The resulting micro-habitats for epiphytic ferns may often resemble niches we would never associate as being 'tropical' in nature and are undoubtably fundamentally distinct from habitats terrestrial tropic ferns inhabitat. Therefore, evolutionary selection of functional traits to adapt to these highly variable environmental conditions should have coincided with the opportunistic diversification into epiphyitc niches by ferns. 
+  
+\
+The ecological stresses of the epiphytic habitat have likely driven selection of functional traits for all vascular and non-vascular plant lineages.  Importantly, is is now generally accepted that seed-free plant lineages (including ferns) exhibit evolutionary canalized functions that could inherently inhibit their plasticity to changing environmental conditions. A suite of studies already reveal how anatomical traits directly influence physiology in ferns in a manner that is functionally different from seed plants (@woodhouse_stipe_1982, @zhang_epiphytes_2009, @brodersen_physiological_2012, @brodribb_leaf_2005). Epiphytic seed plants exhibit high adaptative capacity to maintain leaf water balance; including both drought tolerance and avoidance meachanims, foliar uptake and shifts in leaf capacitance [@gotsch2015]. However, even through a 1/3 of tropical fern species have diversified into tree canopies [@cite], our understanding of how potentially limiting plasticity in ecophysioliogical function has still resulted in such a massive diversification is surpisingly unclear. 
 
-* Paragraph: microhabitat differences
-  + epiphytes contribute to biodiversity, productivity but how their traits have adapted is unclear.
-  + terrestrial vs epiphytes (cardelus)
-  + Within forests, epiphytes grow at many levels. Some are restricted to the dark understory, whereas others grow on the exposed twigs of emergent tree [@watkins_ferns_2012].
-  + As non-parasites, epiphyitc plants face a variety of ecological stressors, regardless of canopy position, that drive selection of functional traits key across their life history. 
-  + hemi-epiphyitc life form co-exists with both these groups which may represent an evolutionary transition between terrestrial and epipythic life histories. (add Zo)
-  * ferns, as seed-free plants, have been shown to have canalized functions -- less inherent functional plasticity (yet a 1/3 of tropical fern species have diversified into canopy)
-
-* Paragraph: Consequences of radiation of plants into canopy, Evolution of traits
-  + A host of studies reveal how anatomical traits directly influence physiology in ferns in a manner that is functionally different from seed plants (@woodhouse_stipe_1982, @zhang_epiphytes_2009, @brodersen_physiological_2012, @brodribb_leaf_2005).
-  + includes drought tolerance in gametophyte life stage, in both life stages [watkins]
-  + It appears likely that the canalization of stomatal traits...
-  + Regardless, epiphytic ferns span a vast arraw of micro-habitats that will undergo a suite of environmental stresses (high light, high pH, limited water) that should....
-
-* Paragraph: water relations and structure
+\
+Adaptations of morphological, anatomical and physiolgical traits that define plant relations will be essential in the ecophysiological success of any epiphytic plant, yet our knowledge of how epiphytic fern species maintain plant water balance is currently underdeveloped. Higer degrees of dessication tolerance has been detected in the gametophyte stages of epiphytic ferns [@watkins2007], but far less is known of the sporophyte generation. Evolutionary canaluzed passive stomatal control has also been reported several times in ferns species [@brodribb2011, @ruszala2011, @mcadam2012], suggesting that ferns possess a diminished capacity to optimize water-use efficiency [@brodribb2009]. This reported inefficient stomatal function likely relates to reduced photosynthetic rates of tropical epiphytic ferns compared to figs and terrestrial ferns [@zhang_epiphytes_2009, @zhang2015]. In these studies, thicker leaves, smaller and fewer stomata and reduced vein density inhibted photosynthetic performance in epiphytic ferns. Passive stomatal function means that epiphytic fern ecophysiology will be driven by leaf water status, thus, anatomical and biomechanical traits that maintain water supply may elucidate how these ferns overcame limitations to canalized stomtatl function.
   + As water transport in ferns occurs exclusively through primary vascular tissue, wrapped in discrete bundles that can span the entire frond [@pittermann_structure-function_2011]...
-  + Terrestrial ferns may have reduced water use efficiency, which would be consistent with Brodribb and McAdam’s hypothesis of inefficient stomatal control.
-  + if stomata are regulated by leaf water status, what traits related to water relations allows ferns to succeed.
-  +The evolution of xylem and that of stomata are
-tightly interconnected [@sperry_coordinating_2004]. (read) - 
+
+  +The evolution of xylem and that of stomata are tightly interconnected [@sperry_coordinating_2004]. (read) - 
 
 * Paragraph: this study seeks...
   + looking within E1 and E2 at traits related to water relations
   + hemi as intermediaries? hemi-epiphytic species begin life as epiphytes and transform into hemi-epiphytes by eventually developing terrestrial root systems [@moffett_whats_2000]. Add watts new paper.
+  
+    with both these groups which may represent an evolutionary transition between terrestrial and epipythic life histories. (add Zo)
 
 # Methods
 
@@ -78,7 +69,7 @@ tightly interconnected [@sperry_coordinating_2004]. (read) -
 The sites used for this study included two Costa Rican wet tropical forest locations at La Selva Biological Research Station in Heredia (84⁰00’12W, 10⁰25’52N) and Las Cruces Research Station in San Vito (8° 47′ 7” N, 82° 57′ 32” W). The La Selva site is a low elevation (ca 50 m) tropical forest, with a moderate dry season. The Las Cruces site is a premontane tropical forest located at a higher elevation (ca 1200 m). Both sites receive approximately 4m of annual rainfall [@holdridge_life_1967,@gentry_four_1993].
 
 \
-A survey of morphological, stoichiometric, anatomical and leaf water relations parameters were conducted for six individuals from 39 fern species across three fundamentally distinct life forms (Table 1). Across both sites, 18 terrestrial, 15 epiphytic and 6 hemi-epiphytic species were collected and measured.  In this study, terrestrial life forms were all collected from shaded closed canopy understories in the forest floor. Epiphytic life forms were sampled from trunks or within tree canopies, depending on the species. Epiphytic species were collected from canopy trees using single-rope climbing techniques. Hemi-epiphytic species were all collected along lower sections of trees trunks (1-3 m). Importantly, all sampled hemi-epiphytic species are known to have root connections to forest floor soils at some point in their life history. Individuals of species were collected across multiple populations but within similar micro-habitat conditions. Most sampled fern species, with the exception of hemi-epiphytes, were restricted to the eupolypod I and II clades. Vouchers for each species were deposited at the respective site of collection at either the La Selva (LSCR) or Las Cruces (LCCR) herbariums. 
+A survey of morphological, stoichiometric, anatomical and leaf water relations parameters were conducted for six individuals from 39 fern species across three fundamentally distinct life forms (Table S1). Across both sites, 18 terrestrial, 15 epiphytic and 6 hemi-epiphytic species were collected and measured.  In this study, terrestrial life forms were all collected from shaded closed canopy understories in the forest floor. Epiphytic life forms were sampled from trunks or within tree canopies, depending on the species. Epiphytic species were collected from canopy trees using single-rope climbing techniques. Hemi-epiphytic species were all collected along lower sections of trees trunks (1-3 m). Importantly, all sampled hemi-epiphytic species are known to have root connections to forest floor soils at some point in their life history. Individuals of species were collected across multiple populations but within similar micro-habitat conditions. Most sampled fern species, with the exception of hemi-epiphytes, were restricted to the eupolypod I and II clades. Vouchers for each species were deposited at the respective site of collection at either the La Selva (LSCR) or Las Cruces (LCCR) herbariums. 
 
 ## Plant Material
 
@@ -114,7 +105,7 @@ For each PV curve, we graphed the relationship between 1/$\Psi$~leaf~ and leaf m
 Linear mixed-effect models were used to test responses of functional traits to categorical fixed effects of life form and site, as well as to test for bivariate relationships among key functional traits. The interaction between life form and site was tested to confirm any potential environmental or climate influence on functional trait patterns. Generally, there were few life form x site interactions, so models with life form and site as main effects were compared to full models (AIC scores) and the most parsimonious model was selected. To test for broad differences among life forms, individual plant species were treated as random effects in each model. Tukey’s post-hoc test were performed in conjunction with ANOVA to determine which mean values of functional traits were different among fixed effect treatments with the ‘multcomp’ package [@hothorn_simultaneous_2008]. We utilized a type 3 ANOVA due to an unbalanced design with the limited number of hemi-epiphytes species available. If interactions were present, we computed pairwise comparisons with the ‘emmeans’ package [@lenth_emmeans:_2018] to investigate interactions between life form and site. **For mixed-effect models, the conditional and marginal r2 values were calculated as per @nakagawa_general_2013. Confidence intervals (95%) of linear mixed-effects models were generated using bootstrapping methods with 999 simulations, using the ‘bootMer’ function in the ‘lme4’ package (Bates et al. 2015).** Tests of differences in slopes and elevations of bivariate relationships between morphological traits were implemented using standardized major axis regression in the 'smatr' package in R [@warton_smatr_2012]. 
 
 \
-A phylogenetic tree for these 39 fern species was constructed using the Maximum Likelihood method based on the Tamura 3-parameter model [@tamura_estimation_1992] and all evolutionary analyses were conducted in MEGA7 [@kumar_mega7_2016]. For each taxon, previously published sequences were obtained from GenBank (**accession numbers are provided in Supplementary information-have but need to add**). In eight instances, it was necessary to use sequences from a closely-related species in the same genus as due suitable sequences from the focal species were unavailable (see Supplementary information). The tree was rooted with a single included representative of the Dennstaedtiaceae, *D. dissecta*. We first selected the best model of nucleotide substitution with jModelTest2 (default parameters) using both Akaike and Bayesian information criteria (AIC and BIC). The selected model was GTR+G+I (lset nst=6 rates=invgamma). 
+A phylogenetic tree for these 39 fern species was constructed using the Maximum Likelihood method based on the Tamura 3-parameter model [@tamura_estimation_1992] and all evolutionary analyses were conducted in MEGA7 [@kumar_mega7_2016]. For each taxon, previously published sequences were obtained from GenBank (Table S1). In eight instances, it was necessary to use sequences from a closely-related species in the same genus as due suitable sequences from the focal species were unavailable. The tree was rooted with a single included representative of the Dennstaedtiaceae, *D. dissecta*. We first selected the best model of nucleotide substitution with jModelTest2 (default parameters) using both Akaike and Bayesian information criteria (AIC and BIC). The selected model was GTR+G+I (lset nst=6 rates=invgamma). 
 We used Bayesian Inference in MrBayes to analyze sequence data [@huelsenbeck, @ronquist]. Two runs of four Markov Chain Monte Carlo (MCMC) chains (3 “heated” and 1 “cold”) were run in parallel in MrBayes for 1 × 106 generations and sampled every 5000 generations (mcmc ngen=1000000 samplefreq=500 printfreq=500 diagnfreq=5000). Tracer (shape of the trace + effective sample size (ESS) > 200) as well as the standard deviation of split frequencies (<0.01) were used to assess stationarity of the Markov chains.
 
 \
@@ -203,7 +194,7 @@ Figure 2. Conductive hydraulic supply, via total xylem area, constrains stipe le
 \
 
 ```{r figure3,  echo=FALSE, fig.align='center',fig.width = 12, fig.height = 6, warning=FALSE, message=FALSE}
-source("master_scripts/figure2_lma.R")
+source("master_scripts/figure3.R")
 
 ```
 Figure 3. Shifts in lamina thickness (LMA) and lamina chemistry differ between tropical fern life forms. (A) Boxplots of leaf mass per unit area (LMA) across tropical fern life forms. (B) LMA is negatively related to lamina nitrogen content in only terrestrial and hemi-epiphytic ferns. (C) Boxplots of lamina $\delta$^13^C across tropical fern life forms (higher values indicate higher water-use efficiency). Significant linear relationships are shown with dashed lines representing model fits and grey shaded areas as 95 % confidence intervals for the mean. The width of boxplots are drawn proportional to the number of observations in each life form.
@@ -212,7 +203,7 @@ Figure 3. Shifts in lamina thickness (LMA) and lamina chemistry differ between t
 
 ```{r figure4,  echo=FALSE, fig.align='center',fig.width = 12, fig.height = 6, warning=FALSE, message=FALSE}
 
-source("master_scripts/internal_anatomy_plot.R")
+source("master_scripts/figure4.R")
 
 ```
 Figure 4. Stomatal traits differed between tropical fern life forms. (A) Boxplots of stomatal density across tropical fern life forms. (B) Stomatal density was negatively related to stomatal size for all life forms. Significant linear relationships for each life from are shown with dashed lines representing model fits and grey shaded areas as 95 % confidence intervals for the mean. The width of boxplots are drawn proportional to the number of observations in each life form.
@@ -220,7 +211,7 @@ Figure 4. Stomatal traits differed between tropical fern life forms. (A) Boxplot
 \
 
 ```{r figure5,  echo=FALSE, fig.align='center',fig.width = 12, fig.height = 12, warning=FALSE, message=FALSE}
-source("master_scripts/pv_curve_plots.R")
+source("master_scripts/figure5.R")
 
 ```
 Figure 5. Epiphytic tropical ferns are not more drought tolerant than terrestrial or hemi-epiphytic tropical ferns. (A) Raw results from 211 presssure volume curves from 38 tropical fern species.  Boxplots of turgor loss point (B) and osmotic potenial (C) across tropical fern life forms. Relationship between tissue capacitance at full turgor and the bulk modulus of elasticity for tropical ferns (D) and boxplots of the tissue capacitance at turgor loss point (inset). Fits for panels A,D for fern life forms use loess regression for visualization purposes. The width of boxplots are drawn proportional to the number of observations in each life form.
