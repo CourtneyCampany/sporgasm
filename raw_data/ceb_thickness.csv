@@ -1,1006 +1,190 @@
-year,species,plant_no,xylem_area_um2,ceb_thickness_um
-2017,Asplenium auretum,1,29229,100.371
-2017,Asplenium auretum,2,23610,89.65966667
-2017,Asplenium auretum,3,31410,78.29775
-2017,Asplenium auretum,4,17878,65.663
-2017,Asplenium auretum,5,22458,111.44775
-2017,Asplenium auretum,6,17343,92.3225
-2017,Asplenium serrata,1,59051,13.845625
-2017,Asplenium serrata,2,55754,20.711125
-2017,Asplenium serrata,3,120665,22.0685
-2017,Asplenium serrata,4,73830,27.183625
-2017,Asplenium serrata,5,105834,32.30845833
-2017,Asplenium serrata,6,122967,0
-2017,Asplenium juglandifolium,2,42102,123.525
-2017,Asplenium juglandifolium,3,56099,123.04175
-2017,Asplenium juglandifolium,4,12428,111.474
-2017,Asplenium juglandifolium,5,13227,102.96725
-2017,Blechnum occidentale,1,92216,6.94
-2017,Blechnum occidentale,2,140674,7.342
-2017,Blechnum occidentale,3,138140,3.9555
-2017,Blechnum occidentale,4,100628,9.30675
-2017,Blechnum occidentale,5,99148,3.377333333
-2017,Blechnum occidentale,6,118353,12.30141667
-2017,Campyloneurum,1,85515,45.74285
-2017,Campyloneurum,2,53655,48.63920833
-2017,Campyloneurum,3,75336,55.052
-2017,Campyloneurum,4,155487,80.7558
-2017,Campyloneurum,5,86991,40.49945
-2017,Campyloneurum,6,118567,47.18165
-2017,Diplazium striatum,1,324934,89.696125
-2017,Diplazium striatum,2,329917,104.259
-2017,Diplazium striatum,3,228924,91.259
-2017,Diplazium striatum,4,214427,82.425625
-2017,Diplazium striatum,5,253718,93.60775
-2017,Diplazium striatum,6,222779,100.22625
-2017,Elaphloglossum amygdafolium,1,3105,11.739
-2017,Elaphloglossum amygdafolium,2,1401,9.196125
-2017,Elaphloglossum amygdafolium,3,2288,8.126125
-2017,Elaphloglossum amygdafolium,4,2259,7.48925
-2017,Elaphloglossum amygdafolium,5,2230,6.626375
-2017,Elaphloglossum amygdafolium,6,3326,8.229
-2017,Elaphloglossum herminieri,1,25482,79.6926875
-2017,Elaphloglossum herminieri,2,45804,98.12558333
-2017,Elaphloglossum herminieri,3,22970,107.3211667
-2017,Elaphloglossum herminieri,4,32962,80.89608333
-2017,Elaphloglossum herminieri,5,20140,81.3052
-2017,Elaphloglossum herminieri,6,60595,108.387125
-2019,Elaphloglossum latifolium,1,44929,35.36075
-2019,Elaphloglossum latifolium,2,26676,39.7368125
-2019,Elaphloglossum latifolium,3,34552,20.68655
-2019,Elaphloglossum latifolium,4,53459,33.598
-2019,Elaphloglossum latifolium,5,52159,38.93695
-2019,Elaphloglossum latifolium,6,34080,16.71333333
-2019,Cyclopeltis semicordata,1,309042.438,24.2632
-2019,Cyclopeltis semicordata,2,408200.254,18.65108333
-2019,Cyclopeltis semicordata,3,170116.552,21.7948
-2019,Cyclopeltis semicordata,4,366112.647,21.29217857
-2019,Cyclopeltis semicordata,5,305728.996,15.85864286
-2019,Cyclopeltis semicordata,6,202355.506,27.9093
-2017,Mickalia,1,67877,12.37908333
-2017,Mickalia,2,101404,7.671125
-2017,Mickalia,3,63617,9.613375
-2017,Mickalia,4,75559,7.965625
-2017,Mickalia,5,52034,10.15341667
-2017,Mickalia,6,104383,9.220458333
-2017,Nephrolepis biserrata,1,265405,15.006875
-2017,Nephrolepis biserrata,2,208624,9.283458333
-2017,Nephrolepis biserrata,3,127186,17.60328333
-2017,Nephrolepis biserrata,6,82148,13.0565
-2017,Nephrolepis biserrata,8,214447,8.710233333
-2017,Nephrolepis biserrata,9,91036,9.8918
-2017,Nephrolepis rivularis,1,26959,39.18383333
-2017,Nephrolepis rivularis,2,33942,41.96833333
-2017,Nephrolepis rivularis,3,20066,26.83725
-2017,Nephrolepis rivularis,4,2522,40.60925
-2017,Nephrolepis rivularis,5,23370,23.53
-2017,Nephrolepis rivularis,6,23344,46.23208333
-2019,Tectari incisa,1,311418.821,17.4246
-2019,Tectari incisa,2,219717.175,5.553125
-2019,Tectari incisa,3,214298.323,3.4715
-2019,Tectari incisa,4,312938.359,4.70055
-2019,Tectari incisa,5,216272.506,11.74065
-2019,Tectari incisa,6,237924.359,6.7438
-2019,Lomariopsis japurensis,2,258956.813,29.47555
-2019,Lomariopsis japurensis,3,504361.714,26.35479167
-2019,Lomariopsis japurensis,4,656076.11,25.79141667
-2019,Lomariopsis japurensis,5,369554.327,20.5241
-2019,Lomariopsis japurensis,6,539840.273,29.11589286
-2019,Phlebodium aureum,1,144239.28,25.371625
-2019,Phlebodium aureum,2,142750.75,26.21585714
-2019,Phlebodium aureum,3,220483.021,26.21833333
-2019,Phlebodium aureum,4,240840.846,16.8725
-2019,Phlebodium aureum,5,236761.321,26.55841667
-2019,Phlebodium aureum,6,125731.458,10.09708333
-2019,Polybotria osmudaceaea,1,222102.608,9.25515
-2019,Polybotria osmudaceaea,2,156353.584,9.681
-2019,Polybotria osmudaceaea,3,308399.947,10.90804167
-2019,Polybotria osmudaceaea,4,114951.064,9.587416667
-2019,Polybotria osmudaceaea,5,147726.398,10.00704167
-2019,Polybotria osmudaceaea,6,134470.168,10.23895833
-2018,Serpacaulon fraxinifolium,1,106433.258,27.34566667
-2018,Serpacaulon fraxinifolium,2,109347.611,22.38525
-2018,Serpacaulon fraxinifolium,3,119499.466,27.7972
-2018,Serpacaulon fraxinifolium,6,154898.855,23.3741
-2018,Serpacaulon fraxinifolium,9,100744.563,24.59745
-2018,Serpacaulon fraxinifolium,10,169679.535,21.3432
-2018,Parapolystichum,1,358159.043,26.98385
-2018,Parapolystichum,2,294913.845,17.25915
-2018,Parapolystichum,4,216187.231,26.90175
-2018,Parapolystichum,6,115342.23,30.15495
-2018,Parapolystichum,7,85572.235,30.62214286
-2018,Parapolystichum,8,76652.659,22.15177778
-2017,Oleandra actinata,1,28950,23.56133333
-2017,Oleandra actinata,3,25473,27.84625
-2017,Oleandra actinata,5,30763,20.4329375
-2017,Oleandra actinata,6,26374,21.16566667
-2017,Oleandra actinata,7,11955,23.36316667
-2017,Oleandra actinata,8,9390,25.2905
-2017,Pleopeltis braedorum,1,16045,7.383
-2017,Pleopeltis braedorum,2,37211,7.781
-2017,Pleopeltis braedorum,3,17111,6.88075
-2017,Pleopeltis braedorum,4,18778,6.52525
-2017,Pleopeltis braedorum,5,16266,7.6855
-2017,Pleopeltis braedorum,6,11954,4.103
-2018,Nephro brownii,1,194725.725,20.49725
-2018,Nephro brownii,2,280710.399,7.098107143
-2018,Nephro brownii,3,370766.247,14.45396429
-2018,Nephro brownii,4,318328.905,10.43592857
-2018,Nephro brownii,5,248661.537,15.6
-2018,Nephro brownii,6,363516.263,15.33391667
-2018,Niphidium crassifolium,1,53172.936,28.22575
-2018,Niphidium crassifolium,2,35490.205,42.75795
-2018,Niphidium crassifolium,3,32760.803,41.5746
-2018,Niphidium crassifolium,4,103172.792,36.89315
-2018,Niphidium crassifolium,5,99674.557,55.3497
-2018,Niphidium crassifolium,6,173200.15,54.0949
-2018,Lomariopsis maxonii,1,193239.137,68.5478
-2018,Lomariopsis maxonii,2,90803.252,48.6305
-2018,Lomariopsis maxonii,3,107976.649,51.41595
-2018,Lomariopsis maxonii,4,169174.788,61.2943
-2018,Lomariopsis maxonii,5,119100.491,48.93575
-2018,Lomariopsis maxonii,6,76887.078,29.9781875
-2018,Elaphoglossum decursivum,1,39407.019,19.36895
-2018,Elaphoglossum decursivum,2,36557.665,14.19645
-2018,Elaphoglossum decursivum,3,34471.007,15.62935
-2018,Elaphoglossum decursivum,4,30624.253,16.50045
-2018,Elaphoglossum decursivum,5,27150.006,20.1535
-2018,Elaphoglossum decursivum,6,30397.715,21.334
-2018,Diplazium prominulum,1,106422.971,22.56925
-2018,Diplazium prominulum,2,175605.208,14.04625
-2018,Diplazium prominulum,3,178086.003,11.39225
-2018,Diplazium prominulum,4,80541.505,13.3325
-2018,Diplazium prominulum,5,85131.145,23.61525
-2018,Diplazium prominulum,7,85885.929,7.0665
-2018,Dryopteris patula,1,235820.178,14.07182143
-2018,Dryopteris patula,2,251243.244,14.46
-2018,Dryopteris patula,3,97919.624,18.42105
-2018,Dryopteris patula,4,103860.458,20.0029
-2018,Dryopteris patula,5,105418.76,18.98355
-2018,Dryopteris patula,6,79110.959,22.7828
-2018,Asplenium uniseriale,2,29277.6,49.2895
-2018,Asplenium uniseriale,3,36703.254,59.09775
-2018,Asplenium uniseriale,4,28787.168,51.98875
-2018,Asplenium uniseriale,5,23113.533,87.750125
-2018,Asplenium uniseriale,6,24431.842,92.119
-2018,Asplenium uniseriale,7,27954.45,43.506625
-2018,Blechnum schedya,1,375834.069,9.400636364
-2018,Blechnum schedya,2,482534.641,17.33035
-2018,Blechnum schedya,3,520521.741,11.74536111
-2018,Blechnum schedya,4,377448.337,4.335075
-2018,Blechnum schedya,5,411167.932,8.210613636
-2018,Blechnum schedya,6,452450.458,28.17045
-2017,Salpichlaena,1,224482.395,11.672
-2017,Salpichlaena,2,270082.527,20.93895
-2017,Salpichlaena,3,295716.262,22.12725
-2017,Salpichlaena,4,204644.752,21.95242857
-2017,Salpichlaena,20,396191.791,22.75121429
-2017,Salpichlaena,21,320710.762,25.39014286
-2017,Serpocaulon loriciforme,4,23833.66,26.9813
-2017,Serpocaulon loriciforme,5,40876.898,16.01105
-2017,Serpocaulon loriciforme,6,37919.059,28.17715
-2017,Serpocaulon loriciforme,9,41068.633,20.797
-2017,Serpocaulon loriciforme,10,42425.407,11.63035
-2017,Serpocaulon loriciforme,12,20100.025,30.7146
-2018,Serpocaulon triseriale,1,334375,29.71015
-2018,Serpocaulon triseriale,2,271531.06,49.46615
-2018,Serpocaulon triseriale,3,388377.703,52.16945
-2018,Serpocaulon triseriale,4,341176.24,63.2717
-2018,Serpocaulon triseriale,5,145474.508,27.40355
-2018,Serpocaulon triseriale,6,236731.811,42.1456
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
-,,,,
+species,plant_no,xylem_area_um2,ceb_thickness_um
+asplenium_auritum,1,29229,100.371
+asplenium_auritum,2,23610,89.65966667
+asplenium_auritum,3,31410,78.29775
+asplenium_auritum,4,17878,65.663
+asplenium_auritum,5,22458,111.44775
+asplenium_auritum,6,17343,92.3225
+asplenium_serratum,1,59051,13.845625
+asplenium_serratum,2,55754,20.711125
+asplenium_serratum,3,120665,22.0685
+asplenium_serratum,4,73830,27.183625
+asplenium_serratum,5,105834,32.30845833
+asplenium_serratum,6,122967,0
+asplenium_juglandifolium,2,42102,123.525
+asplenium_juglandifolium,3,56099,123.04175
+asplenium_juglandifolium,4,12428,111.474
+asplenium_juglandifolium,5,13227,102.96725
+blechnum_occidentale,1,92216,6.94
+blechnum_occidentale,2,140674,7.342
+blechnum_occidentale,3,138140,3.9555
+blechnum_occidentale,4,100628,9.30675
+blechnum_occidentale,5,99148,3.377333333
+blechnum_occidentale,6,118353,12.30141667
+campyloneurum_brevifolium,1,85515,45.74285
+campyloneurum_brevifolium,2,53655,48.63920833
+campyloneurum_brevifolium,3,75336,55.052
+campyloneurum_brevifolium,4,155487,80.7558
+campyloneurum_brevifolium,5,86991,40.49945
+campyloneurum_brevifolium,6,118567,47.18165
+diplazium_striatastrum,1,324934,89.696125
+diplazium_striatastrum,2,329917,104.259
+diplazium_striatastrum,3,228924,91.259
+diplazium_striatastrum,4,214427,82.425625
+diplazium_striatastrum,5,253718,93.60775
+diplazium_striatastrum,6,222779,100.22625
+elaphoglossum_amygdalifolium,1,3105,11.739
+elaphoglossum_amygdalifolium,2,1401,9.196125
+elaphoglossum_amygdalifolium,3,2288,8.126125
+elaphoglossum_amygdalifolium,4,2259,7.48925
+elaphoglossum_amygdalifolium,5,2230,6.626375
+elaphoglossum_amygdalifolium,6,3326,8.229
+elaphoglossum_herminieri,1,25482,79.6926875
+elaphoglossum_herminieri,2,45804,98.12558333
+elaphoglossum_herminieri,3,22970,107.3211667
+elaphoglossum_herminieri,4,32962,80.89608333
+elaphoglossum_herminieri,5,20140,81.3052
+elaphoglossum_herminieri,6,60595,108.387125
+elaphoglossum_latifolium,1,44929,35.36075
+elaphoglossum_latifolium,2,26676,39.7368125
+elaphoglossum_latifolium,3,34552,20.68655
+elaphoglossum_latifolium,4,53459,33.598
+elaphoglossum_latifolium,5,52159,38.93695
+elaphoglossum_latifolium,6,34080,16.71333333
+cyclopeltis_semicordata,1,309042.438,24.2632
+cyclopeltis_semicordata,2,408200.254,18.65108333
+cyclopeltis_semicordata,3,170116.552,21.7948
+cyclopeltis_semicordata,4,366112.647,21.29217857
+cyclopeltis_semicordata,5,305728.996,15.85864286
+cyclopeltis_semicordata,6,202355.506,27.9093
+mickelia_nicotianifolia,1,67877,12.37908333
+mickelia_nicotianifolia,2,101404,7.671125
+mickelia_nicotianifolia,3,63617,9.613375
+mickelia_nicotianifolia,4,75559,7.965625
+mickelia_nicotianifolia,5,52034,10.15341667
+mickelia_nicotianifolia,6,104383,9.220458333
+nephrolepis_biserrata,1,265405,15.006875
+nephrolepis_biserrata,2,208624,9.283458333
+nephrolepis_biserrata,3,127186,17.60328333
+nephrolepis_biserrata,6,82148,13.0565
+nephrolepis_biserrata,8,214447,8.710233333
+nephrolepis_biserrata,9,91036,9.8918
+nephrolepis_rivularis,1,26959,39.18383333
+nephrolepis_rivularis,2,33942,41.96833333
+nephrolepis_rivularis,3,20066,26.83725
+nephrolepis_rivularis,4,2522,40.60925
+nephrolepis_rivularis,5,23370,23.53
+nephrolepis_rivularis,6,23344,46.23208333
+tectaria_incisa,1,311418.821,17.4246
+tectaria_incisa,2,219717.175,5.553125
+tectaria_incisa,3,214298.323,3.4715
+tectaria_incisa,4,312938.359,4.70055
+tectaria_incisa,5,216272.506,11.74065
+tectaria_incisa,6,237924.359,6.7438
+lomariopsis_japurensis,2,258956.813,29.47555
+lomariopsis_japurensis,3,504361.714,26.35479167
+lomariopsis_japurensis,4,656076.11,25.79141667
+lomariopsis_japurensis,5,369554.327,20.5241
+lomariopsis_japurensis,6,539840.273,29.11589286
+phlebodium_aureum,1,144239.28,25.371625
+phlebodium_aureum,2,142750.75,26.21585714
+phlebodium_aureum,3,220483.021,26.21833333
+phlebodium_aureum,4,240840.846,16.8725
+phlebodium_aureum,5,236761.321,26.55841667
+phlebodium_aureum,6,125731.458,10.09708333
+polybotrya_osmundacea,1,222102.608,9.25515
+polybotrya_osmundacea,2,156353.584,9.681
+polybotrya_osmundacea,3,308399.947,10.90804167
+polybotrya_osmundacea,4,114951.064,9.587416667
+polybotrya_osmundacea,5,147726.398,10.00704167
+polybotrya_osmundacea,6,134470.168,10.23895833
+serpocaulon_fraxinifolium,1,106433.258,27.34566667
+serpocaulon_fraxinifolium,2,109347.611,22.38525
+serpocaulon_fraxinifolium,3,119499.466,27.7972
+serpocaulon_fraxinifolium,6,154898.855,23.3741
+serpocaulon_fraxinifolium,9,100744.563,24.59745
+serpocaulon_fraxinifolium,10,169679.535,21.3432
+parapolystichum_excultum,1,358159.043,26.98385
+parapolystichum_excultum,2,294913.845,17.25915
+parapolystichum_excultum,4,216187.231,26.90175
+parapolystichum_excultum,6,115342.23,30.15495
+parapolystichum_excultum,7,85572.235,30.62214286
+parapolystichum_excultum,8,76652.659,22.15177778
+oleandra_articulata,1,28950,23.56133333
+oleandra_articulata,3,25473,27.84625
+oleandra_articulata,5,30763,20.4329375
+oleandra_articulata,6,26374,21.16566667
+oleandra_articulata,7,11955,23.36316667
+oleandra_articulata,8,9390,25.2905
+pleopeltis_bradeorum,1,16045,7.383
+pleopeltis_bradeorum,2,37211,7.781
+pleopeltis_bradeorum,3,17111,6.88075
+pleopeltis_bradeorum,4,18778,6.52525
+pleopeltis_bradeorum,5,16266,7.6855
+pleopeltis_bradeorum,6,11954,4.103
+nephrolepis_brownii,1,194725.725,20.49725
+nephrolepis_brownii,2,280710.399,7.098107143
+nephrolepis_brownii,3,370766.247,14.45396429
+nephrolepis_brownii,4,318328.905,10.43592857
+nephrolepis_brownii,5,248661.537,15.6
+nephrolepis_brownii,6,363516.263,15.33391667
+niphidium_crassifolium,1,53172.936,28.22575
+niphidium_crassifolium,2,35490.205,42.75795
+niphidium_crassifolium,3,32760.803,41.5746
+niphidium_crassifolium,4,103172.792,36.89315
+niphidium_crassifolium,5,99674.557,55.3497
+niphidium_crassifolium,6,173200.15,54.0949
+lomariopsis_maxonii,1,193239.137,68.5478
+lomariopsis_maxonii,2,90803.252,48.6305
+lomariopsis_maxonii,3,107976.649,51.41595
+lomariopsis_maxonii,4,169174.788,61.2943
+lomariopsis_maxonii,5,119100.491,48.93575
+lomariopsis_maxonii,6,76887.078,29.9781875
+elaphoglossum_decursivum,1,39407.019,19.36895
+elaphoglossum_decursivum,2,36557.665,14.19645
+elaphoglossum_decursivum,3,34471.007,15.62935
+elaphoglossum_decursivum,4,30624.253,16.50045
+elaphoglossum_decursivum,5,27150.006,20.1535
+elaphoglossum_decursivum,6,30397.715,21.334
+diplazium_prominulum,1,106422.971,22.56925
+diplazium_prominulum,2,175605.208,14.04625
+diplazium_prominulum,3,178086.003,11.39225
+diplazium_prominulum,4,80541.505,13.3325
+diplazium_prominulum,5,85131.145,23.61525
+diplazium_prominulum,7,85885.929,7.0665
+dryopteris_patula,1,235820.178,14.07182143
+dryopteris_patula,2,251243.244,14.46
+dryopteris_patula,3,97919.624,18.42105
+dryopteris_patula,4,103860.458,20.0029
+dryopteris_patula,5,105418.76,18.98355
+dryopteris_patula,6,79110.959,22.7828
+asplenium_uniseriale,2,29277.6,49.2895
+asplenium_uniseriale,3,36703.254,59.09775
+asplenium_uniseriale,4,28787.168,51.98875
+asplenium_uniseriale,5,23113.533,87.750125
+asplenium_uniseriale,6,24431.842,92.119
+asplenium_uniseriale,7,27954.45,43.506625
+parablechnum_schiedeanum,1,375834.069,9.400636364
+parablechnum_schiedeanum,2,482534.641,17.33035
+parablechnum_schiedeanum,3,520521.741,11.74536111
+parablechnum_schiedeanum,4,377448.337,4.335075
+parablechnum_schiedeanum,5,411167.932,8.210613636
+parablechnum_schiedeanum,6,452450.458,28.17045
+salpichlaena_volubilis,1,224482.395,11.672
+salpichlaena_volubilis,2,270082.527,20.93895
+salpichlaena_volubilis,3,295716.262,22.12725
+salpichlaena_volubilis,4,204644.752,21.95242857
+salpichlaena_volubilis,20,396191.791,22.75121429
+salpichlaena_volubilis,21,320710.762,25.39014286
+serpocaulon_loriciforme,4,23833.66,26.9813
+serpocaulon_loriciforme,5,40876.898,16.01105
+serpocaulon_loriciforme,6,37919.059,28.17715
+serpocaulon_loriciforme,9,41068.633,20.797
+serpocaulon_loriciforme,10,42425.407,11.63035
+serpocaulon_loriciforme,12,20100.025,30.7146
+serpocaulon_triseriale,1,334375,29.71015
+serpocaulon_triseriale,2,271531.06,49.46615
+serpocaulon_triseriale,3,388377.703,52.16945
+serpocaulon_triseriale,4,341176.24,63.2717
+serpocaulon_triseriale,5,145474.508,27.40355
+serpocaulon_triseriale,6,236731.811,42.1456
