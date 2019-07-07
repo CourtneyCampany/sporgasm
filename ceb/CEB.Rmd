@@ -1,0 +1,168 @@
+---
+title: "CEB preliminary"
+output: word_document
+---
+
+```{r setup, include=FALSE, echo=FALSE, warning=FALSE, message=FALSE}
+library(knitr)
+opts_knit$set(root.dir = '../')
+#global packages and plot labels
+library(visreg)
+library(multcomp)
+library(car)
+library(lme4)
+library(MuMIn)
+
+```
+
+Below are the preliminary analyses from the CEB data.  I have included lots of the code so you can see how what the model setup looks like and what steps I went through. I basically just analysed CEB thickness by life form and site. Then plotted against every variables. I did not find anything particularly meaningful.
+
+```{r datasets, warning=FALSE, message=FALSE}
+source("master_scripts/plot_objects.R")
+
+ceb <- read.csv("raw_data/ceb_thickness.csv")
+niche <- read.csv("raw_data/species_niches.csv")
+
+ceb2 <- merge(ceb, niche)
+  ceb2$niche2 <- gsub("climber", "hemi-epiphyte", ceb2$niche)
+  ceb2$niche2 <- as.factor(ceb2$niche2)
+  #reorder from ground to canopy 
+  ceb2$niche2<-factor(ceb2$niche2, 
+               levels=c("terrestrial", "hemi-epiphyte", "epiphyte"))
+  ceb2$curve_id <- with(ceb2, paste(genusspecies, plant_no, sep="-"))
+#drop asplenium #6 with 0.0
+cebnozero <- ceb2[-16,] 
+
+#data for plotting
+#larger trait dataset
+ferndat <- read.csv("calculated_data/ferns_traits_complete.csv")
+
+ceb_regress <- merge(ceb2, ferndat, all=TRUE)
+ceb_regress2 <- ceb_regress[complete.cases(ceb_regress$ceb_thickness_um),]
+
+#k max data
+kmax <- read.csv("calculated_data/lascruces_kmax.csv")
+kmax2 <- merge(kmax, ceb2)
+
+#p50
+p50 <- read.csv("calculated_data/species_p50.csv")
+names(p50)[1] <- "curve_id"
+p50dat <- p50[p50$x==50,]
+p50_ceb <- merge(ceb2[,c(1,4:5,7,9:10)], p50dat)
+
+```
+
+## CEB by life form
+
+```{r ceb, warning=FALSE, message=FALSE}
+boxplot(ceb_thickness_um ~ niche2, data=ceb2) 
+#data check
+hist(sqrt(ceb2$ceb_thickness_um), main="Square-root transformed for normal distribution")
+
+#test interaction with site and if the indiviudal with 0.0 ceb matters
+ceb_mod <- lmer(sqrt(ceb_thickness_um) ~ niche2 * site + (1|species), 
+                   data=ceb2)
+ceb_mod2 <- lmer(sqrt(ceb_thickness_um) ~ niche2 + site + (1|species), 
+                    data=ceb2)
+#without asp-6
+ceb_mod3 <- lmer(sqrt(ceb_thickness_um) ~ niche2 * site + (1|species), 
+                 data=cebnozero)
+
+#model diagnostics
+qqPlot(residuals(ceb_mod)) #good
+plot(ceb_mod) ##transformation fixes skewness
+
+#model summary
+#Anova(ceb_mod3, type="3") #no interactions
+#anova(ceb_mod, ceb_mod2) #models similar (with and without interaction)
+print(AIC(ceb_mod, ceb_mod2)) #keep models with interaction
+
+#effect of life form (niche2) present
+print(Anova(ceb_mod, type="3"))
+print(r.squaredGLMM(ceb_mod)) #diff between two r2 values is the variation of CEB in species, so here quite a lot
+
+#Tukeys test for model with and without asplenium-6
+tukey_ceb <- glht(ceb_mod, linfct = mcp(niche2 = "Tukey"))
+print(cld(tukey_ceb))
+
+tukey_ceb_noasp <- glht(ceb_mod3, linfct = mcp(niche2 = "Tukey"))
+print(cld(tukey_ceb_noasp))
+
+#hemi-epiphyte is different from epiphyte, probably not that exciting. See box plot above. Aspelnium-6 doesnt change results
+```
+
+## Bivariate plots with CEB
+
+I just assumed we wanted to treat CEB thickness as the independent variable.
+
+### CEB vs pressure volume curve parameters
+```{r tlp}
+par(mar=c(4,4,1,1))
+plot(waterpot_tlp ~ ceb_thickness_um,pch=16, col=trtcols2[niche2],
+     data=ceb_regress2)
+plot(osmotic_potential ~ ceb_thickness_um,pch=16, col=trtcols2[niche2],
+     data=ceb_regress2)
+plot(capacitance_full ~ ceb_thickness_um,pch=16, col=trtcols2[niche2],
+     data=ceb_regress2)
+plot(elasticity ~ ceb_thickness_um,pch=16, col=trtcols2[niche2],
+     data=ceb_regress2)
+```
+
+### CEB vs basic morphology
+```{r morph,}
+#basic plots morphology
+plot(lamina_area_cm2 ~ ceb_thickness_um,pch=16, col=trtcols2[niche2],
+     data=ceb_regress2)
+plot(frond_length_cm ~ ceb_thickness_um,pch=16, col=trtcols2[niche2],
+     data=ceb_regress2)
+plot(stipe_length_cm ~ ceb_thickness_um,pch=16, col=trtcols2[niche2],
+     data=ceb_regress2)
+plot(elasticity ~ ceb_thickness_um,pch=16, col=trtcols2[niche2],
+     data=ceb_regress2)
+plot(sla_cm2g ~ ceb_thickness_um,pch=16, col=trtcols2[niche2],
+     data=ceb_regress2)
+```
+
+### CEB vs internal anatomy
+```{r anat}
+plot(xylem_area_mm2 ~ ceb_thickness_um,pch=16, col=trtcols2[niche2],
+     data=ceb_regress2)
+plot(stomatal_size ~ ceb_thickness_um,pch=16, col=trtcols2[niche2],
+     data=ceb_regress2)
+plot(sd_mm2 ~ ceb_thickness_um,pch=16, col=trtcols2[niche2],
+     data=ceb_regress2)
+```
+
+### CEB vs leaf chemistry
+```{r chem}
+#basic plots chemistry
+plot(d13C ~ ceb_thickness_um,pch=16, col=trtcols2[niche2],
+     data=ceb_regress2)
+plot(n_perc ~ ceb_thickness_um,pch=16, col=trtcols2[niche2],
+     data=ceb_regress2)
+```
+
+### CEB vs V-Curve parameters
+```{r}
+plot(K ~ ceb_thickness_um,pch=16, col=trtcols2[niche2],
+     data=kmax2)
+
+plot(Px ~ ceb_thickness_um,pch=16, col=trtcols2[niche2],
+     data=p50_ceb, ylab="p50")
+```
+
+## Bivariate stats
+I combed through all of these and this is the only significant relationship I found with the full model
+
+```{r stats}
+elas_ceb_mod <- lmer(elasticity ~ ceb_thickness_um  * niche2 +(1|species), data=ceb_regress2)
+print(Anova(elas_ceb_mod, type=3))
+#elasticity varies by CEB, but 2 data points drive it
+visreg(elas_ceb_mod, "ceb_thickness_um", by="niche2")
+
+#pairwise contrasts show how hemi is different (but the plot above makes this spurious)
+library(emmeans)
+emmeans(elas_ceb_mod, pairwise ~ ceb_thickness_um : niche2)
+
+```
+

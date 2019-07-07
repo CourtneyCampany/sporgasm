@@ -79,8 +79,6 @@ plot(frond_length_cm ~ ceb_thickness_um,pch=16, col=trtcols2[niche2],
      data=ceb_regress2)
 plot(stipe_length_cm ~ ceb_thickness_um,pch=16, col=trtcols2[niche2],
      data=ceb_regress2)
-plot(elasticity ~ ceb_thickness_um,pch=16, col=trtcols2[niche2],
-     data=ceb_regress2)
 plot(sla_cm2g ~ ceb_thickness_um,pch=16, col=trtcols2[niche2],
      data=ceb_regress2)
 
@@ -117,6 +115,11 @@ plot(Px ~ ceb_thickness_um,pch=16, col=trtcols2[niche2],
      data=p50_ceb) ##possible
 
 #bivariate mixed model
-p50_ceb_mod <- lmer(Px ~ ceb_thickness_um  * niche2 
-                 + (1|species),  data=p50_ceb)
+p50_ceb_mod <- lmer(Px ~ ceb_thickness_um  * niche2 +(1|species),
+                    data=p50_ceb)
+K_ceb_mod <- lmer(K ~ ceb_thickness_um  * niche2 +(1|species),
+                    data=kmax2)
+test_ceb_mod <- lmer(frond_length_cm ~ ceb_thickness_um  * niche2 +(1|species),
+                  data=ceb_regress2)
+Anova(test_ceb_mod, type=3)
 
