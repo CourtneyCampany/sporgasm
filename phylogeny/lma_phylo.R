@@ -21,8 +21,8 @@ library(Hmisc)
 lma_agg$species <- capitalize(lma_agg$species)
 
 ##phylogeny
-mytree <- read.tree("phylogeny/Tree_Court_MrBayes_newick.nwk")
-# test <- read.nexus("phylogeny/Tree_Court_MrBayes_nexus.nxs")
+# mytree <- read.tree("phylogeny/Tree_Court_MrBayes_newick.nwk")
+mytree <- read.tree("phylogeny/constrain_tree_fern.nwk")
 
 mytree$tip.label <- gsub("_", " ", mytree$tip.label)
 #need to drop the root species he added

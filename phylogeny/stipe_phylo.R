@@ -25,7 +25,9 @@ library(Hmisc)
 stipe_agg$species <- capitalize(stipe_agg$species)
 
 ##phylogeny
-mytree <- read.tree("phylogeny/Tree_Court_MrBayes_newick.nwk")
+# mytree <- read.tree("phylogeny/Tree_Court_MrBayes_newick.nwk")
+mytree <- read.tree("phylogeny/constrain_tree_fern.nwk")
+
 # mytree$tip.label <- gsub("_1428_bp", "", mytree$tip.label)
   mytree$tip.label <- gsub("_", " ", mytree$tip.label)
 

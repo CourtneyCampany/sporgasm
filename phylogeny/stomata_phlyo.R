@@ -27,7 +27,8 @@ sd_agg$sppcols <- ifelse(sd_agg$niche2 == "epiphyte", trtcols[3],
 
 
 ##phylogeny
-mytree <- read.tree("phylogeny/Tree_Court_MrBayes_newick.nwk")
+# mytree <- read.tree("phylogeny/Tree_Court_MrBayes_newick.nwk")
+mytree <- read.tree("phylogeny/constrain_tree_fern.nwk")
 # mytree$tip.label <- gsub("_1428_bp", "", mytree$tip.label)
 mytree$tip.label <- gsub("_", " ", mytree$tip.label)
 

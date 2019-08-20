@@ -5,9 +5,10 @@ library(phytools)
 library(tidytree)
 
 ##phylogeny
-mytree <- read.tree("phylogeny/Tree_Court_MrBAyes_newick.nwk")
-mytree$tip.label <- gsub("_", " ", mytree$tip.label)
-mytree$tip.label <- tolower(mytree$tip.label)
+# mytree <- read.tree("phylogeny/Tree_Court_MrBayes_newick.nwk")
+mytree <- read.tree("phylogeny/constrain_tree_fern.nwk")
+  mytree$tip.label <- gsub("_", " ", mytree$tip.label)
+  mytree$tip.label <- tolower(mytree$tip.label)
 
 #need to drop the extra species he added
 mytree2 <- drop.tip(mytree, c("dennstaedtia dissecta"))

@@ -21,9 +21,10 @@ library(Hmisc)
 xa_agg$species <- capitalize(xa_agg$species)
 
 ##phylogeny
-mytree <- read.tree("phylogeny/Tree_Court_MrBayes_newick.nwk")
+# mytree <- read.tree("phylogeny/Tree_Court_MrBayes_newick.nwk")
+mytree <- read.tree("phylogeny/constrain_tree_fern.nwk")
   mytree$tip.label <- gsub("_", " ", mytree$tip.label)
-#need to drop the root species he added and missing xylem sample
+#need to drop the root species DEN DIS and missing xylem sample
 mytree2 <- drop.tip(mytree, c("Dennstaedtia dissecta",
                               "Pecluma pectinata"))
 

@@ -5,9 +5,10 @@ library(phytools)
 library(tidytree)
 
 ##phylogeny
-mytree <- read.tree("phylogeny/court_phylo.nwk")
-mytree$tip.label <- gsub("_1428_bp", "", mytree$tip.label)
-mytree$tip.label <- tolower(mytree$tip.label)
+# mytree <- read.tree("phylogeny/Tree_Court_MrBayes_newick.nwk")
+mytree <- read.tree("phylogeny/constrain_tree_fern.nwk")
+  mytree$tip.label <- gsub("_1428_bp", "", mytree$tip.label)
+  mytree$tip.label <- tolower(mytree$tip.label)
 
 treeorder <- mytree$tip.label
 
