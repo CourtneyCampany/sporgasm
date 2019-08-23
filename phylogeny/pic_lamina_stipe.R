@@ -50,8 +50,6 @@ frondstipe_pic <- lm(pic_lamina[,1] ~ pic_stipe[,1] -1)
 #correlation coefficient
 cc <- sqrt(summary(frondstipe_pic)$r.squared)
 
-
-
 #correlation matrix ---------
 vcv.phylo(mytree2, cor=TRUE)
 
