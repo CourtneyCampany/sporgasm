@@ -149,9 +149,27 @@ Ancestral state reconstructions also elucidated how tropical fern character stat
 
 ## Do biomechanical relationships define water transport capacity?
 
-* Differences in slopes of scaling relationships between epiphyitc and terrestrial (more than with phylogeny) ferns have been detected with LMA and petiole width, suggesting a balance is required between optimizing hydraulic support and providing sufficient biomechanical support [@peppe_biomechanical_2014]
+Tropical epiphytic ferns routinely face environmental conditions that are distinct from the forest floor. Despite large annual precipitation, epiphytic ferns without a root-soil connection have likely faced strong selection pressures from a transient water supply. In conjuction with limited access to elemental nutrients (i.e. N and P), epiphytic ferns must adapt structural traits to optimize both nutient retention and efficient hydraulic transport. The evolution of these traits would have been essetnial in maintain a postive carbon balance as epiphytes radiated into the canopy niche. Here, evidence for the selection of both reduced xylem area and stipe length for water transport in the diversification of epiphtic and hemi-epiphytic ferns is evident in the phylogeny of our studied species. Additionally, theselection of thick lamina (&uparrow; LMA) is readily apparent in the diversification of epiphytic ferns. Evaluating why these strucutral traits evolved requires unpacking their role in the biomechanics of form of epiphytic ferns.
 
-*  Foliar N area increases with LMA in terrestrial temperate ferns understory [@karst_are_2007] add campany, why not epiphytes (n limitation vs other capacitance functions?)
+/
+
+Differences in structrual scaling relationships between epiphyitc and terrestrial ferns have previously been detected with LMA and petiole width, suggesting a needed balance between hydraulic and biomechanincal support [@peppe_biomechanical_2014]. Our results build on these findings by elucidating several additional allometrical differences beteen epiphyitc and terrestrial tropical ferns. Structural relationships between stipe length and both lamina area and xylem area differed bewteen terrestrial and epiphytic life forms. Both these findings highlight adaptions to reduce the path length of water transport in epiphytic ferns, compared longer pathlengths supported by greater surface area of conductive xylem in terrestrial ferns. As a consequence, reduced total frond length of epiphytic ferns does not appear to come at a consequence of conductive surface area of the lamina. Ecologically, these epiphytic shifts in frond structure and anatomy should represent an adaptation to maintain postive water balance for lamina structural integrity and gas exchange in the absense of a root-soil connection.
+
+/
+
+turgor,
+large datasets
+tropical plants tlp
+why?
+tissue capacitance at the turgor loss point as 54 % lower in epiphytic compared to terrestrial species
+
+
+The minimal stipe length of epiphytic ferns likely also represents an increased reliance on rhizomes for mechanical support (?)
+
+
+/
+Increases in foliar N  with increases with LMA have been reported in both terrestrial temperate ferns [@karst_are_2007] and tropical ferns [campany2018]. Here, this relationship was confirmed in terrestrial and hemi-epiphyitc tropical ferns but was uncoupled in fern epiphytes. 
+, why not epiphytes (n limitation vs other capacitance functions?).
 
 * Broadly, you cannot have a large stipe without large xylem area
 
@@ -163,6 +181,9 @@ Understanding the evolutionary role of hemi-epiphytic ferns in the radiation of 
 
 \
 On the other hand, hemi-epiphytic ferns retain traits associated with avoiding dessication that more closely resemble strategies of the measured epiphytic ferns. Reductions of both stipe length and total xylem area in hemi-epiphytic ferns suggest that adaptations to reduced water availability in their early establishment as epiphyites are likely conserved throughtout their life history. Similarily, decreases in stomatal density for hemi-epiphytes also reveals a lasting epiphytic adaptation to drought avoidance and water conservatism. The evolutionary origins of hemi-epiphytic species remains unclear, but our data do suggest that 'epiphytic-like' traits optimized to avoid dessication are likely maintained even when hemi-epiphytic ferns establish a permanent connection with a terrestrial water supply. This suggests an evolutionary epiphytic origin of extant hemi-epiphytic ferns, which could be further elucidated when plasticity of functional traits in the early establishing sporophyte (as an epiphyte) are better understood.
+
+## Conclusions
+
 
 # Tables
 
