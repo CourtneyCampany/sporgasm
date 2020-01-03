@@ -136,7 +136,7 @@ Epiphytic and hemi-epiphytic species had 51% lower stomatal density (36&pm;1.7 m
 
 ## Frond hydraulic traits
 
-Surprisingly, minimal functional differences in drought tolerance where detected among the three life ferns from pressure volume curve parameters (Figure 2a). The turgor loss point ($\Pi$~tlp~) varied by fern life form (*P* = 0.042), however, post-hoc multiple comparisons did not detect differences in $\Psi$~tlp~ across terrestrial, hemi-epiphytic or epiphytic ferns. Broadly, terrestrial and hemi-epiphytic fern species had slightly lower $\Psi$~tlp~ than epiphytic species (Figure 2b). Additionally, the osmotic potential ($\Pi$~o~) decreased in terrestrial and hemi-epiphytic species (*P* = 0.009, Figure 2C), while the modulus of elasticity ($\epsilon$) was similar across all life forms. Consequently, the broad decreases in $\Psi$~tlp~ among terrestrial and hemi-epiphytic fern species appeared to be driven by osmotic adjustments via solute accumulations rather than shifts in cell wall flexibility [see @bartlett_determinants_2012]. Additionally, tissue capacitance at full turgor declined quickly with increasing $\epsilon$ and the tissue capacitance at the turgor loss point as 54 % lower in epiphytic compared to terrestrial species (*P* = 0.010, Figure 5D).
+Surprisingly, minimal functional differences in drought tolerance where detected among the three life ferns from pressure volume curve parameters (Figure 2a). The turgor loss point ($\Pi$~tlp~) varied by fern life form (*P* = 0.042), however, post-hoc multiple comparisons did not detect differences in $\Psi$~tlp~ across terrestrial, hemi-epiphytic or epiphytic ferns. Broadly, terrestrial and hemi-epiphytic fern species had slightly lower $\Psi$~tlp~ than epiphytic species (Figure 2b). Additionally, the osmotic potential ($\Psi$~o~) decreased in terrestrial and hemi-epiphytic species (*P* = 0.009, Figure 2C), while the modulus of elasticity ($\epsilon$) was similar across all life forms. Consequently, the broad decreases in $\Psi$~tlp~ among terrestrial and hemi-epiphytic fern species appeared to be driven by osmotic adjustments via solute accumulations rather than shifts in cell wall flexibility [see @bartlett_determinants_2012]. Additionally, tissue capacitance at full turgor declined quickly with increasing $\epsilon$ and the tissue capacitance at the turgor loss point as 54 % lower in epiphytic compared to terrestrial species (*P* = 0.010, Figure 5D).
 
 ## Functional trait evolution
 
@@ -167,6 +167,12 @@ tissue capacitance at turgor loss point lower in epiphytes
  tissue capacitance at full turgor declines as bulk modulus of elasticity increases simiarlirly.
  
  driven by osmotic adjustments via solute accumulations rather than shifts in cell wall flexibility
+ 
+ Osmotic adjustments appeared to occur in epiphytic ferns ($\Psi$~o~)
+ 
+ ΨTLP has been found to be an indicator of drought tolerance across a wide range of plants and ecosystems (Bartlett et al., 2012).
+ 
+ Osmotic regulation may be an important adaptation for angiosperms epiphytes living in drier sites to enable continued water uptake from canopy soils [gotsch]
 
 turgor,
 large datasets
@@ -174,12 +180,16 @@ tropical plants tlp
 why?
 tissue capacitance at the turgor loss point as 54 % lower in epiphytic compared to terrestrial species
 
+A growing body of evidence now suggests that epiphyitc angiosperms do this .... (gotsch) use of nocturnal due to mainatin water balance [@Chavez-Sahagun], osmotic adjustments and alteration to sap flow [@gotsch], thick cutitcles and laves,  dense veins and stomata and water storage in pseudodbulbs of orchids [@yang; @zhang]
+
+Lepisorus thunbergianus (epiphytic) had low stomatal density and showed high water-use efficiency (WUE) retaining photosynthetic activity with low relative frond water content under drought stress, which suggested their high adaptation to drought. [@nishida]
+
 last para: Do canalized traits define drought avoidance?
 * canalized stomatal traits in seed-free plants still exhibit wide range of variability
 
 Cell size in angiosperms, including guard cell width and length, has been shown to increase as genome size increases [@Beaulieu]. Whether this finding extend to epiphytic and terrestrial fern lineages is uncertain.
 
-High osmotic potentials (~-.97 mpa) in 17 epiphytic ferns, indicative of low solute concentrations, are the result of environmental constraints of the epiphytic habitat and low rates of gas exchange delay the onset of turgor loss in the tissues so that they appear to be very drought-stress tolerant [Martin 2004]
+High osmotic potentials (~-.97 mpa) in 17 epiphytic ferns, indicative of low solute concentrations, are the result of environmental constraints of the epiphytic habitat and low rates of gas exchange delay the onset of turgor loss in the tissues so that they appear to be very drought-stress tolerant [@Martin 2004]
 
 
 ## Consequence of epiphytism on mineral nutrition
