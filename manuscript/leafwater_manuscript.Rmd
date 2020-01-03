@@ -149,13 +149,24 @@ Ancestral state reconstructions also elucidated how tropical fern character stat
 
 ## Do biomechanical relationships define water transport capacity?
 
-Tropical epiphytic ferns routinely face environmental conditions that are distinct from the forest floor. Despite large annual precipitation, epiphytic ferns without a root-soil connection have likely faced strong selection pressures from a transient water supply. In conjuction with limited access to elemental nutrients (i.e. N and P), epiphytic ferns must adapt structural traits to optimize both nutient retention and efficient hydraulic transport. The evolution of these traits would have been essetnial in maintain a postive carbon balance as epiphytes radiated into the canopy niche. Here, evidence for the selection of both reduced xylem area and stipe length for water transport in the diversification of epiphtic and hemi-epiphytic ferns is evident in the phylogeny of our studied species. Additionally, theselection of thick lamina (&uparrow; LMA) is readily apparent in the diversification of epiphytic ferns. Evaluating why these strucutral traits evolved requires unpacking their role in the biomechanics of form of epiphytic ferns.
+Tropical epiphytic ferns routinely face environmental conditions that are distinct from the forest floor. Despite large annual precipitation, epiphytic ferns without a root-soil connection have likely faced strong selection pressures from a transient water supply. In conjuction with limited access to elemental nutrients (i.e. N and P), epiphytic ferns must adapt structural traits to optimize both nutient retention and efficient hydraulic transport. The evolution of these traits would have been essential to maintain a postive carbon balance as ferns radiated into the canopy niche. Here, evidence of the selection of both reduced xylem area and stipe length for water transport is evident in the diversification of epiphtic and hemi-epiphytic ferns in our studied species. Additionally, the selection of thick lamina (&uparrow; LMA) is readily apparent in the diversification of epiphytic ferns. Evaluating why these strucutral traits evolved requires unpacking their role in the biomechanics of form of epiphytic ferns.
 
 /
 
-Differences in structrual scaling relationships between epiphyitc and terrestrial ferns have previously been detected with LMA and petiole width, suggesting a needed balance between hydraulic and biomechanincal support [@peppe_biomechanical_2014]. Our results build on these findings by elucidating several additional allometrical differences beteen epiphyitc and terrestrial tropical ferns. Structural relationships between stipe length and both lamina area and xylem area differed bewteen terrestrial and epiphytic life forms. Both these findings highlight adaptions to reduce the path length of water transport in epiphytic ferns, compared longer pathlengths supported by greater surface area of conductive xylem in terrestrial ferns. As a consequence, reduced total frond length of epiphytic ferns does not appear to come at a consequence of conductive surface area of the lamina. Ecologically, these epiphytic shifts in frond structure and anatomy should represent an adaptation to maintain postive water balance for lamina structural integrity and gas exchange in the absense of a root-soil connection.
+Differences in structrual scaling relationships between epiphytic and terrestrial ferns have previously been detected with LMA and petiole width, suggesting tradeoffs between hydraulic and biomechanincal support [@peppe_biomechanical_2014]. Our results build on these findings by elucidating several additional allometrical differences between epiphyitc and terrestrial tropical ferns. Structural relationships between stipe length and both lamina area and xylem area differed bewteen terrestrial and epiphytic life forms. Both these findings highlight adaptions to reduce the path length of water transport in epiphytic ferns when compared to longer pathlengths supported by greater surface area of conductive xylem in terrestrial ferns. As a consequence, reduced total frond length of epiphytic ferns does not appear to come at a consequence of conductive surface area of the lamina. Ecologically, these epiphytic shifts in frond structure and anatomy should represent an adaptation to maintain postive water balance for lamina structural integrity and gas exchange in the absense of a root-soil connection.
+
+The minimal stipe length of epiphytic ferns likely also represents an increased reliance on rhizomes for mechanical support (?)
 
 /
+
+## Avoidance versuse dessication in tropical ferns
+
+turgor loss point not different
+osmotic potential less negative in epiphytes  
+tissue capacitance at turgor loss point lower in epiphytes
+ tissue capacitance at full turgor declines as bulk modulus of elasticity increases simiarlirly.
+ 
+ driven by osmotic adjustments via solute accumulations rather than shifts in cell wall flexibility
 
 turgor,
 large datasets
@@ -163,24 +174,29 @@ tropical plants tlp
 why?
 tissue capacitance at the turgor loss point as 54 % lower in epiphytic compared to terrestrial species
 
+last para: Do canalized traits define drought avoidance?
+* canalized stomatal traits in seed-free plants still exhibit wide range of variability
 
-The minimal stipe length of epiphytic ferns likely also represents an increased reliance on rhizomes for mechanical support (?)
+Cell size in angiosperms, including guard cell width and length, has been shown to increase as genome size increases [@Beaulieu]. Whether this finding extend to epiphytic and terrestrial fern lineages is uncertain.
+
+High osmotic potentials (~-.97 mpa) in 17 epiphytic ferns, indicative of low solute concentrations, are the result of environmental constraints of the epiphytic habitat and low rates of gas exchange delay the onset of turgor loss in the tissues so that they appear to be very drought-stress tolerant [Martin 2004]
 
 
-/
+## Consequence of epiphytism on mineral nutrition
+
 Increases in foliar N  with increases with LMA have been reported in both terrestrial temperate ferns [@karst_are_2007] and tropical ferns [campany2018]. Here, this relationship was confirmed in terrestrial and hemi-epiphyitc tropical ferns but was uncoupled in fern epiphytes. 
 , why not epiphytes (n limitation vs other capacitance functions?).
 
 * Broadly, you cannot have a large stipe without large xylem area
 
-## Do canalized traits define drought avoidance?
-* canalized stomatal traits in seed-free plants still exhibit wide range of variability
-
 ## The role of hemi-epiphytic life-forms in the evolution of epiphytism in ferns
-Understanding the evolutionary role of hemi-epiphytic ferns in the radiation of tropical ferns into epipytic niches is complicated by limited species diversity available to measure. For example, the constructed trait-based phylogenies suggest both terrestrial and epiphytic ancestors for extant hemi-epiphytic ferns species in this study. Overall, hemi-epiphytic species shared characteristics of both terrestrial and epiphytic life forms, however, similarity in trait function does provide evidence of the transitionary role of the hemi-epiphytic life form. The morphological construction of fronds in hemi-epiphytic species resembles those of terrestrial origins. Similarity in structural allometry (stipe - lamina) and leaf thickness in hemi-epiphytic and terrrestrial ferns suggests that hemi-epiphytic species still optimize functional traits in relation to a low-light environment with a established root-soil connection. This terrestrial-centric trait optimization is also apparent in the similar mineral nutrition (foliar N content) and lamina water-use efficiency ($\delta$^13^C) of hemi-epiphytic and terrestrial fern species. Overall, these similarities should not be surprising if the root-soil connection in hemi-epiphytic species is established early in their sporophytic life history. However, if these morphological and stoichmetric traits are optmized differently in the early life stages of hemi-epiphytic fern species without a root-soil connection is unknown. As such, the plasticity in trait function as hemi-epiphytic fern sporophytes first establish and then develop soil connections should be investigated further.
+
+Understanding the evolutionary role of hemi-epiphytic ferns in the radiation of tropical ferns into epipytic niches is complicated by the limited species diversity available to measure. For example, the constructed trait-based phylogenies suggest both terrestrial and epiphytic ancestors for extant hemi-epiphytic ferns species in this study. Overall, hemi-epiphytic species share characteristics of both terrestrial and epiphytic life forms, however, similarity in trait function does provide evidence of the transitionary role of the hemi-epiphytic life form. The morphological construction of fronds in hemi-epiphytic species resembles those of terrestrial origins. Similarity in structural allometry (stipe - lamina) and leaf thickness in hemi-epiphytic and terrrestrial ferns suggests that hemi-epiphytic species still optimize functional traits relative to a low-light environment with an established root-soil connection. This terrestrial-centric trait optimization is also apparent in the comparable mineral nutrition (foliar N content) and lamina water-use efficiency ($\delta$^13^C) of hemi-epiphytic and terrestrial fern species. Overall, these similarities should not be surprising if the root-soil connection in hemi-epiphytic species is established early in their sporophytic life history. However, if these morphological and stoichmetric traits are optmized differently in life stages of hemi-epiphytic fern species with or without a root-soil connection is unknown. As such, the plasticity in trait function as hemi-epiphytic fern sporophytes first establish and then develop soil connections should be investigated further.
 
 \
-On the other hand, hemi-epiphytic ferns retain traits associated with avoiding dessication that more closely resemble strategies of the measured epiphytic ferns. Reductions of both stipe length and total xylem area in hemi-epiphytic ferns suggest that adaptations to reduced water availability in their early establishment as epiphyites are likely conserved throughtout their life history. Similarily, decreases in stomatal density for hemi-epiphytes also reveals a lasting epiphytic adaptation to drought avoidance and water conservatism. The evolutionary origins of hemi-epiphytic species remains unclear, but our data do suggest that 'epiphytic-like' traits optimized to avoid dessication are likely maintained even when hemi-epiphytic ferns establish a permanent connection with a terrestrial water supply. This suggests an evolutionary epiphytic origin of extant hemi-epiphytic ferns, which could be further elucidated when plasticity of functional traits in the early establishing sporophyte (as an epiphyte) are better understood.
+On the other hand, hemi-epiphytic ferns retain traits associated with avoiding dessication that more closely resemble strategies of epiphytic ferns. Reductions of both stipe length and total xylem area in hemi-epiphytic ferns suggest that adaptations to reduced water availability in their early establishment as epiphyites are likely conserved throughout their life history. Similarily, decreases in stomatal density for hemi-epiphytes also reveals a lasting epiphytic adaptation to drought avoidance and water conservatism. The evolutionary origins of hemi-epiphytic species remains unclear, but our data do suggest that 'epiphytic-like' traits optimized to avoid dessication are likely maintained even when hemi-epiphytic ferns establish a permanent connection with a terrestrial water supply. This could suggest an epiphytic origin of extant hemi-epiphytic ferns, which could be further elucidated when plasticity of functional traits in the early establishing sporophyte (as an epiphyte) are better understood.
+
+add holbrook 1996
 
 ## Conclusions
 
@@ -207,14 +223,14 @@ dust(table1_new)%>%
 source("master_scripts/figure_1.R")
 
 ```
-Figure 1. Structural shifts in path lengths to transport water, via stipe length, alters how tropical fern life forms build conductive structures. (A) Box plots of stipe length across tropical fern life forms. (B) Lamina area in tropical ferns is allometrically (log-based) related to  stipe length and this relationship varies by life form. The conditional and marginal R^2^ for the overall allometric relationship between lamina area and stipe length are 0.23 and 0.88, respectively. Significant log-linear fits for each life from are shown with dashed lines. The width of box plots are drawn proportional to the number of observations in each life form.
+Figure 1. Structural shifts in path lengths to transport water, via stipe length, alters how tropical fern life forms build conductive structures. (A) Box plots of stipe length across tropical fern life forms. (B) Lamina area in tropical ferns is allometrically (log-based) related to  stipe length and this relationship varies by life form. The conditional and marginal R^2^ for the overall allometric relationship between lamina area and stipe length are 0.23 and 0.88, respectively. Significant log-linear fits for each life from are shown with dashed lines. The width of box plots are drawn proportional to the number of measured species in each life form.
 
 \
 
 ```{r figure2,  echo=FALSE, fig.align='center',fig.width = 10, fig.height = 6, warning=FALSE}
 source("master_scripts/figure2.R")
 ```
-Figure 2. Conductive hydraulic supply, via total xylem area, constrains stipe length in tropical fern species. (A) Box plots of Total xylem area across tropical fern life forms. (B) The capacity for greater total xylem area in terrestrial tropical ferns supports construction of large stipes. The conditional and marginal R^2^ for the overall positive relationship between stipe length and total xylem area are 0.30 and 0.88, respectively. Significant linear relationships for each life from are shown with dashed lines representing model fits and grey shaded areas as 95 % confidence intervals for the mean. The width of box plots are drawn proportional to the number of observations in each life form.
+Figure 2. Conductive hydraulic supply, via total xylem area, constrains stipe length in tropical fern species. (A) Box plots of Total xylem area across tropical fern life forms. (B) The capacity for greater total xylem area in terrestrial tropical ferns supports construction of large stipes. The conditional and marginal R^2^ for the overall positive relationship between stipe length and total xylem area are 0.30 and 0.88, respectively. Significant linear relationships for each life from are shown with dashed lines representing model fits and grey shaded areas as 95 % confidence intervals for the mean. The width of box plots are drawn proportional to the number of measured species in each life form.
 
 \
 
@@ -222,7 +238,7 @@ Figure 2. Conductive hydraulic supply, via total xylem area, constrains stipe le
 source("master_scripts/figure3.R")
 
 ```
-Figure 3. Shifts in lamina thickness (LMA) and lamina chemistry differ between tropical fern life forms. (A) Box plots of leaf mass per unit area (LMA) across tropical fern life forms. (B) LMA is negatively related to lamina nitrogen content in only terrestrial and hemi-epiphytic ferns. (C) Box plots of lamina $\delta$^13^C across tropical fern life forms (higher values indicate higher water-use efficiency). Significant linear relationships are shown with dashed lines representing model fits and grey shaded areas as 95 % confidence intervals for the mean. The width of box plots are drawn proportional to the number of observations in each life form.
+Figure 3. Shifts in lamina thickness (LMA) and lamina chemistry differ between tropical fern life forms. (A) Box plots of leaf mass per unit area (LMA) across tropical fern life forms. (B) LMA is negatively related to lamina nitrogen content in only terrestrial and hemi-epiphytic ferns. (C) Box plots of lamina $\delta$^13^C across tropical fern life forms (higher values indicate higher water-use efficiency). Significant linear relationships are shown with dashed lines representing model fits and grey shaded areas as 95 % confidence intervals for the mean. The width of box plots are drawn proportional to the number of measured species in each life form.
 
 \
 
@@ -231,7 +247,7 @@ Figure 3. Shifts in lamina thickness (LMA) and lamina chemistry differ between t
 source("master_scripts/figure4.R")
 
 ```
-Figure 4. Stomatal traits differed between tropical fern life forms. (A) Box plots of stomatal density across tropical fern life forms. (B) Stomatal density was negatively related to stomatal size for all life forms. Significant linear relationships for each life from are shown with dashed lines representing model fits and grey shaded areas as 95 % confidence intervals for the mean. The width of box plots are drawn proportional to the number of observations in each life form.
+Figure 4. Stomatal traits differed between tropical fern life forms. (A) Box plots of stomatal density across tropical fern life forms. (B) Stomatal density was negatively related to stomatal size for all life forms. Significant linear relationships for each life from are shown with dashed lines representing model fits and grey shaded areas as 95 % confidence intervals for the mean. The width of box plots are drawn proportional to the number of measured species in each life form.
 
 \
 
@@ -239,7 +255,7 @@ Figure 4. Stomatal traits differed between tropical fern life forms. (A) Box plo
 source("master_scripts/figure5.R")
 
 ```
-Figure 5. Epiphytic tropical ferns are not more drought tolerant than terrestrial or hemi-epiphytic tropical ferns. (A) Raw results from 211 pressure volume curves from 38 tropical fern species.  Box plots of turgor loss point (B) and osmotic potential (C) across tropical fern life forms. Relationship between tissue capacitance at full turgor and the bulk modulus of elasticity for tropical ferns (D) and box plots of the tissue capacitance at turgor loss point (inset). Fits for panels A,D for fern life forms use loess regression for visualization purposes. The width of box plots are drawn proportional to the number of observations in each life form.
+Figure 5. Epiphytic tropical ferns are not more drought tolerant than terrestrial or hemi-epiphytic tropical ferns. (A) Raw results from 211 pressure volume curves from 38 tropical fern species.  Box plots of turgor loss point (B) and osmotic potential (C) across tropical fern life forms. Relationship between tissue capacitance at full turgor and the bulk modulus of elasticity for tropical ferns (D) and box plots of the tissue capacitance at turgor loss point (inset). Fits for panels A,D for each fern life form uses loess regression for visualization purposes. The width of box plots are drawn proportional to the number of measured species in each life form.
 
 \
 
