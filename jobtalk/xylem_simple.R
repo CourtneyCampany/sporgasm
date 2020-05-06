@@ -33,7 +33,7 @@ jpeg(filename = "jobtalk/xylem.jpeg",
 
 #xylem area
 boxplot(xylem_area_mm2 ~ niche2, data=alldata4,xaxt='n',ylim=c(0, .85),
-        boxlwd=2,whisklwd=2, staplelwd=2,
+        boxlwd=2,whisklwd=2, staplelwd=2,xlab="",
         outline=FALSE ,col=trtcols2, ylab=xylem_lab)
 axis(1, boxlabs, at=1:2, cex.axis=1.25)
 stripchart(xylem_area_mm2 ~ niche2, data = alldata4,
