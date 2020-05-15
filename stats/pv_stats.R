@@ -193,11 +193,17 @@ epi <- mean(zero[zero$niche2 == "epiphyte", "capacitance_zero."]) #0.1583137
 
 ### RWC -------
 
-boxplot(rwc_tlp ~ niche2, data=pv) #looks good
-hist(sqrt(pv$elasticity)) #looks good
+boxplot(rwc_tlp ~ niche2, data=pv)
+hist(sqrt(pv$rwc_tlp)) #looks good
 
-rwc_mod <- lmer(rwc_tlp ~ niche2 * site + (1|species), data=pv)
-rwc_mod2 <- lmer(rwc_tlp ~ niche2 + site + (1|species), data=pv)
+rwc <- pv[pv$rwc_tlp>90,]
+
+boxplot(rwc_tlp ~ niche2, data=rwc)
+hist(sqrt(rwc$rwc_tlp))
+hist(rwc$rwc_tlp)
+
+rwc_mod <- lmer(rwc_tlp ~ niche2 * site + (1|species), data=rwc)
+rwc_mod2 <- lmer(rwc_tlp ~ niche2 + site + (1|species), data=rwc)
 
 plot(rwc_mod) #not bad
 qqPlot(residuals(rwc_mod)) #not bad
@@ -207,6 +213,6 @@ Anova(rwc_mod, type="3") #no effects
 anova(rwc_mod, rwc_mod2) #not different
 AIC(rwc_mod, rwc_mod2) #use model without interaction
 
-summary(e_mod)
-Anova(e_mod, type="3")
-r.squaredGLMM(e_mod)
+summary(rwc_mod)
+Anova(rwc_mod, type="3")
+r.squaredGLMM(rwc_mod)

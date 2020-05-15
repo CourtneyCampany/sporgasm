@@ -1,6 +1,12 @@
 source("master_scripts/plot_objects.R")
 source("functions_packages/ci_functions.R")
 
+#Leaf economic spectrum data
+glopnet <- read.csv("calculated_data/glopnet.csv")
+glopfern <- glopnet[glopnet$GF == "F",]
+globcol <- alpha("grey50", .1)
+
+
 # chemistry and lma data -----
 leafchem <- read.csv("calculated_data/leaf_chemistry.csv")
 leafchem$niche2 <- gsub("climber", "terrestrial", leafchem$niche)
@@ -27,9 +33,9 @@ epi2 <- droplevels(nitro[nitro$niche2 == "epiphyte", ])
 # hemi_mod2 <- lm(n_perc ~ lma_g_m2, data=hemi2[hemi2$lma_g_m2 < 600,])
 # epi_mod2 <- lm(n_perc ~ lma_g_m2, data=epi2[epi2$lma_g_m2 < 600,])
 
-terr_mod2 <- lm(n_perc ~ lma_g_m2, data=terr2)
-hemi_mod2 <- lm(n_perc ~ lma_g_m2, data=hemi2)
-epi_mod2 <- lm(n_perc ~ lma_g_m2, data=epi2)
+terr_mod2 <- lm(log10(n_perc) ~ log10(lma_g_m2), data=terr2)
+hemi_mod2 <- lm(log10(n_perc) ~ log10(lma_g_m2), data=hemi2)
+epi_mod2 <- lm(log10(n_perc) ~ log10(lma_g_m2), data=epi2)
 
 cldlma <- c("a", "ab", "b")
 
@@ -55,11 +61,14 @@ cldc13 <- c("a","a","b")
 
 
 ##lma plots ------ 
+library(plotrix)
 
 # jpeg(filename = "output/figure2_lma.jpeg",
-#       width = 12, height = 5, units = "in", res= 400)
+#        width = 12, height = 5, units = "in", res= 400)
 
-par(mfrow=c(1,3),mgp=c(2.5,.75,0), mar=c(4,4,1,1), cex.lab=1.1)
+layout(matrix(c(1,3,2,2), 2, 2, byrow = TRUE))
+
+par(mgp=c(2.5,.75,0), mar=c(4,4,1,1), cex.lab=1.1)
 
 boxplot(lma_g_m2 ~ niche2, data=nitro,xaxt='n',ylim=c(0,630),
         boxlwd=2, whisklwd=2,staplelwd=2,xlab="",
@@ -73,15 +82,30 @@ text(x=1:3, y=600, cldlma)
 text(3.5, 0, "A", cex=1.25)
 
 #lma v nitro
-plot(n_perc ~ lma_g_m2, data=nitro,ylim=c(0,6), xlim=c(0,600),
-     ylab="Foliar Nitrogen (%)",xlab=lmalab, type='n')
-predline(hemi_mod2, col=trtcols[2], lwd=2, lty=2)
-predline(terr_mod2, col=trtcols[1], lwd=2, lty=2)
-# predline(epi_mod2, col=trtcols[3], lwd=2, lty=2)
-points(n_perc ~ lma_g_m2, data=nitro[nitro$lma_g_m2 < 600,], 
+with(nitro, plot(log10(n_perc) ~ log10(lma_g_m2), ylim=c(-.65,.9),xlim=c(1,3),
+                 xlab = lmalab,
+                 ylab = "Foliar Nitrogen (%)",
+                 axes=FALSE, type='n'))
+
+with(glopnet, points(log.Nmass ~ log.LMA,pch=16, col=globcol, cex=1.25))
+points(log10(n_perc) ~ log10(lma_g_m2), data=nitro[nitro$lma_g_m2 < 600,], 
        pch=16, col=trtcols2[niche2],cex=1.25)
-text(600, 0, "B", cex=1.25)
-legend("topright", legend = boxlabs, pch=21, pt.bg=trtcols, bty="n", inset=.01)
+
+
+ablineclip(terr_mod2, col=trtcols[1], lwd=2, lty=2,
+           x1=min(log10(30)), x2=max(log10(292.5)))
+ablineclip(hemi_mod2, col=trtcols[2], lwd=2, lty=2,
+           x1=min(log10(88)), x2=max(log10(274)))
+# ablineclip(epi_mod2, col=trtcols[3], lwd=2, lty=2,
+#            x1=min(log10(65)), x2=max(log10(535)))
+
+# predline(epi_mod2, col=trtcols[3], lwd=2, lty=2)
+# predline(hemi_mod2, col=trtcols[2], lwd=2, lty=2)
+# predline(terr_mod2, col=trtcols[1], lwd=2, lty=2)
+
+magaxis(side=c(1,2), unlog=c(1,2), frame.plot=TRUE)
+text(3, -.6, "B", cex=1.25)
+legend("bottomleft", legend = boxlabs, pch=21, pt.bg=trtcols, bty="n", inset=.02)
 # text(455,.2,"LMA x Niche, P < 0.001")
 
 #c13
@@ -93,7 +117,7 @@ stripchart(d13C ~ niche2, data = c13dat,cex=1.25,
            pch = 16,  col= trtcols2, xaxt='n', add=TRUE) 
 axis(1, boxlabs, at=1:3, cex.axis=1.1)
 text(x=1:3, y=-25.5, cldc13)
-text(3.5, -40, "C", cex=1.25)
+text(3.5, -38, "C", cex=1.25)
 
 # #inset c13 site
 # text(65, .01, "D", cex=1.25)
@@ -110,4 +134,4 @@ text(3.5, -40, "C", cex=1.25)
 #            pch = 16, xaxt='n', add=TRUE)
 # text(x=1:2, y=-25.5, c("a", "b"))
 
-# dev.off()
+ # dev.off()

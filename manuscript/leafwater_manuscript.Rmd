@@ -151,29 +151,23 @@ Ancestral state reconstructions also elucidated how tropical fern character stat
 
 HYPO: The evolution of plant functional traits typically related to drought tolerance promoted the radiation of ferns from largely moist, terrestrial habitats to far more unpredictable canopy habitats.
 
-## Do biomechanical relationships define water transport capacity?
+## Do anatomical and biomechanical traits regulate how epiphytic ferns thrive in sub-optimal resource environments
 
-**Do anatomical and biomechanical traits that regulate leaf water supply may help elucidate how epiphytic ferns thrive in sub-optimal resource environments**
-
-Tropical epiphytic ferns routinely face environmental conditions that are distinct from the forest floor. Despite large annual precipitation, epiphytic ferns without a root-soil connectionroutinely faced strong selection pressures from a transient water supply. In conjuction with limited access to elemental nutrients (i.e. N and P), epiphytic ferns must adapt structural traits to optimize both nutient retention and efficient hydraulic transport. The evolution of these traits would have been essential to maintain a positive carbon balance as ferns radiated into the canopy niche. Here, evidence of the selection of both reduced xylem area and stipe length for water transport is evident in the diversification of epiphtic and hemi-epiphytic ferns in our studied species. Additionally, the selection of thick lamina (&uparrow; LMA) is readily apparent in the diversification of epiphytic ferns. Evaluating why these strucutral traits evolved requires unpacking the role of each trait in the biomechanics of form and function of epiphytic ferns.
+Tropical epiphytic ferns routinely face environmental conditions that are distinct from the forest floor. Despite large annual precipitation, epiphytic ferns without a root-soil connection routinely face strong selection pressures from a transient water supply. In conjuction with limited access to elemental nutrients (i.e. N and P), epiphytic ferns must adapt structural traits to optimize both nutient retention and efficient hydraulic transport. The evolution of these traits would have been essential to maintain a positive carbon balance as ferns radiated into the canopy niche. Here, evidence of the selection of both reduced xylem area and stipe length for water transport is evident in the diversification of epiphtic and hemi-epiphytic ferns in our studied species. Additionally, the selection of thick lamina (&uparrow; LMA) is readily apparent in the diversification of epiphytic ferns. Evaluating why these strucutral traits evolved requires unpacking the role of each trait in the biomechanics of form and function of epiphytic ferns.
 
 \
-Differences in structrual scaling relationships between epiphytic and terrestrial ferns have previously been detected with LMA and petiole width, suggesting tradeoffs between hydraulic and biomechanincal support [@peppe_biomechanical_2014]. Our results build on these findings by elucidating several additional allometrical differences between epiphyitc and terrestrial tropical ferns. Structural relationships between stipe length and both lamina area and xylem area differed bewteen terrestrial and epiphytic life forms. Both these findings highlight adaptions to reduce the path length of water transport in epiphytic ferns when compared to longer pathlengths supported by greater surface area of conductive xylem in terrestrial ferns. As a consequence, reduced total frond length of epiphytic ferns does not appear to come at a consequence of conductive surface area of the lamina. Ecologically, these epiphytic shifts in frond structure and anatomy should represent an adaptation to maintain postive water balance for lamina structural integrity and gas exchange in the absense of a root-soil connection.
+Differences in structrual scaling relationships between epiphytic and terrestrial ferns have previously been detected with LMA and petiole width, suggesting tradeoffs between hydraulic and biomechanincal support [@peppe_biomechanical_2014]. Our results build on these findings by elucidating several additional allometrical differences between epiphyitc and terrestrial tropical ferns. Structural relationships between stipe length and both lamina area and xylem area differed bewteen terrestrial and epiphytic life forms. Both these findings highlight adaptions to reduce the path length of water transport in epiphytic ferns when compared to longer pathlengths supported by greater surface area of conductive xylem in terrestrial ferns. As a consequence, reduced total frond length of epiphytic ferns does not appear to come at a consequence of conductive surface area of the lamina. Ecologically, these epiphytic shifts in frond structure and anatomy should represent an adaptation to maintain postive water balance for lamina structural integrity and gas exchange in the absense of a root-soil connection. This is supported by the less negative lamina $\delta$^13^C in epiphytic ferns, suggesting a greater water use efficiency over the frond life span. 
 
 \
-The minimal stipe length of epiphytic ferns likely also represents an increased reliance on rhizomes for mechanical support (?)
-
-## Consequence of epiphytism on mineral nutrition
-
-**evolutionary selection of functional traits to adapt to these highly variable environmental conditions should have coincided with the opportunistic diversification of ferns into new epiphyitc niches**
-
+As 
 Increases in foliar N  with increases with LMA have been reported in both terrestrial temperate ferns [@karst_are_2007] and tropical ferns [@campany_convergence_2019]. Here, this relationship was confirmed in terrestrial and hemi-epiphyitc tropical ferns but was uncoupled in fern epiphytes. 
+
 
 \
 why not epiphytes (n limitation vs other capacitance functions?).
 
-\
-Broadly, you cannot have a large stipe without large xylem area
+**evolutionary selection of functional traits to adapt to these highly variable environmental conditions should have coincided with the opportunistic diversification of ferns into new epiphyitc niches**
+
 
 ## Do canalized traits define drought avoidance?
 
