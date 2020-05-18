@@ -104,8 +104,10 @@ ablineclip(hemi_mod2, col=trtcols[2], lwd=2, lty=2,
 # predline(terr_mod2, col=trtcols[1], lwd=2, lty=2)
 
 magaxis(side=c(1,2), unlog=c(1,2), frame.plot=TRUE)
-text(3, -.6, "B", cex=1.25)
-legend("bottomleft", legend = boxlabs, pch=21, pt.bg=trtcols, bty="n", inset=.02)
+text(3, -.6, "C", cex=1.25)
+legend("bottomleft", legend = c(boxlabs, "Wright et al. 2003"), pch=21, 
+                                pt.bg=c(trtcols,"grey50"),cex=1.25,
+                                bty="n", inset=.02)
 # text(455,.2,"LMA x Niche, P < 0.001")
 
 #c13
@@ -117,7 +119,7 @@ stripchart(d13C ~ niche2, data = c13dat,cex=1.25,
            pch = 16,  col= trtcols2, xaxt='n', add=TRUE) 
 axis(1, boxlabs, at=1:3, cex.axis=1.1)
 text(x=1:3, y=-25.5, cldc13)
-text(3.5, -38, "C", cex=1.25)
+text(3.5, -38, "B", cex=1.25)
 
 # #inset c13 site
 # text(65, .01, "D", cex=1.25)

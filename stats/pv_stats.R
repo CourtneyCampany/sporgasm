@@ -216,3 +216,29 @@ AIC(rwc_mod, rwc_mod2) #use model without interaction
 summary(rwc_mod)
 Anova(rwc_mod, type="3")
 r.squaredGLMM(rwc_mod)
+
+### SWC -------
+
+boxplot(SWC~ niche2, data=pv)
+hist(sqrt(pv$SWC)) #looks good
+
+swc <- pv[pv$SWC<7.8,]
+boxplot(SWC~ niche2, data=swc)
+hist(sqrt(swc$SWC))
+
+swc_mod <- lmer(sqrt(swc$SWC) ~ niche2 * site + (1|species), data=swc)
+swc_mod2 <- lmer(sqrt(swc$SWC) ~ niche2 + site + (1|species), data=swc)
+
+plot(swc_mod) #not bad
+qqPlot(residuals(swc_mod)) #not bad
+
+#model summary
+Anova(swc_mod, type="3") #no effects
+anova(swc_mod, swc_mod2) #not different
+AIC(swc_mod, swc_mod2) #use model without interaction
+
+summary(swc_mod2)
+Anova(swc_mod2, type="3")
+r.squaredGLMM(swc_mod2)
+
+#SWC not different between niches

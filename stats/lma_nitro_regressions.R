@@ -19,7 +19,6 @@ lmanitro_mod <- lmer(n_perc ~ lma  * niche2
                     + (1|species),data=alldata)
 
 #model diagnostics
-windows()
 qqPlot(residuals(lmanitro_mod))#pretty good
 plot(lmanitro_mod) #pretty good
 
@@ -35,14 +34,14 @@ pairwise <- emmeans(lmanitro_mod, ~ lma  * niche2 )
 pairs(pairwise)
 
 #slopes and elevations
-xylemlength2 <- sma(n_perc ~ lma * niche2,data=alldata, 
+nitrolma2 <- sma(n_perc ~ lma * niche2,data=alldata, 
                     multcomp = TRUE, multcompmethod='adjusted')
-summary(xylemlength2) #slopes not equal, all different, all relationships sig
+summary(nitrolma2) #slopes not equal, all different, all relationships sig
 #P-value : 0.000001 
-xylemlength3 <- sma(n_perc ~ lma + niche2,
+nitrolma3 <- sma(n_perc ~ lma + niche2,
                     data=alldata, multcomp = TRUE,
                     multcompmethod='adjusted') 
-summary(xylemlength3) #elevations not equal P-value : 0.017624 
+summary(nitrolma3) #elevations not equal P-value : 0.017624 
 #elevations different for hemi-epi, but similar for terrstrial epi
 
 
