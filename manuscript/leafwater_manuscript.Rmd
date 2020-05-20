@@ -42,14 +42,16 @@ includeFigs <- TRUE
 
 # Summary
 
-* research and rationale
-* methods
-* key results
-* main conclusion (key discussion points)
+* Opportunistic diversification has allowed ferns to radiate into epiphytic niches created by angiosperm dominated landscapes. Our understanding of how canalized ecophysiological function allowed diversification into this more variable environment and the potential transitionary role of the hemi-epiphytic life form remains unclear. 
+
+* We surveyed 39 fern species, in Costa Rican tropical forests, to explore epiphytic trait divergence in a phylogenetic context. We examined the resistance to hydraulic failure in terrestrial, hemi-epiphytic and epiphytic ferns and related these findings to functional traits that regulate leaf water status and mineral nutrition. 
+
+* Epiphytic ferns had reduced xylem area (-60%), stipe length (-54%), thicker laminas (+67%) and reduced stomatal density compared to terrestrial ferns (-51%). Surprisingly, epiphytic ferns exhibiting similar turgor loss points, higher osmotic potential and lower tissue capacitiance than terrestrial ferns. Overall, hemi-epiphytic ferns exhibit traits that share functional relevance with both terrestrial and epiphytic species.
+
+* Our findings clearly demonstrate the prevalence of water conservatism in both epiphytic and hemi-epiphytic ferns, via selection of anatomical, structural and hydraulic traits that increase the efficiency of hydraulic transport and increase water retention. Even with canalized passive stomatal function, adaptations for drought avoidance have allowed epiphytic ferns to successfully endure the stresses of the epiphytic habitat.
 
 \
-
-**Key Words:**
+**Key Words:** epiphyte, fern, functional traits, stomata, turgor loss, 
 
 # Introduction
 
@@ -137,7 +139,7 @@ Total chlorophyll content was similar between terrestrial and epiphytic species,
 
 ## Stomatal anatomy
 
-Epiphytic and hemi-epiphytic species had 51% lower stomatal density (36&pm;1.7 mm^-2^) compared to terrestrial species (72&pm;3.1 mm^-2^, *P* < 0.001). Stomatal length was similar across all species, however, guard cell width differed across life forms. Mean width of individual guard cells was 18% smaller in terrestrial species compared to hemi-epiphytic of epiphytic species. Overall, stomatal size of terrestrial and epiphytic species were statistical similar, yet epiphytes had broadly higher stomatal size. Stomatal size in hemi-epiphtic species was 27% larger than terrestrial or epiphytic life forms (*P* = 0.044). Increases in stomatal density were negatively correlated increases in stomatal density across all life forms (*P* < 0.001). Pair-wise differences across life forms were detected for the slopes (*P* < 0.001) and elevations (*P* = 0.007) of the negative relationship between stomatal density and stomatal size (Figure 4B). Phylogenetic independent contrasts support the negative relationship between stomatal density and stomatal size for measured species (*P* = 0.006, R^2^ = 0.17).
+Epiphytic and hemi-epiphytic species had 51% lower stomatal density compared to terrestrial species (Figure 4A, *P* < 0.001). Stomata of epiphytic species were 11.4% larger in epiphytes compared to terrestrial species, with hemi-epiphytes intermediates between both life forms (*P* = 0.0368). Differences in stomatal size were driven by 17.1% greater guard cell width in epiphytes and hemiphytes (13.3 um) compared to terrestrial species (11.2 um). Guard cell length was statisically similar across life forms ($\overline{x}$ = 47.7 um). Increases in stomatal density were negatively correlated with stomtal size across all life forms (*P* < 0.001). Pair-wise differences across life forms were detected for the slopes (*P* < 0.001) and elevations (*P* = 0.007) of the negative relationship between stomatal density and stomatal size (Figure 4B). Phylogenetic independent contrasts support the negative relationship between stomatal density and stomatal size for measured species (*P* = 0.006, R^2^ = 0.17).
 
 ## Frond hydraulic traits
 
@@ -152,111 +154,55 @@ Ancestral state reconstructions also elucidated how tropical fern character stat
 
 # Discussion
 
-HYPO: The evolution of plant functional traits typically related to drought tolerance promoted the radiation of ferns from largely moist, terrestrial habitats to far more unpredictable canopy habitats.
+This study aimed to shed light on the mechanisms by which ferns, with potentially limited plasticity in ecophysiological function, diversified successfull into epiphyitc habitats. Our evidence shows that adaptions of functional traits related to drought avoidance, instead of drought tolerance, allowed the radiation of ferns from largely moist, terrestrial habitats to far more unpredictable canopy habitats. 
 
-Epiphytic ferns have been previously shown to be consistently smaller than terrestrail ferns [@testo_are_2018; @nitta_life_2020]
+Hemi-epiphytic fern express traits 
+
+Epiphytic ferns have been previously been shown to be consistently smaller than terrestrail ferns [@testo_are_2018; @nitta_life_2020]. Here, we unpack a suite of traits and biomechanical relationships related to hydraullic function that likely underpin this reduction in size.
 
 ## Do anatomical and biomechanical traits regulate how epiphytic ferns thrive in sub-optimal resource environments
 
 Tropical epiphytic ferns routinely face environmental conditions that are distinct from the forest floor. Despite large annual precipitation, epiphytic ferns without a root-soil connection face selection pressures from a transient water supply. In conjunction with limited access to elemental nutrients (i.e. N and P), epiphytic ferns must adapt functional traits to optimize both nutrient retention and efficient hydraulic transport. The evolution of these traits would have been essential to maintain a positive carbon balance as ferns radiated into the canopy niche. Here, evidence of the selection of both reduced xylem area and stipe length for water transport is evident across the diversification of epiphytic and hemi-epiphytic ferns in our studied species. Additionally, the selection of thick lamina (&uparrow; LMA) is readily apparent in the diversification of epiphytic ferns. Evaluating why these structural traits evolved requires unpacking the role of each trait in the biomechanics of form and function of epiphytic ferns.
 
 \
-Differences in structural scaling relationships between epiphytic and terrestrial ferns have previously been detected with LMA and petiole width, suggesting trade-offs between hydraulic and biomechanical support [@peppe_biomechanical_2014]. Ferns also rely entirely on primary xylem to supply lamiana tissues [@nitta_life_2020], thus stipe morphology is key for regulating whole leaf hydraulic conductance [@pittermann_physiological_2013]. Our results build on these findings by elucidating several differing allometrical relationships between epiphytic and terrestrial tropical ferns. For example, many epiphytes were capable of supporting equally large laminas as terrestrrial species with short or minimal stipes. Additionally, positive relationships between xylem area and stipe length were functionally distinct in epiphytes due to large reductions in both traits. As a result, reduced total frond length of epiphytic ferns does not appear to come at a consequence of conductive surface area of the lamina. These shifts in frond structure and anatomy represent adaptations to maintain positive water balance for lamina structural integrity and gas exchange and are realized by a greater water use efficiency (less negative lamina $\delta$^13^C) detected in epiphytic ferns.
+Differences in structural scaling relationships between epiphytic and terrestrial ferns have previously been detected with LMA and petiole width, suggesting trade-offs between hydraulic and biomechanical support [@peppe_biomechanical_2014]. Ferns also rely entirely on primary xylem to supply lamiana tissues [@nitta_life_2020], thus stipe morphology is key for regulating whole leaf hydraulic conductance [@pittermann_physiological_2013]. Our results build on these findings by elucidating several differing allometric relationships between epiphytic and terrestrial tropical ferns. For example, many epiphytes were capable of supporting equally large laminas as terrestrrial species with short or minimal stipes. Additionally, positive relationships between xylem area and stipe length were functionally distinct in epiphytes due to large reductions in both traits. As a result, reduced total frond length of epiphytic ferns does not appear to come at a consequence of conductive surface area of the lamina. These shifts in frond structure and anatomy represent adaptations to maintain positive water balance for lamina structural integrity and gas exchange and are realized by a greater water use efficiency (less negative lamina $\delta$^13^C) detected in epiphytic ferns.
 
 \
-Plant species adapted to low resource supplies tend to invest in higher LMA and to maintain leaves longer into periods of scarcity [@wright_worldwide_2004]. The radiation of ferns into tropical canopy niches included the adaptation of thick lamina, which may have been exacerbated in ferns compared to other epiphytic groups. For example, leaf dry matter content (a component of LMA) was found to be twice as high in ferns compared to other taxonomic groups of tropical epiphytes [@petter_functional_2016]. The benefits of higher LMA for tropical epiphytes likely centers on improved water retention [@watkins_influence_2007; @zhang_differentiation_2015] and leaf persistence [@reich_leaf_1991], but may come at the consequence of resource utilization and photosynthetic capacity. Globally, mass based nitrogen investment decreases in plants has LMA increases [@wright_worldwide_2004]. Similar relationships between nitrogen and LMA can be inferred in tropical understory ferns from several studies [@karst_are_2007, @campany_convergence_2019] and from the data presented here. This relationship appears to become uncoupled in epiphytic ferns (see Figure 3c), however, largely due to the extremely high values of LMA produced in many species of epiphytic fern. This decoupling may help explain the comparatively low rates of photosynthesis reported in epiphytic ferns and provide further support for the evolution of leaf traits adapted for water conservation [@zhang_epiphytes_2009; @zhang_leaf_2014].
+Plant species adapted to low resource supplies tend to invest in higher LMA and to maintain leaves longer into periods of scarcity [@wright_worldwide_2004]. The radiation of ferns into tropical canopy niches included the adaptation of thick lamina, which may have been exacerbated in ferns compared to other epiphytic groups. For example, leaf dry matter content (a component of LMA) was found to be twice as high in ferns compared to other taxonomic groups of tropical epiphytes [@petter_functional_2016]. The benefits of higher LMA for tropical epiphytes likely centers on improved water retention [@watkins_influence_2007; @zhang_differentiation_2015] and leaf persistence [@reich_leaf_1991], but may come at the consequence of resource utilization and photosynthetic capacity. Globally, mass based nitrogen investment decreases in plants as LMA increases [@wright_worldwide_2004]. Similar relationships between nitrogen and LMA can be inferred in tropical understory ferns from several studies [@karst_are_2007; @campany_convergence_2019] and from the data presented here. This relationship appears to become uncoupled in epiphytic ferns (see Figure 3c), however, largely due to the extremely high values of LMA produced in many species of epiphytic fern. This decoupling may help explain the comparatively low rates of photosynthesis reported in epiphytic ferns and provide further support for the evolution of leaf traits adapted for water conservation [@zhang_epiphytes_2009; @zhang_leaf_2014].
 
-## Do canalized traits define drought avoidance?
-
-**The resistance to hydraulic failure across field-sampled terrestrial, hemi-epiphytic and epiphytic ferns in Costa Rican tropical forests and related these data to a suite of anatomical and morphological traits that modulate leaf water status** 
+## Does canalized physiological function underpin drought avoidance?
 
 Surprisingly, increased resistance to hydraulic failure was not detected in tropical epiphytic ferns. Epiphytic ferns had slightly more sensitive $\Psi$~tlp~ than terrestrial ferns, which can be explained by several components of tissue water potential. Epiphytic ferns were less capable of osmotic adjustments (less negative $\Psi$~o~) than terrestrial ferns and did not exhibit adaptations of cell wall elasticity ($\epsilon$). Across all surveyed species, the ability to store water declined quickly with decreases in cell wall elasticity (lower $\epsilon$). However, the water storage capacity at turgor loss points (*C~TLP~*) of epiphytic ferns was far lower than in terrestrial ferns. Combined, we detected no hydraulic traits in epiphytic ferns that are commonly associated with drought tolerance, which elucidates the inability of epiphytic ferns to resist more negative water potentials. 
 
 \
-The water potential at turgor loss point ($\Psi$~TLP~) has been found to be an indicator of drought tolerance across a wide range of plants and ecosystems [@bartlett_determinants_2012]. Drought tolerance mechanisms have been previously studied in epiphytes but largely focus on angiosperm species. Tropical angiosperms epiphytes were shown to adjust osmotic potentials and sap flow to seasonal climate [@gotsch_variation_2018], having more negative $\Psi$~TLP~ in wet and dry seasons than the epiphytic fern species in this study. Our evidence suggests that epiphytic ferns have not evolved traits that impact $\Psi$~TLP~ to tolerate water stress, in contrast to their epiphytic angiosperms neighbors. This is confirmed by a study by @martin_causes_2004 which also detected relatively high osmotic potentials (~1.0 MPa) in epiphytic ferns and lycophytes. 
+The water potential at turgor loss point ($\Psi$~TLP~) has been found to be an indicator of drought tolerance across a wide range of plants and ecosystems [@bartlett_determinants_2012]. Drought tolerance mechanisms have been previously studied in epiphytes but largely focus on angiosperm species. Tropical angiosperms epiphytes were shown to adjust osmotic potentials and sap flow to seasonal climate [@gotsch_variation_2018], having more negative $\Psi$~TLP~ in wet and dry seasons than the epiphytic fern species in this study. Our evidence suggests that epiphytic ferns have not evolved traits to be tolerant of water stress, in contrast to their epiphytic angiosperms neighbors. This is confirmed by a study by @martin_causes_2004 which also detected relatively high osmotic potentials (~1.0 MPa) in epiphytic ferns and lycophytes.
 
 \
-Next, we evaluated if canalized stomatal traits could explain the water conservation strategies observed in epiphytic ferns (i.e. lack of apparent drought tolerance). Evidence now strongly suggests that passive stomatal function persists in fern evolution, compared to the development of active stomata control in seed plant taxa [lots of cites]. 
-
-
-
-add Stomata trait reconstruction
-
-With passive stomatal control, plasticity in stomatal anatomical traits may be crucial for epipytic ferns to avoid low leaf water potentials. Although stomatal function appears canalized, stomatal anatomical traits have previously been shown to exhibit a wide range of interspecific variability in understory tropical ferns [see @campany_convergence_2019]. The role of stomatal size and density is 
-
-Evidence from several studies has also suggested that smaller stomata respond faster than larger stomata, an observation that has been explained in the context of surface-to-volume ratios and the requirement for solute transport to drive movement (Hetherington and Woodward, 2003; Franks and Beerling, 2009; Drake et al.,
-2013). There are some notable exceptions to this relationship. The stomata of ferns are relatively large compared with many angiosperm species but nonetheless respond
-rapidly to changes in vapor pressure difference (VPD), which is the difference in water vapor pressure between inside the leaf and outside; however, their response to
-light is much slower than that of angiosperms (Brodribb and Holbrook, 2004; McAdam and Brodribb, 2012b, 2013).
-
-
-so it is possible that plasticity in stomatal traits for epiphytic ferns may 
-
-In comparison stomatal density and vein density did not vary between terrestrial and epiphytic life forms of tropical orchids [@zhang_differentiation_2015]
-
-smaller stomata have a greater surface area to volume ratio,
-facilitating ion exchange and thus stronger and faster movements
-in response to changing irradiance and leaf hydration status26–28.
-
-For stomata to open, guard cells must accumulate solutes from the
-apoplast, driving water uptake to build sufficient hydrostatic
-pressure to inflate against the surrounding pressure of the epidermal
-pavement cells27,29. Opening to a higher gmax may thus be
-mechanically facilitated, requiring less guard cell ion uptake,
-when epidermal pavement cells have lower osmotic concentration
-and lower turgor pressure at full hydration27,29, which tissue-scale
-studies have shown would be associated with a higher bulk leaf
-osmotic potential at full turgor (πo)30. A higher πo would also
-cause greater stomatal sensitivity to closure under drought, as it
-corresponds to a higher turgor loss point (πtlp), i.e., greater sensitivity
-to wilting, and stomatal closure is a typical wilting
-response12,31–34.
-A gmax−Ψgs50 trade-
+Next, we evaluated if plasticity in stomatal traits could explain the water conservation strategies observed in epiphytic ferns (i.e. lack of apparent drought tolerance). Evidence now strongly suggests that passive stomatal function persists in fern evolution, compared to the development of active stomata control in seed plant taxa [@brodribb_passive_2011; @ruszala_land_2011; @mcadam_fern_2012; @cardoso_hydraulics_2019], limiting the leaf water potential margin between stomatal closure and leaf death via water stress [@zhang_leaf_2014]. Stomatal anatomical traits have been shown to exhibit a wide range of interspecific variability among understory tropical ferns [@campany_convergence_2019] and epiphytic ferns [@hietz_correlation_1998] and between epiphytic and tropical ferns in a tropical common gardern [@zhang_leaf_2014]. Synthesizing findings from these studies with our data reveals a broad pattern of decreased stomatal density (approx. 2.5 fold) in epiphytic compared to terrestrial tropical ferns. Patterns in stomatal size are less clear, but still suggest slightly higher stomatal size in epiphytes. 
 
 \
-foliar uptake capacity in ferns?
-
-stomatal insensitivity
-
-\
-Habitat comparisons among single taxa, showed that the epiphytic fern *Lepisorus thunbergianus* had low stomatal density, higher  WUE and low relative frond water content under manipulated drought, compared to terrestrial fern species. [@nishida_photosynthetic_2017]
-
-\
-Cell size in angiosperms, including guard cell width and length, has been shown to increase as genome size increases [@beaulieu_genome_2008]. Whether this finding extend to epiphytic and terrestrial fern lineages is uncertain.
-
-
-Optimization of gas exchange in environments that suffer water deficit may select for species with high densities of small stomata (Franks et al., 2009; de Boer et al., 2012), however, the requirement for leaf cooling in hot climates with high light intensities may select for species with moderate densities of mid-sized stomata [@mcelwain_using_2016]
-
-Earlier work on the coordination of stomatal and xylem functions in cohabiting ferns and angiosperms showed that fern stomata shut to prevent xylem cavitation and associated dysfunction much earlier than the stomata of angiosperms (Brodribb & Holbrook, 2004). This conservatism inevitably would lead to lost photosynthetic potential among ferns compared with angiosperms, where stomata operated much closer to the critical point of xylem dysfunction [@mcelwain_ferns_2011]
-
-higher rates of gas exchange have smaller stomata and faster dynamic characteristics.
-With the aid of a stomatal control model, it is demonstrated that higher gop can potentially expose plants to larger tissue water potential gradients, and that faster stomatal response times can help offset this risk in banksia [@drake_smaller_2013]
-
-
-
-\
-
-
-To avoid water stress in the canopy niche, epiphytic angiosperms use nocturnal dew [@chavez-sahagun_dew_2019], adjust osmotic potentials and sap flow [@gotsch_variation_2018], have thick cuticles, dense veins and stomata and store water in pseudodbulbs [@yang_two_2016]. Here, none of the mechanisms 
+The stomata of ferns have been shown to close rapidly to changes in vapor pressure difference, despite hydropassive regulation, compared to angiosperms [@mcadam_evolution_2015] and ferns close stomata at very low levels of water stress [@brodribb_stomatal_2004; @mcadam_ancestral_2013]. To persist in epiphytic niches characterized by inconsistent water supply, adaptations to stomatal anatomy likely allowed ferns to minimize exposure to water stress. Overall, the derived nature of functional traits seen in the radiation of ferns into epiphytic life forms (&darr; stomatal density, &darr xylem area, &darr stipe lengths and &uarr LMA) reveal strategies for avoidance of low leaf water potentials. Although this water conservatism reduces photosynthetic potential [@mcelwain_ferns_2011], it likely represents an evolutionary drought avoidance pathway that allowed the impressive diversification of epiphytic ferns.
 
 ## The role of hemi-epiphytic life-forms in the evolution of epiphytism in ferns
 
-**the transitionary role the hemi-epiphytic life form serves, if any, to the radiation of ferns from terrestrial to epiphytic habitats**
-
-Understanding the evolutionary role of hemi-epiphytic ferns in the radiation of tropical ferns into epiphytic niches is complicated by the limited total species diversity available to measure[see @putz_notes_1986; @gentry_contribution_1987; @testo_primary_2014]. Our constructed trait-based phylogenies suggest both terrestrial and epiphytic ancestors for the hemi-epiphytic ferns species in this study. Overall, hemi-epiphytic species share characteristics of both terrestrial and epiphytic life forms [@watkins_hydraulic_2010], however, similarity in trait function does provide evidence of the transitionary role of the hemi-epiphytic life form. The morphological construction of fronds in hemi-epiphytic species resembles those of terrestrial origins. Similarity in structural allometry (stipe - lamina) and leaf thickness in hemi-epiphytic and terrestrial ferns suggests that hemi-epiphytic species still optimize functional traits relative to a low-light environment with an established root-soil connection. This terrestrial-centric trait optimization is also apparent in the comparable mineral nutrition (foliar N content) and lamina water-use efficiency ($\delta$^13^C) of hemi-epiphytic and terrestrial fern species. Overall, these similarities should not be surprising if the root-soil connection in hemi-epiphytic species is established early in their sporophytic life history. However, if these morphological and stoichmetric traits are optimized differently in life stages of hemi-epiphytic fern species with or without a root-soil connection is unknown. As such, the plasticity in trait function as hemi-epiphytic fern sporophytes first establish and then develop soil connections should be investigated further.
+Understanding the evolutionary role of hemi-epiphytic ferns in the radiation of tropical ferns into epiphytic niches is complicated by the limited total species diversity available to measure[see @putz_notes_1986; @gentry_contribution_1987; @testo_primary_2014]. Our constructed phylogenies suggest both terrestrial and epiphytic ancestors for the surveryed hemi-epiphytic ferns species, but this should be taken with caution due to low total diversity. Hemi-epiphytic species share characteristics of both terrestrial and epiphytic life forms [@watkins_hydraulic_2010], however, similarity in trait function does provide evidence of the transitionary role of the hemi-epiphytic life form. The morphological construction of fronds in hemi-epiphytic species resemble those of terrestrial ferns. Similarity in structural allometry (stipe - lamina) and LMA in hemi-epiphytic and terrestrial ferns suggests that hemi-epiphytic species optimize functional traits for a low-light environment with an established root-soil connection. This terrestrial-centric trait optimization is also apparent in the comparable mineral nutrition (foliar N content) and lamina water-use efficiency ($\delta$^13^C) of hemi-epiphytic and terrestrial fern species. Overall, these similarities should not be surprising if the root-soil connection in hemi-epiphytic species is established early in their sporophytic life history. However, if these morphological and stoichmetric traits are optimized differently in life stages of hemi-epiphytic fern species with or without a root-soil connection is still unknown. As such, the plasticity in trait function as hemi-epiphytic fern sporophytes first establish and then develop soil connections should be investigated further.
 
 \
-On the other hand, hemi-epiphytic ferns retain traits associated with avoiding desiccation that more closely resemble strategies of epiphytic ferns. Reductions of both stipe length and total xylem area in hemi-epiphytic ferns suggest that adaptations to reduced water availability in their early establishment as epiphytes are likely conserved throughout their life history. Similarly, decreases in stomatal density for hemi-epiphytes also reveals a lasting epiphytic adaptation to drought avoidance and water conservatism. The evolutionary origins of hemi-epiphytic species remains unclear, but our data do suggest that 'epiphytic-like' traits optimized to avoid desiccation are likely maintained even when hemi-epiphytic ferns establish a permanent connection with a terrestrial water supply. This could suggest an holoepiphytic origin of extant hemi-epiphytic ferns, agreeing with @testo_primary_2014, which could be further elucidated when plasticity of functional traits in the early establishing sporophyte (as an epiphyte) are better understood.
+On the other hand, hemi-epiphytic ferns express traits associated with avoiding desiccation that more closely resemble strategies of epiphytic ferns. Reductions of both stipe length and total xylem area in hemi-epiphytic ferns suggest that adaptations to reduced water availability in their early establishment as epiphytes are likely conserved throughout their life history. Similarly, decreases in stomatal density for hemi-epiphytes mirror adaptations for water conservatism detected in epiphytic ferns. The evolutionary origins of hemi-epiphytic species remains unclear, but our data do suggest that 'epiphytic-like' traits optimized to avoid desiccation are likely maintained even when hemi-epiphytic ferns establish a permanent connection with a terrestrial water supply. This could suggest an holoepiphytic origin of extant hemi-epiphytic ferns, agreeing with @testo_primary_2014, which could be further elucidated when plasticity of functional traits in the early establishing sporophyte (as an epiphyte) are better understood.
 
 ## Conclusions
 
-This variation in potential growing sites and the numerous different types of inhabited vegetation reveal that there is not a simple definition of the ‘epiphytic habitat’ nor of the environmental conditions faced by epiphytic species [@zotz_physiological_2001]. However, scarcity of water is likely the most impactful constraint on epiphytic plants as most epiphytes are characterized as having a 'pulse supplied" water supply without access to soil [@benzing_1990; @zotz_physiological_2001]. The plasticity of functional traits between epiphytic and terrestrial ferns and the reconstructions of functional trait evolution, in this study, reveal the pathway in which ferns where able to opportunistically diversify into the more variable canopy habitat.
+This variation in potential growing sites and the numerous different types of inhabited vegetation reveal that there is not a simple definition of the ‘epiphytic habitat’ nor of the environmental conditions faced by epiphytic species [@zotz_physiological_2001]. However, scarcity of water is likely the most impactful constraint on epiphytic plants as most epiphytes are characterized as having a 'pulse supplied" water supply without access to soil [@benzing_1990; @zotz_physiological_2001]. The plasticity of functional traits between epiphytic and terrestrial ferns and the reconstructions of trait evolution, in this study, reveal how ferns where able to opportunistically diversify into the more variable canopy habitat.
 
 emergent hypothesis that selection acted on the physiology of both the sporophyte and gametophyte
 generations in a synchronous manner that is consistent with selection for drought
 tolerance in the epiphytic niche, and the increasingly diverse habitats of the mid to late Cenozoic. in epiphytes adapted to seasonally dry habitats [@pittermann_physiological_2013]
 
 **Our understanding of how potentially limiting plasticity in ecophysiological function has still resulted in such a massive diversification is surprisingly unclear. **
+
+Physiological work on stomatal response times in epiphytic ferns, in the same lense as studies by   , would be greatly beneficial in ....
+
+Ferns and angiosperms live side by side on canopy branches, yet likely utilize distict mechanims to deal with water stress.
 
 # Tables
 

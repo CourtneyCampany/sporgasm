@@ -36,7 +36,6 @@ ss_agg <- doBy::summaryBy(guardcell_length_um + average_guardcell_width_um +
                           + niche2, data=ss2, FUN=mean, keep.names = TRUE)
 ss_nohemi <- droplevels(ss_agg[!ss_agg$niche2 == "hemi-epiphyte",])
 
-
 ##stats --------
 
 #basic stats
@@ -53,43 +52,48 @@ hist(ss_agg$stomatal_size) ## likely affect frequency distribution
 # summary(ss_mod)
 # anova(ss_mod)
 
-##full mixed model for stomatal size ---------
-ss_mod2 <- lmer(sqrt(stomatal_size) ~ niche2 * site + (1|species), data=ss_agg)
-ss_mod3 <- lmer(sqrt(stomatal_size) ~ niche2 + site + (1|species), data=ss_agg)
-
-ss_mod4 <- lmer(sqrt(stomatal_size) ~ niche2 * site + (1|species), data=ss_nohemi)
-Anova(ss_mod4)
-
 boxplot(stomatal_size ~ niche2, data=ss_agg) #aspenium species outliers?
+
+#test dataset without asplenium serratum
+ss_noasp <- ss_agg[!ss_agg$species == "asplenium_serratum",]
+boxplot(stomatal_size ~ niche2, data=ss_noasp)
+
+#test dataset without any outliers
+ss_noout <- ss_agg[ss_agg$stomatal_size < 0.002,]
+boxplot(stomatal_size ~ niche2, data=ss_noout)
+
+##full mixed model for stomatal size ---------
+ss_mod2 <- lmer(sqrt(stomatal_size) ~ niche2 * site + (1|species), data=ss_noout)
+ss_mod3 <- lmer(sqrt(stomatal_size) ~ niche2 + site + (1|species), data=ss_noout)
+
+# ss_mod4 <- lmer(sqrt(stomatal_size) ~ niche2 * site + (1|species), data=ss_nohemi)
+# Anova(ss_mod4)
+
 qqPlot(residuals(ss_mod2)) #sqrt transformation works best
 plot(ss_mod2)
 
 #model summary
 Anova(ss_mod2, type="3") #niche, no interaction
 anova(ss_mod2, ss_mod3) #not different
-AIC(ss_mod2, ss_mod4) #model 2 is better (less than 2)
+AIC(ss_mod2, ss_mod3) #model 2 is better (less than 2)
 
-
-#use model with interaction
+#use model with interaction (no matter the dataset, stomatal size differs)
 r.squaredGLMM(ss_mod2)
 #R2m       R2c
-#0.1424696 0.879826
+#0.1536656 0.8791218
 
-#niche2        6.2322  2    0.04433 *
 tukey_ss <- glht(ss_mod2, linfct = mcp(niche2 = "Tukey"))
 ss_siglets <-cld(tukey_ss)
 
 #terrestrial hemi-epiphyte      epiphyte 
 # "a"           "b"           "ab"
 
-nohemi_ss <- mean(ss_agg[!ss_agg$niche2 == "hemi-epiphyte", "stomatal_size"])
-#0.001178799
-hemi_ss <- mean(ss_agg[ss_agg$niche2 == "hemi-epiphyte", "stomatal_size"])
-#0.00150345
+terr_ss <- mean(ss_noout[ss_noout$niche2 == "terrestrial", "stomatal_size"])
+#0.001278601
+epi_ss <- mean(ss_noout[ss_noout$niche2 == "epiphyte", "stomatal_size"])
+#0.001213584
 
-##non terrestrial are 40.4% larger
-visreg(ss_mod2)
-
+#epiphyte stomata 11.4 % bigger
 
 ###test for whether it is length or width?
 sl_mod <- lmer(sqrt(guardcell_length_um)  ~ niche2 * site + (1|species), data=ss_agg)
@@ -99,27 +103,38 @@ Anova(sl_mod, type="3")  ###not length
 
 
 sw_mod <- lmer(average_guardcell_width_um  ~ niche2 * site + (1|species), 
-               data=ss_agg)
+               data=ss_noout)
 sw_mod2 <- lmer(average_guardcell_width_um  ~ niche2 + site + (1|species), 
-               data=ss_agg)
+               data=ss_noout)
 qqPlot(residuals(sw_mod))
 
 Anova(sw_mod, type="3") ##interaction is not significant
 anova(sw_mod, sw_mod2)
 AIC(sw_mod, sw_mod2) #us no interaction model
 
-Anova(sw_mod2, type="3")
-visreg(sw_mod2)
+Anova(sw_mod, type="3")
 
 tukey_sw <- glht(sw_mod2, linfct = mcp(niche2 = "Tukey"))
 sw_siglets <-cld(tukey_sw)
 
-terr_sw <- mean(ss_agg[ss_agg$niche2 == "terrestrial", "average_guardcell_width_um"])
-#0.01111373
-noterr_sw <- mean(ss_agg[!ss_agg$niche2 == "terrestrial", "average_guardcell_width_um"])
-#0.01349161
+# terrestrial hemi-epiphyte      epiphyte 
+# "a"           "b"           "b" 
 
+terr_sw <- mean(ss_noout[ss_noout$niche2 == "terrestrial", "average_guardcell_width_um"])
+#0.0110753
+noterr_sw <- mean(ss_noout[!ss_noout$niche2 == "terrestrial", "average_guardcell_width_um"])
+#0.01335375
 
+mean(ss_noout$guardcell_length_um) *1000
+## diff in width:
+(noterr_sw-terr_sw)/noterr_sw
+
+#length
+
+terr_sl <- mean(ss_noout[ss_noout$niche2 == "terrestrial", "guardcell_length_um"])
+#48.1
+epi_sl <- mean(ss_noout[ss_noout$niche2 == "epiphyte", "guardcell_length_um"])
+#45.9um
 
 ##if use interaction model::
 # library(emmeans)
