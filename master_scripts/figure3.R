@@ -109,6 +109,8 @@ legend("bottomleft", legend = c(boxlabs, "Wright et al. 2003"), pch=21,
                                 pt.bg=c(trtcols,"grey50"),cex=1.25,
                                 bty="n", inset=.02)
 # text(455,.2,"LMA x Niche, P < 0.001")
+text(log10(800), log10(7), expression(paste(R[cond]^{"2"}," = "," 0.21")))
+text(log10(800), log10(4.75), expression(paste(R[marg]^{"2"}," = "," 0.79")))
 
 #c13
 boxplot(d13C ~ niche2, data=c13dat, xaxt='n',ylim=c(-38, -25),xlab="",

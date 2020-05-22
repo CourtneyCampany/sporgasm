@@ -24,14 +24,14 @@ ss2 <-  merge(ss, niche, by=c("genusspecies", "site"))
   #reorder from ground to canopy 
   ss2$niche2<-factor(ss2$niche2, 
                    levels=c("terrestrial", "hemi-epiphyte", "epiphyte"))
+  ss2$stomatal_length_um <- ss2$guardcell_length_um*1000
   ss2$average_guardcell_width_um <- with(ss2, 
-                                       (guardcell_width1_um + guardcell_width1_um)/2)
-  ss2$stomatal_size <- with(ss2, (guardcell_width1_um + guardcell_width1_um) *
-                            guardcell_length_um)
-
+                                         ((guardcell_width1_um + guardcell_width2_um)*1000)/2)
+  ss2$stomatal_size <- with(ss2, ((guardcell_width1_um*1000) + (guardcell_width2_um*1000)) *
+                              (guardcell_length_um*1000))
 
 #mean of stomatal size per plant number
-ss_agg <- doBy::summaryBy(guardcell_length_um + average_guardcell_width_um +
+ss_agg <- doBy::summaryBy(stomatal_length_um + average_guardcell_width_um +
                             stomatal_size ~ site + species + plant_no 
                           + niche2, data=ss2, FUN=mean, keep.names = TRUE)
 ss_nohemi <- droplevels(ss_agg[!ss_agg$niche2 == "hemi-epiphyte",])
@@ -40,7 +40,7 @@ ss_nohemi <- droplevels(ss_agg[!ss_agg$niche2 == "hemi-epiphyte",])
 
 #basic stats
 chisq.out.test(ss_agg$stomatal_size) #highest points are likely outliers
-hist(ss_agg$stomatal_size) ## likely affect frequency distribution
+hist(sqrt(ss_agg$stomatal_size)) ## likely affect frequency distribution
 
 #simple model check
 # ss_mod <- lm(log10(stomatal_size) ~ niche2, data=ss_agg)
@@ -59,7 +59,7 @@ ss_noasp <- ss_agg[!ss_agg$species == "asplenium_serratum",]
 boxplot(stomatal_size ~ niche2, data=ss_noasp)
 
 #test dataset without any outliers
-ss_noout <- ss_agg[ss_agg$stomatal_size < 0.002,]
+ss_noout <- ss_agg[ss_agg$stomatal_size < 2000,]
 boxplot(stomatal_size ~ niche2, data=ss_noout)
 
 ##full mixed model for stomatal size ---------
@@ -80,7 +80,7 @@ AIC(ss_mod2, ss_mod3) #model 2 is better (less than 2)
 #use model with interaction (no matter the dataset, stomatal size differs)
 r.squaredGLMM(ss_mod2)
 #R2m       R2c
-#0.1536656 0.8791218
+#0.1496913 0.8793392
 
 tukey_ss <- glht(ss_mod2, linfct = mcp(niche2 = "Tukey"))
 ss_siglets <-cld(tukey_ss)
@@ -89,14 +89,16 @@ ss_siglets <-cld(tukey_ss)
 # "a"           "b"           "ab"
 
 terr_ss <- mean(ss_noout[ss_noout$niche2 == "terrestrial", "stomatal_size"])
-#0.001278601
+#0102.967
 epi_ss <- mean(ss_noout[ss_noout$niche2 == "epiphyte", "stomatal_size"])
-#0.001213584
+#1231.472
 
-#epiphyte stomata 11.4 % bigger
+#epiphyte stomata 10.4 % bigger
+
+
 
 ###test for whether it is length or width?
-sl_mod <- lmer(sqrt(guardcell_length_um)  ~ niche2 * site + (1|species), data=ss_agg)
+sl_mod <- lmer(sqrt(stomatal_length_um)  ~ niche2 * site + (1|species), data=ss_agg)
 qqPlot(residuals(sl_mod))
 
 Anova(sl_mod, type="3")  ###not length
@@ -121,11 +123,12 @@ sw_siglets <-cld(tukey_sw)
 # "a"           "b"           "b" 
 
 terr_sw <- mean(ss_noout[ss_noout$niche2 == "terrestrial", "average_guardcell_width_um"])
-#0.0110753
+#11.25
 noterr_sw <- mean(ss_noout[!ss_noout$niche2 == "terrestrial", "average_guardcell_width_um"])
-#0.01335375
+#13.4
 
-mean(ss_noout$guardcell_length_um) *1000
+mean(ss_noout$stomatal_length_um) 
+
 ## diff in width:
 (noterr_sw-terr_sw)/noterr_sw
 

@@ -57,7 +57,8 @@ points(stipe_length_cm ~ xylem_area_mm2, data=alldata3, col=trtcols2[niche2],
      pch=16,cex=1.25)
 legend("topleft", legend = boxlabs, pch=16, col=trtcols, bty="n", inset=.01)
 text(0.8, 80, "B", cex=1.25)
-
+text(.7, 10, expression(paste(R[cond]^{"2"}," = "," 0.30")))
+text(.7, 3, expression(paste(R[marg]^{"2"}," = "," 0.88")))
 
 
 # #xylem_lamina

@@ -15,13 +15,14 @@ ss2 <-  merge(ss, niche, by="genusspecies")
     #reorder from ground to canopy 
   ss2$niche2<-factor(ss2$niche2, 
                          levels=c("terrestrial", "hemi-epiphyte", "epiphyte"))
+  ss2$stomatal_length_um <- ss2$guardcell_length_um*1000
   ss2$average_guardcell_width_um <- with(ss2, 
-                            (guardcell_width1_um + guardcell_width1_um)/2)
-  ss2$stomatal_size <- with(ss2, (guardcell_width1_um + guardcell_width1_um) *
-                            guardcell_length_um)
+                            ((guardcell_width1_um + guardcell_width2_um)*1000)/2)
+  ss2$stomatal_size <- with(ss2, ((guardcell_width1_um*1000) + (guardcell_width2_um*1000)) *
+                            (guardcell_length_um*1000))
 
 #mean of stomatal size per plant number
-ss_agg <- doBy::summaryBy(guardcell_length_um + average_guardcell_width_um +
+ss_agg <- doBy::summaryBy(stomatal_length_um + average_guardcell_width_um +
                             stomatal_size ~ site + species + plant_no 
                           + niche2, data=ss2, FUN=mean, keep.names = TRUE)
 write.csv(ss_agg, "calculated_data/stomata_size_means.csv", row.names = FALSE)

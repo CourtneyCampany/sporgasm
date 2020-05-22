@@ -32,6 +32,8 @@ nitro_mod <- lmer(n_perc ~ lma_g_m2 * niche2 + site + (1|species),
 # nitro_mod2 <- lmer(n_perc ~ lma_g_m2 * niche2 * site + (1|species), 
 #                   data=nitro2[nitro2$lma_g_m2 < 600,])
 
+nitro_mod3 <- lmer(log10(n_perc) ~ log10(lma_g_m2) * niche2 + site + (1|species), 
+                  data=nitro[nitro$lma_g_m2 < 600,])
 
 # plot(nitro_mod) #ok
 # qqPlot(residuals(nitro_mod)) #ok
@@ -46,7 +48,11 @@ Anova(nitro_mod, type="3")
 # visreg(nitro_mod, "lma_g_m2", by="niche2")
 r.squaredGLMM(nitro_mod)
 # R2m       R2c
-# [1,] 0.250495 0.8111689
+# 0.2437342 0.7849114
+
+r.squaredGLMM(nitro_mod3)
+# R2m       R2c
+#0.2099185 0.7937285
 
 summary(nitro_mod)
 library(emmeans)

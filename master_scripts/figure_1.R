@@ -74,6 +74,9 @@ ablineclip(epi_mod, x1=log10(min(epi$stipe_length_cm+1)),
            col=trtcols[3], lwd=3, lty=2)
 text(log10(100), log10(10), "B", cex=1.25)
 
+text(log10(60), log10(25), expression(paste(R[cond]^{"2"}," = "," 0.23")))
+text(log10(60), log10(15), expression(paste(R[marg]^{"2"}," = "," 0.88")))
+
 # dev.off()
 
 
