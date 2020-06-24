@@ -68,17 +68,17 @@ library(plotrix)
 
 layout(matrix(c(1,3,2,2), 2, 2, byrow = TRUE))
 
-par(mgp=c(2.5,.75,0), mar=c(4,4,1,1), cex.lab=1.1)
+par(mgp=c(2.5,.75,0), mar=c(4,4,1,1), cex.lab=1.15)
 
 boxplot(lma_g_m2 ~ niche2, data=nitro,xaxt='n',ylim=c(0,630),
         boxlwd=2, whisklwd=2,staplelwd=2,xlab="",
         ylab=lma_lab, outline=FALSE, border=trtcols, varwidth=TRUE)
-axis(1, boxlabs, at=1:3, cex.axis=1.1)
+axis(1, boxlabs, at=1:3, cex.axis=1.15)
 stripchart(lma_g_m2 ~ niche2, data = nitro,cex=1.25,
            vertical = TRUE, method = "jitter",
            pch=16, col=trtcols2,
            xaxt='n', add=TRUE) 
-text(x=1:3, y=600, cldlma)
+text(x=1:3, y=600, cldlma, cex=1.15)
 text(3.5, 0, "A", cex=1.25)
 
 #lma v nitro
@@ -119,8 +119,8 @@ boxplot(d13C ~ niche2, data=c13dat, xaxt='n',ylim=c(-38, -25),xlab="",
 stripchart(d13C ~ niche2, data = c13dat,cex=1.25,
            vertical = TRUE, method = "jitter",
            pch = 16,  col= trtcols2, xaxt='n', add=TRUE) 
-axis(1, boxlabs, at=1:3, cex.axis=1.1)
-text(x=1:3, y=-25.5, cldc13)
+axis(1, boxlabs, at=1:3, cex.axis=1.15)
+text(x=1:3, y=-25.5, cldc13, cex=1.15)
 text(3.5, -38, "B", cex=1.25)
 
 # #inset c13 site

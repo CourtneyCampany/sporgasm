@@ -32,18 +32,18 @@ cldxylem <- c("a","b","b" )
 #      width = 12, height = 5, units = "in", res= 400)  
 
 # windows(12,5)
-par(mfrow=c(1,2),mgp=c(2.5,.75,0), mar=c(4,4,1,1), cex.lab=1.1)
+par(mfrow=c(1,2),mgp=c(2.5,.75,0), mar=c(4,4,1,1), cex.lab=1.15)
 
 #xylem area
 boxplot(xylem_area_mm2 ~ niche2, data=alldata3,xaxt='n',ylim=c(0, .85),
         border=trtcols, varwidth=TRUE, outline=FALSE,xlab="",
         boxlwd=2,whisklwd=2,staplelwd=2, ylab=xylem_lab)
-axis(1, boxlabs, at=1:3, cex.axis=1.1)
+axis(1, boxlabs, at=1:3, cex.axis=1.15)
 stripchart(xylem_area_mm2 ~ niche2, data = alldata3,
            vertical = TRUE, method = "jitter",cex=1.25,
            pch = 16,  col= trtcols2, xaxt='n', add=TRUE)
 text(3.5, 0.85, "A", cex=1.25)
-text(x=1:3, y=.775, cldxylem)
+text(x=1:3, y=.775, cldxylem, cex=1.15)
 
 #xylem stipe
 plot(stipe_length_cm ~ xylem_area_mm2, data=alldata3, type='n',
