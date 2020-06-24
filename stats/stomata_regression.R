@@ -21,29 +21,36 @@ terr <- stomata_noout[stomata_noout$niche2 == "terrestrial",]
 hemi <- stomata_noout[stomata_noout$niche2 == "hemi-epiphyte" ,]
 epi <- stomata_noout[stomata_noout$niche2 == "epiphyte",]
 
+plot(stomatal_size ~ sd_mm2, data=stomata_noout)
+
 #bivariate mixed model
 sizedens <- lmer(sqrt(stomatal_size) ~ sqrt(sd_mm2)  * niche2 
                  + (1|species),  data=stomata_noout)
 
-sizedens2 <- lmer(log10(sd_mm2) ~ log10(stomatal_size)  + niche2 
+sizedens2 <- lmer(log10(sd_mm2) ~ log10(stomatal_size)  * niche2 
                  + (1|species),  data=stomata_noout)
 
-sizedens3 <- lmer(sqrt(sd_mm2) ~ sqrt(stomatal_size)  * niche2 
+sizedens3 <- lmer(sqrt(sd_mm2) ~ sqrt(stomatal_size)  + niche2 
                  + (1|species),  data=stomata_noout)
 
+sizedens4 <- lmer(stomatal_size ~ sd_mm2  * niche2 
+                 + (1|species),  data=stomata_noout)
 
-#model diagnostics
+#model diagnostics (sqrt trans works best)
 qqPlot(residuals(sizedens)) 
 plot(sizedens)
 
-Anova(sizedens, type=3) #p = .035
-anova(sizedens, sizedens2)
-AIC(sizedens, sizedens2)
+Anova(sizedens, type=3) 
+anova(sizedens, sizedens3)
+AIC(sizedens, sizedens3)
 
-summary(sizedens)
-r.squaredGLMM(sizedens)
+#no interaction, choose model without
+Anova(sizedens3, type=3) #p = .8
+
+summary(sizedens3)
+r.squaredGLMM(sizedens3)
 #R2m       R2c
-#0.2232516 0.9032065
+#0.2760553 0.9013058
 
 anova(lm(sd_mm2 ~ stomatal_size ,  data=terr))
 anova(lm(sd_mm2 ~ stomatal_size ,  data=hemi))

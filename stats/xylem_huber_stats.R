@@ -1,10 +1,20 @@
 #huber by niche
-huber <- read.csv("calculated_data/xylem_area_huber.csv")
-huber$niche2<-factor(huber$niche2, 
-                   levels=c("terrestrial", "hemi-epiphyte", "epiphyte"))
-huber$id <- paste(huber$genusspecies, huber$plant_no, sep="-")
+alldata <- read.csv("calculated_data/ferns_traits_complete.csv")
+alldata$id <- paste(alldata$genusspecies, alldata$plant_no, sep="-")
+#reorder from ground to canopy 
+alldata$niche2<-factor(alldata$niche2, 
+                       levels=c("terrestrial", "hemi-epiphyte", "epiphyte"))
+alldata2 <- alldata[alldata$xylem_area_mm2 < .8,]
+#remove outliers detected in stats (lomjap-hemi)
+alldata3 <- alldata2[! alldata2$id  %in% c("lomjap-4","lomjap-3","lomjap-6"),]
 
-#stats for xylem area and huber values
+alldata3$xylemfrac <- (alldata3$xylem_area_mm2 / (alldata3$lamina_area_cm2 * 100))*10000
+#xylemfrac is unitless standardized stem xylem measurement (huber value)
+#multiple x 100000 for ease of view
+
+boxplot(xylemfrac~niche2, data=alldata3, outline=FALSE)
+
+#stats for xylem area and xylemfrac values
 
 library(visreg)
 library(multcomp)
@@ -21,16 +31,19 @@ boxplot(huber ~ niche2, data=huber)
 hist(huber$xylem_area_mm2)
 hist(huber$huber)
 
+boxplot(xylemfrac~niche2, data=alldata3)
 #lots of outliers for huber:
-huber2 <- huber[huber$huber <= 1.147990e-05, ]
-boxplot(huber ~ niche2, data=huber2)
-hist(huber2$huber) #much better
+xylemfrac_dat <- alldata3[alldata3$xylemfrac <= .12, ]
+boxplot(xylemfrac ~ niche2, data=xylemfrac_dat)
+hist(xylemfrac_dat$xylemfrac) # better
 
 #there are still a few epi outliers, so lets try to remove rownumbers
-huber3 <- huber2[!(huber2$id %in% c("elalat-4", "aspjug-3","phlaur-4", 
+xylemfrac_dat2 <- xylemfrac_dat[!(xylemfrac_dat$id %in% 
+                                    c("elalat-4", "aspjug-3","phlaur-4", 
                                     "elaher-2", "elalat-1")),]
-boxplot(huber ~ niche2, data=huber3)
+boxplot(xylemfrac ~ niche2, data=xylemfrac_dat2)
 
+#xylem data
 xylem2 <- huber[huber$xylem_area_mm2 < 0.8,]
 xylem3 <- xylem2[! xylem2$id  %in% c("lomjap-4","lomjap-3","lomjap-6"),]
 
@@ -72,9 +85,8 @@ epi_hemi <- mean(xylem2[!xylem2$niche2 == "terrestrial", "xylem_area_mm2"]) #0.1
 
 ###huber values ------
 
-#run stats on LMA because it jives better with other common regrssions
-hv_mod <- lmer(sqrt(huber) ~ niche2 * site + (1|species), data=huber3)
-hv_mod2 <- lmer(sqrt(huber) ~ niche2 + site + (1|species), data=huber3)
+hv_mod <- lmer(sqrt(xylemfrac) ~ niche2 * site + (1|species), data=xylemfrac_dat2)
+hv_mod2 <- lmer(sqrt(xylemfrac) ~ niche2 + site + (1|species), data=xylemfrac_dat2)
 
 plot(hv_mod)
 qqPlot(residuals(hv_mod))
@@ -87,10 +99,10 @@ AIC(hv_mod, hv_mod2) #model without interaction in better
 Anova(hv_mod2, type="3") #only niche effect
 r.squaredGLMM(hv_mod2)
 
-# niche2       11.7107  2   0.001038 ** 
+# niche2      0.0006
 
 # R2m       R2c
-# [1,] 0.2329479 0.7829399
+# [1,] 00.2448371 0.7863302
 
 
 visreg(hv_mod2)

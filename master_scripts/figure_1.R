@@ -42,18 +42,18 @@ lma_lab <- expression(LMA~~(g~m^-2))
 # jpeg(filename = "output/figure1_short.jpeg",
 #       width = 10, height = 6, units = "in", res= 400)
 
-par(mfrow=c(1,2),mgp=c(2.5,.75,0), mar=c(4,4,1,1), cex.lab=1.25)
+par(mfrow=c(1,2),mgp=c(2.5,.75,0), mar=c(4,4,1,1), cex.lab=1.15)
 
 # stipe length
 boxplot(stipe_length_cm ~ niche2, data=traits, ylim=c(0, 82),xaxt='n',
         boxlwd=2,whisklwd=2,staplelwd=2,xlab="",
         ylab = stipe_lab,border=trtcols, varwidth=TRUE, outline=FALSE)
 axis(1, at=1:3, labels=FALSE)
-mtext(boxlabs2, side=1, at=1:3, cex=1.25, line=2.5)
+mtext(boxlabs, side=1, at=1:3, cex=1.15, line=2.5)
 stripchart(stipe_length_cm ~ niche2, data = traits,
            vertical = TRUE, method = "jitter",cex=1.25,
            pch = 16,  col= trtcols2, xaxt='n', add=TRUE)
-text(x=1:3, y=80, stipecld, cex=1.25)
+text(x=1:3, y=80, stipecld, cex=1.15)
 text(3.5, 0, "A", cex=1.25)
 
 # allometry
