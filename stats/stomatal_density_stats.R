@@ -46,6 +46,16 @@ boxplot(sd_mm2 ~ niche2, data=sd_agg)
 
 sd_new <- droplevels(sd_agg[!sd_agg$genusspecies == "oleart",])
 
+### custom quantiles for paper
+terr <- sd_new[sd_new$niche2 == "terrestrial",]
+epi <- sd_new[sd_new$niche2 == "epiphyte",]
+hemi <- sd_new[sd_new$niche2 == "hemi-epiphyte",]
+
+quantile(epi$sd_mm2, probs=.8)
+quantile(hemi$sd_mm2, probs=.8)
+quantile(terr$sd_mm2, probs=.8)
+
+
 ##full mixed model:
 sd_mod2 <- lmer(sqrt(sd_mm2) ~ niche2 * site + (1|species), data=sd_new)
 sd_mod3 <- lmer(sqrt(sd_mm2) ~ niche2 + site + (1|species), data=sd_new)

@@ -37,19 +37,19 @@ cldxylemfrac <- c("a","b","b" )
 #      width = 12, height = 5, units = "in", res= 400)  
 
 # windows(12,5)
-par(mfrow=c(1,2),mgp=c(2.5,.75,0), mar=c(4,4,1,1), cex.lab=1.15)
+par(mfrow=c(1,2),mgp=c(2.5,.75,0), mar=c(4,4,1,1), cex.lab=1.15,cex.axis=1.15)
 
 
 #xylem area
 boxplot(xylemfrac ~ niche2, data=alldata3[alldata3$xylemfrac < .15,],
         xaxt='n',ylim=c(0, .2),
         border=trtcols, varwidth=TRUE, outline=FALSE,xlab="",
-        boxlwd=2,whisklwd=2,staplelwd=2, ylab="Xylem Fraction")
+        boxlwd=2,whisklwd=2,staplelwd=2, ylab=xylemfrac_lab)
 axis(1, boxlabs, at=1:3, cex.axis=1.15)
 stripchart(xylemfrac ~ niche2, data=alldata3[alldata3$xylemfrac < .15,],
            vertical = TRUE, method = "jitter",cex=1.25,
-           pch = 17,col= trtcols2, xaxt='n', add=TRUE)
-text(3.5, 0.85, "A", cex=1.25)
+           pch = 16,col= trtcols2, xaxt='n', add=TRUE)
+text(3.5, 0, "A", cex=1.25)
 text(x=1:3, y=.18, cldxylemfrac, cex=1.15)
 
 #xylem stipe
@@ -62,10 +62,10 @@ predline(hemi_mod_xa, col=trtcols[2], lwd=2, lty=2)
 predline(epi_mod_xa, col=trtcols[3], lwd=2, lty=2)
 points(stipe_length_cm ~ xylem_area_mm2, data=alldata3, col=trtcols2[niche2],
      pch=16,cex=1.25)
-legend("topleft", legend = boxlabs, pch=16, col=trtcols, bty="n", inset=.01)
-text(0.8, 80, "B", cex=1.25)
-text(.7, 10, expression(paste(R[cond]^{"2"}," = "," 0.30")))
-text(.7, 3, expression(paste(R[marg]^{"2"}," = "," 0.88")))
+legend("topleft", legend = boxlabs, pch=16, col=trtcols, bty="n", inset=.01,1.15)
+text(.8, 0, "B", cex=1.25)
+text(.85, 16, expression(paste(R[cond]^{"2"}," = "," 0.30")), 1.25)
+text(.85, 9, expression(paste(R[marg]^{"2"}," = "," 0.88")), 1.25)
 
 
 # #xylem_lamina

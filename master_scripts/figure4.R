@@ -44,32 +44,32 @@ cldsize <- c("a","b","b" )
 # jpeg(filename = "output/figure3_anatomy.jpeg",
 #      width = 10, height = 6, units = "in", res= 400)
 
-par(mfrow=c(1,2),mgp=c(2.5,.75,0), mar=c(4,4,1,1), cex.lab=1.15)
+par(mfrow=c(1,2),mgp=c(2.5,.75,0), mar=c(4,4,1,1), cex.lab=1.15,cex.axis=1.15)
 
 #sd
 boxplot(sd_mm2 ~ niche2, data=stomata_noout, xaxt='n',ylim=c(0, 170),
         varwidth=TRUE,xlab="",
-        ylab=expression(Stomatal~density~~(mm^2)),border=trtcols,
+        ylab=sd_lab,border=trtcols,
         boxlwd=2,whisklwd=2,staplelwd=2)
 axis(1, boxlabs, at=1:3, cex.axis=1.15)
 stripchart(sd_mm2 ~ niche2, data = stomata_noout,
            vertical = TRUE, method = "jitter",cex=1.25,
            pch = 16,  col= trtcols2, xaxt='n', add=TRUE) 
 text(x=1:3, y=165, cldstomata, cex=1.15)
-text(.5, 170, "A", cex=1.25)
+text(3.5, 0, "A", cex=1.25)
 
 #stomatal sze
 
 boxplot(stomatal_size ~ niche2, data=stomata_noout, xaxt='n',
-        varwidth=TRUE,xlab="",outline=FALSE,ylim=c(200,2700),
+        varwidth=TRUE,xlab="",outline=FALSE,ylim=c(200,2800),
         ylab=ss_lab,border=trtcols,
         boxlwd=2,whisklwd=2,staplelwd=2)
 axis(1, boxlabs, at=1:3, cex.axis=1.15)
 stripchart(stomatal_size ~ niche2, data = stomata_noout,
            vertical = TRUE, method = "jitter",cex=1.25,
            pch = 16,  col= trtcols2, xaxt='n', add=TRUE) 
-text(x=1:3, y=2600, cldsize, cex=1.25)
-text(.5, 2700, "B", cex=1.25)
+text(x=1:3, y=2700, cldsize, cex=1.25)
+text(3.5, 200, "B", cex=1.25)
 
 ##below is removed SD vs SS
 # plot(stomatal_size ~ sd_mm2, data=stomata_noout, 

@@ -68,18 +68,18 @@ library(plotrix)
 
 layout(matrix(c(1,3,2,2), 2, 2, byrow = TRUE))
 
-par(mgp=c(2.5,.75,0), mar=c(4,4,1,1), cex.lab=1.15)
+par(mgp=c(2.5,.75,0), mar=c(4,4,1,1), cex.lab=1,cex.axis=1)
 
 boxplot(lma_g_m2 ~ niche2, data=nitro,xaxt='n',ylim=c(0,630),
         boxlwd=2, whisklwd=2,staplelwd=2,xlab="",
         ylab=lma_lab, outline=FALSE, border=trtcols, varwidth=TRUE)
-axis(1, boxlabs, at=1:3, cex.axis=1.15)
-stripchart(lma_g_m2 ~ niche2, data = nitro,cex=1.25,
+axis(1, boxlabs, at=1:3, cex.axis=1)
+stripchart(lma_g_m2 ~ niche2, data = nitro,cex=1,
            vertical = TRUE, method = "jitter",
            pch=16, col=trtcols2,
            xaxt='n', add=TRUE) 
-text(x=1:3, y=600, cldlma, cex=1.15)
-text(3.5, 0, "A", cex=1.25)
+text(x=1:3, y=600, cldlma, cex=1)
+text(3.5, 0, "A", cex=1.1)
 
 #lma v nitro
 with(nitro, plot(log10(n_perc) ~ log10(lma_g_m2), ylim=c(-.65,.9),xlim=c(1,3),
@@ -104,9 +104,9 @@ ablineclip(hemi_mod2, col=trtcols[2], lwd=2, lty=2,
 # predline(terr_mod2, col=trtcols[1], lwd=2, lty=2)
 
 magaxis(side=c(1,2), unlog=c(1,2), frame.plot=TRUE)
-text(3, -.6, "C", cex=1.25)
-legend("bottomleft", legend = c(boxlabs, "Wright et al. 2003"), pch=21, 
-                                pt.bg=c(trtcols,"grey50"),cex=1.25,
+text(3, -.6, "C", cex=1.1)
+legend("bottomleft", legend = c(boxlabs, "Wright et al. 2003"), pch=16, 
+                                col=c(trtcols,"grey50"),cex=1.15,
                                 bty="n", inset=.02)
 # text(455,.2,"LMA x Niche, P < 0.001")
 text(log10(800), log10(7), expression(paste(R[cond]^{"2"}," = "," 0.21")))
@@ -116,12 +116,12 @@ text(log10(800), log10(4.75), expression(paste(R[marg]^{"2"}," = "," 0.79")))
 boxplot(d13C ~ niche2, data=c13dat, xaxt='n',ylim=c(-38, -25),xlab="",
         boxlwd=2, whisklwd=2,staplelwd=2,
         ylab=c13lab,border=trtcols,  varwidth=TRUE, outline=FALSE)
-stripchart(d13C ~ niche2, data = c13dat,cex=1.25,
-           vertical = TRUE, method = "jitter",
+stripchart(d13C ~ niche2, data = c13dat,cex=1,
+           vertical = TRUE, method = "jitter", 
            pch = 16,  col= trtcols2, xaxt='n', add=TRUE) 
-axis(1, boxlabs, at=1:3, cex.axis=1.15)
-text(x=1:3, y=-25.5, cldc13, cex=1.15)
-text(3.5, -38, "B", cex=1.25)
+axis(1, boxlabs, at=1:3, cex.axis=1)
+text(x=1:3, y=-25.5, cldc13, cex=1)
+text(3.5, -38, "B", cex=1.1)
 
 # #inset c13 site
 # text(65, .01, "D", cex=1.25)

@@ -29,13 +29,13 @@ chllab <- expression(Chlorophyll~content~~(mg~m^-2))
 # jpeg(filename = "output/chlorophll.jpeg",
 #      width = 7, height = 7, units = "in", res= 400)
 
-par(mgp=c(2.5,.75,0), mar=c(4,4,1,1), cex.lab=1.15)
+par(mgp=c(2.5,.75,0), mar=c(4,4,1,1), cex.lab=.9, cex.axis=.9)
 boxplot(chl_mg_m2 ~ niche2, data=chloro4, xaxt='n',ylim=c(0, 900),
         varwidth=TRUE, ylab=chllab,border=trtcols,outline=FALSE,
         boxlwd=2,whisklwd=2,staplelwd=2, xlab="")
-axis(1, boxlabs, at=1:3, cex.axis=1.15)
-stripchart(chl_mg_m2 ~ niche2, data = chloro4,
+axis(1, boxlabs, at=1:3, cex.axis=.9)
+stripchart(chl_mg_m2 ~ niche2, data = chloro4,cex=1,
            vertical = TRUE, method = "jitter",
            pch = 16,  col= trtcols2, xaxt='n', add=TRUE) 
-text(x=1:3, y=890, chlstomata, cex=1.15)
+text(x=1:3, y=890, chlstomata, cex=.9)
 # dev.off()

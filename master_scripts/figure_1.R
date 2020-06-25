@@ -42,7 +42,7 @@ lma_lab <- expression(LMA~~(g~m^-2))
 # jpeg(filename = "output/figure1_short.jpeg",
 #       width = 10, height = 6, units = "in", res= 400)
 
-par(mfrow=c(1,2),mgp=c(2.5,.75,0), mar=c(4,4,1,1), cex.lab=1.15)
+par(mfrow=c(1,2),mgp=c(2.5,.75,0), mar=c(4,4,1,1), cex.lab=1.15, cex.axis=1.15)
 
 # stipe length
 boxplot(stipe_length_cm ~ niche2, data=traits, ylim=c(0, 82),xaxt='n',
@@ -63,7 +63,7 @@ with(fronddat, plot(log10(lamina_area_cm2) ~ log10(stipe_length_cm+1.01),
                     xlim=c(0,2.05),
                     ylim=c(1, 3.5)))
 magaxis(side=c(1,2), unlog=c(1,2), frame.plot=TRUE)
-legend("topleft", legend = boxlabs, pch=16, col=trtcols, bty="n", inset=.01)
+legend("topleft", legend = boxlabs, pch=16, col=trtcols, bty="n", inset=.01, cex=1.15)
 ablineclip(terr_mod, x1=log10(min(terr$stipe_length_cm+1)), 
            x2=log10(max(terr$stipe_length_cm+1)),
            col=trtcols[1], lwd=3, lty=2)
@@ -75,8 +75,8 @@ ablineclip(epi_mod, x1=log10(min(epi$stipe_length_cm+1)),
            col=trtcols[3], lwd=3, lty=2)
 text(log10(100), log10(10), "B", cex=1.25)
 
-text(log10(60), log10(25), expression(paste(R[cond]^{"2"}," = "," 0.23")))
-text(log10(60), log10(15), expression(paste(R[marg]^{"2"}," = "," 0.88")))
+text(log10(150), log10(25), expression(paste(R[cond]^{"2"}," = "," 0.23")), 1.25)
+text(log10(150), log10(15), expression(paste(R[marg]^{"2"}," = "," 0.88")), 1.25)
 
 # dev.off()
 
