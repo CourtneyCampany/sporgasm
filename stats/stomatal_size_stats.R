@@ -124,11 +124,16 @@ sw_siglets <-cld(tukey_sw)
 
 terr_sw <- mean(ss_noout[ss_noout$niche2 == "terrestrial", "average_guardcell_width_um"])
 #11.25
+terr_sw_se <- se(ss_noout[ss_noout$niche2 == "terrestrial", "average_guardcell_width_um"])
+#0.2174234
+
 noterr_sw <- mean(ss_noout[!ss_noout$niche2 == "terrestrial", "average_guardcell_width_um"])
 #13.4
+noterr_sw_se <- se(ss_noout[!ss_noout$niche2 == "terrestrial", "average_guardcell_width_um"])
+#0.1785642
 
 mean(ss_noout$stomatal_length_um) 
-
+se(ss_noout$stomatal_length_um)
 ## diff in width:
 (noterr_sw-terr_sw)/noterr_sw
 
@@ -136,6 +141,7 @@ mean(ss_noout$stomatal_length_um)
 
 terr_sl <- mean(ss_noout[ss_noout$niche2 == "terrestrial", "guardcell_length_um"])
 #48.1
+
 epi_sl <- mean(ss_noout[ss_noout$niche2 == "epiphyte", "guardcell_length_um"])
 #45.9um
 

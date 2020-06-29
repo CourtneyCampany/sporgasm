@@ -1,3 +1,5 @@
+source("functions_packages/basic_functions.R")
+
 ## stats on leaf chemistry-------
 library(visreg)
 library(lme4)
@@ -105,6 +107,9 @@ c13niche_siglets <-cld(tukey_c13_niche)
 epi <- mean(c13dat[c13dat$niche2 == "epiphyte", "d13C"],na.rm=TRUE) #-32.46
 noepi <- mean(c13dat[!c13dat$niche2 == "epiphyte", "d13C"], na.rm=TRUE) #-34.38
 
+epi_iso_se <- se(c13dat[c13dat$niche2 == "epiphyte", "d13C"]) #0.20
+noepi_iso_se <- se(c13dat[!c13dat$niche2 == "epiphyte", "d13C"]) #0.17
+
 tukey_c13_site <- glht(c13_mod2, linfct = mcp(site = "Tukey"))
 c13site_siglets <-cld(tukey_c13_site)
 #la_selva las_cruces 
@@ -113,7 +118,10 @@ c13site_siglets <-cld(tukey_c13_site)
 ls <- mean(c13dat[c13dat$site == "la_selva", "d13C"],na.rm=TRUE) #-33.98324
 lc <- mean(c13dat[c13dat$site == "las_cruces", "d13C"], na.rm=TRUE) #-32.95949
 
+ls_se <- se(c13dat[c13dat$site == "la_selva", "d13C"]) #0.15
+lc_se <- se(c13dat[c13dat$site == "las_cruces", "d13C"]) #0.26
 
+boxplot(d13C ~ site, data=c13dat) 
 
 # 15n ------  #likely ignore these for now
 
