@@ -1,5 +1,8 @@
 ---
 title: "Leaf water relations in epiphytic ferns are driven by avoidance rather than tolerance mechanisms"
+title_textcol: 'white'
+author_textcol: 'white'
+title_textsize: 80px
 author:
   - name: Courtney Campany
     affil: 1
@@ -18,6 +21,8 @@ affiliation:
   - num: 1
     address: Department of Biology, Shepherd University, Shepherdstown, WV, USA
 column_numbers: 3
+logoright_name: https&#58;//raw.githubusercontent.com/CourtneyCampany/sporgasm/master/aspb_poster/nsf_logo.png
+logoleft_name: https&#58;//raw.githubusercontent.com/CourtneyCampany/sporgasm/master/aspb_poster/su_logo.jpg
 output: 
   posterdown::posterdown_html:
     self_contained: false
@@ -29,17 +34,20 @@ knitr::opts_chunk$set(echo = FALSE)
 
 # Introduction
 
-Welcome to `posterdown` ! This is my attempt to provide a semi-smooth workflow for those who wish to take their R Markdown skills to the conference world. Most features from R Markdown are available in this package such as Markdown section notation, figure captioning, and even citations like this one [@R-rmarkdown]. The rest of this example poster will show how you can insert typical conference poster features into your own document. 
+Opportunistic diversification allowed ferns to radiate into epiphytic niches created by now angiosperm dominated landscapes. Compared to terrestrial habitats, ferns in epiphytic habitats should exhibit variation in functional traits to cope with water stress. *We tested whether the evolution of leaf traits related to drought tolerance promoted the radiation of ferns from moist, terrestrial habitats to more unpredictable canopy habitats.*
+
 
 ## Objectives
 
-1. Easy to use reproducible poster design. 
-2. Integration with R Markdown.
-3. Easy transition from `posterdown` to `pagedown` report or manuscript documents [@R-pagedown].
+1. **Explore** epiphytic trait divergence in a phylogenetic context
+2. **Examine** leaf responses to water stress vs functional traits
+3. **Explain** opportunistic radiation of ferns in canopy habitats
 
 # Methods
 
-This package uses the same workflow approach as the R Markdown you know and love. Basically it goes from RMarkdown > Knitr > Markdown > Pandoc > HTML/CSS > PDF. You can even use the bibliography the same way [@R-posterdown].
+* **Surveyed 39 fern species in Costa Rican tropical forests**
+* **Explore epiphytic functional trait divergence in a phylogenetic context**
+* **_Now on to the results!_** bibliography the same way [@R-posterdown].
 
 # Results
 
@@ -69,16 +77,16 @@ plot(x = data$Sepal.Length,
 
 ```
 
-# Next Steps
+# Main Findings
 
 Aliquam sed faucibus risus, quis efficitur erat. Vestibulum semper mauris quis tempus eleifend. Aliquam sagittis dictum ipsum, quis viverra ligula eleifend ut. Curabitur sagittis vitae arcu eget faucibus. In non elementum felis. Duis et aliquam nunc. Nunc pulvinar sapien nunc, vel pretium nisi efficitur in. Fusce fringilla maximus leo et maximus. Fusce at ligula laoreet, iaculis mi at, auctor odio. Praesent sed elementum justo. Aenean consectetur risus rhoncus tincidunt efficitur. Praesent dictum mauris at diam maximus maximus [@R-posterdown].
 
-# Conclusion
+# Take home message
 
-Try `posterdown` out! Hopefully you like it!
+
 
 ```{r, include=FALSE}
 knitr::write_bib(c('knitr','rmarkdown','posterdown','pagedown'), 'packages.bib')
 ```
 
-# References
+# Co-author affliations
