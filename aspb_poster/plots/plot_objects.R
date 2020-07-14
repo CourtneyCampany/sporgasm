@@ -1,6 +1,6 @@
 #plotting objects
 
-makelabels <- read.csv("plots/species_niches.csv")
+makelabels <- read.csv("aspb_poster/plots/species_niches.csv")
 
 
 niche_lab <- c("Climber", "Epiphyte", "Hemi-epiphyte", "Terrestrial")
