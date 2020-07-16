@@ -1,6 +1,6 @@
 ## figure 1 (morphology and chemistry) panel figure 
 source("aspb_poster/plots/plot_objects.R")
-source("aspb_posters/plots/ci_functions.R")
+source("aspb_poster/plots/ci_functions.R")
 
 #traits data -----
 traits <- read.csv("calculated_data/fern_traits.csv")
@@ -42,19 +42,23 @@ trtcols_poster2 <- c(alpha(trtcols_poster[1], .7), alpha(trtcols_poster[2], .7))
 jpeg(filename = "aspb_poster/plots/figure1_poster.jpeg",
       width = 10, height = 6, units = "in", res= 400)
 
-par(mfrow=c(1,2),mgp=c(2.5,.75,0), mar=c(4,4,1,1), cex.lab=1.15, cex.axis=1.15)
+par(mfrow=c(1,2),mgp=c(2,.75,0), mar=c(6,4,1,1), cex.lab=1.15, cex.axis=1.15)
 
 # stipe length
 boxplot(stipe_length_cm ~ niche2, data=traits_poster, ylim=c(0, 82),xaxt='n',
         boxlwd=2,whisklwd=2,trtcols_poster=2,xlab="",
         ylab = stipe_lab,border=trtcols_poster, varwidth=TRUE, outline=FALSE)
 axis(1, at=1:2, labels=FALSE)
-mtext(boxlabs3, side=1, at=1:2, cex=1.15, line=2.5)
+mtext(boxlabs3, side=1, at=1:2, cex=1.15, line=2)
 stripchart(stipe_length_cm ~ niche2, data = traits_poster,
            vertical = TRUE, method = "jitter",cex=1.25,
            pch = 16,  col= trtcols_poster2, xaxt='n', add=TRUE)
 text(x=1:2, y=80, stipecld, cex=1.15)
 text(2.5, 0, "A", cex=1.25)
+mtext("Figure 1. (A) Box plots of stipe length across tropical fern life forms.", 1, line=4, adj=0)
+mtext("               (B) Lamina area is positively related to stipe length (log-based) and varies by life form.",
+       1, line=5, adj=0)
+
 
 # allometry
 with(fronddat, plot(log10(lamina_area_cm2) ~ log10(stipe_length_cm+1.01),

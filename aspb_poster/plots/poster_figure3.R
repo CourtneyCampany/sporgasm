@@ -63,9 +63,9 @@ trtcols_poster2 <- c(alpha(trtcols_poster[1], .7), alpha(trtcols_poster[2], .7))
 library(plotrix)
 
 jpeg(filename = "aspb_poster/plots/figure3_poster.jpeg",
-       width = 12, height = 5, units = "in", res= 400)
+       width = 10, height = 6, units = "in", res= 400)
 
-par(mfrow=c(1,2), mgp=c(2.5,.75,0), mar=c(4,4,1,1), cex.lab=1,cex.axis=1)
+par(mfrow=c(1,2), mgp=c(2,.75,0), mar=c(6,4,1,1), cex.lab=1,cex.axis=1)
 
 boxplot(lma_g_m2 ~ niche2, data=nitro_poster,xaxt='n',ylim=c(0,630),
         boxlwd=2, whisklwd=2,staplelwd=2,xlab="",
@@ -77,6 +77,9 @@ stripchart(lma_g_m2 ~ niche2, data = nitro_poster,cex=1,
            xaxt='n', add=TRUE) 
 text(x=1:2, y=600, cldlma, cex=1)
 text(2.5, 0, "A", cex=1.1)
+mtext("Figure 3. (A) Box plots of leaf mass per unit area (LMA) across life forms.", 1, line=4, adj=0)
+mtext("               (B) Negative relationships between lamina nitrogen content and LMA for ferns in this study compared to the GLOPNET data set",
+      1, line=5, adj=0)
 
 #lma v nitro
 with(nitro_poster, plot(log10(n_perc) ~ log10(lma_g_m2), ylim=c(-.65,.9),xlim=c(1,3),
@@ -97,7 +100,7 @@ ablineclip(terr_mod2, col=trtcols_poster[1], lwd=2, lty=2,
 
 magaxis(side=c(1,2), unlog=c(1,2), frame.plot=TRUE)
 text(3, -.6, "C", cex=1.1)
-legend("bottomleft", legend = c(boxlabs3, "Wright et al. 2003"), pch=16, 
+legend("bottomleft", legend = c(boxlabs3, "Wright et al. 2004"), pch=16, 
                                 col=c(trtcols_poster,"grey50"),cex=1.15,
                                 bty="n", inset=.02)
 
