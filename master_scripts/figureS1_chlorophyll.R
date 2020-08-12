@@ -7,7 +7,7 @@ traits <- read.csv("calculated_data/fern_traits.csv")
 ## Climber seems to be close to terrestrial and it still is technically-------
 ## create new variable that adds climber to terrestrial category
 traits$niche2 <- traits$niche
-traits$niche2 <- gsub("climber", "hemi-epiphyte", traits$niche2)
+traits$niche2 <- gsub("climber", "terrestrial", traits$niche2)
 traits$niche2 <- as.factor(traits$niche2)
 
 chloro <- traits[complete.cases(traits$chl_mg_m2),]  
@@ -21,7 +21,7 @@ chloro4 <- chloro[chloro$chl_mg_m2 < 800 & !chloro$genusspecies == "elaher",]
 
 
 #drop oleart as we do in model
-chlstomata <- c("ab","b","a" )
+chlstomata <- c("a","a","a" )
 chllab <- expression(Chlorophyll~content~~(mg~m^-2))
 
 # windows()

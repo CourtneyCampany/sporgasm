@@ -17,8 +17,8 @@ sla <- read.csv("calculated_data/fern_sla.csv")
 
 ##merge lma and nitrogen
 nitro <- merge(leafchem, sla, all=TRUE)  
-nitro$lma_g_m2 <- with(nitro, 1/(sla_cm2g/10000))
-nitro$nitro_area <- with(nitro,lma_g_m2 * (n_perc/100))
+        nitro$lma_g_m2 <- with(nitro, 1/(sla_cm2g/10000))
+        nitro$nitro_area <- with(nitro,lma_g_m2 * (n_perc/100))
 
 #reorder from ground to canopy 
 nitro$niche2<-factor(nitro$niche2, 
@@ -57,14 +57,14 @@ epi <- alldata[alldata$niche2 == "epiphyte",]
 # epi_mod_13c <- lm(d13C ~ lma, data=epi) #no epi
 
 c13dat <- alldata[!alldata$genusspecies == "bleschi",]
-cldc13 <- c("a","a","b") 
+cldc13 <- c("a","ab","b") 
 
 
 ##lma plots ------ 
 library(plotrix)
 
-# jpeg(filename = "output/figure2_lma.jpeg",
-#        width = 12, height = 5, units = "in", res= 400)
+# jpeg(filename = "master_scripts/figure3.jpeg",
+#        width = 8, height = 8, units = "in", res= 400)
 
 layout(matrix(c(1,3,2,2), 2, 2, byrow = TRUE))
 
@@ -109,7 +109,7 @@ legend("bottomleft", legend = c(boxlabs, "Wright et al. 2004"), pch=16,
                                 col=c(trtcols,"grey50"),cex=1.15,
                                 bty="n", inset=.02)
 # text(455,.2,"LMA x Niche, P < 0.001")
-text(log10(800), log10(7), expression(paste(R[cond]^{"2"}," = "," 0.21")))
+text(log10(800), log10(7), expression(paste(R[cond]^{"2"}," = "," 0.22")))
 text(log10(800), log10(4.75), expression(paste(R[marg]^{"2"}," = "," 0.79")))
 
 #c13

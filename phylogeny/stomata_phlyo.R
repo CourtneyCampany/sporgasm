@@ -5,7 +5,7 @@ source("master_scripts/plot_objects.R")
 
 #stomata
 stodens <- read.csv("calculated_data/stomata_density.csv")
-stodens$niche2 <- gsub("climber", "hemi-epiphyte", stodens$niche)
+stodens$niche2 <- gsub("climber", "terrestrial", stodens$niche)
 stodens$niche2 <- as.factor(stodens$niche2)
 
 #reorder from ground to canopy 
@@ -67,10 +67,13 @@ yval <- lastPP$yy[1:39]
 
 #plot acr stomata
 
-jpeg(filename = "manuscript/asr_stomata.jpeg",
-     width = 6, height = 6, units = "in", res= 400)
+# jpeg(filename = "manuscript/asr_stomata.jpeg",
+#      width = 6, height = 6, units = "in", res= 400)
 
 # windows()
+
+pdf(file = "manuscript/Figure7.pdf", width = 8, height = 8)
+
 plot(obj2, ftype="off", xlim=c(0,.15),ylim=c(-4,39),
      #ylim=lastPP$y.lim,xlim=lastPP$x.lim,
      outline=F,res=200, sig=2,lwd=3,

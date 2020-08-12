@@ -6,7 +6,7 @@ library(scales)
 
 #pv parameters
 pv <- read.csv("calculated_data/pv_curves2.csv")
-    pv$niche2 <- gsub("climber", "hemi-epiphyte", pv$niche)
+    pv$niche2 <- gsub("climber", "terrestrial", pv$niche)
     pv$niche2 <- as.factor(pv$niche2)
     #reorder from ground to canopy 
     pv$niche2<-factor(pv$niche2, 
@@ -66,12 +66,12 @@ capft_lab <- expression(C[ft]~~(MPa^-1))
 captlp_lab <- expression(C[TLP]~~(MPa^-1))
 
 tlp_cld <- c("a","a","a" )
-op_cld <- c("a","a","b" )
+op_cld <- c("a","ab","b" )
 cap_cld <- c("a","ab","b" )
 
 #pv curve plots-------
 
-# jpeg(filename = "output/plot_4_pvparams.jpeg",
+# jpeg(filename = "master_scripts/figure5.jpeg",
 #       width = 12, height = 12, units = "in", res= 400)
 
 par(mar=c(4,4,1,1), mfrow=c(2,2),mgp=c(2.5,.75,0),cex.lab=1.25,cex.axis=1.25)

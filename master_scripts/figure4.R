@@ -27,7 +27,7 @@ epi_mod <- lm(stomatal_size ~ sd_mm2 , data=epi)
 fernmod <- lm(stomatal_size ~ sd_mm2, stomata_noout)
 
 cldstomata <- c("a","b","b" ) #from stomata density stats
-cldsize <- c("a","b","b" )
+cldsize <- c("a","b","ab" )
 
 #loess for sd vs ss
 # loess_terr <- loess(stomatal_size ~ sd_mm2, data=terr2, span=5)
@@ -41,8 +41,8 @@ cldsize <- c("a","b","b" )
 
 ##panel plot-------
 
-# jpeg(filename = "output/figure3_anatomy.jpeg",
-#      width = 10, height = 6, units = "in", res= 400)
+# jpeg(filename = "master_scripts/figure4.jpeg",
+#      width = 12, height = 6, units = "in", res= 400)
 
 par(mfrow=c(1,2),mgp=c(2.5,.75,0), mar=c(4,4,1,1), cex.lab=1.15,cex.axis=1.15)
 

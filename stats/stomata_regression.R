@@ -42,15 +42,14 @@ plot(sizedens)
 
 Anova(sizedens, type=3) 
 anova(sizedens, sizedens3)
-AIC(sizedens, sizedens3)
+AIC(sizedens, sizedens3) #no interaction, choose model without
 
-#no interaction, choose model without
-Anova(sizedens3, type=3) #p = .8
+Anova(sizedens3, type=3) #p = .09
 
 summary(sizedens3)
 r.squaredGLMM(sizedens3)
 #R2m       R2c
-#0.2760553 0.9013058
+#0.2027541 0.8960833
 
 anova(lm(sd_mm2 ~ stomatal_size ,  data=terr))
 anova(lm(sd_mm2 ~ stomatal_size ,  data=hemi))

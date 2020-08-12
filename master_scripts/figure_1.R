@@ -4,7 +4,7 @@ source("functions_packages/ci_functions.R")
 
 #traits data -----
 traits <- read.csv("calculated_data/fern_traits.csv")
-traits$niche2 <- gsub("climber", "hemi-epiphyte", traits$niche)
+traits$niche2 <- gsub("climber", "terrestrial", traits$niche)
 traits$niche2 <- as.factor(traits$niche2)
 
 #reorder from ground to canopy 
@@ -32,15 +32,15 @@ fronddat <- traits[-203,] ##loses one outlier so same as stats
 #plot bits-------
 library(magicaxis)
 library(plotrix)
-stipecld <- c("a", "ab", "b")
+stipecld <- c("a", "b", "b")
 cldlma <- c("a", "ab", "b")
 lma_lab <- expression(LMA~~(g~m^-2))
 
 #plot ----------
 # windows(12,8)
 
-# jpeg(filename = "output/figure1_short.jpeg",
-#       width = 10, height = 6, units = "in", res= 400)
+# jpeg(filename = "master_scripts/figure1.jpeg",
+#       width = 12, height = 6, units = "in", res= 400)
 
 par(mfrow=c(1,2),mgp=c(2.5,.75,0), mar=c(4,4,1,1), cex.lab=1.15, cex.axis=1.15)
 
@@ -75,7 +75,7 @@ ablineclip(epi_mod, x1=log10(min(epi$stipe_length_cm+1)),
            col=trtcols[3], lwd=3, lty=2)
 text(log10(100), log10(10), "B", cex=1.25)
 
-text(log10(150), log10(25), expression(paste(R[cond]^{"2"}," = "," 0.23")), 1.25)
+text(log10(150), log10(25), expression(paste(R[cond]^{"2"}," = "," 0.24")), 1.25)
 text(log10(150), log10(15), expression(paste(R[marg]^{"2"}," = "," 0.88")), 1.25)
 
 # dev.off()

@@ -11,9 +11,10 @@ alldata$id <- paste(alldata$genusspecies, alldata$plant_no, sep="-")
 #reorder from ground to canopy 
 alldata$niche2<-factor(alldata$niche2, 
                        levels=c("terrestrial", "hemi-epiphyte", "epiphyte"))
-alldata2 <- alldata[alldata$xylem_area_mm2 < .8,]
+alldata_nona <- alldata[complete.cases(alldata$xylem_area_um2),]
+alldata2 <- alldata_nona[alldata_nona$xylem_area_mm2 < .8,]
 #remove outliers detected in stats (lomjap-hemi)
-alldata3 <- alldata2[! alldata2$id  %in% c("lomjap-4","lomjap-3","lomjap-6"),]
+alldata3 <- alldata2[!alldata2$id  %in% c("lomjap-4","lomjap-3","lomjap-6"),]
 
 alldata3$xylemfrac <- (alldata3$xylem_area_mm2 / (alldata3$lamina_area_cm2 * 100))*10000
 #xylemfrac is unitless standardized stem xylem measurement (huber value)
@@ -22,7 +23,7 @@ alldata3$xylemfrac <- (alldata3$xylem_area_mm2 / (alldata3$lamina_area_cm2 * 100
 
 ##separate habitat dataframes for all traits -----
 terr <- alldata3[alldata3$niche2 == "terrestrial",]
-hemi <- alldata3[alldata3$niche2 == "hemi-epiphyte" ,]
+hemi <- alldata3[alldata3$niche2 == "hemi-epiphyte",]
 epi <- alldata3[alldata3$niche2 == "epiphyte",]
 
 #simple models ------
@@ -33,8 +34,8 @@ epi_mod_xa <- lm(stipe_length_cm ~ xylem_area_mm2, data=epi)
 #plot bits -----
 cldxylemfrac <- c("a","b","b" )
 
-# jpeg(filename = "output/stipe_xylem.jpeg",
-#      width = 12, height = 5, units = "in", res= 400)  
+# jpeg(filename = "master_scripts/figure2.jpeg",
+#      width = 12, height = 6, units = "in", res= 400)
 
 # windows(12,5)
 par(mfrow=c(1,2),mgp=c(2.5,.75,0), mar=c(4,4,1,1), cex.lab=1.15,cex.axis=1.15)
@@ -64,7 +65,7 @@ points(stipe_length_cm ~ xylem_area_mm2, data=alldata3, col=trtcols2[niche2],
      pch=16,cex=1.25)
 legend("topleft", legend = boxlabs, pch=16, col=trtcols, bty="n", inset=.01,1.15)
 text(.8, 0, "B", cex=1.25)
-text(.85, 16, expression(paste(R[cond]^{"2"}," = "," 0.30")), 1.25)
+text(.85, 16, expression(paste(R[cond]^{"2"}," = "," 0.33")), 1.25)
 text(.85, 9, expression(paste(R[marg]^{"2"}," = "," 0.88")), 1.25)
 
 
@@ -87,4 +88,4 @@ text(.85, 9, expression(paste(R[marg]^{"2"}," = "," 0.88")), 1.25)
 # text(log10(0.0015), log10(1900), "D", cex=1.25)
 
 
-# dev.off()
+ # dev.off()

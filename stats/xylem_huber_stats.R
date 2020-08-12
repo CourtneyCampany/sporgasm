@@ -1,16 +1,16 @@
 #huber by niche
 alldata <- read.csv("calculated_data/ferns_traits_complete.csv")
-alldata$id <- paste(alldata$genusspecies, alldata$plant_no, sep="-")
-#reorder from ground to canopy 
-alldata$niche2<-factor(alldata$niche2, 
+  alldata$id <- paste(alldata$genusspecies, alldata$plant_no, sep="-")
+  #reorder from ground to canopy 
+  alldata$niche2<-factor(alldata$niche2, 
                        levels=c("terrestrial", "hemi-epiphyte", "epiphyte"))
-alldata2 <- alldata[alldata$xylem_area_mm2 < .8,]
-#remove outliers detected in stats (lomjap-hemi)
-alldata3 <- alldata2[! alldata2$id  %in% c("lomjap-4","lomjap-3","lomjap-6"),]
+  alldata2 <- alldata[alldata$xylem_area_mm2 < .8,]
+  #remove outliers detected in stats (lomjap-hemi)
+  alldata3 <- alldata2[! alldata2$id  %in% c("lomjap-4","lomjap-3","lomjap-6"),]
 
-alldata3$xylemfrac <- (alldata3$xylem_area_mm2 / (alldata3$lamina_area_cm2 * 100))*10000
-#xylemfrac is unitless standardized stem xylem measurement (huber value)
-#multiple x 100000 for ease of view
+  alldata3$xylemfrac <- (alldata3$xylem_area_mm2 / (alldata3$lamina_area_cm2 * 100))*10000
+  #xylemfrac is unitless standardized stem xylem measurement (huber value)
+  #multiple x 100000 for ease of view
 
 boxplot(xylemfrac~niche2, data=alldata3, outline=FALSE)
 
@@ -26,10 +26,8 @@ library(outliers)
 
 #data check:
 
-boxplot(xylem_area_mm2 ~ niche2, data=huber)
-boxplot(huber ~ niche2, data=huber)
-hist(huber$xylem_area_mm2)
-hist(huber$huber)
+boxplot(xylem_area_mm2 ~ niche2, data=alldata3)
+hist(alldata3$xylem_area_mm2)
 
 boxplot(xylemfrac~niche2, data=alldata3)
 #lots of outliers for huber:
@@ -44,11 +42,11 @@ xylemfrac_dat2 <- xylemfrac_dat[!(xylemfrac_dat$id %in%
 boxplot(xylemfrac ~ niche2, data=xylemfrac_dat2)
 
 #xylem data
-xylem2 <- huber[huber$xylem_area_mm2 < 0.8,]
+xylem2 <- alldata3[alldata3$xylem_area_mm2 < 0.8,]
+  boxplot(xylem_area_mm2 ~ niche2, data=xylem2)
 xylem3 <- xylem2[! xylem2$id  %in% c("lomjap-4","lomjap-3","lomjap-6"),]
-
-boxplot(xylem_area_mm2 ~ niche2, data=xylem3)
-hist(sqrt(xylem3$xylem_area_mm2)) #going to need a transformation
+  boxplot(xylem_area_mm2 ~ niche2, data=xylem3)
+  hist(sqrt(xylem3$xylem_area_mm2)) #going to need a transformation
 
 #mixed model
 
@@ -66,10 +64,10 @@ AIC(xa_mod, xa_mod2) #model without interaction in better
 Anova(xa_mod2, type="3") #only niche effect
 r.squaredGLMM(xa_mod2)
 
-#niche2      11.4126  2   0.003325 ** 
+#niche2     0.0003748 ** 
 
 # R2m       R2c
-# [1,] 0.3016933 0.8853995
+# [1,] 0.2913789 0.8849976
 
 visreg(xa_mod2)
 
@@ -77,10 +75,10 @@ tukey_xa <- glht(xa_mod2, linfct = mcp(niche2 = "Tukey"))
 xa_siglets <-cld(tukey_xa)
 
 # terrestrial hemi-epiphyte      epiphyte 
-# "a"          "b"           "b" 
+# "a"          "ab"           "b" 
 
-terr <- mean(xylem2[xylem2$niche2 == "terrestrial", "xylem_area_mm2"]) #0.259551
-epi_hemi <- mean(xylem2[!xylem2$niche2 == "terrestrial", "xylem_area_mm2"]) #0.1041174
+terr <- mean(xylem3[xylem3$niche2 == "terrestrial", "xylem_area_mm2"], na.rm=TRUE) #0.2459
+epi <- mean(xylem2[xylem2$niche2 == "epiphyte", "xylem_area_mm2"], na.rm=TRUE) #0.087
 
 
 ###huber values ------
@@ -91,18 +89,18 @@ hv_mod2 <- lmer(sqrt(xylemfrac) ~ niche2 + site + (1|species), data=xylemfrac_da
 plot(hv_mod)
 qqPlot(residuals(hv_mod))
 
-Anova(hv_mod, type=3) #niche effect, no site
 anova(hv_mod, hv_mod2) #not different
 AIC(hv_mod, hv_mod2) #model without interaction in better
-
 
 Anova(hv_mod2, type="3") #only niche effect
 r.squaredGLMM(hv_mod2)
 
-# niche2      0.0006
+boxplot(xylemfrac ~ niche2, data=xylemfrac_dat2)
+
+# niche2     0.0231
 
 # R2m       R2c
-# [1,] 00.2448371 0.7863302
+# [1,] 0.1436604 0.7877202
 
 
 visreg(hv_mod2)
@@ -114,5 +112,8 @@ hv_siglets <-cld(tukey_hv)
 # terrestrial hemi-epiphyte      epiphyte 
 # "b"           "a"          "a"
 
-terr <- mean(huber2[huber2$niche2 == "terrestrial", "huber"]) #129.3988
-noterr <- mean(huber2[!huber2$niche2 == "terrestrial", "huber"]) #216.4421
+terr <- mean(xylemfrac_dat2[xylemfrac_dat2$niche2 == "terrestrial", "xylemfrac"], na.rm=TRUE) 
+#.04405
+noterr <- mean(xylemfrac_dat2[!xylemfrac_dat2$niche2 == "terrestrial", "xylemfrac"], na.rm=TRUE) 
+#.02688
+#39%

@@ -14,7 +14,8 @@ alldata <- read.csv("calculated_data/ferns_traits_complete.csv")
 #reorder from ground to canopy 
 alldata$niche2<-factor(alldata$niche2, 
                        levels=c("terrestrial", "hemi-epiphyte", "epiphyte"))
-alldata2 <- alldata[alldata$xylem_area_mm2 < .8,]
+alldata_nona <- alldata[complete.cases(alldata$xylem_area_um2),]
+alldata2 <- alldata_nona[alldata_nona$xylem_area_mm2 < .8,]
 alldata3 <- alldata2[complete.cases(alldata2$xylem_area_mm2) & 
                        complete.cases(alldata2$species),]
 #outliers present with hemi
@@ -33,7 +34,7 @@ plot(xylemlength)
 Anova(xylemlength, type="3") #no interactions
 r.squaredGLMM(xylemlength)
 # R2m       R2c
-# [1,] 0.3027123 0.8818933
+# [1,] 0.3313526 0.8810719
 
 xylemlength2 <- sma(sqrt(stipe_length_cm) ~ sqrt(xylem_area_mm2) * niche2,
                     data=alldata4, multcomp = TRUE,

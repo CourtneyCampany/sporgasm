@@ -25,7 +25,8 @@ alldata <- read.csv("calculated_data/ferns_traits_complete.csv")
 alldata$niche2<-factor(alldata$niche2, 
                        levels=c("terrestrial", "hemi-epiphyte", "epiphyte"))
 alldata$id <- paste(alldata$genusspecies, alldata$plant_no, sep="-")
-alldata2 <- alldata[alldata$xylem_area_mm2 < .8,]
+alldata_nona <- alldata[complete.cases(alldata$xylem_area_um2),]
+alldata2 <- alldata_nona[alldata_nona$xylem_area_mm2 < .8,]
 alldata3 <- alldata2[complete.cases(alldata2$xylem_area_mm2) & 
                        complete.cases(alldata2$species),]
 alldata3$stipe_nozero <- alldata3$stipe_length_cm + .1

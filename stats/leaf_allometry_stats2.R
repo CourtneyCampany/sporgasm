@@ -11,12 +11,13 @@ library(LMERConvenienceFunctions)
 ## compare slopes of treatments with leaf allometry (stipe vs lamina)
 
 traits <- read.csv("calculated_data/fern_traits.csv")
-  traits$niche2 <- gsub("climber", "hemi-epiphyte", traits$niche)
+  traits$niche2 <- gsub("climber", "terrestrial", traits$niche)
   traits$niche2 <- as.factor(traits$niche2)
   #reorder from ground to canopy 
   traits$niche2<-factor(traits$niche2, 
                         levels=c("terrestrial", "hemi-epiphyte", "epiphyte"))
-  
+
+#add a non-zero stipe length for stats  
 traits$stipe_nozero <- traits$stipe_length_cm + .1
 
 
@@ -25,10 +26,10 @@ arealength <- lmer(log10(lamina_area_cm2) ~ log10(stipe_nozero)
 anova(arealength, type=3)
 r.squaredGLMM(arealength)
 # R2m       R2c
-# [1,] 0.2268914 0.8813653
+# [1,] 0.2402571 0.8800745
 
 al_slopes <- lstrends(arealength, "niche2", var="stipe_nozero")
-pairs(al_slopes) #terresrial and epi diff, terr marginally different than hemi
+pairs(al_slopes) #terresrial and epi diff
 
 arealength_mod2 <- sma(lamina_area_cm2 ~ stipe_nozero * niche2,
                        log="xy", data=traits, multcomp = TRUE,
