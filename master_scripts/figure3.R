@@ -103,7 +103,7 @@ ablineclip(hemi_mod2, col=trtcols[2], lwd=2, lty=2,
 # predline(hemi_mod2, col=trtcols[2], lwd=2, lty=2)
 # predline(terr_mod2, col=trtcols[1], lwd=2, lty=2)
 
-magaxis(side=c(1,2), unlog=c(1,2), frame.plot=TRUE)
+magaxis(side=c(1,2), unlog='xy', frame.plot=TRUE)
 text(3, -.6, "C", cex=1.1)
 legend("bottomleft", legend = c(boxlabs, "Wright et al. 2004"), pch=16, 
                                 col=c(trtcols,"grey50"),cex=1.15,

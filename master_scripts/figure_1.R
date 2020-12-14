@@ -62,7 +62,7 @@ with(fronddat, plot(log10(lamina_area_cm2) ~ log10(stipe_length_cm+1.01),
                     pch=16, col=trtcols2[niche2],cex=1.25,
                     xlim=c(0,2.05),
                     ylim=c(1, 3.5)))
-magaxis(side=c(1,2), unlog=c(1,2), frame.plot=TRUE)
+magaxis(side=c(1,2), unlog='xy', frame.plot=TRUE)
 legend("topleft", legend = boxlabs, pch=16, col=trtcols, bty="n", inset=.01, cex=1.15)
 ablineclip(terr_mod, x1=log10(min(terr$stipe_length_cm+1)), 
            x2=log10(max(terr$stipe_length_cm+1)),
