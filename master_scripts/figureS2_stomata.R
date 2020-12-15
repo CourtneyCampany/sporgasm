@@ -27,6 +27,8 @@ epi_mod <- lm(stomatal_size ~ sd_mm2 , data=epi)
 fernmod <- lm(stomatal_size ~ sd_mm2, stomata_noout)
 
 
+sd_lab2 <- expression(Stomatal~density~~(stomata~mm^2))
+
 #loess for sd vs ss
 # loess_terr <- loess(stomatal_size ~ sd_mm2, data=terr2, span=5)
 # terr2$smooth_terr <- predict(loess_terr)
@@ -45,7 +47,7 @@ fernmod <- lm(stomatal_size ~ sd_mm2, stomata_noout)
 par(mgp=c(2.5,.75,0), mar=c(4,4,1,1), cex.lab=.9, cex.axis=.9)
 
 plot(stomatal_size ~ sd_mm2, data=stomata_noout,
-     ylab=ss_lab, xlab=sd_lab, type='n')
+     ylab=ss_lab, xlab=sd_lab2, type='n')
 predline(terr_mod, col=trtcols[1], lwd=2, lty=2)
 # predline(hemi_mod, col=trtcols[2], lwd=2, lty=2)
 predline(epi_mod, col=trtcols[3], lwd=2, lty=2)
