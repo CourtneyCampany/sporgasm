@@ -57,8 +57,8 @@ hist(frond_dat$frond_length_cm)
 
 frond_mod4 <- lmer(sqrt(frond_length_cm) ~ niche2 * site + (1|species), 
                     data=frond_dat)
-# frond_mod5 <- lmer(sqrt(frond_length_cm) ~ niche2 + site + (1|species), 
-#                    data=frond_dat)
+frond_mod5 <- lmer(sqrt(frond_length_cm) ~ niche2 + site + (1|species),
+                   data=frond_dat)
   
 # plot(frond_mod4)
 # qqPlot(residuals(frond_mod4))
@@ -70,7 +70,7 @@ frond_mod4 <- lmer(sqrt(frond_length_cm) ~ niche2 * site + (1|species),
 
 #use model without interaction
 # summary(frond_mod4)
-Anova(frond_mod4, type="3")
+Anova(frond_mod5, type="3")
 r.squaredGLMM(frond_mod4)
 
 # R2m       R2c
@@ -82,7 +82,7 @@ r.squaredGLMM(frond_mod4)
 visreg(frond_mod4)
 ##frond longer in terrestrial
 
-tukey_fr <- glht(frond_mod4, linfct = mcp(niche2 = "Tukey"))
+tukey_fr <- glht(frond_mod5, linfct = mcp(niche2 = "Tukey"))
 fr_siglets <-cld(tukey_fr)
 
 # terrestrial hemi-epiphyte      epiphyte 
@@ -96,3 +96,7 @@ terr_se <- se(frond_dat[frond_dat$niche2 == "terrestrial", "frond_length_cm"])
 epi <- mean(frond_dat[frond_dat$niche2 == "epiphyte", "frond_length_cm"], 
                na.rm=TRUE) #58.98
 epi_se <- se(frond_dat[frond_dat$niche2 == "epiphyte", "frond_length_cm"])
+
+hemi <- mean(frond_dat[frond_dat$niche2 == "hemi-epiphyte", "frond_length_cm"], 
+             na.rm=TRUE) #54.47
+hemi_se <- se(frond_dat[frond_dat$niche2 == "hemi-epiphyte", "frond_length_cm"]) #5.944

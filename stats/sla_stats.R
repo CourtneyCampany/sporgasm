@@ -14,6 +14,10 @@ library(lattice)
 library(moments)
 library(MASS)
 library(outliers)
+library(lme4)
+library(MuMIn)
+library(lmerTest)
+library(LMERConvenienceFunctions)
 
 # Ltest_frond <- leveneTest(sla_cm2g ~ niche2 , data = sla)
 
@@ -73,4 +77,29 @@ b20hemi <- nrow(hemi[hemi$stipe_length_cm <= 20 ,])
 a20hemi <- nrow(hemi[hemi$stipe_length_cm > 20 ,])
 
 
+##For reviewer1
 
+
+selva <- sla[sla$site == "la_selva",]
+cruces <- sla[sla$site == "las_cruces" ,]
+
+selva_mod <- lmer(log10(lma) ~ niche2  + (1|species), data=selva)
+cruces_mod <- lmer(log10(lma) ~ niche2 + (1|species), data=cruces)
+
+#laselva
+plot(selva_mod)
+qqPlot(residuals(selva_mod))
+summary(selva_mod)
+Anova(selva_mod, type="3") #only niche effect
+r.squaredGLM(selva_mod)
+tukey_selva <- glht(selva_mod, linfct = mcp(niche2 = "Tukey"))
+cld(tukey_selva) #same
+
+#lascruces
+plot(cruces_mod)
+qqPlot(residuals(cruces_mod))
+summary(cruces_mod)
+Anova(cruces_mod, type="3") #only niche effect
+r.squaredGLM(cruces_mod)
+tukey_cruces <- glht(cruces_mod, linfct = mcp(niche2 = "Tukey"))
+cld(tukey_cruces) #not same

@@ -117,3 +117,32 @@ terr <- mean(xylemfrac_dat2[xylemfrac_dat2$niche2 == "terrestrial", "xylemfrac"]
 noterr <- mean(xylemfrac_dat2[!xylemfrac_dat2$niche2 == "terrestrial", "xylemfrac"], na.rm=TRUE) 
 #.02688
 #39%
+
+
+
+##For reviewer1
+
+
+selva <- xylem3[xylem3$site == "la_selva",]
+cruces <- xylem3[xylem3$site == "las_cruces" ,]
+
+selva_mod <- lmer(sqrt(xylem_area_mm2) ~ niche2  + (1|species), data=selva)
+cruces_mod <- lmer(sqrt(xylem_area_mm2) ~ niche2 + (1|species), data=cruces)
+
+#laselva
+plot(selva_mod)
+qqPlot(residuals(selva_mod))
+summary(selva_mod)
+Anova(selva_mod, type="3") #only niche effect
+r.squaredGLM(selva_mod)
+tukey_selva <- glht(selva_mod, linfct = mcp(niche2 = "Tukey"))
+cld(tukey_selva) #same
+
+#lascruces
+plot(cruces_mod)
+qqPlot(residuals(cruces_mod))
+summary(cruces_mod)
+Anova(cruces_mod, type="3") #only niche effect
+r.squaredGLM(cruces_mod)
+tukey_cruces <- glht(cruces_mod, linfct = mcp(niche2 = "Tukey"))
+cld(tukey_cruces) #not same

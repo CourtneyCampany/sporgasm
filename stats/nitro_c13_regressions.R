@@ -89,6 +89,6 @@ summary(d13nitro3) #elevations not equal P-value : <0.00001
 # --------------------------------------------------------------
 
 
-
-
-
+justnitro <- lmer(d13C ~ nitro_area + (1|species),data=alldata)
+justnitro <- lmer(nitro_area ~ d13C + (1|species),data=alldata)
+Anova(justnitro, type="3")

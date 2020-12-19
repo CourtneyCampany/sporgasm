@@ -123,3 +123,30 @@ noterr <- mean(traits[!traits$niche2 == "terrestrial", "stipe_length_cm"],
                na.rm=TRUE)
 
 
+
+##For reviewer1
+
+
+selva <- traits[traits$site == "la_selva",]
+cruces <- traits[traits$site == "las_cruces" ,]
+
+selva_mod <- lmer(sqrt(stipe_length_cm) ~ niche2  + (1|species), data=selva)
+cruces_mod <- lmer(sqrt(stipe_length_cm) ~ niche2 + (1|species), data=cruces)
+
+#laselva
+plot(selva_mod)
+qqPlot(residuals(selva_mod))
+summary(selva_mod)
+Anova(selva_mod, type="3") #only niche effect
+r.squaredGLM(selva_mod)
+tukey_selva <- glht(selva_mod, linfct = mcp(niche2 = "Tukey"))
+cld(tukey_selva) #same
+
+#lascruces
+plot(cruces_mod)
+qqPlot(residuals(cruces_mod))
+summary(cruces_mod)
+Anova(cruces_mod, type="3") #only niche effect
+r.squaredGLM(cruces_mod)
+tukey_cruces <- glht(cruces_mod, linfct = mcp(niche2 = "Tukey"))
+cld(tukey_cruces) #not same
