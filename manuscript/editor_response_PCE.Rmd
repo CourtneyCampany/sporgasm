@@ -30,7 +30,7 @@ We are grateful for the opportunity to resubmit our manuscript. We thank the edi
 - *Comment: 1. Title: Could be made more informative by inserting “drought” before “avoidance”..*
 
 \
-*Response*: SHOULD THIS BE 'DROUGHT" or "STRESS"
+*Response*: We agree. We have inserted 'drought' into the title. 
 
 \
 - *Comment: 2. L. 191-194: To reach a broader readership, you should explain the rationale for the d13C measurements here and/or in the introduction. You could inform the reader that it is an index of relative stomatal limitation of photosynthesis and might be correlated with relative avoidance versus tolerance of drought. You can also mention that results could be confounded by differences in Ci/Ca driven by variation in leaf N content in addition to stomatal conductance.*
@@ -78,7 +78,7 @@ We are grateful for the opportunity to resubmit our manuscript. We thank the edi
 - *Comment: 9. L. 381-396: Comparing leaf area-based N content with d13C values might provide some additional insights here. Higher N/area can yield a less negative d13C value at a given stomatal conductance.*
 
 \
-*Response*: Yes, we did think to test for this relationship. The overall relationship was not significant. The lack of a realtionship mostly due to a large amount of variation among the terrestrial and epiphytic species. 
+*Response*: Yes, we did think to test for this relationship. The overall relationship was not significant. The lack of a relationship mostly due to a large amount of variation among the terrestrial and epiphytic species. 
 
 \
 - *Comment: 10. L. 399-401: Conclusions about capacity for osmotic adjustment will depend on the seasons in which pressure volume curves were determined. Were P-V samples collected in both the wet and dry seasons? If not, were all samples collected in the same season?*
@@ -118,13 +118,17 @@ We are grateful for the opportunity to resubmit our manuscript. We thank the edi
 - *Comment: 2. More detailed information about the study system/species and the sampling protocols need to be provided. For example, it is necessary to briefly introduce/explain what are Eupolypod I and II clades. What are the proportions of fern species in general or in the two studied clades having epiphytic, hemi-epiphytic and terrestrial growth form? Why only 4 species of hemi-epiphytic ferns were studied? What is the life history of the hemi-epiphytic ferns? Do they have connections with the forest floor during the first or second part of lifetime? Do the hemi-epiphytic ferns get connected with forest floor for part of lifetime by sending aerial roots to the ground? For the 4 hemi-epiphytic species, were the individuals sampled at epiphytic or terrestrial phase of growth? Were the measurements done during the raining season or dry season? At what heights in the forest canopy were the hemi-epiphytic and epiphytic plants sampled? How were they reached? Are only the individuals at lower positions (the ones that can be reached) sampled?*
 
 \
-*Response*: 
+*Response*: Additional information on the taxonomic breadth of the eupolypods clades and evolution of critical characters has been added at the end to the last paragraph in the introduction. Information describing the differences in growth habitat ('epiphytism') is already included in the first paragraph of the introduction. Phylogenetic relationships in ferns are notoriously tricky, so we have kept the explanation of character states broad. Only 4 species of hemi-epiphytic ferns were located and collected across both sites. Few examples of hemi-epiphytism  have been conclusively documented. We have added more detail to the description of fern hemi-epiphytism in the introduction that better explains the life history of this form. We have edited text in the methods to clearly state that all hemi-ephytes had an established soil connection when sampled. We have also clarified that the measurement campaigns occurred across multiple field seasons in July (rainy season). Description of species collection, including tree heights and capture methods, are already described in the 2^nd^ paragraph of the methods. We have edited the text to make these distinctions more clear. In summary, hemi-epiphytic species were collected on trunks within 3m of the ground, while epiphytic species were collected across trunk and and top canopy positions. 
 
 \
 - *Comment: 3. The discussion is not very focused and there is a worrying lack of strong data support for important statements. For example, there is very limited data to support the interpretation regarding stomatal control (only have stomatal size and density data) and xylem water transport (only related to the xylem area and stiple length data). The discussion on the role of hemi-epiphytic life-form in the evolution of epiphytism in ferns is also weakly supported since there are only four species studied for this life form. Moreover, there is in general a lack of in-depth mechanistic discussion on the adaptation of epiphytic fern species to the more stressful and variable canopy environments.*
 
 \
 *Response*: 
+
+The goal of the discussion section "Does canalized physiological function underpin drought tolerance' is to not provide support for passive stomatal control in seed-free plants. The works of McAdams and Brodribb show this quite elegantly already. The goal of this research (and many others) is to try to understand if this canalized function limits the diversification of seed-free plants in a world now dominated by angiosperms. Here, we accomplish this by first examining if traits related to drought tolerance evolved in fern epiphytes in a similar manner that has been detected for angiosperm epiphytes. We then examine if adaptations in stomatal size and density alleviate limitations from passive stomatal function. Overall, we detected no specific traits associated with drought tolerance in epiphytic ferns . Interestingly, ferns exhibit a wide range of stomatal anatomy, despite passive function. Thus, we tested whether shifts in stomatal anatomy occurred across life forms. Since ferns close stomata at low levels of dehydration, shifts in both the number and size of stomata could be relevant for the drier and more exposed epiphytic niche. The reductions of stomatal density for epiphytic ferns (this study and others) is telling. Without active stomatal control, fewer stomata likely reduce photosynthetic potential but limit daily water loss and avoid more negative water potentials. We do agree that the message of this discussion section is not entirely clear. Thus, we have streamlined and combined the first 2 paragraphs. This change also eliminates the repetition of results that the reviewer also mentions in other comments. 
+
+Studies of primary hemi-epiphytism in ferns nearly all focus on characterization of the life form for a single species. As the reviewer points out, we collect and present data for many individuals of 4 species. This representation is unbalanced with the other life forms because of available diversity in the field, not because of improper sampling. To date, our data set actually represents one of the larger reports of functional traits of hemi-epiphytic ferns. 
 
 \
 - *Comment: 4. L35: The functional traits are mostly related to plant water relations. Better not to mention “mineral nutrition” here since only one trait (foliar N content) was measured in the present study.*
@@ -148,13 +152,13 @@ We are grateful for the opportunity to resubmit our manuscript. We thank the edi
 - *Comment: 7. L92-97: These sentences are about the uniqueness of ferns in general but not closely related to the topic of the paragraph here, i.e. the selection of traits related to water deficit in epiphytic habitat.*
 
 \
-*Response*: 
+*Response*: PICK OUT CITES THAT ARE RELATED TO WATER OR CHANGE OPENING
 
 \
 - *Comment: 8. L105-114: If the main topic of this paragraph is about the large variation of functional traits among epiphytic fern species, the study on “variation” in the literature needs to be reviewed here. Moreover, I think the more important thing needs to be introduced in much more detail here is the current status of knowledge regarding the ecophysiological comparisons between terrestrial and epiphytic ferns.*
 
 \
-*Response*: .
+*Response*: SHOULD THIS PARAGRPAH AND THE PREVIOS BE REARRANGED?
 
 \
 - *Comment: 9. L114-118: This sentence is difficult to be understood.*
@@ -184,7 +188,7 @@ We are grateful for the opportunity to resubmit our manuscript. We thank the edi
 - *Comment: 13. L186-187: The parameter “total xylem vascular area” needs to be better described. It’s a bit difficult to understand what this really means.*
 
 \
-*Response*: 
+*Response*: Replaced 'Total xylem vascular area (mm2) was considered the conduit lumen area and the wall area for all xylem in each cross section' with 'Total xylem vascular area (mm2) was calculated as the sum of the conduit lumen area and conduit wall area for each cross section.'
 
 \
 - *Comment: 14. L199: I think the expression “chlorophyll content per individual” is not correct.*
@@ -244,7 +248,7 @@ We are grateful for the opportunity to resubmit our manuscript. We thank the edi
 - *Comment: 23. L364-379: There is a lack of a clear mechanistic explanation about the correlations between functional traits. The topic of this paragraph is not clear and it is difficult to be followed.*
 
 \
-*Response*: 
+*Response*: WHEN CHANGE MENTION IN #2
 
 \
 - *Comment: 24. L385: Please specify what groups were compared with here.*
@@ -262,7 +266,7 @@ We are grateful for the opportunity to resubmit our manuscript. We thank the edi
 - *Comment: 26. L398-405: Repeating the Results*
 
 \
-*Response*: The reviewer correctly points out that this paragraph repeats specific results from leaf water relations. These sentences broadly review the findings of leaf pressure volume parameters. We feel this is important because the parameters of pressure volume curves are not broadly known, such as a trait like LMA. The context of this paragraph is also to remind the reader that many of these parameters were similar between life forms (not expected) and that drought tolerance traits were not detected in epiphytes as hypothesized. Both of these points provide some interpretation. 
+*Response*: We have streamlined this section (see comment #2) and have removed the repetition of results.
 
 \
 - *Comment: 27. L403-404: Is that possible the results were miscalculated? Larger LMA is usually related to higher capacitance. Please double check.*
