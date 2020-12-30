@@ -96,7 +96,7 @@ legend("topright", boxlabs, pch=16, col=trtcols, bty='n', inset = .01, cex=1.25)
 #tlp
 boxplot(waterpot_tlp ~ niche2, data=pv, xaxt='n',ylim=c(-2,0.1),
         boxlwd=2,whisklwd=2,staplelwd=2,xlab="",
-        varwidth=TRUE,ylab=tlp_lab,
+        varwidth=TRUE,ylab=tlp_lab, outline=FALSE,
         border=trtcols)
 axis(1, boxlabs, at=1:3, cex.axis=1.25)
 stripchart(waterpot_tlp ~ niche2, data = pv,cex=1.25,
@@ -110,7 +110,7 @@ text(3.5, -2, "B", cex=1.5)
 boxplot(osmotic_potential ~ niche2, data=pv, xaxt='n',
         boxlwd=2,whisklwd=2,staplelwd=2,xlab="",
         varwidth=TRUE,ylab=op_lab,ylim=c(-2,0.1),
-        border=trtcols)
+        border=trtcols,outline=FALSE)
 axis(1, boxlabs, at=1:3, cex.axis=1.25)
 stripchart(osmotic_potential ~ niche2, data = pv,
            vertical = TRUE, method = "jitter",cex=1.25,

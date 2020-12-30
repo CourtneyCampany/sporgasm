@@ -72,7 +72,7 @@ We are grateful for the opportunity to resubmit our manuscript. We thank the edi
 - *Comment: 8. L. 364-379: I agree with Reviewer 1’s comments on this section. You could also explain that higher intrinsic WUE (as derived from d13C) could imply a trade-off against CO2 uptake unless leaf N/area is higher in epiphytic ferns. You should also specify that d13C is an index of intrinsic rather than realized WUE (transpiration/biomass), especially in this case where VPD and therefore potential transpiration are likely to be higher in the upper canopy.*
 
 \
-*Response*: Both the editor and the reviewer make important points. We agree that a more developed discussion of the role of WUE and N are useful in the context of this section. We have added a sentence at the end of the section that conveys the point about the trade-off with photosynthesis because area based nitrogen was not increased. We believe this nicely ties with the Zhang papers that report relatively lower rates of photosynthesis in fern epiphytes.
+*Response*: Both the editor and the reviewer make important points. See response to comment #23 from Reviewer 2 for specifics on changes in Lines 364-379. We also agree that a more developed discussion of the role of WUE and N are useful in the context of this section. We have added a sentence at the end of the section that conveys the point about the trade-off with photosynthesis because area based nitrogen was not increased. We believe this nicely ties with the Zhang papers that report relatively lower rates of photosynthesis in fern epiphytes.
 
 \
 - *Comment: 9. L. 381-396: Comparing leaf area-based N content with d13C values might provide some additional insights here. Higher N/area can yield a less negative d13C value at a given stomatal conductance.*
@@ -84,7 +84,7 @@ We are grateful for the opportunity to resubmit our manuscript. We thank the edi
 - *Comment: 10. L. 399-401: Conclusions about capacity for osmotic adjustment will depend on the seasons in which pressure volume curves were determined. Were P-V samples collected in both the wet and dry seasons? If not, were all samples collected in the same season?*
 
 \
-*Response*: PV curves were collected in the same season. PV curves were sampled during separate campaigns for each sample site but during the same season (July of 2 different years).
+*Response*: PV curves were collected in the same season. PV curves were sampled during separate campaigns for each sample site but during the same season (July of 2 different years). We have added a description of the timing of field campaigns in the methods. 
 
 \
 - *Comment: 11. L. L.410 and 413: “angiosperms” should be singular.*
@@ -146,19 +146,19 @@ Studies of primary hemi-epiphytism in ferns nearly all focus on characterization
 - *Comment: 6. L91: The term “evolutionary canalization” needs some explanation here since it is not a commonly used term to people who work in the field of ecophysiology.*
 
 \
-*Response*: Replaced 'On the surface, seed91 free vascular plant lineages (including ferns) appear to present evolutionary canalization of physiological function' with 'Ferns, however, appear to present a lack of adaptation (evolutionary canalization) in physiological function.'
+*Response*: Replaced 'On the surface, seed-free vascular plant lineages (including ferns) appear to present evolutionary canalization of physiological function' with 'Ferns, however, appear to present a lack of adaptation (evolutionary canalization) in physiological function.'
 
 \
 - *Comment: 7. L92-97: These sentences are about the uniqueness of ferns in general but not closely related to the topic of the paragraph here, i.e. the selection of traits related to water deficit in epiphytic habitat.*
 
 \
-*Response*: PICK OUT CITES THAT ARE RELATED TO WATER OR CHANGE OPENING
+*Response*: We agree with the reviewer that this paragraph does not properly maintain a central focus throughout. The goal of this paragraph is to identify if/how the dominant epiphytic plant lineages adapt to the drier and more variable canopy habitat. We have re-written and re-organized the text to reflect this.
 
 \
 - *Comment: 8. L105-114: If the main topic of this paragraph is about the large variation of functional traits among epiphytic fern species, the study on “variation” in the literature needs to be reviewed here. Moreover, I think the more important thing needs to be introduced in much more detail here is the current status of knowledge regarding the ecophysiological comparisons between terrestrial and epiphytic ferns.*
 
 \
-*Response*: SHOULD THIS PARAGRPAH AND THE PREVIOS BE REARRANGED?
+*Response*: We disagree with the reviewer on this point. In this paragraph, we aim to summarize traits that regulate water relations in ferns and highlight the evolution of these traits in epiphytic ferns. This paragraph is not about the variation in functional traits among epiphytic ferns species.  We do not wish to address broader comparisons of ecophysiology for several reasons. A large component of plant ecophysiology, leaf gas-exchange, is mostly beyond the scope of this paper. Instead, this paragraph should function as a primer for the the discussion section "Anatomical and biomechanical traits regulate how epiphytic ferns thrive in sub-optimal resource environments". As such, we have left much of the text intact but have added more detail on variation in structural traits, which was miss
 
 \
 - *Comment: 9. L114-118: This sentence is difficult to be understood.*
@@ -248,7 +248,7 @@ Studies of primary hemi-epiphytism in ferns nearly all focus on characterization
 - *Comment: 23. L364-379: There is a lack of a clear mechanistic explanation about the correlations between functional traits. The topic of this paragraph is not clear and it is difficult to be followed.*
 
 \
-*Response*: WHEN CHANGE MENTION IN #2
+*Response*: We agree with the reviewer's (and editor's) points on this paragraph. We have re-written and re-organized the text to reflect how coordination between traits shifts to better maintain hydraulic function in epiphytic ferns compared to terrestrial ferns.  
 
 \
 - *Comment: 24. L385: Please specify what groups were compared with here.*
@@ -260,7 +260,7 @@ Studies of primary hemi-epiphytism in ferns nearly all focus on characterization
 - *Comment: 25. L397: What does the “more sensitive Ytlp” mean here?*
 
 \
-*Response*: 
+*Response*: In coordination with previous reviewer comments we have revised this section and this statement. Here, the text has been re-written to direct relate more negative turgor loss points to drought tolerance.
 
 \
 - *Comment: 26. L398-405: Repeating the Results*
@@ -314,4 +314,7 @@ Studies of primary hemi-epiphytism in ferns nearly all focus on characterization
 
 \
 *Response*: 
+
+
+
 
