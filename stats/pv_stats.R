@@ -125,13 +125,13 @@ boxplot(capacitance_full ~ niche2, data=full)
 boxplot(capacitance_zero. ~ niche2, data=zero)
 boxplot(capacitance_absolute ~ niche2, data=abs)
 
-hist(full$capacitance_full) 
-hist(zero$capacitance_zero.)
+hist(sqrt(full$capacitance_full) )
+hist(sqrt(zero$capacitance_zero.))
 hist(abs$capacitance_absolute)    
 
-#capcitance full
-full_mod <- lmer(log10(capacitance_full) ~ niche2 * site + (1|species), data=full)
-full_mod2 <- lmer(log10(capacitance_full) ~ niche2 + site + (1|species), data=full)
+#capacitance full
+full_mod <- lmer(sqrt(capacitance_full) ~ niche2 * site + (1|species), data=full)
+full_mod2 <- lmer(sqrt(capacitance_full) ~ niche2 + site + (1|species), data=full)
 
 plot(full_mod) #not bad
 qqPlot(residuals(full_mod)) #not bad
@@ -139,9 +139,12 @@ qqPlot(residuals(full_mod)) #not bad
 #model summary
 Anova(full_mod2, type="3") #no effects
 
+# mean(full[full$niche2 == "terrestrial", "capacitance_full"]) #0.06
+# mean(full[full$niche2 == "epiphyte", "capacitance_full"]) #0.05
+
 #capcitance absolute
-abs_mod <- lmer(log10(capacitance_absolute) ~ niche2 * site + (1|species), data=full)
-abs_mod2 <- lmer(log10(capacitance_absolute) ~ niche2 + site + (1|species), data=full)
+abs_mod <- lmer(log10(capacitance_absolute) ~ niche2 * site + (1|species), data=abs)
+abs_mod2 <- lmer(log10(capacitance_absolute) ~ niche2 + site + (1|species), data=abs)
 
 plot(abs_mod) #not bad
 qqPlot(residuals(abs_mod)) #not bad
@@ -151,8 +154,8 @@ Anova(abs_mod2, type="3") #no effect
 
 
 #capcitance zero
-zero_mod <- lmer(log10(capacitance_zero.) ~ niche2 * site + (1|species), data=full)
-zero_mod2 <- lmer(log10(capacitance_zero.) ~ niche2 + site + (1|species), data=full)
+zero_mod <- lmer(sqrt(capacitance_zero.) ~ niche2 * site + (1|species), data=zero)
+zero_mod2 <- lmer(sqrt(capacitance_zero.) ~ niche2 + site + (1|species), data=zero)
 
 plot(zero_mod) #not bad
 qqPlot(residuals(zero_mod)) #not bad
@@ -161,16 +164,16 @@ qqPlot(residuals(zero_mod)) #not bad
 Anova(zero_mod, type="3") #niche2
 
 anova(zero_mod, zero_mod2) #not different
-AIC(zero_mod, zero_mod2) #use model with interaction
+AIC(zero_mod, zero_mod2) 
 
 summary(zero_mod)
 Anova(zero_mod, type="3")
 r.squaredGLMM(zero_mod)
 
 # R2m       R2c
-# [1,] 0.3186195 0.6273325
+# [1,] 0.280573 0.619161
 
-# niche2    0.01075 *
+# niche2    0.009101 *
 
 tukey_zero <- glht(zero_mod, linfct = mcp(niche2 = "Tukey"))
 zero_siglets <-cld(tukey_zero)
