@@ -5,7 +5,7 @@ traits <- read.csv("calculated_data/fern_traits.csv")
 ## create new variable that adds climber to terrestrial category
 
 traits$niche2 <- traits$niche
-  traits$niche2 <- gsub("climber", "hemi-epiphyte", traits$niche2)
+  traits$niche2 <- gsub("climber", "terrestrial", traits$niche2)
   traits$niche2 <- as.factor(traits$niche2)
   
 lamina <- traits[complete.cases(traits$lamina_area_cm2),]
@@ -42,7 +42,7 @@ summary(lamina_mod2)
 Anova(lamina_mod2, type="3")
 r.squaredGLMM(lamina_mod)
 #R2m       R2c
-#0.1286234 0.8875239
+#0.1689838 0.8865733
 
 # no diff, related to species
 

@@ -11,8 +11,8 @@ sla <- read.csv("calculated_data/fern_sla.csv")
 
 ##merge lma and nitrogen
 nitro <- merge(leafchem, sla, all=TRUE)  
-nitro$lma_g_m2 <- with(nitro, 1/(sla_cm2g/10000))
-nitro$nitro_area <- with(nitro,lma_g_m2 * (n_perc/100))
+  nitro$lma_g_m2 <- with(nitro, 1/(sla_cm2g/10000))
+  nitro$nitro_area <- with(nitro,lma_g_m2 * (n_perc/100))
 
 #reorder from ground to canopy 
 nitro$niche2<-factor(nitro$niche2, 

@@ -1,3 +1,5 @@
+source("functions_packages/basic_functions.R")
+
 ## stats on leaf chemistry-------
 library(visreg)
 library(lme4)
@@ -9,7 +11,7 @@ library(outliers)
 
 
 leafchem <- read.csv("calculated_data/leaf_chemistry.csv")
-  leafchem$niche2 <- gsub("climber", "hemi-epiphyte", leafchem$niche)
+  leafchem$niche2 <- gsub("climber", "terrestrial", leafchem$niche)
   leafchem$niche2 <- as.factor(leafchem$niche2)
   leafchem$percN <- leafchem$n_perc/100
 
@@ -32,7 +34,6 @@ plot(nitro_mod) #looks good
 qqPlot(residuals(nitro_mod)) #looks good
 
 #model summary
-Anova(nitro_mod, type="3") #niche but no interaction
 anova(nitro_mod, nitro_mod2) #not different
 AIC(nitro_mod, nitro_mod2) 
 
@@ -41,22 +42,19 @@ summary(nitro_mod2)
 Anova(nitro_mod2, type="3")
 r.squaredGLMM(nitro_mod2)
 #R2m       R2c
-#0.1758401 0.7982714
+#0.1740686 0.7982922
 
-#niche2    0.007098
-
-visreg(nitro_mod2)
-# lower nitrogen for epiphyes
+#niche2   0.007562
 
 tukey_nitro <- glht(nitro_mod2, linfct = mcp(niche2 = "Tukey"))
 nitro_siglets <-cld(tukey_nitro)
 
 #terrestrial hemi-epiphyte      epiphyte 
-#"b"          "b"           "a" 
+#"b"          "ab"           "a" 
 
 #epi lower than other croups
-terr_N <- mean(leafchem[!leafchem$niche2 == "epiphyte", "percN"],na.rm=TRUE) #2.95
-epi_N <- mean(leafchem[leafchem$niche2 == "epiphyte", "percN"], na.rm=TRUE) #2.08
+terr_N <- mean(leafchem[!leafchem$niche2 == "epiphyte", "percN"],na.rm=TRUE) #.0295
+epi_N <- mean(leafchem[leafchem$niche2 == "epiphyte", "percN"], na.rm=TRUE) #.02079
 
 
 
@@ -87,10 +85,10 @@ summary(c13_mod2)
 Anova(c13_mod2, type="3")
 r.squaredGLMM(c13_mod2)
 #R2m       R2
-#0.269034 0.685494
+#0.2331338 0.73046
 
-#niche2        17.1304  2  0.0001427
-#site           4.7686  1  0.0400207
+# niche2        10.4991  2   0.005250 ** 
+#   site           6.6734  1   0.009786 ** 
 
 visreg(c13_mod2)
 ##d13 higher in epi
@@ -99,11 +97,14 @@ visreg(c13_mod2)
 tukey_c13_niche <- glht(c13_mod2, linfct = mcp(niche2 = "Tukey"))
 c13niche_siglets <-cld(tukey_c13_niche)
 #terrestrial hemi-epiphyte      epiphyte 
-#"a"           "a"           "b" 
+#"a"           "ab"           "b" 
 
 
 epi <- mean(c13dat[c13dat$niche2 == "epiphyte", "d13C"],na.rm=TRUE) #-32.46
-noepi <- mean(c13dat[!c13dat$niche2 == "epiphyte", "d13C"], na.rm=TRUE) #-34.38
+terri <- mean(c13dat[c13dat$niche2 == "terrestrial", "d13C"], na.rm=TRUE) #-34.07
+
+epi_iso_se <- se(c13dat[c13dat$niche2 == "epiphyte", "d13C"]) #0.20
+noepi_iso_se <- se(c13dat[!c13dat$niche2 == "epiphyte", "d13C"]) #0.17
 
 tukey_c13_site <- glht(c13_mod2, linfct = mcp(site = "Tukey"))
 c13site_siglets <-cld(tukey_c13_site)
@@ -113,7 +114,10 @@ c13site_siglets <-cld(tukey_c13_site)
 ls <- mean(c13dat[c13dat$site == "la_selva", "d13C"],na.rm=TRUE) #-33.98324
 lc <- mean(c13dat[c13dat$site == "las_cruces", "d13C"], na.rm=TRUE) #-32.95949
 
+ls_se <- se(c13dat[c13dat$site == "la_selva", "d13C"]) #0.15
+lc_se <- se(c13dat[c13dat$site == "las_cruces", "d13C"]) #0.26
 
+boxplot(d13C ~ site, data=c13dat) 
 
 # 15n ------  #likely ignore these for now
 

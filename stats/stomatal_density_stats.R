@@ -10,7 +10,7 @@ library(lattice)
 library(outliers)
 
 stodens <- read.csv("calculated_data/stomata_density.csv")
-  stodens$niche2 <- gsub("climber", "hemi-epiphyte", stodens$niche)
+  stodens$niche2 <- gsub("climber", "terrestrial", stodens$niche)
   stodens$niche2 <- as.factor(stodens$niche2)
 
 #reorder from ground to canopy 
@@ -46,6 +46,16 @@ boxplot(sd_mm2 ~ niche2, data=sd_agg)
 
 sd_new <- droplevels(sd_agg[!sd_agg$genusspecies == "oleart",])
 
+### custom quantiles for paper
+terr <- sd_new[sd_new$niche2 == "terrestrial",]
+epi <- sd_new[sd_new$niche2 == "epiphyte",]
+hemi <- sd_new[sd_new$niche2 == "hemi-epiphyte",]
+
+quantile(epi$sd_mm2, probs=.8)
+quantile(hemi$sd_mm2, probs=.8)
+quantile(terr$sd_mm2, probs=.8)
+
+
 ##full mixed model:
 sd_mod2 <- lmer(sqrt(sd_mm2) ~ niche2 * site + (1|species), data=sd_new)
 sd_mod3 <- lmer(sqrt(sd_mm2) ~ niche2 + site + (1|species), data=sd_new)
@@ -65,9 +75,9 @@ summary(sd_mod2)
 Anova(sd_mod2, type="3")
 r.squaredGLMM(sd_mod3)
 #R2m       R2c
-#0.3494343 0.9215529
+#0.3069365 0.9220326
 
-#niche2       14.3531  2  0.0001032***
+#niche2    0.001039***
 
 tukey_sd3 <- glht(sd_mod2, linfct = mcp(niche2 = "Tukey"))
 sd3_siglets <-cld(tukey_sd3)
@@ -75,12 +85,11 @@ sd3_siglets <-cld(tukey_sd3)
 #terrestrial hemi-epiphyte      epiphyte 
 # "b"           "a"           "a"
 
-terr_sd <- mean(sd_new[sd_new$niche2 == "terrestrial", "sd_mm2"]) #72.3
-terr_se <- se(sd_new[sd_new$niche2 == "terrestrial", "sd_mm2"]) #72.3
+terr_sd <- mean(sd_new[sd_new$niche2 == "terrestrial", "sd_mm2"]) #68.2
+terr_se <- se(sd_new[sd_new$niche2 == "terrestrial", "sd_mm2"]) #3.0
 
-
-notterr_sd <- mean(sd_new[!sd_new$niche2 == "terrestrial", "sd_mm2"]) #36.6
-notterr_se <- se(sd_new[!sd_new$niche2 == "terrestrial", "sd_mm2"]) #36.6
+notterr_sd <- mean(sd_new[!sd_new$niche2 == "terrestrial", "sd_mm2"]) #37.1
+notterr_se <- se(sd_new[!sd_new$niche2 == "terrestrial", "sd_mm2"]) #1.87
 
 
 

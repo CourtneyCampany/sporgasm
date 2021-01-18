@@ -4,7 +4,7 @@ traits <- read.csv("calculated_data/fern_traits.csv")
   ## Climber seems to be close to terrestrial and it still is technically-------
   ## create new variable that adds climber to terrestrial category
   traits$niche2 <- traits$niche
-  traits$niche2 <- gsub("climber", "hemi-epiphyte", traits$niche2)
+  traits$niche2 <- gsub("climber", "terrestrial", traits$niche2)
   traits$niche2 <- as.factor(traits$niche2)
 
 chloro <- traits[complete.cases(traits$chl_mg_m2),]  
@@ -54,11 +54,11 @@ boxplot(chl_mg_m2 ~ niche2, data=chloro) #couple of outlers
 chloro2 <- chloro[!chloro$genusspecies == "elaher",]
 chloro3 <- chloro[chloro$chl_mg_m2 < 800,]
 chloro4 <- chloro[chloro$chl_mg_m2 < 800 & !chloro$genusspecies == "elaher",]
-boxplot(chl_mg_m2 ~ niche2, data=chloro4)
+boxplot(chl_mg_m2 ~ niche2, data=chloro2)
 
 #models
-chl_mod3 <- lmer(chl_mg_m2 ~ niche2 * site + (1|species), data=chloro4)
-chl_mod4 <- lmer(chl_mg_m2 ~ niche2 + site + (1|species), data=chloro4)
+chl_mod3 <- lmer(chl_mg_m2 ~ niche2 * site + (1|species), data=chloro2)
+chl_mod4 <- lmer(chl_mg_m2 ~ niche2 + site + (1|species), data=chloro2)
 
 hist(chloro4$chl_mg_m2) #look good
 plot(chl_mod3) #not bad
@@ -74,17 +74,15 @@ summary(chl_mod3)
 Anova(chl_mod3, type="3")
 r.squaredGLMM(chl_mod3)
 #R2m       R2c
-#0.1261207 0.5984076
-# niche2    0.03146 * 
+#0.1145319 0.6082761
+# niche2   0.0434 * 
 
-visreg(chl_mod3)
-##slightly higher chat las cruces
 
 tukey_chl <- glht(chl_mod3, linfct = mcp(niche2 = "Tukey"))
 chl_siglets <-cld(tukey_chl)
 
 # terrestrial hemi-epiphyte      epiphyte 
-# "ab"           "b"           "a" 
+# "a"           "a"           "a" 
 
 epi <- mean(chloro4[chloro4$niche2 == "epiphyte", "chl_mg_m2"])
 #390.9373

@@ -31,13 +31,14 @@ boxlabs2 <- c("Terrestrial", "Hemi-\nepiphyte", "Epiphyte")
 ss_lab <- expression(Stomatal~size~~(um^2))
 sl_lab <- expression(Stomatal~length~~(um))
 sw_lab <- expression(Stomatal~width[mean]~~(um))
-sd_lab <- expression(Stomatal~density~~(mm^2))
+sd_lab <- expression(Stomatal~density~~(stomata~mm^-2))
 xylem_lab <- expression(Total~xylem~area[stipe]~~(mm^-2))
 xylem_lab2 <- expression(Total~xylem~area[stipe]~~(um^-2))
 wp_lab <- expression(Psi[midday]~~(MPa))
 lma_lab <- expression(LMA~~(g~m^-2))
 cap_lab <- expression(C[tlp]~~(units))
 veinlab <- expression(Vein~Density~~(mm~mm^-2))
+xylemfrac_lab <- expression(Xylem~fraction~x~10^4)
 
 
 #colors

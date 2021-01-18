@@ -14,6 +14,10 @@ library(lattice)
 library(moments)
 library(MASS)
 library(outliers)
+library(lme4)
+library(MuMIn)
+library(lmerTest)
+library(LMERConvenienceFunctions)
 
 # Ltest_frond <- leveneTest(sla_cm2g ~ niche2 , data = sla)
 
@@ -39,12 +43,10 @@ AIC(sla_mod2, sla_mod3) #model with interaction in better
 Anova(sla_mod2, type="3") #only niche effect
 r.squaredGLMM(sla_mod2)
 #R2m       R2c
-#0.2236678 0.8169862
+#0.2265056 0.8169017
 
-#niche2   12.7224  2   0.001727
+#niche2   0.001536
 
-visreg(sla_mod2)
-##slightly higher SD at las cruces
 
 tukey_sla <- glht(sla_mod2, linfct = mcp(niche2 = "Tukey"))
 sla_siglets <-cld(tukey_sla)
@@ -52,7 +54,7 @@ sla_siglets <-cld(tukey_sla)
 #terrestrial hemi-epiphyte      epiphyte 
 #     "a"          "ab"           "b"
 
-terr <- mean(sla[sla$niche2 == "terrestrial", "lma"]) #129.3988
+terr <- mean(sla[sla$niche2 == "terrestrial", "lma"]) #127.95
 epi <- mean(sla[sla$niche2 == "epiphyte", "lma"]) #216.4421
 
 ### custom quantiles for paper
@@ -75,4 +77,29 @@ b20hemi <- nrow(hemi[hemi$stipe_length_cm <= 20 ,])
 a20hemi <- nrow(hemi[hemi$stipe_length_cm > 20 ,])
 
 
+##For reviewer1
 
+
+selva <- sla[sla$site == "la_selva",]
+cruces <- sla[sla$site == "las_cruces" ,]
+
+selva_mod <- lmer(log10(lma) ~ niche2  + (1|species), data=selva)
+cruces_mod <- lmer(log10(lma) ~ niche2 + (1|species), data=cruces)
+
+#laselva
+plot(selva_mod)
+qqPlot(residuals(selva_mod))
+summary(selva_mod)
+Anova(selva_mod, type="3") #only niche effect
+r.squaredGLM(selva_mod)
+tukey_selva <- glht(selva_mod, linfct = mcp(niche2 = "Tukey"))
+cld(tukey_selva) #same
+
+#lascruces
+plot(cruces_mod)
+qqPlot(residuals(cruces_mod))
+summary(cruces_mod)
+Anova(cruces_mod, type="3") #only niche effect
+r.squaredGLM(cruces_mod)
+tukey_cruces <- glht(cruces_mod, linfct = mcp(niche2 = "Tukey"))
+cld(tukey_cruces) #not same

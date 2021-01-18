@@ -6,7 +6,7 @@ source("master_scripts/plot_objects.R")
 ##frond morphology data
 traits <- read.csv("calculated_data/fern_traits.csv")
   traits$niche2 <- traits$niche
-  traits$niche2 <- gsub("climber", "hemi-epiphyte", traits$niche2)
+  traits$niche2 <- gsub("climber", "terrestrial", traits$niche2)
   traits$niche2 <- as.factor(traits$niche2)
   #reorder from ground to canopy 
   traits$niche2<-factor(traits$niche2, 
@@ -63,10 +63,12 @@ xval <- lastPP$xx[1:39]
 yval <- lastPP$yy[1:39]
 
 #ancestrial state reconstruction
-jpeg(filename = "manuscript/asr_stipe.jpeg",
-      width = 6, height = 6, units = "in", res= 400)
+# jpeg(filename = "manuscript/asr_stipe.jpeg",
+#       width = 6, height = 6, units = "in", res= 400)
 
 # windows()
+
+pdf(file = "manuscript/Figure6.pdf", width = 8, height = 8)
 
 plot(obj2, ftype="off", xlim=c(0,.15),ylim=c(-4,39),
      #ylim=lastPP$y.lim,xlim=lastPP$x.lim,

@@ -1,0 +1,91 @@
+---
+title: Leaf water relations in epiphytic ferns are driven by avoidance rather than tolerance mechanisms
+titlebox_height: "10%"
+author:
+  - name: Courtney Campany
+    affil: 1
+    orcid: '0000-0002-1099-3857'
+    twitter: Court_Campany
+    email: ccampany@shepherd.edu
+  - name: Jarmila Pittermann
+    affil: 2
+  - name: Alex Baer
+    affil: 2
+  - name: Helen Holmlund
+    affil: 3
+  - name: Eddie Watkins
+    affil: 4
+affiliation:
+  - num: 1
+    address: Department of Biology, Shepherd University, Shepherdstown, WV, USA
+column_numbers: 3
+logoright_name: https&#58;//raw.githubusercontent.com/brentthorne/posterdown/master/images/betterhexlogo.png
+logoleft_name: https&#58;//raw.githubusercontent.com/brentthorne/posterdown/master/images/betterhexlogo.png
+output: 
+  posterdown::posterdown_html:
+    self_contained: false
+bibliography: packages.bib
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# Introduction
+
+Opportunistic diversification allowed ferns to radiate into epiphytic niches created by now angiosperm dominated landscapes. Compared to terrestrial habitats, ferns in epiphytic habitats should exhibit variation in functional traits to cope with water stress. *We tested whether the evolution of leaf traits related to drought tolerance promoted the radiation of ferns from moist, terrestrial habitats to more unpredictable canopy habitats.*
+
+## Objectives
+
+1. **Explore** epiphytic trait divergence in a phylogenetic context
+2. **Examine** leaf responses to water stress vs functional traits
+3. **Explain** opportunistic radiation of ferns in canopy habitats
+
+# Methods
+
+* **Surveyed 39 fern species in Costa Rican tropical forests**
+* **Explore epiphytic functional trait divergence in a phylogenetic context**
+* **_Now on to the results!_**
+
+# Results
+
+Usually you want to have a nice table displaying some important results that you have calculated. In `posterdown` this is as easy as using the `kable` table formatting you are probably use to as per typical R Markdown formatting.
+
+You can reference tables like so: Table \@ref(tab:mytable). Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam placerat augue at velit tincidunt semper. Donec elementum porta posuere. Nullam interdum, odio at tincidunt feugiat, turpis nisi blandit eros, eu posuere risus felis non quam. Nam eget lorem odio. Duis et aliquet orci. Phasellus nec viverra est.
+
+```{r mytable, out.width='80%'}
+knitr::kable(iris[1:10, 1:4], caption = 'Table caption.',align = 'c',"html")
+```
+
+Or with figures: Figure \@ref(fig:standard-plot), or Figure \@ref(fig:morefigs).
+
+```{r standard-plot, out.width='80%', fig.align='center', fig.cap='Great figure!', fig.height=5}
+plot(mtcars[1:2])
+```
+
+```{r morefigs, out.width='80%', echo=TRUE, fig.cap='Amazing, right?!', fig.height=5}
+data <- iris
+
+plot(x = data$Sepal.Length, 
+     y = data$Sepal.Width, 
+     col = data$Species,
+     pch = 19, 
+     xlab = "Sepal Length (cm)",
+     ylab = "Sepal Width (cm)")
+
+```
+
+
+Aliquam sed faucibus risus, quis efficitur erat. Vestibulum semper mauris quis tempus eleifend. Aliquam sagittis dictum ipsum, quis viverra ligula eleifend ut. Curabitur sagittis vitae arcu eget faucibus. 
+
+# Key Findings
+
+In non elementum felis. Duis et aliquam nunc. Nunc pulvinar sapien nunc, vel pretium nisi efficitur in. Fusce fringilla maximus leo et maximus. Fusce at ligula laoreet, iaculis mi at, auctor odio. Praesent sed elementum justo. Aenean consectetur risus rhoncus tincidunt efficitur. Praesent dictum mauris at diam maximus maximus [@R-posterdown].
+
+# Take Home Message
+
+# Co-Author affliations
+
+^2^ Department of Ecology and Evolutionary Biology, University of California, Santa Cruz, CA, USA     
+^3^ Natural Science Division, Pepperdine University, Malibu, CA, USA     
+^4^ Department of Biology, Colgate University, Hamilton, NY, USA

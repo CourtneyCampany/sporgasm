@@ -5,7 +5,7 @@ traits <- read.csv("calculated_data/fern_traits.csv")
 ## create new variable that adds climber to terrestrial category
 
 traits$niche2 <- traits$niche
-  traits$niche2 <- gsub("climber", "hemi-epiphyte", traits$niche2)
+  traits$niche2 <- gsub("climber", "terrestrial", traits$niche2)
   traits$niche2 <- as.factor(traits$niche2)
   #reorder from ground to canopy 
   traits$niche2<-factor(traits$niche2, 
@@ -21,6 +21,7 @@ hemi <- stipe[stipe$niche2 == "hemi-epiphyte",]
 
 b20epi <- nrow(epi[epi$stipe_length_cm <= 20 ,])
 a20epi <- nrow(epi[epi$stipe_length_cm > 20 ,])
+quantile(terr$stipe_length_cm, probs = .8, na.rm=TRUE)
 
 b20terr <- nrow(terr[terr$stipe_length_cm <= 20 ,])
 a20terr <- nrow(terr[terr$stipe_length_cm > 20 ,])
@@ -105,7 +106,7 @@ stipe_mod8 <- lmer(sqrt(stipe_length_cm) ~ niche2 + site
 Anova(stipe_mod8, type="3")
 r.squaredGLMM(stipe_mod8)
 
-# niche2       12.5416  2   0.001891 ** 
+# niche2      0.0005094
 
 #           R2m       R2c
 # [1,] 0.2874501 0.8818687
@@ -115,10 +116,37 @@ visreg(stipe_mod8, "niche2")
 tukey_stipe_8 <- summary(glht(stipe_mod8, linfct=mcp(niche2="Tukey")))  
 stipe8_siglets <-cld(tukey_stipe_8)
 # terrestrial hemi-epiphyte      epiphyte 
-# "a"          "ab"           "b" 
+# "a"          "b"           "b" 
 
 terr <- mean(traits[traits$niche2 == "terrestrial", "stipe_length_cm"], na.rm=TRUE)
 noterr <- mean(traits[!traits$niche2 == "terrestrial", "stipe_length_cm"], 
                na.rm=TRUE)
 
 
+
+##For reviewer1
+
+
+selva <- traits[traits$site == "la_selva",]
+cruces <- traits[traits$site == "las_cruces" ,]
+
+selva_mod <- lmer(sqrt(stipe_length_cm) ~ niche2  + (1|species), data=selva)
+cruces_mod <- lmer(sqrt(stipe_length_cm) ~ niche2 + (1|species), data=cruces)
+
+#laselva
+plot(selva_mod)
+qqPlot(residuals(selva_mod))
+summary(selva_mod)
+Anova(selva_mod, type="3") #only niche effect
+r.squaredGLM(selva_mod)
+tukey_selva <- glht(selva_mod, linfct = mcp(niche2 = "Tukey"))
+cld(tukey_selva) #same
+
+#lascruces
+plot(cruces_mod)
+qqPlot(residuals(cruces_mod))
+summary(cruces_mod)
+Anova(cruces_mod, type="3") #only niche effect
+r.squaredGLM(cruces_mod)
+tukey_cruces <- glht(cruces_mod, linfct = mcp(niche2 = "Tukey"))
+cld(tukey_cruces) #not same

@@ -1,0 +1,316 @@
+---
+output:
+  word_document:
+    reference_docx: manuscriptstyle_pce2.docx
+  pdf_document: default
+  html_document:
+    number_sections: yes
+---
+
+```{r, results='asis', echo=FALSE, warning=FALSE}
+library(knitr)
+opts_knit$set(root.dir = '../')
+```
+
+Dr. Frederick Meinzer
+
+\
+Editor
+\
+Plant Cell & Environment
+
+\
+We are grateful for the opportunity to resubmit our manuscript, and we thank the editor and reviewers for providing insightful comments to improve our work. We have responded in detail to each comment, which has improved the overall quality of the manuscript. Below, we have itemized our response to each comment from the editor and both referees. 
+
+\
+**EDITOR**
+\
+**Comment: 1.** Title: Could be made more informative by inserting “drought” before “avoidance”..
+
+\
+*Response*: We agree. We have inserted 'drought' into the title. 
+
+\
+**Comment: 2.** L. 191-194: To reach a broader readership, you should explain the rationale for the d13C measurements here and/or in the introduction. You could inform the reader that it is an index of relative stomatal limitation of photosynthesis and might be correlated with relative avoidance versus tolerance of drought. You can also mention that results could be confounded by differences in Ci/Ca driven by variation in leaf N content in addition to stomatal conductance.
+
+\
+*Response*: This is a great suggestion. We have incorporated the editors suggestion into the methods section. 
+
+\
+**Comment: 3.** L. 202: PMS is located in Albany, OR.
+
+\
+*Response*: Location changed from Corvallis to Albany
+
+\
+**Comment: 4.** L. 267-268: “between” makes the sentence potentially confusing. I suggest replacing it with “in”
+
+\
+*Response*: editorial change made
+
+\
+**Comment: 5.** L. 290: Not clear what “capable” implies.
+
+\
+*Response*: changed 'were capable of much' to 'reached'
+
+\
+**Comment: 6.** L. 291-302: It would help the reader to foreshadow the potential implications of the d13C data by using the methods section to explain the rationale for collecting these data (see above). This also applies to the N and chlorophyll content data.
+
+\
+*Response*: As with the previous comment, we have integrated implications of d13C, foliar N and chlorophyll content data into the 'Foliar Chemistry' section in the Methods. 
+
+\
+**Comment: 7.** L. 317: to be consistent with the terminology used in the rest of the paper. Pitlp should be replaced with PSItlp.
+
+\
+*Response*: editorial change made
+
+\
+**Comment: 8.** L. 364-379: I agree with Reviewer 1’s comments on this section. You could also explain that higher intrinsic WUE (as derived from d13C) could imply a trade-off against CO2 uptake unless leaf N/area is higher in epiphytic ferns. You should also specify that d13C is an index of intrinsic rather than realized WUE (transpiration/biomass), especially in this case where VPD and therefore potential transpiration are likely to be higher in the upper canopy.
+
+\
+*Response*: Both the editor and the reviewer make important points. See response to comment #23 from Reviewer 2 for specifics on changes in Lines 364-379. We also agree that a more developed discussion of the role of WUE and N is useful in the context of this section. We have added a sentence at the end of the section that conveys the point about the trade-off with photosynthesis because area based nitrogen was not increased. We believe this nicely ties with the Zhang papers that report relatively lower rates of photosynthesis in fern epiphytes.
+
+\
+**Comment: 9.** L. 381-396: Comparing leaf area-based N content with d13C values might provide some additional insights here. Higher N/area can yield a less negative d13C value at a given stomatal conductance.
+
+\
+*Response*: Yes, we did think to test this relationship. The overall relationship was not significant. The lack of a relationship mostly due to a large amount of variation among the terrestrial and epiphytic species. 
+
+\
+**Comment: 10.** L. 399-401: Conclusions about capacity for osmotic adjustment will depend on the seasons in which pressure volume curves were determined. Were P-V samples collected in both the wet and dry seasons? If not, were all samples collected in the same season?
+
+\
+*Response*: PV curves were collected in the same season. PV curves were sampled during separate campaigns for each sample site but during the same season (July of 2 different years). We have added a description of the timing of field campaigns in the methods. 
+
+\
+**Comment: 11.** L. L.410 and 413: “angiosperms” should be singular.
+
+\
+*Response*: 'Tropical angiosperms epiphytes' replaced with 'Tropical epiphytic angiosperms'
+
+\
+**Comment: 12.** L. 437: Here and elsewhere in the text I suggest replacing arrows with words, e.g. “higher”, “lower”.
+
+\
+*Response*: arrows replaced with descriptors throughout manuscript.
+
+\
+**Comment: 13.** L. 459: Foliar N does not encompass overall mineral nutrition. See comments of Reviewer 1.
+
+\
+*Response*: replaced 'mineral nutrition (foliar N content) ' with 'foliar N status'
+
+\
+**REVIEWER 1**
+\
+
+**Comment: 1.** The aim of the study is to compare between the three functional groups but there is a confounding factor of study site, particularly considering the fact that one of the two sites is drier than the other site. The differences in environmental conditions between the two sites may have resulted in different plant water relations of species from the two sites as indicated by the significantly different plant tissue carbon 13 isotope enrichment found in the present study. At least, there is a need to show whether the results of comparison between functional groups are different when the site factor is taken into consideration for statistics.
+
+\
+*Response*: We realize that as written, "Generally, there were few life form x collection site interactions" infers that multiple significant effects of collection site were detected. Across all the surveyed functional traits, tissue ^13^C was the only trait were a site effect (main effect or interaction with life form) was detected. We have corrected this poor choice of wording to specify that a 'site' effect was only detected in leaf isotopes.
+
+\
+**Comment: 2.** More detailed information about the study system/species and the sampling protocols need to be provided. For example, it is necessary to briefly introduce/explain what are Eupolypod I and II clades. What are the proportions of fern species in general or in the two studied clades having epiphytic, hemi-epiphytic and terrestrial growth form? Why only 4 species of hemi-epiphytic ferns were studied? What is the life history of the hemi-epiphytic ferns? Do they have connections with the forest floor during the first or second part of lifetime? Do the hemi-epiphytic ferns get connected with forest floor for part of lifetime by sending aerial roots to the ground? For the 4 hemi-epiphytic species, were the individuals sampled at epiphytic or terrestrial phase of growth? Were the measurements done during the raining season or dry season? At what heights in the forest canopy were the hemi-epiphytic and epiphytic plants sampled? How were they reached? Are only the individuals at lower positions (the ones that can be reached) sampled?
+
+\
+*Response*: Additional information on the taxonomic breadth of the eupolypods clades and evolution of critical characters has been added to the 2^nd paragraph of the methods section. Information describing the differences in growth habitat ('epiphytism') is already included in the first paragraph of the introduction. Phylogenetic relationships in ferns are notoriously tricky, so we have kept the explanation of character states broad. Only 4 species of hemi-epiphytic ferns were located and collected across both sites. Importantly, few examples of hemi-epiphytism  have been conclusively documented. We have added more detail to the description of fern hemi-epiphytism in the introduction that better explains the life history of this form. We have edited text in the methods to clearly state that all hemi-epiphytes had an established soil connection when sampled. We have also clarified that the measurement campaigns occurred across multiple field seasons in July (rainy season). Description of species collection, including tree heights and capture methods, are already described in the 2^nd^ paragraph of the methods. We have edited the text to make these distinctions clearer. In summary, hemi-epiphytic species were collected on trunks within 3m of the ground, while epiphytic species were collected across trunk and top canopy positions. 
+
+\
+**Comment: 3.** The discussion is not very focused and there is a worrying lack of strong data support for important statements. For example, there is very limited data to support the interpretation regarding stomatal control (only have stomatal size and density data) and xylem water transport (only related to the xylem area and stiple length data). The discussion on the role of hemi-epiphytic life-form in the evolution of epiphytism in ferns is also weakly supported since there are only four species studied for this life form. Moreover, there is in general a lack of in-depth mechanistic discussion on the adaptation of epiphytic fern species to the more stressful and variable canopy environments.
+
+\
+*Response*: 
+
+The goal of the discussion section "Does canalized physiological function underpin drought tolerance' is to not provide support for passive stomatal control in seed-free plants. The works of McAdams and Brodribb show this quite elegantly already. One goal of this research is to try to understand if this canalized function limits the diversification of seed-free plants in a world now dominated by angiosperms. Here, we accomplish this by first examining if traits related to drought tolerance evolved in fern epiphytes in a similar manner that has been detected for angiosperm epiphytes. We then examine if adaptations in stomatal size and density alleviate limitations from passive stomatal function. Overall, we detected no specific physiological (PV curves) traits associated with drought tolerance in epiphytic ferns. Interestingly, ferns exhibit a wide range of stomatal anatomy, despite passive function. Thus, we tested whether shifts in stomatal anatomy occurred across life forms. Since ferns close stomata at low levels of dehydration, shifts in both the number and size of stomata could be relevant for the drier and more exposed epiphytic niche. The reductions of stomatal density for epiphytic ferns (this study and others) is telling. Without active stomatal control, fewer stomata likely reduce photosynthetic potential but limit daily water loss and avoid more negative water potentials. We do agree that the message of this discussion section is not entirely clear. Thus, we have streamlined and combined the first 2 paragraphs. This change also eliminates the repetition of results that the reviewer also mentions in other comments. 
+
+Studies of primary hemi-epiphytism in ferns nearly all focus on characterization of the life form for a single species. As the reviewer points out, we collect and present data for many individuals of 4 species. This representation is unbalanced with the other life forms because of available diversity in the field, not because of improper sampling. To date, our data set actually represents one of the larger reports of functional traits of hemi-epiphytic ferns. 
+
+\
+**Comment: 4.** L35: The functional traits are mostly related to plant water relations. Better not to mention “mineral nutrition” here since only one trait (foliar N content) was measured in the present study.
+
+\
+*Response*: removed 'and mineral nutrition' from abstract
+
+\
+**Comment: 5.** L39-40: The meaning of “share functional relevance” is vague.
+
+\
+*Response*: replaced 'share functional relevance with 'share characteristics of"
+
+\
+**Comment: 6.** L91: The term “evolutionary canalization” needs some explanation here since it is not a commonly used term to people who work in the field of ecophysiology.
+
+\
+*Response*: Replaced 'On the surface, seed-free vascular plant lineages (including ferns) appear to present evolutionary canalization of physiological function' with 'Ferns, however, appear to present a lack of adaptation (evolutionary canalization) in physiological function.'
+
+\
+**Comment: 7.** L92-97: These sentences are about the uniqueness of ferns in general but not closely related to the topic of the paragraph here, i.e. the selection of traits related to water deficit in epiphytic habitat.
+
+\
+*Response*: We agree with the reviewer that this paragraph does not properly maintain a central focus throughout. The goal of this paragraph is to identify if/how the dominant epiphytic plant lineages adapt to the drier and more variable canopy habitat. We have re-written and re-organized the text to reflect this.
+
+\
+**Comment: 8.** L105-114: If the main topic of this paragraph is about the large variation of functional traits among epiphytic fern species, the study on “variation” in the literature needs to be reviewed here. Moreover, I think the more important thing needs to be introduced in much more detail here is the current status of knowledge regarding the ecophysiological comparisons between terrestrial and epiphytic ferns.
+
+\
+*Response*: We disagree with the reviewer on this point. In this paragraph, we aim to summarize traits that regulate water relations in ferns and highlight the evolution of these traits in epiphytic ferns. This paragraph is not about the variation in functional traits among epiphytic ferns species.  We do not wish to address broader comparisons of ecophysiology for several reasons. A large component of plant ecophysiology, leaf gas-exchange, is mostly beyond the scope of this paper. Instead, this paragraph should function as a primer for the discussion section "Anatomical and biomechanical traits regulate how epiphytic ferns thrive in sub-optimal resource environments". As such, we have left much of the text intact but have added more detail on variation in structural traits, which was missing.
+
+\
+**Comment: 9.** L114-118: This sentence is difficult to be understood.
+
+\
+*Response*: Replaced 'Synthesizing these findings in ferns suggests that the evolution of xylem and stomata are likely connected from an ancestral state of water conservatism (Sperry 2004), and the more recent diversification of epiphytic ferns allows exploration of the degree to which dehydration tolerance or avoidance mechanisms manifest in key functional traits.' with 'These findings suggests that the evolution of xylem and stomata are connected from an ancestral state of water conservatism in ferns (Sperry 2004), and the more recent diversification of epiphytic ferns allows exploration of the degree to which dehydration tolerance or dehydration avoidance mechanisms have developed.'
+
+\
+**Comment: 10.** L123-125: The hypothesis can be more specific.
+
+\
+*Response*: The sentence above the hypothesis describes how adaptions to morphological, anatomical and physiolgical traits could all be necessary to deal with the canopy habitat. For brevity, we have altered the hypothesis to specifically allude to drought tolerance adaptations but we have not listed any of the dozen traits we measured. 
+
+\
+**Comment: 11.** L135: Put the latitude information before that of the longitude, to be consistent with what is shown for the other site.
+
+\
+*Response*: editorial change made
+
+\
+**Comment: 12.** L160: Why the duration of the rehydration process was not kept constant for all the species? How was the length of this rehydration process for different species determined?
+
+\
+*Response*: The re-hydration process was for a minimum of 1 hour. Each day involved pre-dawn collection of ferns in the field. Ferns were then re-hydrated in the lab and pressure volume curves were started. Each pressure volume curve took approximately 4-5 hours. We utilized two pressure chambers each day, meaning not all curves could be started simultaneously. If over-saturation was detected in the pressure volume data, the individual curve was removed.
+
+\
+**Comment: 13.** L186-187: The parameter “total xylem vascular area” needs to be better described. It’s a bit difficult to understand what this really means.
+
+\
+*Response*: Replaced 'Total xylem vascular area (mm2) was considered the conduit lumen area and the wall area for all xylem in each cross section' with 'Total xylem vascular area (mm2) was calculated as the sum of the conduit lumen area and conduit wall area for each cross section.'
+
+\
+**Comment: 14.** L199: I think the expression “chlorophyll content per individual” is not correct.
+
+\
+*Response*: 'Chlorophyll content per individual' replaced with 'Lamina chlorophyll content' 
+
+\
+**Comment: 15.** L261-262: Please also specify the frond length of the hemi-epiphytes. From Fig. 1a, it seems that there is no difference between hemi-epiphytic and epiphytic species, or even the hemi-epiphytic species have lower mean values.
+
+\
+*Response*: We thank the reviewer for spotting this. Statistically, hemi-epiphytes are not not different from either terrestrial or epiphytic species. However, this does not mean that the data support the statement that hemi-epiphytes have intermediate values. We have clarified this in the text.
+ 
+\
+**Comment: 16.** L269-270: This relationship seems not very meaningful.  It is not surprising that longer stiple is related to larger frond area. The two traits are not independent.
+
+\
+*Response*: We agree with this statement, to a degree. Lamina area is mechanically and hydraulically supported by the stipe length. Thus, we agree that a positive relationship is not surprisingly. However, many epiphytes had drastically reduced stipes. Thus, we feel it important that this allometric relationship is present and distinct (slopes and elevations) in epiphytes compared to the other life forms. 
+
+\
+**Comment: 17.** L290: How much higher? Please specify.
+
+\
+*Response*: replaced 'Broadly, LMA of terrestrial and hemi-epiphytic ferns was constrained to less than 300 g m-2, while epiphytic ferns species were capable of much LMA higher values.' with 'Broadly, LMA of terrestrial and hemi-epiphytic ferns was constrained to less than 300 g m^-2^, while epiphytic species reached much higher LMA values (~500 g m^-2^).'
+
+\
+**Comment: 18.** L299-300: This result suggests that the two study sites may be significantly different in environmental water availability. But for comparisons among the three functional groups, data from the two study sites were pooled. How the results in comparing the three types of ferns will change if analyses were done separately for the two sites?
+
+\
+*Response*: In our statistical analysis, we include both the role of 'life form' and 'site' as interactive fixed effects in each mixed model. Thus, trait variation across sites is accounted for in all model. The only 'site' effect detected in these models was with leaf ~13~C, as the reviewer points out. We did re-run un-pooled statistics for several of the most important traits. When analyses were run separately for each site, differences among life forms were more pronounced in the La Selva site compared to the Las Cruces site. However, the larger goal of this work is to analyze leaf water relations in a phylogenetic context. This effort was only successful by surveying a broad coverage of taxa across sites. Thus, examining environmental variation in fern functional traits is not the goal of this paper. There already exists a suite of papers that examine functional traits of epiphytes (ferns and others) across elevation gradients in the tropics.
+
+\
+**Comment: 19.** L304: The values for epiphytic and hemi-epiphytic species are different as can be seen from Fig. 4a, but from the description here it seems the two groups have the same mean value.
+
+\
+*Response*: The means for stomatal density of hemi-epiphytes and epiphytes are statistically similar. This is why these groups are pooled when presented in the results. In the figure, this is relationship is visualized by the post-hoc tests reported in the figure.  
+
+\
+**Comment: 20.** L338: Need to specify in the figure which clade is Eupolypods II/I.
+
+\
+*Response*: Instead of making each ancestral state reconstruction figure more complicated, we have chosen to reword this statement to just focus on life form.
+
+\
+**Comment: 21.** L352-362: Citations are needed for this paragraph and should avoid repeating the results without interpretation.
+
+\
+*Response*: We have added citations for Lüttge 2012 and Gotsch et al. 2015 at the start of the paragraph. This paper does present results for 15 functional traits across 3 life forms. Thus, we feel that is important to briefly remind the reader of key results in certain areas of our discussion. We do agree with the reviewer that this approach should broadly be avoided. 
+
+\
+**Comment: 22.** L366: Trade-off between what?
+
+\
+*Response*: replaced 'Differences in trait coordination related to biomechanical and structural support have previously been detected between epiphytic and terrestrial ferns (Peppe et al. 2014; Mahley et al. 2018), creating potential trade-offs to leaf water supply.' with 'Differences in trait coordination related to biomechanical and structural support have previously been detected between epiphytic and terrestrial ferns (Peppe et al. 2014; Mahley et al. 2018), uncovering potential trade-offs related to leaf water supply.'
+
+\
+**Comment: 23.** L364-379: There is a lack of a clear mechanistic explanation about the correlations between functional traits. The topic of this paragraph is not clear and it is difficult to be followed.
+
+\
+*Response*: We agree with the reviewer's (and editor's) points on this paragraph. We have re-written and re-organized the text to reflect how coordination between traits shifts to better maintain hydraulic function in epiphytic ferns compared to terrestrial ferns.  
+
+\
+**Comment: 24.** L385: Please specify what groups were compared with here.
+
+\
+*Response*: replaced 'compared to other taxonomic groups of epiphytes' with 'compared to epiphytes from other angiosperm taxonomic groups'
+
+\
+**Comment: 25.** L397: What does the “more sensitive Ytlp” mean here?
+
+\
+*Response*: In coordination with previous reviewer comments we have revised this section and this statement. Here, the text has been re-written to directly relate more negative turgor loss points to drought tolerance.
+
+\
+**Comment: 26.** L398-405: Repeating the Results
+
+\
+*Response*: We have streamlined this section (see comment #2) and have removed the repetition of results.
+
+\
+**Comment: 27.** L403-404: Is that possible the results were miscalculated? Larger LMA is usually related to higher capacitance. Please double check.
+
+\
+*Response*: We re-checked the raw data and re-ran the statistics. The results did not change. 
+
+\
+**Comment: 28.** L486: It is not very clear what “plasticity of functional traits” means here.
+
+\
+*Response*: replaced 'plasticity' with 'adaptability'
+
+\
+**Comment: 29.** L490-491: The comparison between the epiphytic ferns and angiosperms is not very relevant here.
+
+\
+*Response*: We disagree. The evolution of epiphytism was not limited to a single plant lineage. The unique strategies that ferns utilize to persist in the canopy habitat make braoder comparisons to angiosperms evern more relevant. 
+
+\
+**Comment: 30.** Fig. 2B: Should the unit of xylem area be mm2 in the figure (as in the legend) instead of mm-2?
+
+\
+*Response*: editorial change made
+
+\
+**REVIEWER 2**
+\
+
+\
+**Comment: 1. 1. Please provide all of the data for each species in a supplementary table, this will be useful for future studies that might want to make comparisons.  Please include guard cell length in this dataset too.**
+
+\
+*Response*: We will publish all data onto a online repository (FigShare, DRYAD, TRY, etc.) once the article has been accepted for a publication. It is a rather large raw dataset which is more suitable for a repository.
+
+\
+**Comment: 2.** It would be nice to have some sort of quantification of laminal shape?  Did this vary between epiphytes and terrestrial species - with epiphytes having entire lamina, as opposed to more pinnate lamina?  Also could this be the reason for reduced xylem area, is there a structural component happening here too, with a larger endodermis in the terrestrial species supporting the larger laminal area structurally?  What about a shorter stipe in epiphytes as an adaptation against wind damage?
+
+\
+*Response*: We agree that shape parameters would be very interesting to address, particularity in their role in structural biomechanics. However, the LICOR LI-3100 does not record images of the leaves that are scanned. We do agree with the reviewer that several interesting lines of inquiry could be addressed with a study on lamina shape. We also agree that shorter stipes are a potential adaptation to avoid damage and have added this (with findings from Mahey et al. 2018) to the discussion. 
+
+\
+**Comment: 3.** Line 38 and 404: was water storage before turgor loss point greater in the epiphytic species?
+
+\
+*Response*: No differences were detected in water storage at full turgor between the 3 different fern life forms. We have added this result to the results section. 
+
+
+
+

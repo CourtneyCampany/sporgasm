@@ -1,4 +1,4 @@
-Genus,Epithet,Author,Field_Site,Life_form,Eupolypod_clade,Genbank_Accession,Genbank_substituion
+Genus,Epithet,Author,Field site,Life form,Eupolypod clade,Genbank accession,Genbank substitution
 Asplenium,auritum,Sw.,La Selva,epiphyte,E2,EF463146,
 Asplenium,juglandifolium,Lam.,La Selva,epiphyte,E2,AF525269,
 Asplenium,serratum,L.,La Selva,epiphyte,E2,KJ628633,
@@ -33,7 +33,7 @@ Pecluma,pectinata,(L.) M. G. Price,La Selva,epiphyte,E1,KT780741,
 Phlebodium,aureum,(L.) J. Sm.,La Selva,epiphyte,E1,KR816694,
 Pleopeltis,bradeorum,(Rosenst.) A. R. Sm. & Tejero,La Selva,hemi-epiphyte,E1,AY362614,
 Polybotrya,osmundacea,Humb. & Bonpl. ex Willd.,La Selva,climber,E1,KM495215,
-Salpichlaena,volubilis,(Kaulf.) J. Sm.,La Selva,terrestrial,E2,EF463162,
+Salpichlaena,volubilis,(Kaulf.) J. Sm.,La Selva,climber,E2,EF463162,
 Serpocaulon,fraxinifolium,(Jacq.) A. R. Sm.,Las Cruces,epiphyte,E1,EF551071,
 Serpocaulon,loriciforme,(Rosenst.) A. R. Sm.,La Selva,epiphyte,E1,KJ628812,
 Serpocaulon,triseriale,(Sw.) A. R. Sm.,Las Cruces,epiphyte,E1,EF463263,

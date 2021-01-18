@@ -6,7 +6,7 @@ library(scales)
 
 #pv parameters
 pv <- read.csv("calculated_data/pv_curves2.csv")
-    pv$niche2 <- gsub("climber", "hemi-epiphyte", pv$niche)
+    pv$niche2 <- gsub("climber", "terrestrial", pv$niche)
     pv$niche2 <- as.factor(pv$niche2)
     #reorder from ground to canopy 
     pv$niche2<-factor(pv$niche2, 
@@ -66,15 +66,15 @@ capft_lab <- expression(C[ft]~~(MPa^-1))
 captlp_lab <- expression(C[TLP]~~(MPa^-1))
 
 tlp_cld <- c("a","a","a" )
-op_cld <- c("a","a","b" )
+op_cld <- c("a","ab","b" )
 cap_cld <- c("a","ab","b" )
 
 #pv curve plots-------
 
-# jpeg(filename = "output/plot_4_pvparams.jpeg",
+# jpeg(filename = "master_scripts/figure5.jpeg",
 #       width = 12, height = 12, units = "in", res= 400)
 
-par(mar=c(4,4,1,1), mfrow=c(2,2),mgp=c(2.5,.75,0),cex.lab=1.5)
+par(mar=c(4,4,1,1), mfrow=c(2,2),mgp=c(2.5,.75,0),cex.lab=1.25,cex.axis=1.25)
 
 #global pv curve
 plot(psi2~rwc_100, data=pv_data3 , type='n',xlim=c(0,15),
@@ -91,19 +91,18 @@ lines(x=epi[order(epi$rwc_100),"rwc_100"],
       y=epi[order(epi$rwc_100),"smooth_epi"], type='l',
       lwd=4, lty=2,col=trtcols[3])
 text(15, 0, "A", cex=1.5)
-legend("topright", boxlabs, pch=16, col=trtcols, bty='n', inset = .01)
+legend("topright", boxlabs, pch=16, col=trtcols, bty='n', inset = .01, cex=1.25)
 
 #tlp
 boxplot(waterpot_tlp ~ niche2, data=pv, xaxt='n',ylim=c(-2,0.1),
         boxlwd=2,whisklwd=2,staplelwd=2,xlab="",
-        varwidth=TRUE,ylab=tlp_lab,
+        varwidth=TRUE,ylab=tlp_lab, outline=FALSE,
         border=trtcols)
-axis(1, at=1:3, labels=FALSE)
-mtext(boxlabs, side=1, at=1:3, cex=1.25, line=2)
+axis(1, boxlabs, at=1:3, cex.axis=1.25)
 stripchart(waterpot_tlp ~ niche2, data = pv,cex=1.25,
            vertical = TRUE, method = "jitter",
            pch = 16,  col= trtcols2, xaxt='n', add=TRUE)
-text(x=1:3, y=0, tlp_cld, cex=1.5)
+text(x=1:3, y=0, tlp_cld, cex=1.25)
 text(3.5, -2, "B", cex=1.5)
 
 
@@ -111,13 +110,12 @@ text(3.5, -2, "B", cex=1.5)
 boxplot(osmotic_potential ~ niche2, data=pv, xaxt='n',
         boxlwd=2,whisklwd=2,staplelwd=2,xlab="",
         varwidth=TRUE,ylab=op_lab,ylim=c(-2,0.1),
-        border=trtcols)
-axis(1, at=1:3, labels=FALSE)
-mtext(boxlabs, side=1, at=1:3, cex=1.25, line=2)
+        border=trtcols,outline=FALSE)
+axis(1, boxlabs, at=1:3, cex.axis=1.25)
 stripchart(osmotic_potential ~ niche2, data = pv,
            vertical = TRUE, method = "jitter",cex=1.25,
            pch = 16,  col= trtcols2, xaxt='n', add=TRUE)
-text(x=1:3, y=0, op_cld, cex=1.5)
+text(x=1:3, y=0, op_cld, cex=1.25)
 text(3.5, -2, "C", cex=1.5)
 
 #capacitance vs elas

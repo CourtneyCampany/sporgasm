@@ -1,5 +1,5 @@
 pv <- read.csv("calculated_data/pv_curves2.csv")
-  pv$niche2 <- gsub("climber", "hemi-epiphyte", pv$niche)
+  pv$niche2 <- gsub("climber", "terrestrial", pv$niche)
   pv$niche2 <- as.factor(pv$niche2)
   
   #reorder from ground to canopy 
@@ -35,17 +35,13 @@ Anova(tlp_mod, type="3") #no effects
 anova(tlp_mod, tlp_mod2) #not different
 AIC(tlp_mod, tlp_mod2) #use model without interaction
 
-summary(tlp_mod3)
 Anova(tlp_mod2, type="3")
 r.squaredGLMM(tlp_mod2)
 #R2m       R2c
-#0.1000985 0.5529221
+#0.09453121 0.5527911
 # niche2    0.04197
 
-visreg(tlp_mod2)
-##epiphyte less drought toleratnt 
-
-tukey_tlp <- glht(tlp_mod3, linfct = mcp(niche2 = "Tukey"))
+tukey_tlp <- glht(tlp_mod2, linfct = mcp(niche2 = "Tukey"))
 tlp_siglets <-cld(tukey_tlp)
 
 # terrestrial hemi-epiphyte      epiphyte 
@@ -76,23 +72,20 @@ Anova(op_mod, type="3") #no effects
 anova(op_mod, op_mod2) #not different
 AIC(op_mod, op_mod2) #use model without interaction
 
-summary(om_mod2)
-Anova(om_mod2, type="3")
-r.squaredGLMM(om_mod2)
+summary(op_mod2)
+Anova(op_mod2, type="3")
+r.squaredGLMM(op_mod2)
 
 # R2m       R2c
-# [1,] 0.144529 0.6102061
+# [1,] 0.1419392 0.6108792
 # 
-# niche2        9.5179  2   0.008575 ** 
-
-visreg(op_mod2)
-##less solutes in epiphytes
+# niche2       0.009819 **
 
 tukey_op <- glht(op_mod2, linfct = mcp(niche2 = "Tukey"))
 op_siglets <-cld(tukey_op)
 
 # terrestrial hemi-epiphyte      epiphyte 
-# "a"           "a"           "b" 
+# "a"           "ab"           "b" 
 
 ### elasticity -------
 
@@ -132,13 +125,13 @@ boxplot(capacitance_full ~ niche2, data=full)
 boxplot(capacitance_zero. ~ niche2, data=zero)
 boxplot(capacitance_absolute ~ niche2, data=abs)
 
-hist(full$capacitance_full) 
-hist(zero$capacitance_zero.)
+hist(sqrt(full$capacitance_full) )
+hist(sqrt(zero$capacitance_zero.))
 hist(abs$capacitance_absolute)    
 
-#capcitance full
-full_mod <- lmer(log10(capacitance_full) ~ niche2 * site + (1|species), data=full)
-full_mod2 <- lmer(log10(capacitance_full) ~ niche2 + site + (1|species), data=full)
+#capacitance full
+full_mod <- lmer(sqrt(capacitance_full) ~ niche2 * site + (1|species), data=full)
+full_mod2 <- lmer(sqrt(capacitance_full) ~ niche2 + site + (1|species), data=full)
 
 plot(full_mod) #not bad
 qqPlot(residuals(full_mod)) #not bad
@@ -146,9 +139,12 @@ qqPlot(residuals(full_mod)) #not bad
 #model summary
 Anova(full_mod2, type="3") #no effects
 
+# mean(full[full$niche2 == "terrestrial", "capacitance_full"]) #0.06
+# mean(full[full$niche2 == "epiphyte", "capacitance_full"]) #0.05
+
 #capcitance absolute
-abs_mod <- lmer(log10(capacitance_absolute) ~ niche2 * site + (1|species), data=full)
-abs_mod2 <- lmer(log10(capacitance_absolute) ~ niche2 + site + (1|species), data=full)
+abs_mod <- lmer(log10(capacitance_absolute) ~ niche2 * site + (1|species), data=abs)
+abs_mod2 <- lmer(log10(capacitance_absolute) ~ niche2 + site + (1|species), data=abs)
 
 plot(abs_mod) #not bad
 qqPlot(residuals(abs_mod)) #not bad
@@ -158,8 +154,8 @@ Anova(abs_mod2, type="3") #no effect
 
 
 #capcitance zero
-zero_mod <- lmer(log10(capacitance_zero.) ~ niche2 * site + (1|species), data=full)
-zero_mod2 <- lmer(log10(capacitance_zero.) ~ niche2 + site + (1|species), data=full)
+zero_mod <- lmer(sqrt(capacitance_zero.) ~ niche2 * site + (1|species), data=zero)
+zero_mod2 <- lmer(sqrt(capacitance_zero.) ~ niche2 + site + (1|species), data=zero)
 
 plot(zero_mod) #not bad
 qqPlot(residuals(zero_mod)) #not bad
@@ -168,17 +164,16 @@ qqPlot(residuals(zero_mod)) #not bad
 Anova(zero_mod, type="3") #niche2
 
 anova(zero_mod, zero_mod2) #not different
-AIC(zero_mod, zero_mod2) #use model with interaction
+AIC(zero_mod, zero_mod2) 
 
 summary(zero_mod)
 Anova(zero_mod, type="3")
 r.squaredGLMM(zero_mod)
 
 # R2m       R2c
-# [1,] 0.3180491 0.6268394
+# [1,] 0.280573 0.619161
 
-# niche2       9.1368  2    0.01037 *
-visreg(zero_mod)
+# niche2    0.009101 *
 
 tukey_zero <- glht(zero_mod, linfct = mcp(niche2 = "Tukey"))
 zero_siglets <-cld(tukey_zero)
@@ -188,8 +183,8 @@ zero_siglets <-cld(tukey_zero)
 
 #capcitance zero is lower in epiphytes
 
-terr <- mean(zero[zero$niche2 == "terrestrial", "capacitance_zero."]) #0.3455018
-epi <- mean(zero[zero$niche2 == "epiphyte", "capacitance_zero."]) #0.1583137
+terr <- mean(zero[zero$niche2 == "terrestrial", "capacitance_zero."]) #0.34
+epi <- mean(zero[zero$niche2 == "epiphyte", "capacitance_zero."]) #0.15
 
 ### RWC -------
 

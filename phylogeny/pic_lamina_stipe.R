@@ -22,7 +22,7 @@ mytree3<-multi2di(mytree2)
 ##frond morphology data
 traits <- read.csv("calculated_data/fern_traits.csv")
   traits$niche2 <- traits$niche
-  traits$niche2 <- gsub("climber", "hemi-epiphyte", traits$niche2)
+  traits$niche2 <- gsub("climber", "terrestrial", traits$niche2)
   traits$niche2 <- as.factor(traits$niche2)
   #reorder from ground to canopy 
   traits$niche2<-factor(traits$niche2, 

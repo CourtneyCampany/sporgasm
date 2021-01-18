@@ -23,7 +23,7 @@ alldata$niche2<-factor(alldata$niche2,
 #get species means
 data_means <- doBy::summaryBy(stomatal_size + sd_mm2 + xylem_area_mm2 +
               frond_length_cm + stipe_length_cm + lamina_area_cm2 +
-              chl_mg_m2 +  huber + guardcell_length_um +waterpot_tlp + 
+              chl_mg_m2 +  huber + stomatal_length_um +waterpot_tlp + 
               average_guardcell_width_um + osmotic_potential + elasticity +
               capacitance_full + capacitance_zero. + sla_cm2g + d13C + n_perc
               ~ species,data=alldata,FUN=mean2, keep.names = TRUE)
@@ -74,7 +74,7 @@ mytree_ss <-  drop.tip(mytree3, c("pleopeltis_bradeorum",
 ssdat <- data_means[complete.cases(data_means$stomatal_size),] 
 
 ss_K <- phylosignal(ssdat$stomatal_size , mytree_ss)
-length_K <- phylosignal(ssdat$guardcell_length_um, mytree_ss)
+length_K <- phylosignal(ssdat$stomatal_length_um, mytree_ss)
 width_K <- phylosignal(ssdat$average_guardcell_width_um , mytree_ss)
 
 ##xylem/huber miss pecluma_pectinata
@@ -101,4 +101,4 @@ kstats$variable <- c("Stomatal Density", "Stomatal Size","Guard cell length",
                      "Lamina area", "Chlorophyll content", "SLA", "13C",
                      "Foliar Nitrogen")
 
-write.csv(kstats, "calculated_data/K_statistic_traits.csv", row.names = FALSE)                     
+write.csv(kstats, "calculated_data/K_statistic_traits_new.csv", row.names = FALSE)                     

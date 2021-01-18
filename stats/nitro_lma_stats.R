@@ -11,8 +11,8 @@ sla <- read.csv("calculated_data/fern_sla.csv")
 
 ##merge lma and nitrogen
 nitro <- merge(leafchem, sla, all=TRUE)  
-nitro$lma_g_m2 <- with(nitro, 1/(sla_cm2g/10000))
-nitro$nitro_area <- with(nitro,lma_g_m2 * (n_perc/100))
+  nitro$lma_g_m2 <- with(nitro, 1/(sla_cm2g/10000))
+  nitro$nitro_area <- with(nitro,lma_g_m2 * (n_perc/100))
 
 #reorder from ground to canopy 
 nitro$niche2<-factor(nitro$niche2, 
@@ -46,13 +46,13 @@ Anova(nitro_mod, type="3")
 
 #use model  interaction
 # visreg(nitro_mod, "lma_g_m2", by="niche2")
-r.squaredGLMM(nitro_mod)
+# r.squaredGLMM(nitro_mod)
 # R2m       R2c
 # 0.2437342 0.7849114
 
 r.squaredGLMM(nitro_mod3)
 # R2m       R2c
-#0.2099185 0.7937285
+#0.2211815 0.7992715
 
 summary(nitro_mod)
 library(emmeans)
