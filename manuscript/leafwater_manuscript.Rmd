@@ -250,13 +250,13 @@ Figure 5. Epiphytic tropical ferns are not more drought tolerant than terrestria
 
 ![](asr_stipe.jpeg)
 \
-Figure 6. Ancestral state reconstruction for stipe length mapped onto the phylogeny of the selected ferns examined in this study. A posterior probability is indicated at each node.
+Figure 6. Ancestral state reconstruction for stipe length mapped onto the phylogeny of the selected ferns examined in this study. A posterior probability is indicated at each node. Eupolypods I (EI) and II (E2) clades are marked on basal nodes, respectively. 
 
 \
 
 ![](asr_stomata.jpeg)
 \
-Figure 7. Ancestral state reconstruction for stomatal density mapped onto the phylogeny of the selected ferns examined in this study. A posterior probability is indicated at each node.
+Figure 7. Ancestral state reconstruction for stomatal density mapped onto the phylogeny of the selected ferns examined in this study. A posterior probability is indicated at each node. Eupolypods I (EI) and II (E2) clades are marked on basal nodes, respectively.
 
 # Supplementary Information
 
@@ -294,12 +294,12 @@ Figure S2. Stomatal density broadly decreases as stomatal size increases. Signif
 
 ![](asr_lma.jpeg)
 \
-Figure S3. Ancestral state reconstruction for leaf mass per unit area (LMA) mapped onto the phylogeny of the selected tropical ferns examined in this study. A posterior probability is indicated at each node.
+Figure S3. Ancestral state reconstruction for leaf mass per unit area (LMA) mapped onto the phylogeny of the selected tropical ferns examined in this study. A posterior probability is indicated at each node. Eupolypods I (EI) and II (E2) clades are marked on basal nodes, respectively.
 
 \
 
 ![](asr_xa.jpeg)
 \
-Figure S4. Ancestral state reconstruction for total xylem area mapped onto the phylogeny of the selected tropical ferns examined in this study. A posterior probability is indicated at each node. *Pecluma pectinata* was trimmed from the phylogenetic tree due to missing data.
+Figure S4. Ancestral state reconstruction for total xylem area mapped onto the phylogeny of the selected tropical ferns examined in this study. A posterior probability is indicated at each node. *Pecluma pectinata* was trimmed from the phylogenetic tree due to missing data. Eupolypods I (EI) and II (E2) clades are marked on basal nodes, respectively.
 
 # Bibliography

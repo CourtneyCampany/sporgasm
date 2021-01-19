@@ -227,7 +227,7 @@ Studies of primary hemi-epiphytism in ferns nearly all focus on characterization
 **Comment: 20.** L338: Need to specify in the figure which clade is Eupolypods II/I.
 
 \
-*Response*: Instead of making each ancestral state reconstruction figure more complicated, we have chosen to reword this statement to just focus on life form.
+*Response*: Change made on Figures 6, 7, S3, and S4.
 
 \
 **Comment: 21.** L352-362: Citations are needed for this paragraph and should avoid repeating the results without interpretation.
