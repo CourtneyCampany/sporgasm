@@ -23,6 +23,7 @@ alldata4 <- alldata3[-c(126,127,129),]
 
 alldata4$xylemleafarea <- alldata4$xylem_area_mm2 / alldata4$lamina_area_cm2 
 
+windows()
 boxplot(xylemleafarea ~ niche2, data=alldata4, outline=FALSE)
 
 boxplot(lamina_area_cm2 ~ niche2, data=alldata4, outline=FALSE)

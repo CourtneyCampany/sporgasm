@@ -72,26 +72,27 @@ text(x=1:3, y=2700, cldsize, cex=1.25)
 text(3.5, 200, "B", cex=1.25)
 
 ##below is removed SD vs SS
-# plot(stomatal_size ~ sd_mm2, data=stomata_noout, 
-#      ylab=ss_lab, xlab=sd_lab, type='n')
-# predline(terr_mod, col=trtcols[1], lwd=2, lty=2)
-# predline(hemi_mod, col=trtcols[2], lwd=2, lty=2)
-# predline(epi_mod, col=trtcols[3], lwd=2, lty=2)
-# points(stomatal_size ~ sd_mm2, data=stomata_noout, pch=16, col= trtcols2[niche2],
-#        cex=1.25)
-# legend("topright", legend = boxlabs, pch=16, col=trtcols, bty="n", inset=.01)
-# text(8, 3300, "B", cex=1.25)
-# 
-# lines(x=terr2[order(terr2$sd_mm2),"sd_mm2"],
-#       y=terr2[order(terr2$sd_mm2),"smooth_terr"],
-#       lwd=4, lty=2, col=trtcols[1])
-# lines(x=hemi2[order(hemi2$sd_mm2),"sd_mm2"],
-#       y=hemi2[order(hemi2$sd_mm2),"smooth_hemi"],
-#       lwd=4, lty=2, col=trtcols[2])
-# lines(x=epi2[order(epi2$sd_mm2),"sd_mm2"],
-#       y=epi2[order(epi2$sd_mm2),"smooth_epi"],
-#       lwd=4, lty=2, col=trtcols[3])
+windows()
+plot(stomatal_size ~ sd_mm2, data=stomata_noout,
+     ylab=ss_lab, xlab=sd_lab, type='n')
+predline(terr_mod, col=trtcols[1], lwd=2, lty=2)
+predline(hemi_mod, col=trtcols[2], lwd=2, lty=2)
+predline(epi_mod, col=trtcols[3], lwd=2, lty=2)
+points(stomatal_size ~ sd_mm2, data=stomata_noout, pch=16, col= trtcols2[niche2],
+       cex=1.25)
+legend("topright", legend = boxlabs, pch=16, col=trtcols, bty="n", inset=.01)
+text(8, 3300, "B", cex=1.25)
 
-# text(130,1700, expression(paste(R[cond]^{"2"}," = "," 0.22")))
-# text(130,1500, expression(paste(R[marg]^{"2"}," = "," 0.90")))
-# dev.off()
+lines(x=terr2[order(terr2$sd_mm2),"sd_mm2"],
+      y=terr2[order(terr2$sd_mm2),"smooth_terr"],
+      lwd=4, lty=2, col=trtcols[1])
+lines(x=hemi2[order(hemi2$sd_mm2),"sd_mm2"],
+      y=hemi2[order(hemi2$sd_mm2),"smooth_hemi"],
+      lwd=4, lty=2, col=trtcols[2])
+lines(x=epi2[order(epi2$sd_mm2),"sd_mm2"],
+      y=epi2[order(epi2$sd_mm2),"smooth_epi"],
+      lwd=4, lty=2, col=trtcols[3])
+
+text(130,1700, expression(paste(R[cond]^{"2"}," = "," 0.22")))
+text(130,1500, expression(paste(R[marg]^{"2"}," = "," 0.90")))
+dev.off()
