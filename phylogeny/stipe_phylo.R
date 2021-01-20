@@ -63,12 +63,12 @@ xval <- lastPP$xx[1:39]
 yval <- lastPP$yy[1:39]
 
 #ancestrial state reconstruction
-# jpeg(filename = "manuscript/asr_stipe.jpeg",
-#        width = 6, height = 6, units = "in", res= 400)
+ jpeg(filename = "manuscript/asr_stipe.jpeg",
+        width = 6, height = 6, units = "in", res= 400)
 
  # windows()
 
-pdf(file = "manuscript/Figure6.pdf", width = 8, height = 8)
+# pdf(file = "manuscript/Figure6.pdf", width = 8, height = 8)
 
 plot(obj2, ftype="off", xlim=c(0,.15),ylim=c(-4,39),
      #ylim=lastPP$y.lim,xlim=lastPP$x.lim,

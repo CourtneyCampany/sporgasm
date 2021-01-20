@@ -59,6 +59,9 @@ yval <- lastPP$yy[1:39]
 #ancestrial state reconstruction
 jpeg(filename = "manuscript/asr_lma.jpeg",
       width = 6, height = 6, units = "in", res= 400)
+
+# pdf(file = "manuscript/FigureS3.pdf", width = 8, height = 8)
+
 # windows()
 plot(obj2, ftype="off", xlim=c(0,.15),ylim=c(-4,39),
      #ylim=lastPP$y.lim,xlim=lastPP$x.lim,
@@ -90,5 +93,8 @@ add.color.bar(.019,"black",title="",
 add.simmap.legend(leg = niche_lab_goodorder,outline=FALSE,
                   colors=trtcols,prompt=FALSE,
                   x=.07,y=-1.75,vertical=TRUE,fsize=0.6)
+
+text(0,7.8, "E2", cex=.7)
+text(.0115,29.5, "E1", cex=.7)
 
 dev.off()
