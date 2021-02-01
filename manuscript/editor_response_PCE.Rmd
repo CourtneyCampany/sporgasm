@@ -167,7 +167,7 @@ Studies of primary hemi-epiphytism in ferns nearly all focus on characterization
 **Comment: 10.** L123-125: The hypothesis can be more specific.
 
 \
-*Response*: The sentence above the hypothesis describes how adaptions to morphological, anatomical and physiolgical traits could all be necessary to deal with the canopy habitat. For brevity, we have altered the hypothesis to specifically allude to drought tolerance adaptations but we have not listed any of the dozen traits we measured. 
+*Response*: The sentence above the hypothesis describes how adaptions to morphological, anatomical and physiological traits could all be necessary to deal with the canopy habitat. For brevity, we have altered the hypothesis to specifically allude to drought tolerance adaptations but we have not listed any of the dozen traits we measured. 
 
 \
 **Comment: 11.** L135: Put the latitude information before that of the longitude, to be consistent with what is shown for the other site.
@@ -281,7 +281,7 @@ Studies of primary hemi-epiphytism in ferns nearly all focus on characterization
 **Comment: 29.** L490-491: The comparison between the epiphytic ferns and angiosperms is not very relevant here.
 
 \
-*Response*: We disagree. The evolution of epiphytism was not limited to a single plant lineage. The unique strategies that ferns utilize to persist in the canopy habitat make braoder comparisons to angiosperms evern more relevant. 
+*Response*: We disagree. The evolution of epiphytism was not limited to a single plant lineage. The unique strategies that ferns utilize to persist in the canopy habitat make broader comparisons to angiosperms even more relevant. 
 
 \
 **Comment: 30.** Fig. 2B: Should the unit of xylem area be mm2 in the figure (as in the legend) instead of mm-2?
