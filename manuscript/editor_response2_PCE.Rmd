@@ -1,0 +1,50 @@
+---
+output:
+  word_document:
+    reference_docx: manuscriptstyle_pce2.docx
+  pdf_document: default
+  html_document:
+    number_sections: yes
+---
+
+```{r, results='asis', echo=FALSE, warning=FALSE}
+library(knitr)
+opts_knit$set(root.dir = '../')
+```
+
+Dr. Frederick Meinzer
+
+\
+Editor
+\
+Plant Cell & Environment
+
+\
+We are grateful for the opportunity to resubmit our manuscript, and we thank the original reviewer for providing additional insights to improve our work. We have responded in detail to each comment, which has improved the overall quality of the manuscript. Below, we have itemized our response to each comment from the referee. 
+
+\
+**EDITOR**
+\
+**Comment: 1.** L42: better to replace the word “canalized” with a term more easily understood.
+
+\
+*Response*: In the abstract, we have replaced 'canalized; with 'evolutionarily constrained'
+
+\
+**Comment: 2.** L91: Delete one of the two “to maintain”.
+
+\
+*Response*: editiorial change made. 
+
+\
+**Comment: 3.** Results: Results of phylogenetic independent contrast were only described in the text. It might be better to show the results as supporting figures.
+
+\
+*Response*: The results of the PIC analysis are actually presented in Table 1 of the manuscript. We believe the reviewer overlooked this. 
+
+\
+**Comment: 4.** The PIC results were rarely discussed particularly in the first two sections of Discussion. It might be necessary to add more interpretations on the PIC results, since the PIC result is an important component of the data.
+
+\
+*Response*: Our main goal with the PIC analysis was to dutifully check if phylogenetic signals for each functional trait suggested that related species resemble each other more than species drawn at random from our phylogeny. In this study, phylogenetic signals were broadly low, confirming traits adaptions across life forms (even from different clades) from our mixed model. Because of this confirmation, we do not discuss the phylogenetic signal explicitly in the discussion (as the reviewer points out). Had the phylogenetic signal been higher for functional traits, it is likely that the PIC results would need to be a focal point of a much different discussion. We have altered the first paragraph of the discussion to mentions that adaptive shifts,in lieu of phylogenetic conservatism, were found in many functional traits related to leaf water relations.
+
