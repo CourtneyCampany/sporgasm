@@ -1,5 +1,5 @@
 ---
-title: "Leaf water relations in epiphytic ferns are driven by drought avoidance rather than tolerance mechanisms "
+title: "Leaf water relations in epiphytic ferns are driven by drought avoidance rather than tolerance mechanisms"
 author: 
 date: 
 output:
@@ -42,8 +42,8 @@ Courtney E. Campany^1,2^, Jarmila Pittermann^3^, Alex Baer^3^, Helen Holmlund^4^
 \
 **Conflicts of interest**: (None)
 
-<!-- \ -->
-<!-- **Running Head:** Terrestrial and epiphytic fern functional traits -->
+\
+**Running Head:** Terrestrial and epiphytic fern functional traits
 
 ```{r, results="asis", echo=FALSE, warning=FALSE}
 library(knitr)
