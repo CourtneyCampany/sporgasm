@@ -5,7 +5,7 @@ library(stringr)
 ## read in datasheet with flow parameters
 
 lascruces_times <- 
-  read.csv("raw_data/vcurve_raw_data/lascruces/vcurve_times_lascruces.csv") %>% 
+  read.csv("raw_data/vcurve_raw_data/lascruces/vcurve_times_lascruces_ab.csv") %>% 
          mutate(water_potential = format(water_potential, nsmall=2),
          sample_id = paste(species_id, individual, 
          format(water_potential,digits=2), sep="_"))
@@ -47,8 +47,8 @@ vcurve_function <- function(dfr, timesdfr,
   
   #isolate backgrounds (x2) and flow from timesdfr to trim flow data sets
   #ackward variable names are raw names from flow meter
-  background1 <- x[x$Relative.Time.s. > (y$back_first_initial-1)
-                     & x$Relative.Time.s. < y$back_first_final ,]
+  background1 <- dfr[dfr$Relative.Time.s. > (y$back_first_initial-1)
+                     & dfr$Relative.Time.s. < y$back_first_final ,]
   
   background2 <- x[x$Relative.Time.s. > (y$back_second_initial-1)
                    & x$Relative.Time.s. < y$back_second_final ,]
@@ -88,6 +88,9 @@ vcurve_function <- function(dfr, timesdfr,
                         genusspecies = y$species_id, 
                         individual = y$individual,
                         K = conductivity, 
+                        flow = corr_flow_rate,
+                        phead = pressurehead,
+                        bg = background_agg,
                         MPa = as.numeric(format(y$water_potential, nsmall=2)),
                         curve_id = paste(y$species_id, y$individual, 
                                                    sep = "-"))

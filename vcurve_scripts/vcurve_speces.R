@@ -2,14 +2,14 @@
 ### analyze vulnerability curves for each species
 
 library(dplyr)
-library(plyr)
+
 #read in all vcurves (working) -----------
 
 laselva <- read.csv("calculated_data/laselva_vcurves.csv") %>%
   mutate(curve_id = paste(genusspecies,individual,sep="-"),
          site="la_selva")
 
-lascruces <- read.csv("calculated_data/lascruces_vcurves.csv") %>%
+lascruces <- read.csv("calculated_data/lascruces_vcurves2.csv") %>%
   mutate(curve_id = paste(genusspecies,individual,sep="-"),
          site="las_cruces")
 
@@ -57,6 +57,8 @@ if(packageVersion("fitplc") < "1.3"){
 
 species <- unique(fern_plc_curves$genusspecies)
 
+library(plyr)
+
 #create easy object for package required variables names
 var_names <- c(PLC = "PLC", WP = "MPa")
 
@@ -83,9 +85,15 @@ dippro_Px <- rbind.fill(dippro_Px_12,dippro_Px_50,dippro_Px_88)
 
 drypat <- fitplcs(fern_plc_curves[fern_plc_curves$genusspecies == "drypat",],
           "curve_id",model = "Weibull", rescale_Px=TRUE, varnames=var_names)
-drypat_Px_12 <- getPx(drypat,  rescale_Px=TRUE, x=12)
-drypat_Px_50 <- getPx(drypat,  rescale_Px=TRUE, x=50)
-drypat_Px_88 <- getPx(drypat,  rescale_Px=TRUE, x=88)
+#singulargradient
+
+drypat_no2 <- fitplcs(fern_plc_curves[fern_plc_curves$genusspecies == "drypat"&
+                                        ! fern_plc_curves$curve_id == "drypat-2",],"curve_id",
+                      model = "Weibull", rescale_Px=TRUE, varnames=var_names)
+
+drypat_Px_12 <- getPx(drypat_no2,  rescale_Px=TRUE, x=12)
+drypat_Px_50 <- getPx(drypat_no2,  rescale_Px=TRUE, x=50)
+drypat_Px_88 <- getPx(drypat_no2,  rescale_Px=TRUE, x=88)
 drypat_Px <- rbind.fill(drypat_Px_12,drypat_Px_50,drypat_Px_88)
 
 #4) elalat
@@ -169,44 +177,48 @@ tecinc_Px <- rbind.fill(tecinc_Px_12,tecinc_Px_50,tecinc_Px_88)
 
 #13) olfcer
 
-# olfcer <- fitplcs(fern_plc_curves[fern_plc_curves$genusspecies == "olfcer",],
-#           "curve_id",model = "Weibull", rescale_Px=TRUE, varnames=var_names)
+olfcer <- fitplcs(fern_plc_curves[fern_plc_curves$genusspecies == "olfcer",],
+          "curve_id",model = "Weibull", rescale_Px=TRUE, varnames=var_names)
+olfcer_Px_12 <- getPx(olfcer,  rescale_Px=TRUE, x=12)
+olfcer_Px_50 <- getPx(olfcer,  rescale_Px=TRUE, x=50)
+olfcer_Px_88 <- getPx(olfcer,  rescale_Px=TRUE, x=88)
+olfcer_Px <- rbind.fill(olfcer_Px_12,olfcer_Px_50,olfcer_Px_88)
 #singular gradient error in nls
 # olfcer_Px <- getPx(olfcer,  rescale_Px=TRUE, x=c(12, 50, 88))
 
 #run indivduals and adjust fitting methods as needed
-olfcer_2 <- fitplc(fern_plc_curves[fern_plc_curves$curve_id == "olfcer-2",], 
-                   model = "Weibull", rescale_Px=TRUE, varnames=var_names)
-
-olfcer_3 <- fitplc(fern_plc_curves[fern_plc_curves$curve_id == "olfcer-3",], 
-                   model = "Weibull", rescale_Px=TRUE, varnames=var_names)
-
-olfcer_4 <- fitplc(fern_plc_curves[fern_plc_curves$curve_id == "olfcer-4",], 
-                   model = "Weibull", rescale_Px=TRUE, varnames=var_names)
-
-olfcer_5 <- fitplc(fern_plc_curves[fern_plc_curves$curve_id == "olfcer-5",], 
-                   model = "Weibull", rescale_Px=TRUE, varnames=var_names)
-
-#droppping curve six, 
-# olfcer_6 <- fitplc(fern_plc_curves[fern_plc_curves$curve_id == "olfcer-6",], 
+# olfcer_2 <- fitplc(fern_plc_curves[fern_plc_curves$curve_id == "olfcer-2",], 
+#                    model = "Weibull", rescale_Px=TRUE, varnames=var_names)
+# 
+# olfcer_3 <- fitplc(fern_plc_curves[fern_plc_curves$curve_id == "olfcer-3",], 
+#                    model = "Weibull", rescale_Px=TRUE, varnames=var_names)
+# 
+# olfcer_4 <- fitplc(fern_plc_curves[fern_plc_curves$curve_id == "olfcer-4",], 
+#                    model = "Weibull", rescale_Px=TRUE, varnames=var_names)
+# 
+# olfcer_5 <- fitplc(fern_plc_curves[fern_plc_curves$curve_id == "olfcer-5",], 
+#                    model = "Weibull", rescale_Px=TRUE, varnames=var_names)
+# 
+# #droppping curve six, 
+# # olfcer_6 <- fitplc(fern_plc_curves[fern_plc_curves$curve_id == "olfcer-6",], 
+# #                    model = "Weibull", rescale_Px=TRUE, varnames=var_names)
+# 
+# olfcer_7 <- fitplc(fern_plc_curves[fern_plc_curves$curve_id == "olfcer-7",], 
 #                    model = "Weibull", rescale_Px=TRUE, varnames=var_names)
 
-olfcer_7 <- fitplc(fern_plc_curves[fern_plc_curves$curve_id == "olfcer-7",], 
-                   model = "Weibull", rescale_Px=TRUE, varnames=var_names)
-
-t2 <- getPx(olfcer_2, rescale_Px=TRUE, x=c(12, 50, 88))
-    t2$Group <- "olfcer-2"
-t3 <- getPx(olfcer_3, rescale_Px=TRUE, x=c(12, 50, 88))
-    t3$Group <- "olfcer-3"
-t4 <- getPx(olfcer_4, rescale_Px=TRUE, x=c(12, 50, 88))
-    t4$Group <- "olfcer-4"
-t5 <- getPx(olfcer_5, rescale_Px=TRUE, x=c(12, 50, 88))
-    t5$Group <- "olfcer-5"
-t7 <- getPx(olfcer_7, rescale_Px=TRUE, x=c(12, 50, 88))
-    t7$Group <- "olfcer-7"
-
-olfcer_Px <- dplyr::bind_rows(t2,t3,t4,t5,t7)
-olfcer_Px <- olfcer_Px[,c(5, 1:4)]
+# t2 <- getPx(olfcer_2, rescale_Px=TRUE, x=c(12, 50, 88))
+#     t2$Group <- "olfcer-2"
+# t3 <- getPx(olfcer_3, rescale_Px=TRUE, x=c(12, 50, 88))
+#     t3$Group <- "olfcer-3"
+# t4 <- getPx(olfcer_4, rescale_Px=TRUE, x=c(12, 50, 88))
+#     t4$Group <- "olfcer-4"
+# t5 <- getPx(olfcer_5, rescale_Px=TRUE, x=c(12, 50, 88))
+#     t5$Group <- "olfcer-5"
+# t7 <- getPx(olfcer_7, rescale_Px=TRUE, x=c(12, 50, 88))
+#     t7$Group <- "olfcer-7"
+# 
+# olfcer_Px <- dplyr::bind_rows(t2,t3,t4,t5,t7)
+# olfcer_Px <- olfcer_Px[,c(5, 1:4)]
 
 
 #14) parexc
@@ -214,6 +226,9 @@ olfcer_Px <- olfcer_Px[,c(5, 1:4)]
 parexc_no1 <- fitplcs(fern_plc_curves[fern_plc_curves$genusspecies == "parexc"&
               ! fern_plc_curves$curve_id == "parexc-1",],"curve_id",
               model = "Weibull", rescale_Px=TRUE, varnames=var_names)
+
+# parexc <- fitplcs(fern_plc_curves[fern_plc_curves$genusspecies == "parexc",],
+#                   "curve_id",model = "Weibull", rescale_Px=TRUE, varnames=var_names)
 
 #dropping parexc1
 # parexc_1 <- fitplc(fern_plc_curves[fern_plc_curves$curve_id == "parexc-1",],
@@ -231,7 +246,7 @@ species_vc_px <- dplyr::bind_rows(cycsem_Px, dippro_Px, drypat_Px,
                                 olfcer_Px,parexc_Px,phlaur_Px,polosm_Px,
                                 sertri_Px, serfra_Px, tecinc_Px)
 
-write.csv(species_vc_px, "calculated_data/species_p50.csv", row.names = FALSE)
+write.csv(species_vc_px, "calculated_data/species_p50_new.csv", row.names = FALSE)
 
 
 #examine fits

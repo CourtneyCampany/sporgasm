@@ -62,7 +62,7 @@ vcurve_function <- function(dfr, timesdfr,
   y$h20_dens <- (massflow_constant1 * y$air_temp_C )+ massflow_constant2
   
   #isolate backgrounds (x2) and flow from timesdfr to trim flow data sets
-  #ackward variable names are raw names from flow meter
+  #backward variable names are raw names from flow meter
   background1 <- dfr[dfr$Relative.Time.s. > (y$back_first_initial-1)
                      & dfr$Relative.Time.s. < y$back_first_final ,]
   
